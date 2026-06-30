@@ -2,8 +2,8 @@
   "id": "az900",
   "name": "Microsoft Azure AZ-900",
   "vendor": "Microsoft",
-  "questions": 5,
-  "duration": 15,
+  "questions": 15,
+  "duration": 30,
   "passingScore": 700,
   "difficulty": "Beginner",
   "questionList": [
@@ -26,6 +26,7 @@
       "id": "q2",
       "question": "You need a service to host a web application without managing underlying infrastructure. Which Azure service should you use?",
       "type": "single-choice",
+      "topic": "Core Azure Services",
       "options": [
         { "id": "o1", "text": "Azure Virtual Machines" },
         { "id": "o2", "text": "Azure App Service" },
@@ -37,21 +38,23 @@
     },
     {
       "id": "q3",
-      "question": "Which cloud deployment models allow you to share infrastructure with other organizations?",
+      "question": "Which of the following cloud models involves shared computing resources accessible by multiple organizations over the internet?",
       "type": "multiple-choice",
       "multipleAnswer": true,
+      "topic": "Cloud Concepts",
       "options": [
         { "id": "o1", "text": "Public Cloud" },
         { "id": "o2", "text": "Private Cloud" },
         { "id": "o3", "text": "Hybrid Cloud" }
       ],
       "correctAnswers": ["o1", "o3"],
-      "explanation": "Public cloud is shared among multiple organizations. Hybrid cloud includes public cloud, meaning parts of it are shared."
+      "explanation": "Public cloud is shared among multiple organizations. Hybrid cloud includes public cloud components, meaning parts of it are shared."
     },
     {
       "id": "q4",
       "question": "What is the primary benefit of deploying resources across multiple Availability Zones?",
       "type": "single-choice",
+      "topic": "Core Azure Architecture",
       "options": [
         { "id": "o1", "text": "Lower cost" },
         { "id": "o2", "text": "Increased performance" },
@@ -63,9 +66,10 @@
     },
     {
       "id": "q5",
-      "question": "Azure Advisor provides recommendations for which of the following categories?",
+      "question": "Which of the following are categories of recommendations provided by Azure Advisor? (Choose three)",
       "type": "multiple-choice",
       "multipleAnswer": true,
+      "topic": "Management and Governance",
       "options": [
         { "id": "o1", "text": "Cost" },
         { "id": "o2", "text": "Performance" },
@@ -74,6 +78,146 @@
       ],
       "correctAnswers": ["o1", "o2", "o4"],
       "explanation": "Azure Advisor provides recommendations on Cost, Security, Reliability, Operational Excellence, and Performance."
+    },
+    {
+      "id": "q6",
+      "question": "What is the deployment and management service for Azure that enables you to create, update, and delete resources in your Azure account?",
+      "type": "single-choice",
+      "topic": "Core Azure Services",
+      "options": [
+        { "id": "o1", "text": "Azure CLI" },
+        { "id": "o2", "text": "Azure Resource Manager (ARM)" },
+        { "id": "o3", "text": "Azure Active Directory" },
+        { "id": "o4", "text": "Azure Portal" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Azure Resource Manager (ARM) is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources."
+    },
+    {
+      "id": "q7",
+      "question": "Which Azure service provides a centralized location to manage security policies and threat protection across all your Azure subscriptions?",
+      "type": "single-choice",
+      "topic": "Security",
+      "options": [
+        { "id": "o1", "text": "Azure Monitor" },
+        { "id": "o2", "text": "Microsoft Defender for Cloud" },
+        { "id": "o3", "text": "Azure Key Vault" },
+        { "id": "o4", "text": "Azure Policy" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Microsoft Defender for Cloud (formerly Azure Security Center) provides unified security management and advanced threat protection across hybrid cloud workloads."
+    },
+    {
+      "id": "q8",
+      "question": "Your company wants to enforce a rule that all newly created virtual machines must be deployed only in the 'East US' region. Which Azure service allows you to enforce this rule?",
+      "type": "single-choice",
+      "topic": "Management and Governance",
+      "options": [
+        { "id": "o1", "text": "Azure Blueprint" },
+        { "id": "o2", "text": "Azure Role-Based Access Control (RBAC)" },
+        { "id": "o3", "text": "Azure Policy" },
+        { "id": "o4", "text": "Azure Resource Locks" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Azure Policy helps to enforce organizational standards and to assess compliance at-scale. You can use it to restrict resource creation to specific regions."
+    },
+    {
+      "id": "q9",
+      "question": "Which cloud service model shifts the MOST responsibility for underlying infrastructure to the cloud provider?",
+      "type": "single-choice",
+      "topic": "Cloud Concepts",
+      "options": [
+        { "id": "o1", "text": "Infrastructure as a Service (IaaS)" },
+        { "id": "o2", "text": "Platform as a Service (PaaS)" },
+        { "id": "o3", "text": "Software as a Service (SaaS)" },
+        { "id": "o4", "text": "On-Premises" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "In Software as a Service (SaaS), the cloud provider manages the infrastructure, OS, and software application entirely. The consumer only uses the software."
+    },
+    {
+      "id": "q10",
+      "question": "Which Azure feature allows you to filter network traffic to and from Azure resources in an Azure virtual network?",
+      "type": "single-choice",
+      "topic": "Networking",
+      "options": [
+        { "id": "o1", "text": "Azure ExpressRoute" },
+        { "id": "o2", "text": "Network Security Group (NSG)" },
+        { "id": "o3", "text": "Azure Load Balancer" },
+        { "id": "o4", "text": "Azure Content Delivery Network" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Network Security Group (NSG) contains security rules that allow or deny inbound or outbound network traffic to Azure resources."
+    },
+    {
+      "id": "q11",
+      "question": "A company wants to store petabytes of unstructured data, such as documents, images, and videos. Which Azure storage service is best suited?",
+      "type": "single-choice",
+      "topic": "Storage",
+      "options": [
+        { "id": "o1", "text": "Azure Blob Storage" },
+        { "id": "o2", "text": "Azure File Storage" },
+        { "id": "o3", "text": "Azure Table Storage" },
+        { "id": "o4", "text": "Azure Disk Storage" }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Azure Blob Storage is Microsoft's object storage solution for the cloud, optimized for storing massive amounts of unstructured data."
+    },
+    {
+      "id": "q12",
+      "question": "You need to securely store and strictly control access to tokens, passwords, certificates, and API keys. Which Azure service should you use?",
+      "type": "single-choice",
+      "topic": "Security",
+      "options": [
+        { "id": "o1", "text": "Azure Information Protection" },
+        { "id": "o2", "text": "Azure Key Vault" },
+        { "id": "o3", "text": "Azure Active Directory" },
+        { "id": "o4", "text": "Azure Advanced Threat Protection" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Azure Key Vault is a centralized cloud service for securely storing and accessing secrets, encryption keys, and certificates."
+    },
+    {
+      "id": "q13",
+      "question": "Which Microsoft Entra ID (formerly Azure AD) feature requires users to provide two or more forms of identification in order to sign in?",
+      "type": "single-choice",
+      "topic": "Identity, Access, and Security",
+      "options": [
+        { "id": "o1", "text": "Single Sign-On (SSO)" },
+        { "id": "o2", "text": "Conditional Access" },
+        { "id": "o3", "text": "Multi-Factor Authentication (MFA)" },
+        { "id": "o4", "text": "Role-Based Access Control (RBAC)" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Multi-Factor Authentication (MFA) requires users to provide additional verification methods beyond just a password to secure their accounts."
+    },
+    {
+      "id": "q14",
+      "question": "Which Azure compute service executes code automatically in response to events or triggers without requiring you to manage underlying servers?",
+      "type": "single-choice",
+      "topic": "Core Azure Services",
+      "options": [
+        { "id": "o1", "text": "Azure Virtual Machines" },
+        { "id": "o2", "text": "Azure Kubernetes Service" },
+        { "id": "o3", "text": "Azure Functions" },
+        { "id": "o4", "text": "Azure App Service" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure."
+    },
+    {
+      "id": "q15",
+      "question": "What is the highest level of resource organization hierarchy in Azure, allowing you to manage access, policies, and compliance across multiple subscriptions?",
+      "type": "single-choice",
+      "topic": "Management and Governance",
+      "options": [
+        { "id": "o1", "text": "Resource Groups" },
+        { "id": "o2", "text": "Management Groups" },
+        { "id": "o3", "text": "Subscriptions" },
+        { "id": "o4", "text": "Azure Active Directory Tenants" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Management Groups allow you to organize multiple Azure Subscriptions hierarchically so you can easily apply policies and access controls across all of them."
     }
   ]
 }

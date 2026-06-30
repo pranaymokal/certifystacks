@@ -3,7 +3,7 @@
   "name": "GitHub Copilot Certification Practice Exam",
   "vendor": "GitHub",
   "questions": 70,
-  "duration": 30,
+  "duration": 60,
   "passingScore": 700,
   "difficulty": "Intermediate",
   "questionList": [

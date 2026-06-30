@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://certify-stack.netlify.app/sitemap.xml
+Sitemap: https://certifystacks.netlify.app/sitemap.xml

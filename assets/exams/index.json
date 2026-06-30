@@ -4,7 +4,7 @@
       "id": "az900",
       "name": "Microsoft Azure AZ-900",
       "vendor": "Microsoft",
-      "questions": 5,
+      "questions": 15,
       "duration": 15,
       "passingScore": 700,
       "difficulty": "Beginner"
@@ -13,17 +13,17 @@
       "id": "aws-saa",
       "name": "AWS Solutions Architect Associate",
       "vendor": "Amazon Web Services",
-      "questions": 65,
-      "duration": 130,
-      "passingScore": 720,
-      "difficulty": "Intermediate"
+      "questions": 15,
+      "duration": 15,
+      "passingScore": 700,
+      "difficulty": "Beginner"
     },
     {
       "id": "gh300",
       "name": "Gitgub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
-      "duration": 70,
+      "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
     }
