@@ -1,0 +1,79 @@
+{
+  "id": "az900",
+  "name": "Microsoft Azure AZ-900",
+  "vendor": "Microsoft",
+  "questions": 5,
+  "duration": 15,
+  "passingScore": 700,
+  "difficulty": "Beginner",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "Which of the following is a key characteristic of cloud computing?",
+      "type": "single-choice",
+      "difficulty": "Easy",
+      "topic": "Cloud Concepts",
+      "options": [
+        { "id": "o1", "text": "High upfront capital expenditure" },
+        { "id": "o2", "text": "Fixed capacity" },
+        { "id": "o3", "text": "Pay-as-you-go pricing model" },
+        { "id": "o4", "text": "Requires long-term contracts" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Cloud computing operates on an operational expenditure (OpEx) model where you pay for what you use, unlike traditional on-premises setups which require high upfront capital expenditure (CapEx)."
+    },
+    {
+      "id": "q2",
+      "question": "You need a service to host a web application without managing underlying infrastructure. Which Azure service should you use?",
+      "type": "single-choice",
+      "options": [
+        { "id": "o1", "text": "Azure Virtual Machines" },
+        { "id": "o2", "text": "Azure App Service" },
+        { "id": "o3", "text": "Azure Kubernetes Service" },
+        { "id": "o4", "text": "Azure SQL Database" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Azure App Service is a fully managed Platform as a Service (PaaS) for hosting web apps."
+    },
+    {
+      "id": "q3",
+      "question": "Which cloud deployment models allow you to share infrastructure with other organizations?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "options": [
+        { "id": "o1", "text": "Public Cloud" },
+        { "id": "o2", "text": "Private Cloud" },
+        { "id": "o3", "text": "Hybrid Cloud" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Public cloud is shared among multiple organizations. Hybrid cloud includes public cloud, meaning parts of it are shared."
+    },
+    {
+      "id": "q4",
+      "question": "What is the primary benefit of deploying resources across multiple Availability Zones?",
+      "type": "single-choice",
+      "options": [
+        { "id": "o1", "text": "Lower cost" },
+        { "id": "o2", "text": "Increased performance" },
+        { "id": "o3", "text": "High availability and fault tolerance" },
+        { "id": "o4", "text": "Simplified management" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Availability Zones provide physical separation within a region, protecting applications from datacenter failures."
+    },
+    {
+      "id": "q5",
+      "question": "Azure Advisor provides recommendations for which of the following categories?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "options": [
+        { "id": "o1", "text": "Cost" },
+        { "id": "o2", "text": "Performance" },
+        { "id": "o3", "text": "Marketing" },
+        { "id": "o4", "text": "Security" }
+      ],
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "Azure Advisor provides recommendations on Cost, Security, Reliability, Operational Excellence, and Performance."
+    }
+  ]
+}

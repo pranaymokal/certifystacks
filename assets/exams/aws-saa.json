@@ -1,0 +1,98 @@
+{
+  "id": "aws-saa",
+  "name": "AWS Solutions Architect Associate",
+  "vendor": "Amazon Web Services",
+  "questions": 3,
+  "duration": 30,
+  "passingScore": 720,
+  "difficulty": "Intermediate",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "Which AWS service is best suited for storing objects, such as documents, images, and videos?",
+      "type": "single-choice",
+      "difficulty": "Easy",
+      "topic": "Storage",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Amazon EBS"
+        },
+        {
+          "id": "o2",
+          "text": "Amazon S3"
+        },
+        {
+          "id": "o3",
+          "text": "Amazon EFS"
+        },
+        {
+          "id": "o4",
+          "text": "Amazon RDS"
+        }
+      ],
+      "correctAnswers": [
+        "o2"
+      ],
+      "explanation": "Amazon Simple Storage Service (S3) is an object storage service built to store and retrieve any amount of data from anywhere."
+    },
+    {
+      "id": "q2",
+      "question": "A company wants to decouple its application components using a message queuing service. Which AWS service should be used?",
+      "type": "single-choice",
+      "topic": "Application Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Amazon SNS"
+        },
+        {
+          "id": "o2",
+          "text": "Amazon SQS"
+        },
+        {
+          "id": "o3",
+          "text": "Amazon Kinesis"
+        },
+        {
+          "id": "o4",
+          "text": "AWS Step Functions"
+        }
+      ],
+      "correctAnswers": [
+        "o2"
+      ],
+      "explanation": "Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications."
+    },
+    {
+      "id": "q3",
+      "question": "Which of the following are serverless compute services in AWS? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Compute",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Amazon EC2"
+        },
+        {
+          "id": "o2",
+          "text": "AWS Lambda"
+        },
+        {
+          "id": "o3",
+          "text": "AWS Fargate"
+        },
+        {
+          "id": "o4",
+          "text": "Amazon EMR"
+        }
+      ],
+      "correctAnswers": [
+        "o2",
+        "o3"
+      ],
+      "explanation": "AWS Lambda and AWS Fargate are serverless compute engines. EC2 requires managing servers, and EMR is for big data processing."
+    }
+  ]
+}
