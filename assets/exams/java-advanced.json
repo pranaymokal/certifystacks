@@ -1,0 +1,1700 @@
+{
+    "id": "java-advanced",
+    "name": "Advanced Java Core Concepts and Concurrency",
+    "vendor": "Oracle",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Advanced",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Given the following code executing under Java 21+, what is the behavior of the Virtual Thread configuration?\n\nThread.ofVirtual().name(“worker-”, 0).start(() -> {\n\tSystem.out.println(Thread.currentThread().isDaemon());\n});",
+            "type": "single-choice",
+            "topic": "Concurrency & Virtual Threads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It prints 'true' because all virtual threads are explicitly daemon threads."
+                },
+                {
+                    "id": "o2",
+                    "text": "It prints 'false' because virtual threads inherit the daemon status of the carrier pool."
+                },
+                {
+                    "id": "o3",
+                    "text": "It throws an UnsupportedOperationException during thread creation."
+                },
+                {
+                    "id": "o4",
+                    "text": "It prints 'false' by default unless setDaemon(true) is invoked via a custom factory."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "In Java, virtual threads are always daemon threads. The Thread.isDaemon() method always returns true for a virtual thread, and attempting to change it using setDaemon(false) throws an exception."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following statements accurately describe the guarantees and behaviors of the Virtual Thread pinning mechanism in Project Loom?",
+            "type": "single-choice",
+            "topic": "Concurrency & Virtual Threads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pinning prevents a virtual thread from unmounting from its carrier thread during a blocking operation."
+                },
+                {
+                    "id": "o2",
+                    "text": "Pinning forces the carrier thread to immediately terminate and throw an OutOfMemoryError."
+                },
+                {
+                    "id": "o3",
+                    "text": "Pinning occurs automatically whenever a virtual thread executes a database network call via NIO."
+                },
+                {
+                    "id": "o4",
+                    "text": "Pinning expands the ForkJoinPool carrier parallelism dynamically without limits."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Pinning occurs when a virtual thread is executing inside a 'synchronized' block/method or executing a native method/foreign function. When pinned, the virtual thread cannot unmount from its carrier thread during blocking operations, blocking the carrier thread itself."
+        },
+        {
+            "id": "q3",
+            "question": "Consider the following pattern matching code introduced in recent Java versions:\n\nstatic void process(Object obj) {\n\tswitch (obj) {\n\t\tcase String s && s.length() > 5 -> System.out.println(“Long: ” + s);\n\t\tcase String s -> System.out.println(“Short: ” + s);\n\t\tdefault -> System.out.println(“Other”);\n\t}\n}\n\nWhat happens if the order of the two String cases is reversed?",
+            "type": "single-choice",
+            "topic": "Language Features & Pattern Matching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The code will fail to compile due to pattern dominance rules."
+                },
+                {
+                    "id": "o2",
+                    "text": "The code compiles but executing it with a long string will trigger a PatternMatchException."
+                },
+                {
+                    "id": "o3",
+                    "text": "The code compiles, but the guarded pattern becomes unreachable dead code evaluated at runtime."
+                },
+                {
+                    "id": "o4",
+                    "text": "The compiler automatically optimizes and reorders the cases at bytecode level."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Java enforces pattern dominance rules at compile-time. A total pattern or an unguarded pattern (case String s) dominates a guarded pattern (case String s && condition). Reversing them makes the guarded pattern unreachable, causing a compile-time error."
+        },
+        {
+            "id": "q4",
+            "question": "A system uses a VarHandle to perform memory sequencing operations. Which memory fence option provides the strongest hardware-level synchronization guarantees?",
+            "type": "single-choice",
+            "topic": "Low-level Memory Model & VarHandles",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "VarHandle.fullFence()"
+                },
+                {
+                    "id": "o2",
+                    "text": "VarHandle.acquireFence()"
+                },
+                {
+                    "id": "o3",
+                    "text": "VarHandle.releaseFence()"
+                },
+                {
+                    "id": "o4",
+                    "text": "VarHandle.loadLoadFence()"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "VarHandle.fullFence() ensures that loads and stores before the fence cannot be reordered with loads and stores after the fence. It acts as a full multi-directional barrier, providing the strongest synchronization among the choices."
+        },
+        {
+            "id": "q5",
+            "question": "When configuring a custom ForkJoinPool, which parameters are mandatory or directly dictate how the async tasks are prioritized/scheduled? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Parallelism level"
+                },
+                {
+                    "id": "o2",
+                    "text": "Async mode (FIFO vs LIFO scheduling for unjoined tasks)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Core pool warm-up delay"
+                },
+                {
+                    "id": "o4",
+                    "text": "Thread starvation cleanup interval"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "ForkJoinPool constructors allow specifying the parallelism level and the scheduling mode (asyncMode). When asyncMode is true, it uses FIFO queue processing for forked tasks, which is ideal for async events rather than divide-and-conquer tasks."
+        },
+        {
+            "id": "q6",
+            "question": "You are writing a low-latency garbage collection strategy using the Z Garbage Collector (ZGC). Which statements accurately reflect ZGC behavior in modern Java? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "JVM Internals & Garbage Collection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ZGC performs reference coloring and uses load barriers to execute concurrently."
+                },
+                {
+                    "id": "o2",
+                    "text": "ZGC execution pauses scale linearly with the total volume of the heap size."
+                },
+                {
+                    "id": "o3",
+                    "text": "Generational ZGC splits the heap into logical generations to optimize young object collection."
+                },
+                {
+                    "id": "o4",
+                    "text": "ZGC completely eliminates the need for Stop-The-World (STW) phases entirely."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "ZGC uses colored pointers and load barriers to perform memory compaction concurrently with application threads. Generational ZGC maintains separate young and old generations to drastically improve performance. It still has ultra-short STW phases (typically sub-millisecond), so it does not eliminate them entirely."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following is true regarding SequencedCollections introduced in Java 21?",
+            "type": "single-choice",
+            "topic": "Collections Framework",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "LinkedHashSet implements SequencedSet and guarantees predictable encounter order."
+                },
+                {
+                    "id": "o2",
+                    "text": "SequencedCollection introduces a standard parallelSort() method directly to the interface."
+                },
+                {
+                    "id": "o3",
+                    "text": "ArrayList does not implement SequencedCollection to maintain legacy compliance."
+                },
+                {
+                    "id": "o4",
+                    "text": "The reversed() method creates a deep copy of the collection in reverse order."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "LinkedHashSet implements SequencedSet, providing well-defined operations for first/last elements and a predictable encounter order. The reversed() method returns a reversed view, not a deep copy, and ArrayList does implement SequencedCollection."
+        },
+        {
+            "id": "q8",
+            "question": "What happens when you invoke the clean() method on a java.lang.ref.Cleaner instance?",
+            "type": "single-choice",
+            "topic": "Memory Management & Reference Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It executes the registered cleaning action at most once when triggered manually or by GC."
+                },
+                {
+                    "id": "o2",
+                    "text": "It forces an immediate, synchronous full garbage collection of the entire JVM heap."
+                },
+                {
+                    "id": "o3",
+                    "text": "It cancels the cleaning registration without running the cleanup code block."
+                },
+                {
+                    "id": "o4",
+                    "text": "It degrades the referenced object into a PhantomReference automatically."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The java.lang.ref.Cleaner (which replaced finalize) ensures that the registered cleaning action runs at most once when the object becomes phantom reachable or when explicitly triggered via Cleanable.clean()."
+        },
+        {
+            "id": "q9",
+            "question": "Which behavior is true regarding a Java 'record' component annotation propagation?",
+            "type": "single-choice",
+            "topic": "Language Features & Records",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Annotations on record components apply to fields, accessors, and constructor parameters if allowed by @Target."
+                },
+                {
+                    "id": "o2",
+                    "text": "Record components reject any annotation that lacks ElementType.TYPE_USE."
+                },
+                {
+                    "id": "o3",
+                    "text": "Component annotations are entirely omitted from the generated class bytecode."
+                },
+                {
+                    "id": "o4",
+                    "text": "Annotations only propagate to the private final fields, ignoring the accessor methods."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Annotations on a record component are automatically propagated to the corresponding private field, accessor method, and canonical constructor parameter, provided the annotation's @Target matches those contexts."
+        },
+        {
+            "id": "q10",
+            "question": "When using Foreign Function & Memory API (FFM API) in Java 22+, how is native memory managed safely?",
+            "type": "single-choice",
+            "topic": "Foreign Function & Memory API",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An Arena controls the lifecycle of memory segments and guarantees deterministic deallocation."
+                },
+                {
+                    "id": "o2",
+                    "text": "Memory segments are directly bound to the JVM heap and collected by standard G1GC."
+                },
+                {
+                    "id": "o3",
+                    "text": "Native memory must be cleared manually byte-by-byte using the Unsafe interface."
+                },
+                {
+                    "id": "o4",
+                    "text": "Deallocation is entirely dependent on the underlying operating system's garbage collector."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The FFM API utilizes the Arena interface to allocate off-heap memory segments securely. An Arena manages the scope and lifecycle of these allocations, ensuring predictable and deterministic deallocation when the arena is closed."
+        },
+        {
+            "id": "q11",
+            "question": "Consider a dynamic proxy created via java.lang.reflect.Proxy. Which methods invoked on the proxy instance will NOT be routed through the InvocationHandler instance?",
+            "type": "single-choice",
+            "topic": "Reflection & Proxies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "None. All methods, including toString(), hashCode(), and equals(), are routed through the handler."
+                },
+                {
+                    "id": "o2",
+                    "text": "Only final methods from java.lang.Object like getClass() and notify() are bypass routes."
+                },
+                {
+                    "id": "o3",
+                    "text": "Only default methods declared on the proxy's implemented interfaces."
+                },
+                {
+                    "id": "o4",
+                    "text": "Only package-private methods defined within the same package."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Methods on java.lang.Object that are final (such as getClass(), notify(), wait()) cannot be overridden, so they bypass the dynamic proxy's InvocationHandler. Non-final methods (like hashCode, equals, toString) are routed through the handler."
+        },
+        {
+            "id": "q12",
+            "question": "Under the Java Virtual Machine Specification, what does the 'invokedynamic' instruction enable?",
+            "type": "single-choice",
+            "topic": "JVM Bytecode & Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It defers method linkage to runtime via a bootstrap method, enabling dynamic languages and lambdas."
+                },
+                {
+                    "id": "o2",
+                    "text": "It bypasses all access control checks, working like direct Unsafe execution."
+                },
+                {
+                    "id": "o3",
+                    "text": "It forces the JVM to execute the method using the interpreter loop, disabling JIT compilation."
+                },
+                {
+                    "id": "o4",
+                    "text": "It is exclusively utilized to look up static methods within interface blocks."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'invokedynamic' instruction allows runtime method resolution via user-defined bootstrap methods. This underpins Java's lambda expressions, string concatenation optimizations, and dynamic language implementations on the JVM."
+        },
+        {
+            "id": "q13",
+            "question": "What is the primary architectural purpose of a ScopedValue in concurrent Java applications?",
+            "type": "single-choice",
+            "topic": "Concurrency & Scoped Values",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To safely and efficiently share immutable data between threads without the overhead of ThreadLocal variables."
+                },
+                {
+                    "id": "o2",
+                    "text": "To allow child virtual threads to mutate global state across carrier boundaries concurrently."
+                },
+                {
+                    "id": "o3",
+                    "text": "To act as a high-performance replacement for ReentrantReadWriteLock."
+                },
+                {
+                    "id": "o4",
+                    "text": "To store transient configuration variables directly inside the hardware CPU cache registers."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "ScopedValue provides a lightweight way to share immutable data within a bounded scope across threads (especially millions of virtual threads), eliminating the memory footprint and inheritance overhead associated with ThreadLocal variables."
+        },
+        {
+            "id": "q14",
+            "question": "Which of the following descriptions accurately capture the constraints of a 'sealed' interface in Java? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Language Features & Sealed Classes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "All permitted subclasses/subinterfaces must belong to the same module or package."
+                },
+                {
+                    "id": "o2",
+                    "text": "Permitted implementations must explicitly declare final, sealed, or non-sealed modifiers."
+                },
+                {
+                    "id": "o3",
+                    "text": "Sealed interfaces cannot declare default or static methods."
+                },
+                {
+                    "id": "o4",
+                    "text": "Permitted implementations must be declared within the exact same source file as an inner class."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Sealed elements require all permitted implementations to be part of the same package (or same module if modularized). Additionally, every implementing class must explicitly state whether it is final, sealed, or non-sealed to define how the hierarchy continues."
+        },
+        {
+            "id": "q15",
+            "question": "What is the consequence of configuring a CompletableFuture using the completeOnTimeout() method?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It resolves the stage with a specified default value if the original task fails to complete within the window."
+                },
+                {
+                    "id": "o2",
+                    "text": "It immediately throws a TimeoutException to the calling thread as soon as the limit is hit."
+                },
+                {
+                    "id": "o3",
+                    "text": "It kills the underlying OS fork worker thread executing the target payload instantly."
+                },
+                {
+                    "id": "o4",
+                    "text": "It transitions the CompletableFuture to a cancelled state, disregarding any partial evaluation."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The completeOnTimeout(value, time, unit) method provides a way to gracefully recover from timeouts by completing the CompletableFuture with a fallback default value if it doesn't finish normally before the timeout expires."
+        },
+        {
+            "id": "q16",
+            "question": "When using Structured Concurrency (Java 21+) with StructuredTaskScope.ShutdownOnFailure, how does the scope react if one of the forked subtasks throws an exception?",
+            "type": "single-choice",
+            "topic": "Concurrency & Structured Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It silently ignores the exception and waits for the remaining tasks to complete."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically cancels all other running subtasks and causes the scope to shut down."
+                },
+                {
+                    "id": "o3",
+                    "text": "It restarts the failed task up to three times before throwing an aggregate exception."
+                },
+                {
+                    "id": "o4",
+                    "text": "It blocks the carrier thread until a manual cancellation signal is explicitly sent."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "StructuredTaskScope.ShutdownOnFailure is designed to fail fast. If any subtask fails, the scope captures the exception, interrupts all other incomplete subtasks, and shuts down, preventing wasted computational resources."
+        },
+        {
+            "id": "q17",
+            "question": "What is the primary function of Remembered Sets (RSets) in the G1 Garbage Collector?",
+            "type": "single-choice",
+            "topic": "JVM Internals & Garbage Collection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To keep track of object references that point into a specific region from outside that region."
+                },
+                {
+                    "id": "o2",
+                    "text": "To store large objects that exceed the size of a standard G1 heap region."
+                },
+                {
+                    "id": "o3",
+                    "text": "To remember the allocation rate of young generation objects for adaptive sizing."
+                },
+                {
+                    "id": "o4",
+                    "text": "To cache finalizer methods so they bypass the main collection cycle."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Remembered Sets (RSets) track object references originating from outside a region that point into it. This allows G1GC to collect individual regions independently without having to scan the entire heap for incoming references."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following execution reorderings is strictly prohibited by the Java Memory Model (JMM) regarding a 'volatile' variable?",
+            "type": "single-choice",
+            "topic": "Concurrency & Memory Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A volatile read followed by a normal read can be reordered."
+                },
+                {
+                    "id": "o2",
+                    "text": "A normal write operation followed by a volatile write cannot be reordered."
+                },
+                {
+                    "id": "o3",
+                    "text": "Two consecutive normal writes can never be reordered if they occur before a volatile read."
+                },
+                {
+                    "id": "o4",
+                    "text": "A volatile write followed by a volatile read is always aggressively reordered for performance."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In the JMM, a volatile write acts as a release barrier. Normal writes occurring before a volatile write cannot be reordered to happen after the volatile write, ensuring visibility of those normal writes to threads that subsequently read the volatile variable."
+        },
+        {
+            "id": "q19",
+            "question": "Which components are strictly required as arguments when invoking the Collectors.teeing() method introduced in Java 12? (Choose three)",
+            "type": "multiple-choice",
+            "topic": "Stream API & Collections",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A first downstream Collector."
+                },
+                {
+                    "id": "o2",
+                    "text": "A Predicate to filter the incoming stream."
+                },
+                {
+                    "id": "o3",
+                    "text": "A second downstream Collector."
+                },
+                {
+                    "id": "o4",
+                    "text": "A BiFunction to merge the results of both collectors."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Collectors.teeing() requires three arguments: two independent downstream collectors that will process the same elements, and a BiFunction that merges the results returned by these two collectors into a single final result."
+        },
+        {
+            "id": "q20",
+            "question": "In the context of the Java Platform Module System (JPMS), what is the effect of the 'requires transitive' directive?",
+            "type": "single-choice",
+            "topic": "Java Module System (JPMS)",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It marks the module as optional, meaning the application will compile even if it is missing at runtime."
+                },
+                {
+                    "id": "o2",
+                    "text": "It ensures that any module that reads this module will also implicitly read the target module specified."
+                },
+                {
+                    "id": "o3",
+                    "text": "It forcibly exports all internal packages of the target module to the root classpath."
+                },
+                {
+                    "id": "o4",
+                    "text": "It dynamically downloads the required module from Maven Central during JVM bootstrap."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'requires transitive' directive implies readability. If Module A requires transitive Module B, then any Module C that requires Module A will automatically be able to read Module B without explicitly declaring it."
+        },
+        {
+            "id": "q21",
+            "question": "How does ConcurrentHashMap typically achieve thread-safe write operations (like put) in Java 8 and newer versions?",
+            "type": "single-choice",
+            "topic": "Collections Framework",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It synchronizes the entire map object for every read and write operation."
+                },
+                {
+                    "id": "o2",
+                    "text": "It uses Segment locking, dividing the map into 16 statically synchronized sub-maps."
+                },
+                {
+                    "id": "o3",
+                    "text": "It uses CAS (Compare-And-Swap) for empty bins and synchronizes only on the head node for populated bins."
+                },
+                {
+                    "id": "o4",
+                    "text": "It relies entirely on ThreadLocal buffers to isolate writes until a manual flush is triggered."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Starting in Java 8, ConcurrentHashMap abandoned Segment locking. Instead, it uses a highly scalable approach: Compare-And-Swap (CAS) operations to insert into empty bins, and localized 'synchronized' blocks on the head node of a bin when resolving collisions."
+        },
+        {
+            "id": "q22",
+            "question": "Which compiler optimizations are directly enabled by the C2 JIT compiler's Escape Analysis if it determines that an object does NOT escape the current method? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "JVM JIT Compiler",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Scalar Replacement (allocating object fields in CPU registers or on the stack)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Lock Elision (removing unnecessary synchronization on the object)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Garbage Collection Offloading (moving the object to an external GPU memory space)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Class Hierarchy Analysis (bypassing interface method dispatch)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "If Escape Analysis proves an object does not escape a method or thread, the C2 compiler can apply Scalar Replacement (deconstructing the object into local primitive variables allocated on the stack) and Lock Elision (ignoring synchronized blocks on that object since no other thread can access it)."
+        },
+        {
+            "id": "q23",
+            "question": "In a modern Java switch expression, what is the role of the 'yield' keyword?",
+            "type": "single-choice",
+            "topic": "Language Features & Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It pauses the current thread and allows other virtual threads to execute the case block."
+                },
+                {
+                    "id": "o2",
+                    "text": "It generates a continuous stream of values from within the switch block."
+                },
+                {
+                    "id": "o3",
+                    "text": "It is used to explicitly return a value from a block of code inside a switch case."
+                },
+                {
+                    "id": "o4",
+                    "text": "It serves as a fallback to standard switch statement fall-through behavior."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In switch expressions, if a case requires multiple statements or logic inside a block ({ ... }), the 'yield' keyword must be used to return the computed value for that specific branch, distinguishing it from the 'return' keyword which exits the entire method."
+        },
+        {
+            "id": "q24",
+            "question": "When implementing a custom java.util.Spliterator for parallel stream processing, what is the expected behavior of the trySplit() method?",
+            "type": "single-choice",
+            "topic": "Stream API",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It partitions elements into a new Spliterator for parallel processing, returning null if the data cannot be split further."
+                },
+                {
+                    "id": "o2",
+                    "text": "It executes a parallel fork-join task and blocks until the split task is completed."
+                },
+                {
+                    "id": "o3",
+                    "text": "It converts a parallel stream back into a sequential stream."
+                },
+                {
+                    "id": "o4",
+                    "text": "It creates a deep copy of the underlying data source to prevent ConcurrentModificationExceptions."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The trySplit() method is designed to partition some of the elements (ideally half) into a new Spliterator to be processed concurrently by another thread. If the remaining elements are too few to split or the source is not splittable, it must return null."
+        },
+        {
+            "id": "q25",
+            "question": "What is the primary technical advantage of using java.lang.invoke.MethodHandle over the traditional java.lang.reflect.Method?",
+            "type": "single-choice",
+            "topic": "Reflection & MethodHandles",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "MethodHandles perform access control checks at invocation time, allowing for more flexible dynamic typing."
+                },
+                {
+                    "id": "o2",
+                    "text": "MethodHandles are structurally simpler and do not require JVM JIT compilation."
+                },
+                {
+                    "id": "o3",
+                    "text": "MethodHandles perform access checks at creation (lookup) time, allowing the JVM to inline and optimize the invocation aggressively."
+                },
+                {
+                    "id": "o4",
+                    "text": "MethodHandles can execute methods belonging to completely unrelated classes without a common interface."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Traditional Reflection checks access permissions on every single invocation. MethodHandles perform this check exactly once when the handle is resolved via a Lookup. This allows the JIT compiler to treat MethodHandle invocations nearly identically to direct method calls, enabling deep inlining and optimizations."
+        },
+        {
+            "id": "q26",
+            "question": "Why is ThreadLocalRandom preferred over a shared instance of java.util.Random in highly concurrent environments?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It leverages hardware-level true random number generation instructions (TRNG)."
+                },
+                {
+                    "id": "o2",
+                    "text": "It avoids thread contention and false sharing by maintaining isolated RNG state specific to the executing thread."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically scales its seed based on the number of active CPU cores."
+                },
+                {
+                    "id": "o4",
+                    "text": "It generates numbers cryptographically secure for use in SSL/TLS handshakes."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "java.util.Random uses an AtomicLong and CAS operations to update the internal seed, which causes severe contention when accessed by multiple threads simultaneously. ThreadLocalRandom eliminates this overhead by giving every thread its own isolated state."
+        },
+        {
+            "id": "q27",
+            "question": "In Java 22, how are unnamed variables and patterns structurally denoted in code to explicitly indicate that a value is intentionally unused?",
+            "type": "single-choice",
+            "topic": "Language Features & Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Using the 'var' keyword without a trailing identifier."
+                },
+                {
+                    "id": "o2",
+                    "text": "Using a single underscore character '' as the variable name."
+                },
+                {
+                    "id": "o3",
+                    "text": "Using the '@Ignored' annotation on the local variable declaration."
+                },
+                {
+                    "id": "o4",
+                    "text": "By wrapping the variable declaration in empty parentheses '()'."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Java 22 formalized unnamed variables and patterns (JEP 456), allowing developers to use a single underscore '' for variables that must be declared (like exception parameters or lambda arguments) but are never read, improving code clarity and removing compiler warnings."
+        },
+        {
+            "id": "q28",
+            "question": "What is the primary architectural goal of Application Class-Data Sharing (AppCDS) in modern JVMs?",
+            "type": "single-choice",
+            "topic": "JVM Performance & Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To compress all application bytecode into a single JAR file automatically at runtime."
+                },
+                {
+                    "id": "o2",
+                    "text": "To reduce startup time and memory footprint by creating a memory-mapped archive of parsed class metadata shared across JVM instances."
+                },
+                {
+                    "id": "o3",
+                    "text": "To share live object graphs across different JVM processes using remote direct memory access (RDMA)."
+                },
+                {
+                    "id": "o4",
+                    "text": "To offload ClassLoader resolution to an external background daemon thread."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "AppCDS allows the JVM to parse class files and store their internal metadata into an archive file. This archive can be memory-mapped (mmap) into multiple JVM processes, drastically reducing startup time and saving RAM since the read-only metadata is shared at the OS level."
+        },
+        {
+            "id": "q29",
+            "question": "Which of the following statements is true regarding Hidden Classes introduced in Java 15 via MethodHandles.Lookup.defineHiddenClass?",
+            "type": "single-choice",
+            "topic": "Language Features & Reflection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hidden classes are specifically designed to be discovered by standard reflection using Class.forName()."
+                },
+                {
+                    "id": "o2",
+                    "text": "Hidden classes cannot be linked by other classes via constant pool references and are automatically unloaded when no longer reachable."
+                },
+                {
+                    "id": "o3",
+                    "text": "Hidden classes are the standard mechanism used to implement final fields in Java Records."
+                },
+                {
+                    "id": "o4",
+                    "text": "Hidden classes permanently pin themselves to the PermGen/Metaspace, preventing class unloading."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Hidden classes are intended for frameworks that dynamically generate classes at runtime. They are hidden from other classes, cannot be looked up via Class.forName, cannot be linked directly via bytecode instructions, and are aggressively unloaded when their class loader or instances become unreachable."
+        },
+        {
+            "id": "q30",
+            "question": "What primary performance mechanism does the incubating Vector API (JEP 460) leverage to optimize array and mathematical computations?",
+            "type": "single-choice",
+            "topic": "Vector API & Hardware Interaction",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It compiles computations directly to hardware SIMD (Single Instruction, Multiple Data) vector instructions supported by the CPU."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically distributes loops across thousands of virtual threads."
+                },
+                {
+                    "id": "o3",
+                    "text": "It translates standard Java loops into equivalent CUDA kernels for GPU execution."
+                },
+                {
+                    "id": "o4",
+                    "text": "It bypasses the heap allocator by mapping native byte buffers directly to SSD storage."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The Vector API provides a mechanism to express vector computations that reliably compile at runtime to optimal vector instructions (like AVX on x64 or NEON on ARM), which utilize SIMD to perform the same operation on multiple data points simultaneously in a single CPU cycle."
+        },
+        {
+            "id": "q31",
+            "question": "Which API introduced in Java 14 allows applications to continuously monitor and consume Java Flight Recorder (JFR) data in real-time without requiring it to be dumped to a disk file first?",
+            "type": "single-choice",
+            "topic": "JVM Profiling & Diagnostics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "jdk.jfr.consumer.EventStream"
+                },
+                {
+                    "id": "o2",
+                    "text": "java.lang.management.JMXRecorder"
+                },
+                {
+                    "id": "o3",
+                    "text": "jdk.management.jfr.FlightRecorderMXBean"
+                },
+                {
+                    "id": "o4",
+                    "text": "java.util.concurrent.Flow.Subscriber"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Java 14 introduced the JFR Event Streaming API (jdk.jfr.consumer.EventStream), which allows developers to subscribe to JFR events asynchronously in real-time for continuous monitoring without the overhead of disk I/O."
+        },
+        {
+            "id": "q32",
+            "question": "In Java's concurrency framework, what is a defining architectural advantage of a Phaser over a CyclicBarrier or CountDownLatch?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A Phaser allows for the dynamic registration and deregistration of synchronization parties over multiple phases."
+                },
+                {
+                    "id": "o2",
+                    "text": "A Phaser is guaranteed to be entirely wait-free and lock-free across all threads."
+                },
+                {
+                    "id": "o3",
+                    "text": "A Phaser automatically creates and destroys carrier threads dynamically based on CPU load."
+                },
+                {
+                    "id": "o4",
+                    "text": "A Phaser executes callbacks in an isolated JVM sandbox to prevent deadlock propagation."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Unlike CountDownLatch and CyclicBarrier, which have a fixed number of parties initialized at creation, a Phaser supports dynamic registration (register(), arriveAndDeregister()), allowing the number of synchronized threads to vary throughout different phases of computation."
+        },
+        {
+            "id": "q33",
+            "question": "When utilizing a java.util.WeakHashMap, under what exact reachability condition does an entry become eligible for automatic removal by the JVM?",
+            "type": "single-choice",
+            "topic": "Memory Management & Collections",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "When the key object is only weakly reachable (no strong or soft references point to it)."
+                },
+                {
+                    "id": "o2",
+                    "text": "When the value object is garbage collected."
+                },
+                {
+                    "id": "o3",
+                    "text": "When both the key and the value objects lack strong references simultaneously."
+                },
+                {
+                    "id": "o4",
+                    "text": "When the internal time-to-live (TTL) expiration counter reaches zero."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "In a WeakHashMap, the entries are tied to the lifecycle of their keys. If the key object loses all strong and soft references (becoming weakly reachable), the GC reclaims the key, and the WeakHashMap's ReferenceQueue automatically removes the corresponding entry (both key and value)."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following statements accurately describes the mechanism of G1 String Deduplication when enabled via the JVM flag -XX:+UseStringDeduplication?",
+            "type": "single-choice",
+            "topic": "JVM Internals & Tuning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It automatically invokes String.intern() on all dynamically generated strings during execution."
+                },
+                {
+                    "id": "o2",
+                    "text": "It identifies String objects with identical character sequences and repoints their internal byte[] backing arrays to a single shared array instance."
+                },
+                {
+                    "id": "o3",
+                    "text": "It merges identical String object headers to save Metaspace memory footprint."
+                },
+                {
+                    "id": "o4",
+                    "text": "It executes deduplication synchronously on the main thread during object allocation to prevent heap bloat."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "G1 String Deduplication works asynchronously during garbage collection. It inspects Strings, and if it finds different String objects with identical content, it updates them to point to the same underlying byte array (value field), saving memory without altering object identity."
+        },
+        {
+            "id": "q35",
+            "question": "In the standard Java 11+ Platform Module System architecture, which ClassLoader is strictly responsible for loading Java SE API modules that do not belong to java.base, such as java.sql or java.xml?",
+            "type": "single-choice",
+            "topic": "Classloading & Module System",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bootstrap ClassLoader"
+                },
+                {
+                    "id": "o2",
+                    "text": "Platform ClassLoader"
+                },
+                {
+                    "id": "o3",
+                    "text": "System (Application) ClassLoader"
+                },
+                {
+                    "id": "o4",
+                    "text": "Extension ClassLoader"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In JPMS, the Platform ClassLoader (which replaced the legacy Extension ClassLoader) is responsible for loading Java SE modules like java.sql. The Bootstrap ClassLoader is reserved for core modules like java.base."
+        },
+        {
+            "id": "q36",
+            "question": "How is the off-heap native memory allocated by ByteBuffer.allocateDirect() conventionally tracked and reclaimed by the JVM?",
+            "type": "single-choice",
+            "topic": "Memory Management & NIO",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By a dedicated background thread that polls for OutOfMemoryErrors in the OS."
+                },
+                {
+                    "id": "o2",
+                    "text": "Via an internal Cleaner/PhantomReference mechanism that frees the native memory when the DirectByteBuffer Java object is garbage collected."
+                },
+                {
+                    "id": "o3",
+                    "text": "By requiring the developer to explicitly call DirectByteBuffer.close() within a try-with-resources block."
+                },
+                {
+                    "id": "o4",
+                    "text": "Through standard Old Generation compaction cycles which automatically migrate off-heap memory onto the heap."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A DirectByteBuffer is a Java object on the heap that acts as a proxy to native memory. The JVM uses a Cleaner (based on PhantomReferences) tied to the buffer object. When the buffer object is garbage collected, the Cleaner executes Unsafe.freeMemory() to release the native OS memory."
+        },
+        {
+            "id": "q37",
+            "question": "Assume you have an exhaustive pattern matching switch expression handling a Java 21 sealed interface. What happens if a new permitted subclass is added to the sealed interface, but the dependent switch expression in another module is not recompiled, and the new subclass is passed at runtime?",
+            "type": "single-choice",
+            "topic": "Language Features & Pattern Matching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The JVM silently ignores the expression and returns null."
+                },
+                {
+                    "id": "o2",
+                    "text": "A MatchException is thrown at runtime because the switch is no longer exhaustive."
+                },
+                {
+                    "id": "o3",
+                    "text": "An IncompatibleClassChangeError is triggered during ClassLoader verification."
+                },
+                {
+                    "id": "o4",
+                    "text": "The default system exception handler terminates the JVM immediately with a core dump."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "If a switch expression over a sealed type is exhaustive at compile-time, but the class hierarchy changes later (separate compilation anomaly), passing an instance of the newly added subclass to the switch at runtime will result in a java.lang.MatchException."
+        },
+        {
+            "id": "q38",
+            "question": "Consider the code: CompletableFuture<String> future = ...; future.thenApply(fn);. If future is already fully completed BEFORE thenApply is invoked, which thread will execute the fn function?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The thread that originally completed the future."
+                },
+                {
+                    "id": "o2",
+                    "text": "The common ForkJoinPool."
+                },
+                {
+                    "id": "o3",
+                    "text": "The thread that is invoking the thenApply method."
+                },
+                {
+                    "id": "o4",
+                    "text": "A newly spawned daemon thread."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "For synchronous continuation methods like thenApply (without the 'Async' suffix), if the CompletableFuture is already complete when the method is called, the provided function is executed immediately by the calling thread."
+        },
+        {
+            "id": "q39",
+            "question": "To correctly implement the Double-Checked Locking (DCL) singleton pattern in Java to ensure thread-safety across multiple CPU cores, which modifier MUST be applied to the static instance reference field?",
+            "type": "single-choice",
+            "topic": "Concurrency & Memory Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "final"
+                },
+                {
+                    "id": "o2",
+                    "text": "volatile"
+                },
+                {
+                    "id": "o3",
+                    "text": "synchronized"
+                },
+                {
+                    "id": "o4",
+                    "text": "transient"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'volatile' keyword is mandatory for DCL in Java. It establishes a happens-before relationship, preventing the JIT compiler or CPU from reordering the initialization of the Singleton object's fields with the assignment of the reference to the static field."
+        },
+        {
+            "id": "q40",
+            "question": "What primary security defense does the ObjectInputFilter API (introduced in Java 9) provide regarding Java Object Serialization?",
+            "type": "single-choice",
+            "topic": "Security & Serialization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It encrypts the serialized byte stream using AES-GCM to prevent man-in-the-middle attacks."
+                },
+                {
+                    "id": "o2",
+                    "text": "It allows validation of incoming serialized object graphs (classes, array sizes, depth) BEFORE they are fully instantiated, mitigating deserialization vulnerability exploits."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically strips sensitive fields marked with @Sensitive during the serialization process."
+                },
+                {
+                    "id": "o4",
+                    "text": "It enforces strict version control matching between serialVersionUIDs across network boundaries."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "ObjectInputFilter allows developers to define rules to accept or reject classes, array lengths, object graph depths, and references during deserialization. This preemptively stops maliciously crafted byte streams from instantiating gadget chains."
+        },
+        {
+            "id": "q41",
+            "question": "When using a parallel Stream's reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner) method, what strict requirements apply to the identity parameter? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Stream API",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It must be an identity value for the combiner function, such that combiner(identity, u) equals u."
+                },
+                {
+                    "id": "o2",
+                    "text": "It must not be mutated during the reduction process; it must remain stateless and immutable."
+                },
+                {
+                    "id": "o3",
+                    "text": "It must be explicitly registered as a volatile variable."
+                },
+                {
+                    "id": "o4",
+                    "text": "It must always evaluate to numerical zero or boolean false."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "The identity value must be an identity for the combiner function, meaning combining it with any value 'u' yields 'u'. Additionally, because the identity is passed into concurrent accumulations in parallel streams, it must not be mutated (state modifications should be handled by Collector, not reduce)."
+        },
+        {
+            "id": "q42",
+            "question": "What is the correct and thread-safe protocol for performing an optimistic read using Java's java.util.concurrent.locks.StampedLock?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Call tryOptimisticRead(), read the shared state into local variables, then call validate(stamp) to verify no write occurred during the read."
+                },
+                {
+                    "id": "o2",
+                    "text": "Call readLock(), perform the operations, and then call unlockRead(stamp) in a finally block."
+                },
+                {
+                    "id": "o3",
+                    "text": "Call tryOptimisticRead(), modify the state immediately, and call commit(stamp) to flush to main memory."
+                },
+                {
+                    "id": "o4",
+                    "text": "Synchronize on the StampedLock instance, invoke optimisticRead(), and release the monitor lock."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Optimistic reading in StampedLock avoids locks entirely. You call tryOptimisticRead() to get a stamp, copy shared variables into local variables, and then call validate(stamp). If validate returns true, the read was consistent. If false, a write occurred, and the thread must retry or acquire a pessimistic read lock."
+        },
+        {
+            "id": "q43",
+            "question": "Which internal JVM mechanism is utilized to globally pause all running Java threads for operations such as Stop-The-World garbage collection, thread dump generation, or class redefinition?",
+            "type": "single-choice",
+            "topic": "JVM Internals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Monitor Lock Inflation"
+                },
+                {
+                    "id": "o2",
+                    "text": "JNI Critical Sections"
+                },
+                {
+                    "id": "o3",
+                    "text": "Global Safepoints"
+                },
+                {
+                    "id": "o4",
+                    "text": "OS-level POSIX Signals"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Global Safepoints are a JVM mechanism that allows the VM to bring all Java threads to a known, safe state. When a safepoint is requested (e.g., for GC), threads are paused as they reach safepoint polling pages inserted by the JIT compiler."
+        },
+        {
+            "id": "q44",
+            "question": "In highly contended multithreaded environments, why does java.util.concurrent.atomic.LongAdder typically provide superior throughput compared to AtomicLong?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "LongAdder uses native synchronized hardware instructions that bypass the L1 CPU cache."
+                },
+                {
+                    "id": "o2",
+                    "text": "LongAdder maintains an internal array of variables (cells) to distribute updates across threads, heavily reducing Compare-And-Swap (CAS) contention."
+                },
+                {
+                    "id": "o3",
+                    "text": "LongAdder performs updates completely asynchronously using a daemon thread, returning instantly to the caller."
+                },
+                {
+                    "id": "o4",
+                    "text": "LongAdder eliminates memory visibility requirements by keeping values local to virtual threads."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Under high contention, multiple threads updating an AtomicLong constantly fail CAS loops. LongAdder solves this by maintaining an array of 'cells'. When contention is detected, threads hash to different cells to perform their additions independently, and the final sum is aggregated when requested."
+        },
+        {
+            "id": "q45",
+            "question": "Under the Java Platform Module System (JPMS), how can a module securely grant a specific framework (such as Spring or Hibernate) the ability to perform deep reflection on its private fields without broadly exporting its packages to the compilation classpath?",
+            "type": "single-choice",
+            "topic": "Java Module System (JPMS)",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By using the 'requires static' directive in the module-info file."
+                },
+                {
+                    "id": "o2",
+                    "text": "By executing the JVM with the -XX:+EnableDeepReflection flag."
+                },
+                {
+                    "id": "o3",
+                    "text": "By marking the private fields with the java.lang.invoke.DeepReflect annotation."
+                },
+                {
+                    "id": "o4",
+                    "text": "By using the 'opens' or 'opens ... to' directive in the module-info file."
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'opens' directive in module-info.java grants deep reflective access (including private members via setAccessible(true)) to a package at runtime, without making those types accessible at compile-time. 'opens ... to' can restrict this access to specific framework modules."
+        },
+        {
+            "id": "q46",
+            "question": "When leveraging String Templates in recent Java releases, what is the exact semantic role of a Template Processor?",
+            "type": "single-choice",
+            "topic": "Language Features & Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It acts as an interceptor that compiles the template into custom JVM bytecode at startup."
+                },
+                {
+                    "id": "o2",
+                    "text": "It handles interpolation by combining a template string with embedded expressions, safely validating and transforming the input before returning an object."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically escapes HTML tags to neutralize security vulnerabilities but restricts the output type to java.lang.String."
+                },
+                {
+                    "id": "o4",
+                    "text": "It manages memory constraints by compressing the interpolated string segment directly into the CPU L3 cache."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Template Processor combines the static fragments of a template with the evaluations of its embedded expressions. Rather than executing unsafe string concatenation, it intercepts the raw components, allowing validation (e.g., preventing SQL Injection) and can return any Java object type, not just Strings."
+        },
+        {
+            "id": "q47",
+            "question": "In Java 21+, how does the Thread.Builder interface behave when configuring thread local variable inheritance for a new thread?",
+            "type": "single-choice",
+            "topic": "Concurrency & Threads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Inheritance of InheritableThreadLocal variables can be explicitly disabled using the inheritInheritableThreadLocals(false) builder configuration."
+                },
+                {
+                    "id": "o2",
+                    "text": "Thread.Builder forces all virtual threads to implicitly copy the entire parent thread context without bypass methods."
+                },
+                {
+                    "id": "o3",
+                    "text": "Disabling inheritance triggers an immediate UnsupportedOperationException on standard platforms."
+                },
+                {
+                    "id": "o4",
+                    "text": "The builder can only isolate variables if the parent thread belongs to a completely different ThreadGroup."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The Thread.Builder interface (for both platform and virtual threads) introduces fine-grained configuration. By invoking inheritInheritableThreadLocals(false), you can completely prevent the child thread from inheriting initial values from the parent's InheritableThreadLocal map, improving performance and memory footprint."
+        },
+        {
+            "id": "q48",
+            "question": "Which of the following descriptions accurately characterizes the behavior of an initialized java.lang.invoke.VarHandle compared to a standard volatile field reference?",
+            "type": "single-choice",
+            "topic": "Low-level Memory Model & VarHandles",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "VarHandles require the field to be declared with the volatile keyword to enforce visibility."
+                },
+                {
+                    "id": "o2",
+                    "text": "VarHandles allow granular control over memory fence semantics on plain variables, matching access modes like Plain, Opaque, Release/Acquire, and Volatile."
+                },
+                {
+                    "id": "o3",
+                    "text": "VarHandles act strictly as compile-time macros and do not appear in runtime class metadata."
+                },
+                {
+                    "id": "o4",
+                    "text": "VarHandles can only mutate primitive types and reject object reference fields."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "VarHandles provide an expressive alternative to java.util.concurrent.atomic and sun.misc.Unsafe. They allow developers to access a variable using varying degrees of memory sequencing memory-order modes (e.g., getOpaque, getAcquire, getVolatile) without needing the field itself to be structurally declared volatile."
+        },
+        {
+            "id": "q49",
+            "question": "When managing collections using Stream API parallel pipelines, which operation is highly discouraged because it destroys the performance benefit of parallelism due to upstream thread synchronization? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Stream API",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Stream.forEachOrdered()"
+                },
+                {
+                    "id": "o2",
+                    "text": "Stream.collect(Collectors.toConcurrentMap())"
+                },
+                {
+                    "id": "o3",
+                    "text": "Stream.sorted() without a pre-sized input buffer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Stream.mapToLong()"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Stream.forEachOrdered() forces the parallel threads to serialize and coordinate their actions to preserve the encounter order of items, mitigating processing gains. Stream.sorted() introduces a stateful barrier requiring all elements to be buffered and coordinated across threads before proceeding down the line."
+        },
+        {
+            "id": "q50",
+            "question": "What happens if a resource managed within a try-with-resources block throws an exception during its implicit close() invocation, while the primary try body has already thrown a different exception?",
+            "type": "single-choice",
+            "topic": "Language Features & Exception Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The primary exception is masked, and the close() method exception is propagated up the stack."
+                },
+                {
+                    "id": "o2",
+                    "text": "The close() method exception is discarded entirely and logged only via the JVM standard error channel."
+                },
+                {
+                    "id": "o3",
+                    "text": "The primary exception is propagated, and the close() exception is appended to it as a suppressed exception."
+                },
+                {
+                    "id": "o4",
+                    "text": "An IllegalStateException is thrown, wrapping both exceptions as root causes."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a try-with-resources statement, if the body throws an exception and the automatic resource cleanup (close()) also throws an exception, the primary body exception wins and propagates up. The exception from close() is caught and added to the primary exception's suppression list, retrievable via getSuppressed()."
+        },
+        {
+            "id": "q51",
+            "question": "What structural guarantee is provided by a Java record regarding its field layout at the bytecode level?",
+            "type": "single-choice",
+            "topic": "Language Features & Records",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Fields are implicitly generated as private and final, and cannot be modified via standard reflection or custom mutators."
+                },
+                {
+                    "id": "o2",
+                    "text": "The bytecode prevents instance creation completely unless initialized with null parameters."
+                },
+                {
+                    "id": "o3",
+                    "text": "Fields are allocated inside the JVM Metaspace rather than on the standard local heap."
+                },
+                {
+                    "id": "o4",
+                    "text": "Fields must be annotated with @Stable to survive JIT compiler micro-optimizations."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Java records are shallowly immutable data carriers. The compiler generates private final fields corresponding directly to the record components. Field values must be provided during the canonical constructor invocation and cannot be changed later through regular methods or reflective modifications without breaking core specification assumptions."
+        },
+        {
+            "id": "q52",
+            "question": "Under what circumstance will the ForkJoinPool execution structure experience severe thread starvation if it is relying entirely on standard managedBlock calls?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "When tasks block on synchronized blocks or external native resources instead of utilizing ForkJoinPool.ManagedBlocker instances."
+                },
+                {
+                    "id": "o2",
+                    "text": "When the thread count matches the number of active CPU cores exactly."
+                },
+                {
+                    "id": "o3",
+                    "text": "When tasks complete too quickly, flooding the work-stealing double-ended queues."
+                },
+                {
+                    "id": "o4",
+                    "text": "When the system forces all worker tasks to use FIFO scheduling loops exclusively."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "ForkJoinPool worker threads are optimized for non-blocking work-stealing tasks. If a task must execute a blocking operation, wrapping it in ForkJoinPool.ManagedBlocker allows the pool to temporarily activate or spawn a new worker thread to maintain desired parallelism. Blocking without it starves the pool's effective throughput."
+        },
+        {
+            "id": "q53",
+            "question": "Which of the following accurately describes the behavior of Java Class Loaders regarding the isolation of classes across application domains?",
+            "type": "single-choice",
+            "topic": "Classloading Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Two classes with the exact same fully qualified name can coexist in the same JVM if they are loaded by different ClassLoader instances."
+                },
+                {
+                    "id": "o2",
+                    "text": "The JVM identifies a class solely by its package structure, disregarding the identity of the loader."
+                },
+                {
+                    "id": "o3",
+                    "text": "All custom class loaders must delegate parent requests sideways to the system application classpath."
+                },
+                {
+                    "id": "o4",
+                    "text": "A class loaded by the Platform ClassLoader can implicitly access private members of classes in the System ClassLoader."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "In Java, a class runtime identity is defined by its fully qualified class name AND the ClassLoader instance that loaded it. Therefore, an application can load two distinct classes named 'com.App' simultaneously, provided they reside in different class loaders."
+        },
+        {
+            "id": "q54",
+            "question": "What optimization strategy does the JVM employ via tiered compilation (-XX:+TieredCompilation)?",
+            "type": "single-choice",
+            "topic": "JVM JIT Compiler",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It interprets code initially, then compiles to Tier 1-3 using the client compiler (C1) with varying profiling, before upgrading hot code to the server compiler (C2) at Tier 4."
+                },
+                {
+                    "id": "o2",
+                    "text": "It bypasses interpretation entirely and compiles all code directly to native execution streams instantly."
+                },
+                {
+                    "id": "o3",
+                    "text": "It transitions dead methods from Metaspace down to storage tiers to conserve live process memory."
+                },
+                {
+                    "id": "o4",
+                    "text": "It optimizes database connection strings by restructuring string allocations into internal bytecode tiers."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Tiered compilation balances startup time and long-term maximum performance. It starts with code interpretation, gathers profiling info via simple C1-compiled code (Tiers 1-3) for quick startup, and eventually recompiles highly executed 'hot' methods with the C2 compiler (Tier 4) using full optimization."
+        },
+        {
+            "id": "q55",
+            "question": "Which of the following is an invalid declaration rule when defining a record component or compact constructor?",
+            "type": "single-choice",
+            "topic": "Language Features & Records",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A compact constructor must not include an explicit parameter list."
+                },
+                {
+                    "id": "o2",
+                    "text": "A compact constructor can reassign the values of the component parameters before they are committed to fields."
+                },
+                {
+                    "id": "o3",
+                    "text": "A record cannot explicitly declare instance fields that are not part of its component header list."
+                },
+                {
+                    "id": "o4",
+                    "text": "A compact constructor requires an explicit return statement or call to this() to pass validation."
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "A compact constructor (public RecordName { ... }) does not take arguments and must not contain a return statement or explicit assignment to instance fields. The field assignment happens automatically at the end of the compact constructor block."
+        },
+        {
+            "id": "q56",
+            "question": "When monitoring memory leaks, what unique capability does a java.lang.ref.PhantomReference offer that WeakReference and SoftReference do not?",
+            "type": "single-choice",
+            "topic": "Memory Management & Reference Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Its get() method always returns null, preventing an application from accidentally resurrecting an object that is already slated for garbage collection."
+                },
+                {
+                    "id": "o2",
+                    "text": "It guarantees that the referent will remain reachable inside heap memory indefinitely."
+                },
+                {
+                    "id": "o3",
+                    "text": "It can be mutated to point to a completely different object reference dynamically without GC interaction."
+                },
+                {
+                    "id": "o4",
+                    "text": "It automatically flushes raw bytes directly onto the system swap partition to prevent out-of-memory errors."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "PhantomReference.get() always returns null. This design ensures that the application cannot 'resurrect' the object during its finalization or cleanup phase. It serves purely as a notification mechanism via a ReferenceQueue indicating that the object has been completely cleared from memory."
+        },
+        {
+            "id": "q57",
+            "question": "What condition will trigger a PatternMatchException or compilation failure in an exhaustive pattern-matching configuration? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Language Features & Pattern Matching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A switch statement or expression over a sealed type fails to explicitly account for a permitted subclass and lacks a default branch."
+                },
+                {
+                    "id": "o2",
+                    "text": "An enum switch covers all declared constants but includes an unreachable default case branch."
+                },
+                {
+                    "id": "o3",
+                    "text": "A nested record pattern extracts primitive components instead of raw object references."
+                },
+                {
+                    "id": "o4",
+                    "text": "A case branch pattern dominates a subsequent case branch pattern, making the later block completely dead code."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "Pattern matching requires absolute exhaustiveness for switch expressions and modern statements; failing to cover all subclasses of a sealed type or all enum variations results in a compilation error. Similarly, a dominant pattern (e.g., matching a superclass before a subclass) is prohibited by the compiler because the lower block becomes unreachable."
+        },
+        {
+            "id": "q58",
+            "question": "Which of the following statement blocks accurately details the function of Java Class Data Sharing (CDS) dynamic archiving?",
+            "type": "single-choice",
+            "topic": "JVM Performance & Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It records class loading behaviors during application execution and outputs a specialized shared archive automatically upon application termination."
+                },
+                {
+                    "id": "o2",
+                    "text": "It continuously recompiles raw source files directly inside production environments."
+                },
+                {
+                    "id": "o3",
+                    "text": "It encrypts application configurations to protect class files from reflection attacks."
+                },
+                {
+                    "id": "o4",
+                    "text": "It forces the application to run sequentially by blocking parallel ClassLoader calls."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Dynamic CDS archiving (introduced via -XX:ArchiveClassesAtExit) optimizes application workflows. By running the program normally, the JVM tracks all loaded application and framework classes, then builds a shared archive on exit. Subsequent runs map this archive into memory, skipping parsing steps."
+        },
+        {
+            "id": "q59",
+            "question": "When working with the Foreign Function and Memory API, what is the core structural difference between a MemorySegment and a MemoryLayout?",
+            "type": "single-choice",
+            "topic": "Foreign Function & Memory API",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A MemorySegment models a contiguous region of memory (on or off-heap), while a MemoryLayout is a declarative description of a memory segment's contents."
+                },
+                {
+                    "id": "o2",
+                    "text": "A MemoryLayout dictates file storage paths, whereas a MemorySegment controls thread synchronization locks."
+                },
+                {
+                    "id": "o3",
+                    "text": "MemorySegments are entirely garbage-collected, while MemoryLayouts require manual allocation using malloc."
+                },
+                {
+                    "id": "o4",
+                    "text": "MemoryLayout can only specify single byte strings, whereas MemorySegment handles arrays."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A MemorySegment represents the actual buffer or continuous block of bytes in memory (providing spatial boundaries and lifecycle control). A MemoryLayout is an abstract description (like a struct model) used to track padding, offsets, alignment, and programmatic data structures within those segments."
+        },
+        {
+            "id": "q60",
+            "question": "How can you guarantee that a specific task executed inside a ScheduledExecutorService will not allow subsequent execution iterations to overlap if a single iteration runs longer than its designated period?",
+            "type": "single-choice",
+            "topic": "Advanced Concurrency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By invoking scheduleAtFixedRate() and setting the thread concurrency limit to zero."
+                },
+                {
+                    "id": "o2",
+                    "text": "By executing the task via scheduleWithFixedDelay(), which measures the delay interval from the completion of the previous execution."
+                },
+                {
+                    "id": "o3",
+                    "text": "By decorating the task with the volatile keyword directly inside the lambda definition."
+                },
+                {
+                    "id": "o4",
+                    "text": "By using standard CountDownLatch elements initialized to a dynamic negative count value."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "scheduleAtFixedRate runs tasks based on a fixed period from the initial start time, which can cause executions to overlap or stack up if a task takes longer than the period. scheduleWithFixedDelay guarantees zero overlap because it establishes a strict wait interval measured from the exact termination of the prior run to the start of the next."
+        }
+    ]
+}

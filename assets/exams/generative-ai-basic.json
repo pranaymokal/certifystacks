@@ -1,0 +1,1701 @@
+{
+    "id": "generative-ai-basic",
+    "name": "Generative AI Concepts",
+    "vendor": "CertifyStacks-Basics",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the primary objective of Generative AI compared to Discriminative AI?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To classify data into pre-defined categories"
+                },
+                {
+                    "id": "o2",
+                    "text": "To generate new data that resembles the training data"
+                },
+                {
+                    "id": "o3",
+                    "text": "To optimize database storage capacity"
+                },
+                {
+                    "id": "o4",
+                    "text": "To filter out noise from communication networks"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Generative AI focuses on creating new content (such as text, images, or audio) that shares characteristics with its training data, whereas Discriminative AI focuses on classifying or predicting labels for existing data."
+        },
+        {
+            "id": "q2",
+            "question": "In the context of Large Language Models (LLMs), what does the term 'token' typically represent?",
+            "type": "single-choice",
+            "topic": "LLM Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An API authentication key used for billing"
+                },
+                {
+                    "id": "o2",
+                    "text": "A full sentence or paragraph of text"
+                },
+                {
+                    "id": "o3",
+                    "text": "A unit of text, such as a word or a sub-word character sequence"
+                },
+                {
+                    "id": "o4",
+                    "text": "A hardware component used to accelerate GPU training"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Tokens are the basic building blocks processed by LLMs. They represent pieces of words, whole words, or punctuation marks rather than entire sentences or system components."
+        },
+        {
+            "id": "q3",
+            "question": "Which architecture introduced in 2017 forms the baseline foundation for most modern Large Language Models?",
+            "type": "single-choice",
+            "topic": "Model Architectures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Recurrent Neural Network (RNN)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Convolutional Neural Network (CNN)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Transformer Architecture"
+                },
+                {
+                    "id": "o4",
+                    "text": "Support Vector Machine (SVM)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The Transformer architecture, utilizing self-attention mechanisms, revolutionized natural language processing and forms the backbone of models like GPT, Claude, and Llama."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following are common use cases for text-based Generative AI models? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Applications",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Document summarization"
+                },
+                {
+                    "id": "o2",
+                    "text": "Code generation and debugging"
+                },
+                {
+                    "id": "o3",
+                    "text": "Real-time network routing optimization"
+                },
+                {
+                    "id": "o4",
+                    "text": "Relational database indexing"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Summarizing text and writing/debugging programming code are native and highly effective applications of text-generation language models."
+        },
+        {
+            "id": "q5",
+            "question": "What occurs when a generative model confidently produces output that is factually incorrect or unsupported by its training data?",
+            "type": "single-choice",
+            "topic": "Model Limitations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Overclocking"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hallucination"
+                },
+                {
+                    "id": "o3",
+                    "text": "Compilation error"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data migration"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'Hallucination' is the term used when an AI model generates responses that seem fluent and coherent but are factually incorrect or completely fabricated."
+        },
+        {
+            "id": "q6",
+            "question": "What does the technique 'Few-Shot Prompting' involve?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Training a model from scratch with a small dataset"
+                },
+                {
+                    "id": "o2",
+                    "text": "Providing the model with a few examples of the desired task in the prompt"
+                },
+                {
+                    "id": "o3",
+                    "text": "Limiting the model's output to only a few words"
+                },
+                {
+                    "id": "o4",
+                    "text": "Running inference exactly three times to average the results"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Few-shot prompting involves providing a few context examples (input-output pairs) directly inside the prompt to guide the model's behavior without updating its weights."
+        },
+        {
+            "id": "q7",
+            "question": "Which model component allows a Transformer to weigh the relevance of different words in a sentence relative to each other?",
+            "type": "single-choice",
+            "topic": "Model Architectures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Attention Mechanism"
+                },
+                {
+                    "id": "o2",
+                    "text": "Linear Regression Layer"
+                },
+                {
+                    "id": "o3",
+                    "text": "Gradient Descent Component"
+                },
+                {
+                    "id": "o4",
+                    "text": "Activation Function"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The self-attention mechanism enables the model to look at other words in the input sequence to help compute a better representation for a specific word."
+        },
+        {
+            "id": "q8",
+            "question": "What is the primary benefit of using a Foundation Model?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It requires no computational power to run"
+                },
+                {
+                    "id": "o2",
+                    "text": "It is pre-trained on massive data and can be adapted to various downstream tasks"
+                },
+                {
+                    "id": "o3",
+                    "text": "It is only capable of performing one highly specific math operation"
+                },
+                {
+                    "id": "o4",
+                    "text": "It automatically guarantees 100% accurate outputs"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Foundation models are large-scale models trained on vast quantities of data that serve as a starting point for fine-tuning or prompting across diverse applications."
+        },
+        {
+            "id": "q9",
+            "question": "In prompt engineering, what is the effect of increasing the 'temperature' parameter?",
+            "type": "single-choice",
+            "topic": "Model Parameters",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model generates faster responses"
+                },
+                {
+                    "id": "o2",
+                    "text": "The output becomes more random and creative"
+                },
+                {
+                    "id": "o3",
+                    "text": "The model uses less memory during inference"
+                },
+                {
+                    "id": "o4",
+                    "text": "The output becomes strictly deterministic and repetitive"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Higher temperature values increase randomness and creativity by flattening the probability distribution over tokens, while lower temperatures make the output more predictable."
+        },
+        {
+            "id": "q10",
+            "question": "Which pattern involves breaking a prompt down into step-by-step reasoning before arriving at a final answer?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Zero-Shot Prompting"
+                },
+                {
+                    "id": "o2",
+                    "text": "Chain-of-Thought Prompting"
+                },
+                {
+                    "id": "o3",
+                    "text": "Negative Prompting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Meta-Prompting"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Chain-of-Thought (CoT) prompting explicitly guides the language model to show its reasoning steps, which improves performance on complex reasoning, logic, and math tasks."
+        },
+        {
+            "id": "q11",
+            "question": "What is the primary objective of Retrieval-Augmented Generation (RAG)?",
+            "type": "single-choice",
+            "topic": "Advanced Paradigms",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To compress the size of a model's weights for mobile deployment"
+                },
+                {
+                    "id": "o2",
+                    "text": "To pull external knowledge from a data source into the prompt before generating a response"
+                },
+                {
+                    "id": "o3",
+                    "text": "To entirely eliminate the need for an attention mechanism"
+                },
+                {
+                    "id": "o4",
+                    "text": "To encrypt user prompts for local security governance"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "RAG enhances an LLM's response by querying an external database or knowledge base for relevant facts and injecting them into the context window to improve factual accuracy."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following parameters are used to control token selection during generation? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Model Parameters",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Top-p (Nucleus sampling)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Learning Rate"
+                },
+                {
+                    "id": "o3",
+                    "text": "Top-k"
+                },
+                {
+                    "id": "o4",
+                    "text": "Batch Size"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Top-p and Top-k are inference parameters that constrain the pool of candidate tokens the model chooses from at each step. Learning rate and batch size are training hyperparameters."
+        },
+        {
+            "id": "q13",
+            "question": "What does the process of 'Fine-Tuning' a model accomplish?",
+            "type": "single-choice",
+            "topic": "Model Customization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It adjusts the prompt phrasing without modifying model weights"
+                },
+                {
+                    "id": "o2",
+                    "text": "It updates the internal weights of a pre-trained model using a specific dataset"
+                },
+                {
+                    "id": "o3",
+                    "text": "It deletes outdated data from the model's memory permanent storage"
+                },
+                {
+                    "id": "o4",
+                    "text": "It shifts execution from a GPU to a CPU to conserve power"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Fine-tuning takes a pre-trained foundation model and continues training it on a specialized dataset to alter or specialize its behavior, updating its internal parameters."
+        },
+        {
+            "id": "q14",
+            "question": "Which framework mechanism is widely used to align LLM outputs with human preferences regarding safety and helpfulness?",
+            "type": "single-choice",
+            "topic": "Alignment and Ethics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Reinforcement Learning from Human Feedback (RLHF)"
+                },
+                {
+                    "id": "o2",
+                    "text": "K-Means Clustering"
+                },
+                {
+                    "id": "o3",
+                    "text": "Principal Component Analysis (PCA)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Normalization"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "RLHF uses human feedback to train a reward model, which then guides fine-tuning of the LLM to maximize helpfulness and minimize toxic or harmful outputs."
+        },
+        {
+            "id": "q15",
+            "question": "What is a major limitation of a model's 'Context Window'?",
+            "type": "single-choice",
+            "topic": "Model Limitations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It only accepts text written in English"
+                },
+                {
+                    "id": "o2",
+                    "text": "It restricts the total amount of text tokens the model can process at one time"
+                },
+                {
+                    "id": "o3",
+                    "text": "It prevents users from using temperature controls"
+                },
+                {
+                    "id": "o4",
+                    "text": "It causes the system's hard drive to fragment automatically"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The context window dictates the maximum capacity of combined input and output tokens that a model can handle simultaneously in a single conversation history or request session."
+        },
+        {
+            "id": "q16",
+            "question": "What is the primary function of an 'Embedding Model' in generative AI workflows?",
+            "type": "single-choice",
+            "topic": "Vector Embeddings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To translate text into different spoken human languages"
+                },
+                {
+                    "id": "o2",
+                    "text": "To convert text or media into high-dimensional numerical vectors that capture semantic meaning"
+                },
+                {
+                    "id": "o3",
+                    "text": "To physically compress large LLM files onto a local disk"
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically detect and delete malicious code scripts"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Embedding models convert tokens, words, or sentences into vectors (arrays of numbers). Words with similar meanings are positioned close together in this high-dimensional mathematical space."
+        },
+        {
+            "id": "q17",
+            "question": "Which phase of building an LLM requires the most massive computational scale and vast, uncurated web data?",
+            "type": "single-choice",
+            "topic": "Model Training Lifecycle",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Prompt Engineering"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pre-training"
+                },
+                {
+                    "id": "o3",
+                    "text": "Vector Indexing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Inferencing"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Pre-training is the initial phase where a model learns language structures, grammar, and general knowledge by processing massive datasets. It requires significant GPU infrastructure and time."
+        },
+        {
+            "id": "q18",
+            "question": "In a multimodal Generative AI system, what types of data inputs can the model process simultaneously?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Only plain text files"
+                },
+                {
+                    "id": "o2",
+                    "text": "Multiple distinct data types such as text, images, and audio"
+                },
+                {
+                    "id": "o3",
+                    "text": "Only structured SQL database rows"
+                },
+                {
+                    "id": "o4",
+                    "text": "Compiled binary executables exclusively"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'Multimodal' refers to a model's ability to interpret and generate across different modalities or types of communication, such as combining text understanding with computer vision or audio."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following are considered 'Parameter-Efficient Fine-Tuning' (PEFT) techniques? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Model Customization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "LoRA (Low-Rank Adaptation)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Full Parameter Pre-training"
+                },
+                {
+                    "id": "o3",
+                    "text": "Prefix Tuning"
+                },
+                {
+                    "id": "o4",
+                    "text": "Retrieval-Augmented Generation"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "LoRA and Prefix Tuning are PEFT methods that freeze the original model weights and only train a tiny fraction of external parameters, saving memory and compute. RAG is an architecture pattern, not a fine-tuning technique."
+        },
+        {
+            "id": "q20",
+            "question": "What is the primary role of a 'System Prompt' (or System Message) in an LLM interaction?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To measure the response latency of the API server"
+                },
+                {
+                    "id": "o2",
+                    "text": "To set core behavioral guidelines, persona, and safety boundaries for the model"
+                },
+                {
+                    "id": "o3",
+                    "text": "To update the permanent database logs of the user session"
+                },
+                {
+                    "id": "o4",
+                    "text": "To enforce hardware execution priorities on the system GPU"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A system prompt establishes the foundational persona, rules, operational scope, and behavioral constraints before the user provides their specific query or instruction."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following best describes the concept of 'Tokenization'?",
+            "type": "single-choice",
+            "topic": "LLM Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Encrypting text to prevent it from leaking online"
+                },
+                {
+                    "id": "o2",
+                    "text": "Breaking down raw input text strings into smaller operational units called tokens"
+                },
+                {
+                    "id": "o3",
+                    "text": "Generating unique API keys for application billing layers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Automatically validating the factual truth of an answer"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Tokenization is the initial preprocessing step that splits text strings into smaller segments (characters, sub-words, or words) so that mathematical neural networks can parse them."
+        },
+        {
+            "id": "q22",
+            "question": "Why are traditional relational databases often replaced or augmented by Vector Databases in RAG systems?",
+            "type": "single-choice",
+            "topic": "Advanced Paradigms",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Relational databases cannot store standard text information"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vector databases excel at performing high-speed semantic similarity searches on high-dimensional vectors"
+                },
+                {
+                    "id": "o3",
+                    "text": "Vector databases use less electric power to execute standard table joins"
+                },
+                {
+                    "id": "o4",
+                    "text": "Relational databases are insecure against prompt injection attacks"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Vector databases are optimized to store numerical embeddings and calculate mathematical distance (like Cosine similarity) to pull text chunks based on conceptual meaning rather than strict keyword matching."
+        },
+        {
+            "id": "q23",
+            "question": "What is the primary risk of a 'Prompt Injection' attack?",
+            "type": "single-choice",
+            "topic": "Alignment and Ethics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It burns out physical GPU transistors due to high computational loops"
+                },
+                {
+                    "id": "o2",
+                    "text": "Malicious user input hijacks or bypasses the model's internal system instructions and safety guards"
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically deletes the application's production source code files"
+                },
+                {
+                    "id": "o4",
+                    "text": "It decreases internet bandwidth speed between the host and client"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Prompt injection occurs when untrusted user text manipulates an LLM into ignoring its original instructions, system rules, or behavioral guardrails, causing it to perform unintended actions."
+        },
+        {
+            "id": "q24",
+            "question": "Which generation parameter establishes a cut-off threshold based on cumulative probability mass to determine next-token choices?",
+            "type": "single-choice",
+            "topic": "Model Parameters",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Top-k"
+                },
+                {
+                    "id": "o2",
+                    "text": "Top-p (Nucleus Sampling)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Max Tokens"
+                },
+                {
+                    "id": "o4",
+                    "text": "Presence Penalty"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Top-p (Nucleus sampling) selects from the smallest set of top tokens whose cumulative probability dynamically reaches or exceeds the threshold value 'p'."
+        },
+        {
+            "id": "q25",
+            "question": "When evaluates a Generative AI application, what does 'Grounding' mean?",
+            "type": "single-choice",
+            "topic": "Advanced Paradigms",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Disconnecting server instances from internet traffic to isolate them"
+                },
+                {
+                    "id": "o2",
+                    "text": "Ensuring the model's generated answers are strictly tied to verifiable, trusted source documentation"
+                },
+                {
+                    "id": "o3",
+                    "text": "Restricting model operations strictly to low-cost hardware assets"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deleting custom training weights to reset a system back to default states"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Grounding is the process of anchoring LLM outputs to trusted, real-world context data sources (like internal corporate documents) to limit hallucinations and ensure accuracy."
+        },
+        {
+            "id": "q26",
+            "question": "What category of models is primarily used to generate realistic synthetic images from raw text descriptions? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Model Architectures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Diffusion Models"
+                },
+                {
+                    "id": "o2",
+                    "text": "Autoregressive Language Models"
+                },
+                {
+                    "id": "o3",
+                    "text": "Generative Adversarial Networks (GANs)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Linear Classifiers"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Diffusion models (like Stable Diffusion) and GANs are foundational architectures explicitly optimized for producing complex visual image content."
+        },
+        {
+            "id": "q27",
+            "question": "What is a prominent downside of increasing the size of an LLM's context window excessively?",
+            "type": "single-choice",
+            "topic": "Model Limitations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model completely loses its capacity to translate text"
+                },
+                {
+                    "id": "o2",
+                    "text": "It scales up inference compute cost and memory consumption, potentially causing slower processing times"
+                },
+                {
+                    "id": "o3",
+                    "text": "It forces the application to adopt open-source licensing constraints"
+                },
+                {
+                    "id": "o4",
+                    "text": "It strictly forbids the use of any system prompting patterns"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Processing larger context windows dramatically increases memory load (due to the quadratic or high attention overhead) and requires more processing time and cost per query request."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following best defines an 'AI Agent' within a Generative AI framework?",
+            "type": "single-choice",
+            "topic": "Advanced Paradigms",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A standard desktop script used to automate UI macro tasks"
+                },
+                {
+                    "id": "o2",
+                    "text": "An autonomous system powered by an LLM that can plan steps, call external tools, and execute workflows to achieve goals"
+                },
+                {
+                    "id": "o3",
+                    "text": "A physical human operator reviewing system safety outputs"
+                },
+                {
+                    "id": "o4",
+                    "text": "An automated cloud billing microservice tracking standard API consumption metrics"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "AI Agents use an LLM as a central reasoning engine to formulate multi-step plans, invoke tools (like calculators, web search APIs, or code execution environments), and evaluate progress to fulfill complex tasks."
+        },
+        {
+            "id": "q29",
+            "question": "What occurs during the 'Inference' stage of a Generative AI model workflow?",
+            "type": "single-choice",
+            "topic": "Model Training Lifecycle",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model updates its permanent weight structures using a massive cluster"
+                },
+                {
+                    "id": "o2",
+                    "text": "The pre-trained model processes an input prompt and generates a predicted live response"
+                },
+                {
+                    "id": "o3",
+                    "text": "Engineers clean and label raw internet data for model consumption"
+                },
+                {
+                    "id": "o4",
+                    "text": "System managers archive outdated model weights to cloud deep storage"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Inference is the execution phase where a deployed, trained model is used to compute predictions or generate output content in response to live user inputs."
+        },
+        {
+            "id": "q30",
+            "question": "What problem does 'Catastrophic Forgetting' describe in model customization?",
+            "type": "single-choice",
+            "topic": "Model Customization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model completely runs out of disk storage memory arrays"
+                },
+                {
+                    "id": "o2",
+                    "text": "A model loses its generalized knowledge or previous capabilities while being aggressively fine-tuned on a new specific task"
+                },
+                {
+                    "id": "o3",
+                    "text": "A user accidentally forgets the correct text structure of their system prompt"
+                },
+                {
+                    "id": "o4",
+                    "text": "The cloud provider encounters a data center power outage event"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Catastrophic forgetting occurs when a neural network is fine-tuned heavily on a narrow target domain, inadvertently overwriting or degrading its ability to perform general tasks it learned during pre-training."
+        },
+        {
+            "id": "q31",
+            "question": "What does 'Zero-Shot Prompting' mean in the context of Large Language Models?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Asking the model to perform a task without providing any contextual examples in the prompt"
+                },
+                {
+                    "id": "o2",
+                    "text": "Training a model with zero human intervention"
+                },
+                {
+                    "id": "o3",
+                    "text": "Bypassing the tokenization process to input raw binary code directly"
+                },
+                {
+                    "id": "o4",
+                    "text": "Running a model on a CPU to reduce API costs to zero"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Zero-shot prompting refers to giving an AI model a task or instruction without showing it any prior examples of how to complete that specific task, relying entirely on its pre-trained knowledge."
+        },
+        {
+            "id": "q32",
+            "question": "Why might a Generative AI model inadvertently produce biased or discriminatory outputs?",
+            "type": "single-choice",
+            "topic": "Ethics and Safety",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Because hardware GPUs naturally alter data bit-streams"
+                },
+                {
+                    "id": "o2",
+                    "text": "Because it reflects and amplifies the historical biases present in its massive training datasets"
+                },
+                {
+                    "id": "o3",
+                    "text": "Because the model randomly generates letters that form discriminatory words"
+                },
+                {
+                    "id": "o4",
+                    "text": "Because open-source licenses legally require models to test user tolerance"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "AI models learn from vast amounts of data scraped from the internet. If that data contains human biases, stereotypes, or prejudices, the model is likely to learn and reproduce them."
+        },
+        {
+            "id": "q33",
+            "question": "What is a primary characteristic of an 'open-weights' or open-source foundation model compared to a proprietary one?",
+            "type": "single-choice",
+            "topic": "Model Ecosystem",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It can only be used by academic researchers"
+                },
+                {
+                    "id": "o2",
+                    "text": "Developers can download the model architecture and weights to run on their own infrastructure"
+                },
+                {
+                    "id": "o3",
+                    "text": "It requires an active internet connection to the creator's API at all times"
+                },
+                {
+                    "id": "o4",
+                    "text": "It is mathematically proven to never hallucinate"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Open-weights models (like Llama or Mistral) allow developers to download the actual model files, providing full control over hosting, fine-tuning, and data privacy, unlike proprietary API-only models."
+        },
+        {
+            "id": "q34",
+            "question": "If a user inputs an English sentence into an LLM, how does the token count typically compare to the word count?",
+            "type": "single-choice",
+            "topic": "LLM Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "There are usually more tokens than words"
+                },
+                {
+                    "id": "o2",
+                    "text": "There is always exactly one token per word"
+                },
+                {
+                    "id": "o3",
+                    "text": "There are usually fewer tokens than words"
+                },
+                {
+                    "id": "o4",
+                    "text": "Token count is determined purely by the number of vowels"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Because tokenizers often split complex or less common words into smaller sub-word chunks (and treat punctuation as separate tokens), the token count is typically about 20% to 30% higher than the word count in English."
+        },
+        {
+            "id": "q35",
+            "question": "What is a major security risk when employees paste confidential company data into public, consumer-tier Generative AI chatbots?",
+            "type": "single-choice",
+            "topic": "Security and Privacy",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The chatbot will immediately delete the original files from the employee's hard drive"
+                },
+                {
+                    "id": "o2",
+                    "text": "The provider may use that input data to train future models, potentially leaking the confidential information to the public"
+                },
+                {
+                    "id": "o3",
+                    "text": "The data is converted to an unreadable vector format that permanently corrupts corporate databases"
+                },
+                {
+                    "id": "o4",
+                    "text": "The prompt injection causes a denial-of-service attack on the company network"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Consumer-grade AI services often have terms of service that allow the provider to use user prompts for model training. This risks exposing proprietary code or PII to external users in future model iterations."
+        },
+        {
+            "id": "q36",
+            "question": "During the pre-training phase, what core objective is an Autoregressive Language Model (like GPT) typically optimizing for?",
+            "type": "single-choice",
+            "topic": "Model Training",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Predicting the next token in a sequence based on the preceding context"
+                },
+                {
+                    "id": "o2",
+                    "text": "Translating text from English to French perfectly"
+                },
+                {
+                    "id": "o3",
+                    "text": "Compressing image files into smaller kilobytes"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fact-checking internet articles against a live database"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Autoregressive models are fundamentally trained on a 'next-token prediction' task. By consuming massive amounts of text and constantly guessing the next word, they learn grammar, facts, and reasoning."
+        },
+        {
+            "id": "q37",
+            "question": "What is 'Synthetic Data' in the context of AI model training?",
+            "type": "single-choice",
+            "topic": "Advanced Paradigms",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data that has been encrypted using synthetic cryptographic algorithms"
+                },
+                {
+                    "id": "o2",
+                    "text": "Artificially generated data created by AI models to train or evaluate other models"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data that only exists in temporary RAM and is never stored"
+                },
+                {
+                    "id": "o4",
+                    "text": "Information scraped exclusively from robotics hardware logs"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Synthetic data is artificially generated rather than collected from real-world events. It is increasingly used to overcome data scarcity, improve data diversity, and address privacy concerns during AI training."
+        },
+        {
+            "id": "q38",
+            "question": "Which of the following are practical techniques to help reduce hallucinations in LLM applications? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Model Limitations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Using Retrieval-Augmented Generation (RAG) to provide factual context"
+                },
+                {
+                    "id": "o2",
+                    "text": "Instructing the model in the system prompt to explicitly state 'I don't know' if the answer isn't in the provided text"
+                },
+                {
+                    "id": "o3",
+                    "text": "Increasing the Temperature parameter to its absolute maximum value"
+                },
+                {
+                    "id": "o4",
+                    "text": "Removing all punctuation from the user's input prompt"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "RAG grounds the model in factual data, and explicit system instructions ('I don't know') discourage guessing. Increasing temperature actually increases randomness and the likelihood of hallucination."
+        },
+        {
+            "id": "q39",
+            "question": "What is the function of a 'Stop Sequence' parameter when calling an LLM API?",
+            "type": "single-choice",
+            "topic": "Model Parameters",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It forces the model to ignore all negative prompting"
+                },
+                {
+                    "id": "o2",
+                    "text": "It tells the model to immediately halt text generation when a specific string of characters is produced"
+                },
+                {
+                    "id": "o3",
+                    "text": "It pauses the billing cycle for the API request"
+                },
+                {
+                    "id": "o4",
+                    "text": "It stops the model from using memory during inference"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A stop sequence is a predefined string (like '\n\n' or 'User:'). When the model generates this exact string, it stops generating further tokens, preventing overly long or off-topic responses."
+        },
+        {
+            "id": "q40",
+            "question": "Why are Graphics Processing Units (GPUs) heavily used in training and running Generative AI models?",
+            "type": "single-choice",
+            "topic": "Infrastructure",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They operate entirely offline without internet requirements"
+                },
+                {
+                    "id": "o2",
+                    "text": "They excel at performing massive numbers of parallel matrix multiplications required by neural networks"
+                },
+                {
+                    "id": "o3",
+                    "text": "They contain specialized hard drives designed to store textual data"
+                },
+                {
+                    "id": "o4",
+                    "text": "They automatically resolve ethical dilemmas in training data"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Unlike CPUs, which are designed for sequential processing, GPUs contain thousands of smaller cores designed for parallel processing, making them ideal for the heavy mathematical matrix operations of deep learning."
+        },
+        {
+            "id": "q41",
+            "question": "In AI security, what does the term 'Jailbreaking' refer to?",
+            "type": "single-choice",
+            "topic": "Alignment and Ethics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Unlocking a physical data center door using a corrupted biometric scan"
+                },
+                {
+                    "id": "o2",
+                    "text": "Using carefully crafted prompts to intentionally bypass a model's ethical guardrails and safety filters"
+                },
+                {
+                    "id": "o3",
+                    "text": "Extracting the foundational source code of an API"
+                },
+                {
+                    "id": "o4",
+                    "text": "Moving an AI application from a private cloud to a public cloud environment"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Jailbreaking is a type of prompt injection attack where a user uses complex scenarios, roleplay, or hypothetical framing to trick the AI into providing restricted, harmful, or unethical information."
+        },
+        {
+            "id": "q42",
+            "question": "Which of the following are examples of Multimodal Generative AI capabilities? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Generating a descriptive text paragraph based on an uploaded photograph"
+                },
+                {
+                    "id": "o2",
+                    "text": "Generating a new image based on a written text description"
+                },
+                {
+                    "id": "o3",
+                    "text": "Translating a paragraph from English to Spanish"
+                },
+                {
+                    "id": "o4",
+                    "text": "Sorting an array of numbers in descending order"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Multimodal AI handles multiple types of input/output modalities (e.g., text and images, text and audio). Text translation and number sorting remain within a single modality (text/data)."
+        },
+        {
+            "id": "q43",
+            "question": "If an LLM's output is highly repetitive, which parameters could a developer increase to penalize the model for reusing the same words?",
+            "type": "single-choice",
+            "topic": "Model Parameters",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Max Tokens"
+                },
+                {
+                    "id": "o2",
+                    "text": "Frequency and Presence Penalties"
+                },
+                {
+                    "id": "o3",
+                    "text": "Learning Rate"
+                },
+                {
+                    "id": "o4",
+                    "text": "System Prompt Length"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Frequency penalty decreases the likelihood of a token based on how often it has already appeared in the text, while presence penalty penalizes a token merely for appearing at all, encouraging novel vocabulary."
+        },
+        {
+            "id": "q44",
+            "question": "How does Generative AI relate to Natural Language Processing (NLP)?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Generative AI completely replaces all NLP algorithms"
+                },
+                {
+                    "id": "o2",
+                    "text": "Generative AI is a subset of NLP focusing on creating new text, whereas traditional NLP includes tasks like classification and entity extraction"
+                },
+                {
+                    "id": "o3",
+                    "text": "NLP only deals with images, while Generative AI only deals with text"
+                },
+                {
+                    "id": "o4",
+                    "text": "They are completely unrelated fields of computer science"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "NLP is the broader field of AI dealing with human language interaction. Generative AI is a specific application within NLP (and other fields) focused on producing novel content rather than just analyzing it."
+        },
+        {
+            "id": "q45",
+            "question": "Why is evaluating the output quality of Generative AI text models fundamentally more difficult than evaluating traditional classification models?",
+            "type": "single-choice",
+            "topic": "Model Evaluation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Generative AI models do not output data in English"
+                },
+                {
+                    "id": "o2",
+                    "text": "Text generation is open-ended and subjective, lacking a single definitive mathematical 'right or wrong' answer to measure against"
+                },
+                {
+                    "id": "o3",
+                    "text": "Classification models generate terabytes of log data natively, while generative models do not"
+                },
+                {
+                    "id": "o4",
+                    "text": "Generative models can only be evaluated using physical Turing machines"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A classification model (like spam detection) has a strict binary correct/incorrect answer that is easily scored. Generative outputs are creative and multifaceted, making automated scoring complex and reliant on nuanced metrics or human review."
+        },
+        {
+            "id": "q46",
+            "question": "Why might a Generative AI model confidently state that it cannot provide information about a major news event that occurred yesterday?",
+            "type": "single-choice",
+            "topic": "Model Limitations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model's internet connection has timed out"
+                },
+                {
+                    "id": "o2",
+                    "text": "The event occurred after the model's knowledge cutoff date, which marks the end of its training data"
+                },
+                {
+                    "id": "o3",
+                    "text": "The prompt was written using incorrect grammatical structures"
+                },
+                {
+                    "id": "o4",
+                    "text": "The model's temperature parameter was set too low to access news"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Foundation models are trained on historical data up to a specific date, known as the knowledge cutoff. Without web-browsing tools or RAG, they remain unaware of events that happen after this date."
+        },
+        {
+            "id": "q47",
+            "question": "What is a major legal and ethical concern surrounding the massive datasets used to pre-train Large Language Models?",
+            "type": "single-choice",
+            "topic": "Ethics and Safety",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The datasets are too small to be legally recognized"
+                },
+                {
+                    "id": "o2",
+                    "text": "The datasets often contain vast amounts of copyrighted material scraped from the web without explicit permission"
+                },
+                {
+                    "id": "o3",
+                    "text": "The datasets are entirely fictional and mislead the public"
+                },
+                {
+                    "id": "o4",
+                    "text": "The datasets force hardware to consume excessive electricity"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A significant ethical and legal debate centers on AI companies scraping copyrighted texts, images, and code from the internet to train their models without compensating or notifying the original creators."
+        },
+        {
+            "id": "q48",
+            "question": "In prompt engineering, what is the primary purpose of 'Role Prompting'?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To bypass the API's security authentication"
+                },
+                {
+                    "id": "o2",
+                    "text": "To compress the prompt into a smaller file size"
+                },
+                {
+                    "id": "o3",
+                    "text": "To instruct the AI to adopt a specific persona or profession, which tailors the tone and expertise of its response"
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically switch the processing hardware from CPU to GPU"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Role prompting involves starting a prompt with instructions like 'Act as a senior software engineer' or 'You are an expert historian.' This helps the model retrieve relevant vocabulary and frame its response appropriately."
+        },
+        {
+            "id": "q49",
+            "question": "Which of the following are examples of prominent Generative AI foundation model families? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Model Ecosystem",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GPT (by OpenAI)"
+                },
+                {
+                    "id": "o2",
+                    "text": "TCP/IP (by IETF)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Claude (by Anthropic)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Linux Kernel (by Linus Torvalds)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "GPT (Generative Pre-trained Transformer) and Claude are well-known families of foundation models. TCP/IP is a networking protocol, and Linux is an operating system."
+        },
+        {
+            "id": "q50",
+            "question": "What is the primary purpose of embedding a 'watermark' into Generative AI image or text outputs?",
+            "type": "single-choice",
+            "topic": "Ethics and Safety",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To improve the resolution and clarity of the output"
+                },
+                {
+                    "id": "o2",
+                    "text": "To algorithmically identify that the content was generated by an AI rather than a human"
+                },
+                {
+                    "id": "o3",
+                    "text": "To encrypt the content so only the original user can read it"
+                },
+                {
+                    "id": "o4",
+                    "text": "To reduce the API cost per token"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Watermarking inserts subtle, often invisible or algorithmic patterns into generated content, making it possible for detection tools to identify the content as AI-generated to combat misinformation and deepfakes."
+        },
+        {
+            "id": "q51",
+            "question": "In the context of AI safety and security, what does 'Red Teaming' refer to?",
+            "type": "single-choice",
+            "topic": "Security and Privacy",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The practice of intentionally trying to break or exploit the model's safety guardrails to identify vulnerabilities before public release"
+                },
+                {
+                    "id": "o2",
+                    "text": "The process of painting the physical server racks red to designate them for AI use"
+                },
+                {
+                    "id": "o3",
+                    "text": "A marketing strategy used to sell AI models to enterprise clients"
+                },
+                {
+                    "id": "o4",
+                    "text": "A method of decreasing model latency during peak hours"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Red Teaming is a cybersecurity concept adopted by AI developers where human experts actively attack an AI system (using prompt injections or complex scenarios) to discover flaws and improve safety filters."
+        },
+        {
+            "id": "q52",
+            "question": "Why is it crucial for enterprises to implement PII (Personally Identifiable Information) filtering before sending data to public LLM APIs?",
+            "type": "single-choice",
+            "topic": "Security and Privacy",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Because LLMs cannot read or parse text that contains human names"
+                },
+                {
+                    "id": "o2",
+                    "text": "To ensure compliance with privacy regulations and prevent the exposure of sensitive customer data to third-party providers"
+                },
+                {
+                    "id": "o3",
+                    "text": "To speed up the network latency between the company and the AI provider"
+                },
+                {
+                    "id": "o4",
+                    "text": "To force the AI to use an older, cheaper version of the model"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Sending sensitive PII (like social security numbers or private health data) to external AI APIs can violate data privacy laws (like GDPR or HIPAA) and risks data exposure if the provider logs or learns from the prompts."
+        },
+        {
+            "id": "q53",
+            "question": "What is a 'Prompt Template' in Generative AI software development?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A reusable, structured text string with variables or placeholders that allows developers to dynamically inject user inputs before calling the model"
+                },
+                {
+                    "id": "o2",
+                    "text": "A physical hardware stencil used to print circuit boards for AI servers"
+                },
+                {
+                    "id": "o3",
+                    "text": "A strict legal document required to access open-source models"
+                },
+                {
+                    "id": "o4",
+                    "text": "A proprietary programming language used exclusively to train LLMs"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Prompt templates act like fill-in-the-blank forms for code. They provide a consistent structure (e.g., 'Summarize this text: {user_input}') so applications can programmatically construct reliable prompts for the AI."
+        },
+        {
+            "id": "q54",
+            "question": "When configuring rate limits for an LLM API, what does the metric 'TPM' typically represent?",
+            "type": "single-choice",
+            "topic": "Infrastructure",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Text Prediction Matrix"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tokens Per Minute"
+                },
+                {
+                    "id": "o3",
+                    "text": "Total Processing Memory"
+                },
+                {
+                    "id": "o4",
+                    "text": "Time Per Megabyte"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Tokens Per Minute (TPM) is a standard API rate-limiting metric that restricts the total volume of text (measured in tokens) a user or application can process within a 60-second window."
+        },
+        {
+            "id": "q55",
+            "question": "What does the term 'Emergent Abilities' refer to in the context of Large Language Models?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Capabilities that the model was explicitly hardcoded to perform by its engineers"
+                },
+                {
+                    "id": "o2",
+                    "text": "Unexpected skills or capabilities that naturally arise as the model's parameter size and training data scale up, despite not being directly trained for them"
+                },
+                {
+                    "id": "o3",
+                    "text": "The ability of the model to physically repair its own server hardware"
+                },
+                {
+                    "id": "o4",
+                    "text": "The model's capacity to shut down during emergency power failures"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Emergent abilities are complex behaviors (like translation, logical reasoning, or coding) that spontaneously appear in large models when they cross a certain threshold of scale, even if they were only trained on simple next-word prediction."
+        },
+        {
+            "id": "q56",
+            "question": "What is the primary risk of 'overfitting' when fine-tuning a Generative AI model on a specialized dataset?",
+            "type": "single-choice",
+            "topic": "Model Customization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The model memorizes the specific training examples too closely and loses its ability to generalize or respond well to new, unseen variations"
+                },
+                {
+                    "id": "o2",
+                    "text": "The model's file size expands until it crashes the local hard drive"
+                },
+                {
+                    "id": "o3",
+                    "text": "The model forgets all human languages and begins outputting only binary code"
+                },
+                {
+                    "id": "o4",
+                    "text": "The API costs automatically multiply by a factor of ten"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Overfitting happens when a model learns the noise and exact details of its training data instead of underlying patterns, resulting in excellent performance on the training set but poor performance on real-world, novel inputs."
+        },
+        {
+            "id": "q57",
+            "question": "How do standard stateless LLM APIs typically maintain conversational context (memory) during a multi-turn chat interaction?",
+            "type": "single-choice",
+            "topic": "LLM Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The API permanently saves the chat to the model's internal neural weights"
+                },
+                {
+                    "id": "o2",
+                    "text": "The developer's application must resubmit the entire previous conversation history along with the new prompt each time"
+                },
+                {
+                    "id": "o3",
+                    "text": "The model accesses the user's local browser cookies to read the past messages"
+                },
+                {
+                    "id": "o4",
+                    "text": "The API uses a quantum entanglement state to recall past events"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Most LLM APIs are stateless, meaning they do not remember previous calls. To enable a back-and-forth conversation, the client application must append past messages to the context window and send the growing transcript with every new query."
+        },
+        {
+            "id": "q58",
+            "question": "Which prompting technique involves explicitly asking the model to review its own generated answer, identify potential flaws, and improve upon it before concluding?",
+            "type": "single-choice",
+            "topic": "Prompt Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Few-Shot Prompting"
+                },
+                {
+                    "id": "o2",
+                    "text": "Self-Reflection / Self-Correction Prompting"
+                },
+                {
+                    "id": "o3",
+                    "text": "Negative Prompting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Injection Prompting"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Self-reflection prompting instructs the AI to critique its own intermediate outputs. By analyzing its own work for errors or logical gaps in a secondary step, the model often produces a higher-quality final response."
+        },
+        {
+            "id": "q59",
+            "question": "In Generative AI performance monitoring, what does 'Time to First Token' (TTFT) measure?",
+            "type": "single-choice",
+            "topic": "Model Evaluation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The latency between when a user submits a prompt and when the model generates the very first token of its response"
+                },
+                {
+                    "id": "o2",
+                    "text": "The time it takes to train a model from scratch"
+                },
+                {
+                    "id": "o3",
+                    "text": "The total duration required to generate an entire 1000-word essay"
+                },
+                {
+                    "id": "o4",
+                    "text": "The lifespan of an API key before it requires rotation"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "TTFT is a crucial user-experience metric. It measures the initial delay or latency before the system starts streaming the response back to the user, indicating how responsive the application feels."
+        },
+        {
+            "id": "q60",
+            "question": "Which specific category of Generative AI models focuses on converting written text inputs into highly realistic, human-sounding audio?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Automatic Speech Recognition (ASR)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Optical Character Recognition (OCR)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Text-to-Speech (TTS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Computer Vision (CV)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Text-to-Speech (TTS) models are generative audio models that synthesize spoken audio from text. (Conversely, ASR converts audio into text, and OCR extracts text from images)."
+        }
+    ]
+}

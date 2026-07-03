@@ -1,7 +1,7 @@
 {
   "exams": [
     {
-      "id": "az900",
+      "id": "az900-basic",
       "name": "Microsoft Azure AZ-900",
       "vendor": "Microsoft",
       "questions": 15,
@@ -10,7 +10,7 @@
       "difficulty": "Beginner"
     },
     {
-      "id": "aws-saa",
+      "id": "aws-saa-basic",
       "name": "AWS Solutions Architect Associate",
       "vendor": "Amazon Web Services",
       "questions": 15,
@@ -19,7 +19,7 @@
       "difficulty": "Beginner"
     },
     {
-      "id": "gh300",
+      "id": "github-copilot-300-basic",
       "name": "Gitgub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
@@ -28,13 +28,85 @@
       "difficulty": "Beginner"
     },
     {
-      "id": "gh300-inter",
+      "id": "github-copilot-300-intermediate",
       "name": "Gitgub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
       "duration": 60,
       "passingScore": 700,
       "difficulty": "Intermediate"
+    },
+    {
+      "id": "generative-ai-basic",
+      "name": "Basic Generative AI Concepts",
+      "vendor": "CertifyStacks - Gen AI Associate",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "system-design-basic",
+      "name": "Fundamentals of System Design",
+      "vendor": "CertifyStacks-Basics",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "cloud-computing-basic",
+      "name": "Basic Cloud Computing Concepts",
+      "vendor": "CertifyStacks-Basics",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "databricks-basic",
+      "name": "Databricks Fundamentals",
+      "vendor": "Databricks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "docker-basic",
+      "name": "Docker Fundamentals - Beginner",
+      "vendor": "Docker",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "java-advanced",
+      "name": "Advanced Java Core Concepts and Concurrency",
+      "vendor": "Oracle",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Advanced"
+    },
+    {
+      "id": "java-basic",
+      "name": "Basic Java Core Concepts",
+      "vendor": "Oracle",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "python-basic",
+      "name": "Python Basic Certification",
+      "vendor": "CertifyStacks-Basics",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Basic"
     }
   ]
 }

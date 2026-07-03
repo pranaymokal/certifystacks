@@ -1,5 +1,5 @@
 {
-  "id": "az900",
+  "id": "az900-basic",
   "name": "Microsoft Azure AZ-900",
   "vendor": "Microsoft",
   "questions": 15,
@@ -14,12 +14,26 @@
       "difficulty": "Easy",
       "topic": "Cloud Concepts",
       "options": [
-        { "id": "o1", "text": "High upfront capital expenditure" },
-        { "id": "o2", "text": "Fixed capacity" },
-        { "id": "o3", "text": "Pay-as-you-go pricing model" },
-        { "id": "o4", "text": "Requires long-term contracts" }
+        {
+          "id": "o1",
+          "text": "High upfront capital expenditure"
+        },
+        {
+          "id": "o2",
+          "text": "Fixed capacity"
+        },
+        {
+          "id": "o3",
+          "text": "Pay-as-you-go pricing model"
+        },
+        {
+          "id": "o4",
+          "text": "Requires long-term contracts"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "Cloud computing operates on an operational expenditure (OpEx) model where you pay for what you use, unlike traditional on-premises setups which require high upfront capital expenditure (CapEx)."
     },
     {
@@ -28,12 +42,26 @@
       "type": "single-choice",
       "topic": "Core Azure Services",
       "options": [
-        { "id": "o1", "text": "Azure Virtual Machines" },
-        { "id": "o2", "text": "Azure App Service" },
-        { "id": "o3", "text": "Azure Kubernetes Service" },
-        { "id": "o4", "text": "Azure SQL Database" }
+        {
+          "id": "o1",
+          "text": "Azure Virtual Machines"
+        },
+        {
+          "id": "o2",
+          "text": "Azure App Service"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Kubernetes Service"
+        },
+        {
+          "id": "o4",
+          "text": "Azure SQL Database"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "Azure App Service is a fully managed Platform as a Service (PaaS) for hosting web apps."
     },
     {
@@ -43,11 +71,23 @@
       "multipleAnswer": true,
       "topic": "Cloud Concepts",
       "options": [
-        { "id": "o1", "text": "Public Cloud" },
-        { "id": "o2", "text": "Private Cloud" },
-        { "id": "o3", "text": "Hybrid Cloud" }
+        {
+          "id": "o1",
+          "text": "Public Cloud"
+        },
+        {
+          "id": "o2",
+          "text": "Private Cloud"
+        },
+        {
+          "id": "o3",
+          "text": "Hybrid Cloud"
+        }
       ],
-      "correctAnswers": ["o1", "o3"],
+      "correctAnswers": [
+        "o1",
+        "o3"
+      ],
       "explanation": "Public cloud is shared among multiple organizations. Hybrid cloud includes public cloud components, meaning parts of it are shared."
     },
     {
@@ -56,12 +96,26 @@
       "type": "single-choice",
       "topic": "Core Azure Architecture",
       "options": [
-        { "id": "o1", "text": "Lower cost" },
-        { "id": "o2", "text": "Increased performance" },
-        { "id": "o3", "text": "High availability and fault tolerance" },
-        { "id": "o4", "text": "Simplified management" }
+        {
+          "id": "o1",
+          "text": "Lower cost"
+        },
+        {
+          "id": "o2",
+          "text": "Increased performance"
+        },
+        {
+          "id": "o3",
+          "text": "High availability and fault tolerance"
+        },
+        {
+          "id": "o4",
+          "text": "Simplified management"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "Availability Zones provide physical separation within a region, protecting applications from datacenter failures."
     },
     {
@@ -71,12 +125,28 @@
       "multipleAnswer": true,
       "topic": "Management and Governance",
       "options": [
-        { "id": "o1", "text": "Cost" },
-        { "id": "o2", "text": "Performance" },
-        { "id": "o3", "text": "Marketing" },
-        { "id": "o4", "text": "Security" }
+        {
+          "id": "o1",
+          "text": "Cost"
+        },
+        {
+          "id": "o2",
+          "text": "Performance"
+        },
+        {
+          "id": "o3",
+          "text": "Marketing"
+        },
+        {
+          "id": "o4",
+          "text": "Security"
+        }
       ],
-      "correctAnswers": ["o1", "o2", "o4"],
+      "correctAnswers": [
+        "o1",
+        "o2",
+        "o4"
+      ],
       "explanation": "Azure Advisor provides recommendations on Cost, Security, Reliability, Operational Excellence, and Performance."
     },
     {
@@ -85,12 +155,26 @@
       "type": "single-choice",
       "topic": "Core Azure Services",
       "options": [
-        { "id": "o1", "text": "Azure CLI" },
-        { "id": "o2", "text": "Azure Resource Manager (ARM)" },
-        { "id": "o3", "text": "Azure Active Directory" },
-        { "id": "o4", "text": "Azure Portal" }
+        {
+          "id": "o1",
+          "text": "Azure CLI"
+        },
+        {
+          "id": "o2",
+          "text": "Azure Resource Manager (ARM)"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Active Directory"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Portal"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "Azure Resource Manager (ARM) is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources."
     },
     {
@@ -99,12 +183,26 @@
       "type": "single-choice",
       "topic": "Security",
       "options": [
-        { "id": "o1", "text": "Azure Monitor" },
-        { "id": "o2", "text": "Microsoft Defender for Cloud" },
-        { "id": "o3", "text": "Azure Key Vault" },
-        { "id": "o4", "text": "Azure Policy" }
+        {
+          "id": "o1",
+          "text": "Azure Monitor"
+        },
+        {
+          "id": "o2",
+          "text": "Microsoft Defender for Cloud"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Key Vault"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Policy"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "Microsoft Defender for Cloud (formerly Azure Security Center) provides unified security management and advanced threat protection across hybrid cloud workloads."
     },
     {
@@ -113,12 +211,26 @@
       "type": "single-choice",
       "topic": "Management and Governance",
       "options": [
-        { "id": "o1", "text": "Azure Blueprint" },
-        { "id": "o2", "text": "Azure Role-Based Access Control (RBAC)" },
-        { "id": "o3", "text": "Azure Policy" },
-        { "id": "o4", "text": "Azure Resource Locks" }
+        {
+          "id": "o1",
+          "text": "Azure Blueprint"
+        },
+        {
+          "id": "o2",
+          "text": "Azure Role-Based Access Control (RBAC)"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Policy"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Resource Locks"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "Azure Policy helps to enforce organizational standards and to assess compliance at-scale. You can use it to restrict resource creation to specific regions."
     },
     {
@@ -127,12 +239,26 @@
       "type": "single-choice",
       "topic": "Cloud Concepts",
       "options": [
-        { "id": "o1", "text": "Infrastructure as a Service (IaaS)" },
-        { "id": "o2", "text": "Platform as a Service (PaaS)" },
-        { "id": "o3", "text": "Software as a Service (SaaS)" },
-        { "id": "o4", "text": "On-Premises" }
+        {
+          "id": "o1",
+          "text": "Infrastructure as a Service (IaaS)"
+        },
+        {
+          "id": "o2",
+          "text": "Platform as a Service (PaaS)"
+        },
+        {
+          "id": "o3",
+          "text": "Software as a Service (SaaS)"
+        },
+        {
+          "id": "o4",
+          "text": "On-Premises"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "In Software as a Service (SaaS), the cloud provider manages the infrastructure, OS, and software application entirely. The consumer only uses the software."
     },
     {
@@ -141,12 +267,26 @@
       "type": "single-choice",
       "topic": "Networking",
       "options": [
-        { "id": "o1", "text": "Azure ExpressRoute" },
-        { "id": "o2", "text": "Network Security Group (NSG)" },
-        { "id": "o3", "text": "Azure Load Balancer" },
-        { "id": "o4", "text": "Azure Content Delivery Network" }
+        {
+          "id": "o1",
+          "text": "Azure ExpressRoute"
+        },
+        {
+          "id": "o2",
+          "text": "Network Security Group (NSG)"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Load Balancer"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Content Delivery Network"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "A Network Security Group (NSG) contains security rules that allow or deny inbound or outbound network traffic to Azure resources."
     },
     {
@@ -155,12 +295,26 @@
       "type": "single-choice",
       "topic": "Storage",
       "options": [
-        { "id": "o1", "text": "Azure Blob Storage" },
-        { "id": "o2", "text": "Azure File Storage" },
-        { "id": "o3", "text": "Azure Table Storage" },
-        { "id": "o4", "text": "Azure Disk Storage" }
+        {
+          "id": "o1",
+          "text": "Azure Blob Storage"
+        },
+        {
+          "id": "o2",
+          "text": "Azure File Storage"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Table Storage"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Disk Storage"
+        }
       ],
-      "correctAnswers": ["o1"],
+      "correctAnswers": [
+        "o1"
+      ],
       "explanation": "Azure Blob Storage is Microsoft's object storage solution for the cloud, optimized for storing massive amounts of unstructured data."
     },
     {
@@ -169,12 +323,26 @@
       "type": "single-choice",
       "topic": "Security",
       "options": [
-        { "id": "o1", "text": "Azure Information Protection" },
-        { "id": "o2", "text": "Azure Key Vault" },
-        { "id": "o3", "text": "Azure Active Directory" },
-        { "id": "o4", "text": "Azure Advanced Threat Protection" }
+        {
+          "id": "o1",
+          "text": "Azure Information Protection"
+        },
+        {
+          "id": "o2",
+          "text": "Azure Key Vault"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Active Directory"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Advanced Threat Protection"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "Azure Key Vault is a centralized cloud service for securely storing and accessing secrets, encryption keys, and certificates."
     },
     {
@@ -183,12 +351,26 @@
       "type": "single-choice",
       "topic": "Identity, Access, and Security",
       "options": [
-        { "id": "o1", "text": "Single Sign-On (SSO)" },
-        { "id": "o2", "text": "Conditional Access" },
-        { "id": "o3", "text": "Multi-Factor Authentication (MFA)" },
-        { "id": "o4", "text": "Role-Based Access Control (RBAC)" }
+        {
+          "id": "o1",
+          "text": "Single Sign-On (SSO)"
+        },
+        {
+          "id": "o2",
+          "text": "Conditional Access"
+        },
+        {
+          "id": "o3",
+          "text": "Multi-Factor Authentication (MFA)"
+        },
+        {
+          "id": "o4",
+          "text": "Role-Based Access Control (RBAC)"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "Multi-Factor Authentication (MFA) requires users to provide additional verification methods beyond just a password to secure their accounts."
     },
     {
@@ -197,12 +379,26 @@
       "type": "single-choice",
       "topic": "Core Azure Services",
       "options": [
-        { "id": "o1", "text": "Azure Virtual Machines" },
-        { "id": "o2", "text": "Azure Kubernetes Service" },
-        { "id": "o3", "text": "Azure Functions" },
-        { "id": "o4", "text": "Azure App Service" }
+        {
+          "id": "o1",
+          "text": "Azure Virtual Machines"
+        },
+        {
+          "id": "o2",
+          "text": "Azure Kubernetes Service"
+        },
+        {
+          "id": "o3",
+          "text": "Azure Functions"
+        },
+        {
+          "id": "o4",
+          "text": "Azure App Service"
+        }
       ],
-      "correctAnswers": ["o3"],
+      "correctAnswers": [
+        "o3"
+      ],
       "explanation": "Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure."
     },
     {
@@ -211,12 +407,26 @@
       "type": "single-choice",
       "topic": "Management and Governance",
       "options": [
-        { "id": "o1", "text": "Resource Groups" },
-        { "id": "o2", "text": "Management Groups" },
-        { "id": "o3", "text": "Subscriptions" },
-        { "id": "o4", "text": "Azure Active Directory Tenants" }
+        {
+          "id": "o1",
+          "text": "Resource Groups"
+        },
+        {
+          "id": "o2",
+          "text": "Management Groups"
+        },
+        {
+          "id": "o3",
+          "text": "Subscriptions"
+        },
+        {
+          "id": "o4",
+          "text": "Azure Active Directory Tenants"
+        }
       ],
-      "correctAnswers": ["o2"],
+      "correctAnswers": [
+        "o2"
+      ],
       "explanation": "Management Groups allow you to organize multiple Azure Subscriptions hierarchically so you can easily apply policies and access controls across all of them."
     }
   ]

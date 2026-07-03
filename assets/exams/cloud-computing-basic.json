@@ -1,0 +1,1711 @@
+{
+    "id": "cloud-computing-basic",
+    "name": "Basic Cloud Computing Concepts",
+    "vendor": "CertifyStacks-Basics",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which cloud service model involves the provider managing the entire underlying infrastructure, operating system, and application, while the consumer only uses the software?",
+            "type": "single-choice",
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Infrastructure as a Service (IaaS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Platform as a Service (PaaS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Software as a Service (SaaS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Functions as a Service (FaaS)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a Software as a Service (SaaS) model, the cloud provider hosts and manages the software application and underlying infrastructure, allowing users to connect to and use cloud-based apps over the Internet."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following represents a shift from capital expenditure (CapEx) to operational expenditure (OpEx) in cloud computing?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Purchasing physical servers for a local data center"
+                },
+                {
+                    "id": "o2",
+                    "text": "Paying a monthly subscription based on active compute usage"
+                },
+                {
+                    "id": "o3",
+                    "text": "Signing a 10-year lease for data center cooling equipment"
+                },
+                {
+                    "id": "o4",
+                    "text": "Hiring a full-time hardware maintenance team"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Cloud computing operates on a pay-as-you-go model (OpEx), meaning you only pay for the resources you consume over time, eliminating the need for large upfront hardware investments (CapEx)."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following are recognized cloud deployment models? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public Cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "Distributed Cloud"
+                },
+                {
+                    "id": "o3",
+                    "text": "Private Cloud"
+                },
+                {
+                    "id": "o4",
+                    "text": "Hybrid Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The three primary cloud deployment models are Public (shared resources over the internet), Private (resources dedicated to a single organization), and Hybrid (a mix of both public and private clouds)."
+        },
+        {
+            "id": "q4",
+            "question": "What cloud computing concept describes the ability of a system to automatically scale its resources up or down dynamically based on workload demand?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "High Availability"
+                },
+                {
+                    "id": "o2",
+                    "text": "Fault Tolerance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o4",
+                    "text": "Disaster Recovery"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Elasticity is the ability of a cloud environment to automatically grow (scale out/up) or shrink (scale in/down) resource capacity to match current demand, ensuring performance and cost optimization."
+        },
+        {
+            "id": "q5",
+            "question": "If an application requires an uptime guarantee of 99.99%, ensuring it remains accessible even during routine maintenance or minor failures, this is an example of:",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "High Availability"
+                },
+                {
+                    "id": "o2",
+                    "text": "Scalability"
+                },
+                {
+                    "id": "o3",
+                    "text": "Predictability"
+                },
+                {
+                    "id": "o4",
+                    "text": "Governance"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "High Availability ensures that services and applications remain accessible and operational for extended periods, minimizing downtime through redundant setups."
+        },
+        {
+            "id": "q6",
+            "question": "Under the Shared Responsibility Model for an Infrastructure as a Service (IaaS) deployment, which of the following is strictly the customer's responsibility?",
+            "type": "single-choice",
+            "topic": "Security and Compliance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Physical security of the data center"
+                },
+                {
+                    "id": "o2",
+                    "text": "Patching the host machine hypervisor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Maintaining cooling and power for servers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Managing the guest operating system and application data"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "In IaaS, the cloud provider manages the physical hardware, data center, and hypervisor. The customer is responsible for managing the guest OS, applications, and their data."
+        },
+        {
+            "id": "q7",
+            "question": "Which characteristic of cloud computing allows businesses to rapidly develop, test, and launch software applications without waiting weeks for hardware procurement?",
+            "type": "single-choice",
+            "topic": "Cloud Benefits",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Geographic distribution"
+                },
+                {
+                    "id": "o2",
+                    "text": "Agility"
+                },
+                {
+                    "id": "o3",
+                    "text": "Economies of scale"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fault tolerance"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Agility in cloud computing refers to the speed and flexibility with which IT resources can be provisioned, allowing organizations to innovate and adapt quickly."
+        },
+        {
+            "id": "q8",
+            "question": "Which computing paradigm allows developers to run code in response to events without having to provision, manage, or scale any underlying servers?",
+            "type": "single-choice",
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Serverless Computing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Virtual Machines"
+                },
+                {
+                    "id": "o3",
+                    "text": "Bare Metal Servers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Private Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Serverless computing abstracts server management entirely. The cloud provider automatically provisions, scales, and manages the infrastructure required to run the code."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following metrics are essential components of a Disaster Recovery (DR) plan? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Resiliency",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Recovery Time Objective (RTO)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Return on Investment (ROI)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Recovery Point Objective (RPO)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Total Cost of Ownership (TCO)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "RTO (the maximum acceptable downtime) and RPO (the maximum acceptable data loss in time) are the critical metrics used to design and measure a Disaster Recovery strategy."
+        },
+        {
+            "id": "q10",
+            "question": "How do large cloud providers offer services at a lower cost than most organizations could achieve on their own?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By eliminating all security measures"
+                },
+                {
+                    "id": "o2",
+                    "text": "Through economies of scale"
+                },
+                {
+                    "id": "o3",
+                    "text": "By charging hidden maintenance fees"
+                },
+                {
+                    "id": "o4",
+                    "text": "By forcing users into multi-year contracts"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Economies of scale allow large cloud providers to purchase hardware and infrastructure in massive quantities at reduced prices, passing those savings onto consumers."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following are primary characteristics of a Public Cloud deployment? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hardware is owned and managed by a third-party provider"
+                },
+                {
+                    "id": "o2",
+                    "text": "Infrastructure is physically located on the customer's premises"
+                },
+                {
+                    "id": "o3",
+                    "text": "Resources are delivered over the public internet"
+                },
+                {
+                    "id": "o4",
+                    "text": "Hardware is exclusively dedicated to a single tenant"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "In a Public Cloud, third-party providers own and manage the infrastructure, which is shared among multiple tenants and accessed securely over the public internet."
+        },
+        {
+            "id": "q12",
+            "question": "What is the main purpose of organizing cloud resources into specific geographic 'Regions'?",
+            "type": "single-choice",
+            "topic": "Cloud Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To increase the cost of data storage"
+                },
+                {
+                    "id": "o2",
+                    "text": "To allow compliance with local data residency laws and reduce latency"
+                },
+                {
+                    "id": "o3",
+                    "text": "To ensure all customers share the exact same physical server"
+                },
+                {
+                    "id": "o4",
+                    "text": "To limit the number of users who can access the cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Regions allow customers to deploy services close to their users to reduce network latency and ensure data remains within specific geopolitical boundaries for legal compliance (data residency)."
+        },
+        {
+            "id": "q13",
+            "question": "A system is designed to experience zero downtime even if a component completely fails. This is an example of:",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o2",
+                    "text": "Fault Tolerance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Predictability"
+                },
+                {
+                    "id": "o4",
+                    "text": "Agility"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Fault tolerance is the property that enables a system to continue operating properly in the event of the failure of one or more of its components, resulting in zero downtime."
+        },
+        {
+            "id": "q14",
+            "question": "In a Platform as a Service (PaaS) model, what is the primary focus of the customer?",
+            "type": "single-choice",
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Managing the physical networking cables"
+                },
+                {
+                    "id": "o2",
+                    "text": "Patching the underlying operating system"
+                },
+                {
+                    "id": "o3",
+                    "text": "Developing, deploying, and managing applications"
+                },
+                {
+                    "id": "o4",
+                    "text": "Replacing failing hard drives"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "PaaS abstracts away infrastructure and OS management, allowing the customer (often developers) to focus entirely on application development and data management."
+        },
+        {
+            "id": "q15",
+            "question": "Which of the following scenarios best justifies a Hybrid Cloud approach?",
+            "type": "single-choice",
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A startup wants zero upfront hardware costs and fully managed services."
+                },
+                {
+                    "id": "o2",
+                    "text": "A highly regulated bank must keep sensitive customer data on-premises while using the public cloud for scalable web hosting."
+                },
+                {
+                    "id": "o3",
+                    "text": "A developer needs a quick, cheap environment to test a personal project."
+                },
+                {
+                    "id": "o4",
+                    "text": "An organization wants to shift 100% of its infrastructure to a third-party to avoid hardware maintenance."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Hybrid Cloud allows organizations to combine the security and compliance of an on-premises private cloud (for sensitive data) with the scalability and cost-efficiency of a public cloud (for general workloads)."
+        },
+        {
+            "id": "q16",
+            "question": "Adding more CPU and RAM to an existing virtual machine to handle increased workload is an example of which type of scaling?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Horizontal Scaling (Scaling Out)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vertical Scaling (Scaling Up)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o4",
+                    "text": "Load Balancing"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Vertical scaling, or scaling up, involves increasing the power or capacity of an existing resource, such as adding more memory or CPU to a server. Horizontal scaling involves adding more servers to a pool."
+        },
+        {
+            "id": "q17",
+            "question": "Under the Shared Responsibility Model for a Software as a Service (SaaS) application, which of the following typically remain the responsibility of the customer? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security and Compliance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Patching the underlying operating system"
+                },
+                {
+                    "id": "o2",
+                    "text": "Managing corporate data and information"
+                },
+                {
+                    "id": "o3",
+                    "text": "Maintaining the physical data center network"
+                },
+                {
+                    "id": "o4",
+                    "text": "Managing user endpoint devices"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "In SaaS, the cloud provider manages almost everything including the physical infrastructure, network, and application layer. The customer remains responsible for their own data, devices, and access management."
+        },
+        {
+            "id": "q18",
+            "question": "Which pricing model is most closely associated with modern cloud computing services?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Consumption-based (Pay-as-you-go)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Flat-rate annual hardware licensing"
+                },
+                {
+                    "id": "o3",
+                    "text": "High upfront capital expenditure"
+                },
+                {
+                    "id": "o4",
+                    "text": "Perpetual software licensing"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Cloud computing typically uses a consumption-based model, meaning you only pay for the specific IT resources you use, for the duration you use them, similar to a utility bill."
+        },
+        {
+            "id": "q19",
+            "question": "An organization decides to use AWS for its database services and Microsoft Azure for its web hosting to avoid vendor lock-in. What is this architectural strategy called?",
+            "type": "single-choice",
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hybrid Cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "Multi-cloud"
+                },
+                {
+                    "id": "o3",
+                    "text": "Private Cloud"
+                },
+                {
+                    "id": "o4",
+                    "text": "Distributed Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A multi-cloud strategy involves using services from two or more distinct public cloud providers to optimize performance, minimize risk, or avoid dependence on a single vendor."
+        },
+        {
+            "id": "q20",
+            "question": "A company needs to rapidly migrate existing custom-built virtual machines to the cloud without making any changes to the operating systems. Which service model is best suited for this 'lift and shift' migration?",
+            "type": "single-choice",
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Platform as a Service (PaaS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Software as a Service (SaaS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Infrastructure as a Service (IaaS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Functions as a Service (FaaS)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "IaaS provides the virtualized computing infrastructure over the internet, allowing organizations to migrate VMs directly (lift and shift) while maintaining full control over the OS and applications."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following strategies help ensure a web application remains available even if a single underlying server fails? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Resiliency and Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Deploying the application across multiple virtual machines"
+                },
+                {
+                    "id": "o2",
+                    "text": "Storing all application data exclusively on the local disk of one server"
+                },
+                {
+                    "id": "o3",
+                    "text": "Using a load balancer to distribute incoming traffic"
+                },
+                {
+                    "id": "o4",
+                    "text": "Scaling a single virtual machine vertically to maximum capacity"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "To achieve high availability and fault tolerance, applications should be distributed across multiple resources (like VMs) and use a load balancer to route traffic away from failed components."
+        },
+        {
+            "id": "q22",
+            "question": "Which term describes the delay or time it takes for a data packet to travel from a user's device to a cloud data center and back?",
+            "type": "single-choice",
+            "topic": "Cloud Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bandwidth"
+                },
+                {
+                    "id": "o2",
+                    "text": "Throughput"
+                },
+                {
+                    "id": "o3",
+                    "text": "Latency"
+                },
+                {
+                    "id": "o4",
+                    "text": "Jitter"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Latency is the time it takes for data to traverse a network. Deploying cloud resources in geographic regions closer to end-users is a common way to reduce latency."
+        },
+        {
+            "id": "q23",
+            "question": "What common mechanism is used in cloud environments to logically organize, categorize, and track costs for various resources across different departments?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Subnetting"
+                },
+                {
+                    "id": "o2",
+                    "text": "Resource Tagging (or Labeling)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Encryption"
+                },
+                {
+                    "id": "o4",
+                    "text": "Containerization"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Tags or labels are key-value pairs attached to cloud resources, allowing administrators to logically organize them for consolidated billing, management, and filtering."
+        },
+        {
+            "id": "q24",
+            "question": "What is the primary purpose of an Identity and Access Management (IAM) service in the cloud?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt data while it is in transit over the internet"
+                },
+                {
+                    "id": "o2",
+                    "text": "To ensure only authenticated and authorized entities can access specific resources"
+                },
+                {
+                    "id": "o3",
+                    "text": "To block Distributed Denial-of-Service (DDoS) attacks"
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically scale compute resources during peak times"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "IAM provides the framework to manage digital identities and user access, ensuring that the right people or services have the correct level of access to cloud resources."
+        },
+        {
+            "id": "q25",
+            "question": "Which cloud computing benefit allows organizations to rely on consistent performance and accurate cost forecasting over time?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Predictability"
+                },
+                {
+                    "id": "o2",
+                    "text": "Agility"
+                },
+                {
+                    "id": "o3",
+                    "text": "Disaster Recovery"
+                },
+                {
+                    "id": "o4",
+                    "text": "Elasticity"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Predictability in the cloud applies to both performance (knowing resources will perform reliably) and cost (forecasting usage and expenses accurately)."
+        },
+        {
+            "id": "q26",
+            "question": "Which technology provides a lightweight, isolated execution environment for applications by sharing the host system's OS kernel, making it start up much faster than a traditional Virtual Machine?",
+            "type": "single-choice",
+            "topic": "Core Cloud Technologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Containers"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hypervisors"
+                },
+                {
+                    "id": "o3",
+                    "text": "Serverless Functions"
+                },
+                {
+                    "id": "o4",
+                    "text": "Bare Metal Servers"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Containers package code and its dependencies together but share the host OS kernel, making them highly portable, lightweight, and faster to boot than full virtual machines."
+        },
+        {
+            "id": "q27",
+            "question": "When assigning permissions to a new developer in your cloud environment, which security principle dictates that they should only receive the minimum access required to do their job?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Zero Trust Network Access"
+                },
+                {
+                    "id": "o2",
+                    "text": "Shared Responsibility Model"
+                },
+                {
+                    "id": "o3",
+                    "text": "Defense in Depth"
+                },
+                {
+                    "id": "o4",
+                    "text": "Principle of Least Privilege"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The Principle of Least Privilege (PoLP) states that a user, program, or process should have only the bare minimum privileges necessary to perform its intended function, reducing security risks."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following is a key reason an organization might choose to deploy a Private Cloud rather than using a Public Cloud?",
+            "type": "single-choice",
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To completely eliminate all physical hardware maintenance tasks"
+                },
+                {
+                    "id": "o2",
+                    "text": "To achieve total, exclusive control over hardware and security configurations"
+                },
+                {
+                    "id": "o3",
+                    "text": "To gain infinite scalability without any capital expenditure"
+                },
+                {
+                    "id": "o4",
+                    "text": "To share infrastructure costs with other companies"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Private clouds are dedicated entirely to one organization, providing strict control over the environment, security, and hardware, often required for highly regulated industries."
+        },
+        {
+            "id": "q29",
+            "question": "Which networking component acts as a traffic cop, distributing incoming user requests across a pool of servers to ensure no single server becomes overwhelmed?",
+            "type": "single-choice",
+            "topic": "Cloud Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Firewall"
+                },
+                {
+                    "id": "o2",
+                    "text": "Domain Name System (DNS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Load Balancer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Virtual Private Network (VPN)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Load Balancer efficiently distributes incoming network traffic across a group of backend servers, improving application responsiveness and availability."
+        },
+        {
+            "id": "q30",
+            "question": "The capability of a cloud provider to offer computing resources from data centers physically located all over the world is referred to as:",
+            "type": "single-choice",
+            "topic": "Cloud Benefits",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Global Reach"
+                },
+                {
+                    "id": "o2",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o3",
+                    "text": "High Availability"
+                },
+                {
+                    "id": "o4",
+                    "text": "Economies of Scale"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Global Reach allows organizations to quickly deploy applications and data in regions closest to their customers worldwide, reducing latency and improving user experience."
+        },
+        {
+            "id": "q31",
+            "question": "Adding more virtual machines to your application's server pool to handle an increase in web traffic is an example of which type of scaling?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Vertical Scaling (Scaling Up)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Horizontal Scaling (Scaling Out)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Diagonal Scaling"
+                },
+                {
+                    "id": "o4",
+                    "text": "Static Scaling"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Horizontal scaling (scaling out) involves adding more resources of the same type, such as adding more virtual machines or containers to a pool, to distribute the workload."
+        },
+        {
+            "id": "q32",
+            "question": "Which foundational cloud networking component provides an isolated, private environment in the public cloud where you can launch your resources?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Virtual Private Network (VPN)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Content Delivery Network (CDN)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Virtual Network (VNet / VPC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "ExpressRoute / Direct Connect"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Virtual Network (often called a VNet in Azure or VPC in AWS) provides a logically isolated section of the cloud where you can securely deploy and connect resources."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following scenarios best describes a Capital Expenditure (CapEx)?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Paying a monthly subscription for a cloud database"
+                },
+                {
+                    "id": "o2",
+                    "text": "Purchasing a new physical server rack for an on-premises data center"
+                },
+                {
+                    "id": "o3",
+                    "text": "Being billed per hour for virtual machine usage"
+                },
+                {
+                    "id": "o4",
+                    "text": "Paying for cloud storage based on the gigabytes used this month"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "CapEx involves spending money upfront on physical infrastructure and deducting that expense over time. Buying physical servers is a classic example of CapEx."
+        },
+        {
+            "id": "q34",
+            "question": "When comparing the cost of running an on-premises data center versus moving to the cloud, which financial metric helps estimate the comprehensive, long-term costs including hardware, software, power, cooling, and personnel?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Return on Investment (ROI)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Total Cost of Ownership (TCO)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Recovery Point Objective (RPO)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Service Level Agreement (SLA)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Total Cost of Ownership (TCO) is an assessment of all direct and indirect costs associated with an IT asset over its lifecycle, helping organizations make informed cloud migration decisions."
+        },
+        {
+            "id": "q35",
+            "question": "To protect against a localized data center failure, such as a power outage or fire, a cloud provider will group distinct data centers within a region. What are these groups called?",
+            "type": "single-choice",
+            "topic": "Cloud Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Edge Locations"
+                },
+                {
+                    "id": "o2",
+                    "text": "Availability Zones"
+                },
+                {
+                    "id": "o3",
+                    "text": "Subnets"
+                },
+                {
+                    "id": "o4",
+                    "text": "Resource Groups"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Availability Zones are unique physical locations within a cloud region, consisting of one or more data centers equipped with independent power, cooling, and networking to provide high availability."
+        },
+        {
+            "id": "q36",
+            "question": "Which security measure adds an additional layer of protection to user accounts by requiring a second form of verification, such as a code sent to a mobile phone, alongside a password?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Single Sign-On (SSO)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Multi-Factor Authentication (MFA)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Encryption"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Multi-Factor Authentication (MFA) requires users to present two or more pieces of evidence (factors) to an authentication mechanism, significantly reducing the risk of compromised passwords."
+        },
+        {
+            "id": "q37",
+            "question": "Under the Shared Responsibility Model across ALL cloud deployment types (IaaS, PaaS, SaaS), which of the following is ALWAYS the sole responsibility of the cloud provider?",
+            "type": "single-choice",
+            "topic": "Security and Compliance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Physical security of the data center"
+                },
+                {
+                    "id": "o2",
+                    "text": "Managing user access and identities"
+                },
+                {
+                    "id": "o3",
+                    "text": "Securing the customer's data"
+                },
+                {
+                    "id": "o4",
+                    "text": "Patching the guest operating system"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Regardless of whether a customer uses IaaS, PaaS, or SaaS, the cloud provider always retains responsibility for the physical security of the hardware and data center facilities."
+        },
+        {
+            "id": "q38",
+            "question": "Which cloud governance tool allows administrators to set proactive financial limits and receive email notifications before their cloud spending exceeds a specific amount?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Billing Alerts / Budgets"
+                },
+                {
+                    "id": "o2",
+                    "text": "Resource Policies"
+                },
+                {
+                    "id": "o3",
+                    "text": "Identity and Access Management (IAM)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Network Security Groups (NSG)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Cloud providers offer Budgeting and Billing Alert tools that allow organizations to set spending thresholds and receive automated notifications if costs forecast to exceed those limits."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following are primary benefits of adopting public cloud computing? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Benefits",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Infinite physical control over the server hardware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Agility to innovate and deploy resources rapidly"
+                },
+                {
+                    "id": "o3",
+                    "text": "Elimination of operational expenditure (OpEx)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Elasticity to scale resources dynamically based on demand"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "Agility (speed to deployment) and Elasticity (dynamic scaling) are core benefits of public cloud. Cloud adoption shifts CapEx to OpEx, it does not eliminate OpEx, and customers lose physical hardware control."
+        },
+        {
+            "id": "q40",
+            "question": "Which of the following are the three widely recognized primary cloud service models? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Platform as a Service (PaaS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Database as a Service (DBaaS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Software as a Service (SaaS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Infrastructure as a Service (IaaS)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The three fundamental cloud service models defined by industry standards (like NIST) are IaaS, PaaS, and SaaS. DBaaS is considered a subset of PaaS."
+        },
+        {
+            "id": "q41",
+            "question": "What security framework is used to grant access to cloud resources based on the specific job duties of a user, rather than assigning permissions user-by-user?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Multi-Factor Authentication (MFA)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Virtual Private Network (VPN)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Loss Prevention (DLP)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Role-Based Access Control (RBAC) simplifies administration by allowing you to assign sets of permissions to a 'Role' (e.g., Database Admin) and then assign users to that role."
+        },
+        {
+            "id": "q42",
+            "question": "While 'Scalability' involves increasing capacity to handle larger workloads, how does 'Elasticity' differ?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Elasticity specifically refers to increasing physical hard drive space."
+                },
+                {
+                    "id": "o2",
+                    "text": "Elasticity is the automatic, dynamic scaling of resources both UP and DOWN to exactly match current demand."
+                },
+                {
+                    "id": "o3",
+                    "text": "Elasticity guarantees that a server will never fail."
+                },
+                {
+                    "id": "o4",
+                    "text": "Elasticity is only available in Private Cloud environments."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Elasticity implies a dynamic, automated ability to shrink (scale in) and grow (scale out) resources strictly in accordance with real-time demand, optimizing costs."
+        },
+        {
+            "id": "q43",
+            "question": "Cloud providers offer deeply discounted virtual machines utilizing excess compute capacity, but with the caveat that they can be interrupted or reclaimed by the provider at any time. What are these instances commonly called?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Reserved Instances"
+                },
+                {
+                    "id": "o2",
+                    "text": "On-Demand Instances"
+                },
+                {
+                    "id": "o3",
+                    "text": "Spot Instances (or Preemptible VMs)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Dedicated Hosts"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Spot Instances (AWS/Azure) or Preemptible VMs (GCP) are highly discounted resources ideal for fault-tolerant, flexible workloads because the provider can terminate them with minimal notice if they need the capacity back."
+        },
+        {
+            "id": "q44",
+            "question": "Which legal and compliance concept mandates that a business's data must be physically stored within the geographical boundaries of a specific country or region?",
+            "type": "single-choice",
+            "topic": "Security and Compliance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data Residency (or Data Sovereignty)"
+                },
+                {
+                    "id": "o2",
+                    "text": "High Availability"
+                },
+                {
+                    "id": "o3",
+                    "text": "Disaster Recovery"
+                },
+                {
+                    "id": "o4",
+                    "text": "Defense in Depth"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Data Residency and Data Sovereignty refer to the physical and geographic location of an organization's data, often dictated by local government regulations and compliance requirements."
+        },
+        {
+            "id": "q45",
+            "question": "What computing paradigm brings processing power and data storage closer to the physical location of the user or IoT device to reduce latency and save bandwidth?",
+            "type": "single-choice",
+            "topic": "Core Cloud Technologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Mainframe Computing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Edge Computing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Serverless Computing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Quantum Computing"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Edge computing pushes computation and data storage away from centralized cloud data centers and closer to the 'edge' of the network, right where the data is being generated or consumed."
+        },
+        {
+            "id": "q46",
+            "question": "Which cloud networking component acts as a virtual firewall to control inbound and outbound traffic at the virtual machine or subnet level?",
+            "type": "single-choice",
+            "topic": "Security and Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Load Balancer"
+                },
+                {
+                    "id": "o2",
+                    "text": "Security Group (or Network Security Group)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Virtual Private Network (VPN)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Content Delivery Network (CDN)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Security Groups (or Network Security Groups in Azure) contain rules that explicitly allow or deny inbound and outbound network traffic to specific cloud resources like virtual machines."
+        },
+        {
+            "id": "q47",
+            "question": "What is a primary financial benefit of using a consumption-based (pay-as-you-go) pricing model in the cloud?",
+            "type": "single-choice",
+            "topic": "Cloud Economics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It requires a large initial capital investment."
+                },
+                {
+                    "id": "o2",
+                    "text": "It shifts costs from Capital Expenditure (CapEx) to Operational Expenditure (OpEx)."
+                },
+                {
+                    "id": "o3",
+                    "text": "It guarantees a fixed, unchanging monthly bill."
+                },
+                {
+                    "id": "o4",
+                    "text": "It completely eliminates all IT staffing and maintenance costs."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A consumption-based model shifts IT spending from CapEx (buying hardware upfront) to OpEx (paying for ongoing service usage), allowing businesses to align costs directly with actual demand."
+        },
+        {
+            "id": "q48",
+            "question": "Which type of cloud storage is highly scalable, accessed via APIs over the web, and optimized for storing massive amounts of unstructured data, such as images, videos, and backups?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Block Storage"
+                },
+                {
+                    "id": "o2",
+                    "text": "File Storage"
+                },
+                {
+                    "id": "o3",
+                    "text": "Object Storage"
+                },
+                {
+                    "id": "o4",
+                    "text": "In-Memory Storage"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Object Storage (like Azure Blob Storage or Amazon S3) manages data as objects rather than files or blocks, making it ideal for highly scalable, unstructured data storage."
+        },
+        {
+            "id": "q49",
+            "question": "If an organization wants to strictly restrict cloud resources from being deployed outside of a specific country for compliance reasons, which governance tool should they use?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Cloud Policies (e.g., Azure Policy)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Resource Tags"
+                },
+                {
+                    "id": "o3",
+                    "text": "Load Balancers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Multi-Factor Authentication (MFA)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Cloud Policies are governance tools used to enforce organizational standards and compliance rules, such as restricting which regions resources can be deployed into."
+        },
+        {
+            "id": "q50",
+            "question": "What is the primary function of a Content Delivery Network (CDN) in cloud architecture?",
+            "type": "single-choice",
+            "topic": "Networking and Performance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To secure data while it is at rest on a physical hard drive."
+                },
+                {
+                    "id": "o2",
+                    "text": "To cache static web content at edge locations closer to users to reduce latency."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically scale the CPU capacity of virtual machines."
+                },
+                {
+                    "id": "o4",
+                    "text": "To provide a dedicated physical network connection to the cloud."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A CDN stores cached versions of static content (like images or HTML files) on servers distributed globally, delivering the content to users from the server geographically closest to them to improve speed."
+        },
+        {
+            "id": "q51",
+            "question": "In a Platform as a Service (PaaS) deployment, who is strictly responsible for updating and patching the underlying physical server hardware and hypervisor?",
+            "type": "single-choice",
+            "topic": "Security and Compliance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The cloud customer"
+                },
+                {
+                    "id": "o2",
+                    "text": "The cloud provider"
+                },
+                {
+                    "id": "o3",
+                    "text": "Both share the responsibility equally"
+                },
+                {
+                    "id": "o4",
+                    "text": "A third-party security vendor"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Under the Shared Responsibility Model for PaaS, the cloud provider handles all underlying infrastructure, including physical servers, networking, and hypervisor patching."
+        },
+        {
+            "id": "q52",
+            "question": "What cloud computing characteristic describes a system's ability to remain operational and automatically recover from the failure of individual components?",
+            "type": "single-choice",
+            "topic": "Cloud Characteristics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Fault Tolerance"
+                },
+                {
+                    "id": "o2",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o3",
+                    "text": "Agility"
+                },
+                {
+                    "id": "o4",
+                    "text": "Predictability"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Fault Tolerance ensures that an application or system continues to operate, even if a part of the system (like a specific server or network link) fails."
+        },
+        {
+            "id": "q53",
+            "question": "Which of the following statements best describes data encryption 'at rest' in the cloud?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data is encrypted as it travels across the internet between the user and the cloud."
+                },
+                {
+                    "id": "o2",
+                    "text": "Data is encrypted while it is physically stored on a disk or in a database."
+                },
+                {
+                    "id": "o3",
+                    "text": "Data is encrypted within the CPU while it is being actively processed."
+                },
+                {
+                    "id": "o4",
+                    "text": "Data is hidden from unauthorized users using Resource Tags."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Encryption at rest protects data that is stored physically (on hard drives, SSDs, or backup tapes) from being accessed by someone who gains physical access to the storage media."
+        },
+        {
+            "id": "q54",
+            "question": "Which cloud deployment model is specifically shared by several organizations that have common concerns (e.g., specific security requirements, mission, or regulatory compliance)?",
+            "type": "single-choice",
+            "topic": "Cloud Deployment Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public Cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "Private Cloud"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hybrid Cloud"
+                },
+                {
+                    "id": "o4",
+                    "text": "Community Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "A Community Cloud is a collaborative environment where infrastructure is shared between multiple organizations from a specific community with common concerns, such as a group of government agencies or healthcare providers."
+        },
+        {
+            "id": "q55",
+            "question": "What is a Virtual Machine (VM) in the context of cloud computing?",
+            "type": "single-choice",
+            "topic": "Core Cloud Technologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A physical server located in a customer's on-premises office."
+                },
+                {
+                    "id": "o2",
+                    "text": "A software emulation of a physical computer that runs its own operating system."
+                },
+                {
+                    "id": "o3",
+                    "text": "A serverless piece of code that is triggered by a specific event."
+                },
+                {
+                    "id": "o4",
+                    "text": "A specialized physical router used to connect to the cloud."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Virtual Machine is a digital version of a physical computer. It utilizes software (a hypervisor) to emulate hardware, allowing it to run an operating system and applications just like a physical machine."
+        },
+        {
+            "id": "q56",
+            "question": "Why might a cloud architect design an application to span multiple geographic Regions? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Resiliency and Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To protect against a massive, region-wide natural disaster."
+                },
+                {
+                    "id": "o2",
+                    "text": "To decrease the hourly cost of running virtual machines."
+                },
+                {
+                    "id": "o3",
+                    "text": "To bring the application physically closer to users globally, reducing latency."
+                },
+                {
+                    "id": "o4",
+                    "text": "To avoid using the cloud provider's proprietary APIs."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Deploying across multiple regions provides global Disaster Recovery capabilities in case an entire region goes offline, and it reduces latency for end-users by serving them from a geographically closer location."
+        },
+        {
+            "id": "q57",
+            "question": "Which identity management feature allows a user to log in once with a single set of credentials and safely gain access to multiple independent software applications?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Multi-Factor Authentication (MFA)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Single Sign-On (SSO)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Virtual Private Network (VPN)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Single Sign-On (SSO) improves user experience and security by allowing users to authenticate just once to an identity provider and subsequently access multiple authorized applications without logging in again."
+        },
+        {
+            "id": "q58",
+            "question": "In cloud migration strategies, what does the term 'Lift and Shift' (Rehosting) refer to?",
+            "type": "single-choice",
+            "topic": "Cloud Migration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Completely rewriting an application's code to utilize serverless microservices."
+                },
+                {
+                    "id": "o2",
+                    "text": "Moving an application to the cloud with little to no modification to its architecture or code."
+                },
+                {
+                    "id": "o3",
+                    "text": "Physically moving server hardware via truck to the cloud provider's data center."
+                },
+                {
+                    "id": "o4",
+                    "text": "Changing a software purchasing model from a perpetual license to a monthly subscription."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Lift and Shift (Rehosting) is the process of migrating an exact copy of an environment or application (usually a Virtual Machine) from on-premises to the cloud without making architectural changes."
+        },
+        {
+            "id": "q59",
+            "question": "If a company wants to deploy a relational database in the cloud but does not want to manage the underlying operating system or database engine updates, which service model should they choose?",
+            "type": "single-choice",
+            "topic": "Cloud Service Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Database as a Service (PaaS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Infrastructure as a Service (IaaS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Software as a Service (SaaS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "On-Premises Dedicated Server"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A managed Database as a Service (a type of PaaS) abstracts the OS and database software maintenance, allowing the customer to focus purely on database design and data management."
+        },
+        {
+            "id": "q60",
+            "question": "How do hyper-scale cloud providers typically achieve better environmental sustainability compared to traditional on-premises corporate data centers? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Benefits",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By running physical servers at lower utilization rates to save electricity."
+                },
+                {
+                    "id": "o2",
+                    "text": "Through highly optimized, large-scale cooling and power infrastructure."
+                },
+                {
+                    "id": "o3",
+                    "text": "By investing heavily in large-scale renewable energy purchases."
+                },
+                {
+                    "id": "o4",
+                    "text": "By requiring customers to turn off their virtual machines during daylight hours."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Cloud providers achieve high sustainability through massive economies of scale that allow for highly efficient facility designs (cooling/power) and large-scale investments in matching electricity use with renewable energy."
+        }
+    ]
+}

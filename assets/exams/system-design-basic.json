@@ -1,0 +1,1701 @@
+{
+    "id": "system-design-basic",
+    "name": "Fundamentals of System Design",
+    "vendor": "CertifyStacks-Basics",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which type of scaling involves adding more power (CPU, RAM) to an existing single server?",
+            "type": "single-choice",
+            "topic": "Scaling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Horizontal Scaling"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vertical Scaling"
+                },
+                {
+                    "id": "o3",
+                    "text": "Diagonal Scaling"
+                },
+                {
+                    "id": "o4",
+                    "text": "Sharding"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Vertical scaling (scaling up) means adding more resources like CPU or RAM to your existing server hardware. Horizontal scaling (scaling out) means adding more machines to your network pool."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of a Load Balancer in system design?",
+            "type": "single-choice",
+            "topic": "Load Balancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt network database storage data"
+                },
+                {
+                    "id": "o2",
+                    "text": "To distribute incoming network traffic across multiple servers"
+                },
+                {
+                    "id": "o3",
+                    "text": "To compile application code at runtime"
+                },
+                {
+                    "id": "o4",
+                    "text": "To cache static assets directly inside user browsers"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A load balancer distributes incoming application or network traffic across a group of backend servers to optimize resource utilization, maximize throughput, and prevent any single server from becoming a bottleneck."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following are benefits of implementing a Content Delivery Network (CDN)? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Reduced latency for global users by caching content closer to them"
+                },
+                {
+                    "id": "o2",
+                    "text": "Direct reduction of database transactional write locks"
+                },
+                {
+                    "id": "o3",
+                    "text": "Decreased bandwidth load on origin infrastructure servers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Automatic translation of relational data schemas to JSON"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "CDNs cache static assets (like images, videos, HTML) on edge servers globally. This reduces latency by serving data closer to users and offloads traffic from the origin web servers."
+        },
+        {
+            "id": "q4",
+            "question": "In the CAP theorem, what do the three letters 'C', 'A', and 'P' stand for?",
+            "type": "single-choice",
+            "topic": "System Design Theory",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Concurrency, Availability, Performance"
+                },
+                {
+                    "id": "o2",
+                    "text": "Consistency, Availability, Partition Tolerance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Caching, Authentication, Privacy"
+                },
+                {
+                    "id": "o4",
+                    "text": "Compliance, Adaptability, Portability"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The CAP theorem states that a distributed data store can simultaneously provide at most two of three guarantees: Consistency (every read receives the most recent write or an error), Availability (every request receives a non-error response), and Partition Tolerance (the system continues to operate despite an arbitrary number of messages being dropped or delayed by the network)."
+        },
+        {
+            "id": "q5",
+            "question": "Which database type is organized based on tables with predefined schemas and relationships using foreign keys?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Key-Value Store"
+                },
+                {
+                    "id": "o2",
+                    "text": "Document Database"
+                },
+                {
+                    "id": "o3",
+                    "text": "Relational Database (RDBMS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Graph Database"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Relational databases store data in tables consisting of rows and columns, utilizing strict schemas and relational constraints like primary and foreign keys."
+        },
+        {
+            "id": "q6",
+            "question": "What does 'High Availability' (HA) mean in the context of system architecture?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The system processing data at the highest possible CPU clock speed"
+                },
+                {
+                    "id": "o2",
+                    "text": "The system remaining operational and accessible for a long period without significant downtime"
+                },
+                {
+                    "id": "o3",
+                    "text": "The database containing the maximum capacity of storage records"
+                },
+                {
+                    "id": "o4",
+                    "text": "The interface loading assets via parallel network connections"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "High Availability refers to a system's ability to remain continuously operational and functional for users over a given period, minimizing downtime through redundancy and failover mechanisms."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following are common NoSQL database categories? (Choose three)",
+            "type": "multiple-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Document Stores"
+                },
+                {
+                    "id": "o2",
+                    "text": "Key-Value Databases"
+                },
+                {
+                    "id": "o3",
+                    "text": "Tabular Relational SQL Views"
+                },
+                {
+                    "id": "o4",
+                    "text": "Wide-Column Stores"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "NoSQL databases generally fall into four core categories: Key-Value stores, Document stores, Wide-column stores, and Graph databases. Tabular SQL views belong to relational databases."
+        },
+        {
+            "id": "q8",
+            "question": "What is the primary benefit of horizontal database sharding?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It eliminates the need to create any secondary indexes."
+                },
+                {
+                    "id": "o2",
+                    "text": "It breaks a large database into smaller, faster, more manageable pieces across multiple servers."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically converts SQL queries into GraphQL requests."
+                },
+                {
+                    "id": "o4",
+                    "text": "It guarantees 100% ACID compliance across unlinked networks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Sharding is a database partitioning method that separates a large database into smaller, faster, distinct pieces called logical shards, which are then spread across multiple hardware nodes to distribute read/write load."
+        },
+        {
+            "id": "q9",
+            "question": "If a system has 'Low Latency', what does this imply?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The system can handle very few concurrent users."
+                },
+                {
+                    "id": "o2",
+                    "text": "The data transit or processing delay is minimal, resulting in fast response times."
+                },
+                {
+                    "id": "o3",
+                    "text": "The system costs less money to run per hour."
+                },
+                {
+                    "id": "o4",
+                    "text": "The storage consumption increases linearly over time."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Latency measures the delay or time taken for data to travel from a source to a destination. Low latency means response times are short and fast."
+        },
+        {
+            "id": "q10",
+            "question": "What role does an in-memory cache (like Redis or Memcached) play in system design?",
+            "type": "single-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Providing durable, long-term disk backup storage for files"
+                },
+                {
+                    "id": "o2",
+                    "text": "Storing frequently accessed data in RAM to serve subsequent reads rapidly"
+                },
+                {
+                    "id": "o3",
+                    "text": "Managing network switch routing paths at the infrastructure layer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Running client-side JavaScript logic inside user browsers"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An in-memory cache stores hot, frequently used data in fast-access RAM. This prevents expensive, repetitive network round-trips to primary databases or disks, speeding up read access."
+        },
+        {
+            "id": "q11",
+            "question": "Which HTTP method is typically considered 'idempotent' because making identical multiple requests has the same effect as a single request?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "POST"
+                },
+                {
+                    "id": "o2",
+                    "text": "GET"
+                },
+                {
+                    "id": "o3",
+                    "text": "PATCH"
+                },
+                {
+                    "id": "o4",
+                    "text": "CONNECT"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GET is safe and idempotent because repeating a GET request multiple times reads data without modifying system state. POST is not idempotent as repeating it usually creates multiple resource duplicates."
+        },
+        {
+            "id": "q12",
+            "question": "What is the main goal of introducing Redundancy into a system architectural layout?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To increase the system's operational hardware costs"
+                },
+                {
+                    "id": "o2",
+                    "text": "To eliminate single points of failure by duplicating critical components"
+                },
+                {
+                    "id": "o3",
+                    "text": "To slow down deployment release pipelines for verification"
+                },
+                {
+                    "id": "o4",
+                    "text": "To force data normalization schemas onto NoSQL stores"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Redundancy involves duplicating critical components or paths in a system design so that if one node fails, a backup component can seamlessly take over without interrupting service."
+        },
+        {
+            "id": "q13",
+            "question": "Which structural pattern breaks a software application down into a collection of loosely coupled, independently deployable services?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Monolithic Architecture"
+                },
+                {
+                    "id": "o2",
+                    "text": "Microservices Architecture"
+                },
+                {
+                    "id": "o3",
+                    "text": "Single-Threaded Process Framework"
+                },
+                {
+                    "id": "o4",
+                    "text": "Shared-Memory Core System"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A microservices architecture patterns an application into modular, decentralized, small domain services that communicate via lightweight protocols (like HTTP/gRPC) and can be deployed independently."
+        },
+        {
+            "id": "q14",
+            "question": "What mechanism allows a client browser to instantly receive updates from a server via a persistent, full-duplex communication channel?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "HTTP Long Polling"
+                },
+                {
+                    "id": "o2",
+                    "text": "DNS Resolution Lookups"
+                },
+                {
+                    "id": "o3",
+                    "text": "WebSockets"
+                },
+                {
+                    "id": "o4",
+                    "text": "Batch Processing Cron Jobs"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "WebSockets provide a persistent, bidirectional, full-duplex TCP communication connection channel between client and server, enabling real-time streaming updates without HTTP polling overhead."
+        },
+        {
+            "id": "q15",
+            "question": "In system design, what does 'Throughput' measure?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The exact storage capacity limit of an SSD drive array"
+                },
+                {
+                    "id": "o2",
+                    "text": "The number of successful requests processed by a system within a given time frame"
+                },
+                {
+                    "id": "o3",
+                    "text": "The time it takes for a single data packet to cross a switch node"
+                },
+                {
+                    "id": "o4",
+                    "text": "The security threat risk score of a firewall rule configuration"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Throughput defines the rate at which a system processes actions or data streams (e.g., requests per second, bits per second) over a specified time frame, showcasing overall processing capacity."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following describes the 'Single Point of Failure' (SPOF) concept?",
+            "type": "single-choice",
+            "topic": "Availability & Reliability",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A specialized software bug that only occurs once during runtime"
+                },
+                {
+                    "id": "o2",
+                    "text": "A component in a system whose failure will cause the entire system to stop functioning"
+                },
+                {
+                    "id": "o3",
+                    "text": "The primary database server responsible for handling read-only queries"
+                },
+                {
+                    "id": "o4",
+                    "text": "A user interface page that fails to load asset scripts properly"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Single Point of Failure (SPOF) is any part of a system that, if it fails, will stop the entire system from working. System designers eliminate SPOFs by introducing redundancy."
+        },
+        {
+            "id": "q17",
+            "question": "What is the role of a 'Reverse Proxy' server in a typical web infrastructure setup?",
+            "type": "single-choice",
+            "topic": "Networking & Proxies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To intercept client requests and forward them to appropriate backend servers"
+                },
+                {
+                    "id": "o2",
+                    "text": "To hide the identity of client web browsers from external ISP trackers"
+                },
+                {
+                    "id": "o3",
+                    "text": "To store transactional database records permanently onto hard disk drives"
+                },
+                {
+                    "id": "o4",
+                    "text": "To compile server-side application source code into native binary formats"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A reverse proxy sits in front of backend web servers, intercepting client requests to provide benefits like load balancing, security anonymization, SSL termination, and caching."
+        },
+        {
+            "id": "q18",
+            "question": "Which properties are guaranteed by a traditional relational database adhering to ACID compliance? (Choose three)",
+            "type": "multiple-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Atomicity"
+                },
+                {
+                    "id": "o2",
+                    "text": "Availability"
+                },
+                {
+                    "id": "o3",
+                    "text": "Isolation"
+                },
+                {
+                    "id": "o4",
+                    "text": "Durability"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "ACID stands for Atomicity, Consistency, Isolation, and Durability. These properties ensure database transactions are processed reliably. Availability is a metric from the CAP theorem, not ACID."
+        },
+        {
+            "id": "q19",
+            "question": "What is 'DNS' (Domain Name System) primarily used for?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Encrypting browser session data using SSL/TLS protocols"
+                },
+                {
+                    "id": "o2",
+                    "text": "Translating human-readable domain names into machine-readable IP addresses"
+                },
+                {
+                    "id": "o3",
+                    "text": "Compressing media assets before sending them across web sockets"
+                },
+                {
+                    "id": "o4",
+                    "text": "Distributing relational database table rows to local memory caches"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "DNS acts like the phonebook of the Internet. It translates domain names (like example.com) into numeric IP addresses (like 192.0.2.1) so computers can locate each other."
+        },
+        {
+            "id": "q20",
+            "question": "What does a 'Cache Miss' mean?",
+            "type": "single-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The memory caching infrastructure has completely crashed down"
+                },
+                {
+                    "id": "o2",
+                    "text": "Requested data is not found in the cache, forcing a fetch from the primary data source"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data in the cache has become corrupted and needs manual formatting"
+                },
+                {
+                    "id": "o4",
+                    "text": "The cache layer successfully returned data faster than the database layer"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A cache miss occurs when an application searches for data within a cache layer but fails to find it. The application must then retrieve the data from the slower primary storage or database."
+        },
+        {
+            "id": "q21",
+            "question": "Which communication strategy involves a client repeatedly requesting data from a server at fixed intervals to check for updates?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Short Polling"
+                },
+                {
+                    "id": "o2",
+                    "text": "Server-Sent Events (SSE)"
+                },
+                {
+                    "id": "o3",
+                    "text": "WebSockets Streams"
+                },
+                {
+                    "id": "o4",
+                    "text": "Asymmetric Routing"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Short polling is a technique where the client sends periodic HTTP requests (e.g., every 5 seconds) to the server to check for new updates, regardless of whether data is ready or not."
+        },
+        {
+            "id": "q22",
+            "question": "What is the main drawback of vertical scaling compared to horizontal scaling?",
+            "type": "single-choice",
+            "topic": "Scaling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It requires complex software architecture changes immediately."
+                },
+                {
+                    "id": "o2",
+                    "text": "It introduces a hard limit based on the maximum capacity of a single machine."
+                },
+                {
+                    "id": "o3",
+                    "text": "It always splits a database schema into separate tables."
+                },
+                {
+                    "id": "o4",
+                    "text": "It cannot handle stateless application microservices."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Vertical scaling has an ultimate hardware limitation: you can only add as much CPU or RAM as a single physical server chassis can support. Horizontal scaling avoids this ceiling."
+        },
+        {
+            "id": "q23",
+            "question": "In a Master-Slave (Primary-Secondary) database replication layout, where do write operations typically go?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To any available Slave node exclusively"
+                },
+                {
+                    "id": "o2",
+                    "text": "To the Master node only"
+                },
+                {
+                    "id": "o3",
+                    "text": "Evenly split across all Master and Slave nodes by a load balancer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Directly to the local client browser storage cache"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In classic primary-secondary configuration architectures, the Master node handles all data modification write operations. These updates are then replicated asynchronously or synchronously to the Slave nodes for read distribution."
+        },
+        {
+            "id": "q24",
+            "question": "Which architectural component is best suited for decoupling long-running asynchronous tasks from user-facing web servers?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Message Queue"
+                },
+                {
+                    "id": "o2",
+                    "text": "Relational Foreign Key Constraint"
+                },
+                {
+                    "id": "o3",
+                    "text": "Layer 7 Load Balancer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Edge Cache Server"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Message queues (like RabbitMQ or Apache Kafka) allow systems to pass messages asynchronously between services, decoupling processing times and letting web apps offload heavy work to background workers."
+        },
+        {
+            "id": "q25",
+            "question": "What is the primary benefit of a 'Stateless' application tier?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It stores user session tokens inside the server's local RAM memory."
+                },
+                {
+                    "id": "o2",
+                    "text": "Any server instance can handle any incoming request, making horizontal scaling easy."
+                },
+                {
+                    "id": "o3",
+                    "text": "It guarantees that database queries execute without any network delay."
+                },
+                {
+                    "id": "o4",
+                    "text": "It completely removes the need for structural database software tiers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Stateless servers do not store request contexts or session states locally. Because every request is independent, auto-scaling groups can safely spin up or destroy server instances as traffic varies."
+        },
+        {
+            "id": "q26",
+            "question": "Which metric evaluates the percentage of time an infrastructure system remains fully operational over a year?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Latency Rate"
+                },
+                {
+                    "id": "o2",
+                    "text": "Throughput Ratio"
+                },
+                {
+                    "id": "o3",
+                    "text": "Availability (e.g., '99.9%')"
+                },
+                {
+                    "id": "o4",
+                    "text": "Cache Hit Rate"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Availability calculates system uptime percentages (often measured in 'nines' like 99.9% or 99.99%) to specify how long system capabilities remain accessible to customers without unplanned outages."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following are valid strategies for invalidating data inside a cache layer? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Setting a Time-to-Live (TTL) expiration period on keys"
+                },
+                {
+                    "id": "o2",
+                    "text": "Explicitly deleting cache keys when data updates in the source database"
+                },
+                {
+                    "id": "o3",
+                    "text": "Converting the cache memory storage arrays into SQL structures"
+                },
+                {
+                    "id": "o4",
+                    "text": "Increasing the network interface bandwidth speeds"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Cache invalidation strategies include using a Time-to-Live (TTL) which automatically deletes stale keys after a time duration, or programmatically evicting/updating keys whenever backend modifications occur."
+        },
+        {
+            "id": "q28",
+            "question": "What does 'SLA' stand for in corporate system operations?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "System Loading Allocation"
+                },
+                {
+                    "id": "o2",
+                    "text": "Service Level Agreement"
+                },
+                {
+                    "id": "o3",
+                    "text": "Secure Logic Architecture"
+                },
+                {
+                    "id": "o4",
+                    "text": "Synchronized Layer Assignment"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Service Level Agreement (SLA) is a formal contract between a service provider and an end-user defining the expected level of service reliability, performance metrics, and penalties for downtime violations."
+        },
+        {
+            "id": "q29",
+            "question": "Which architectural tool helps route user traffic globally to the nearest datacenter based on user location?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Geolocation-based DNS routing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Database read replicas"
+                },
+                {
+                    "id": "o3",
+                    "text": "Local area network switches"
+                },
+                {
+                    "id": "o4",
+                    "text": "Memory caching arrays"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Geolocation DNS routing inspects incoming user lookup locations and resolves the domain name into an IP address belonging to the server or datacenter closest geographically to the user."
+        },
+        {
+            "id": "q30",
+            "question": "What is the primary characteristic of a 'Monolithic Architecture'?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The codebase is broken into dozens of separate microservices running on unique servers."
+                },
+                {
+                    "id": "o2",
+                    "text": "All application functional components are unified and deployed together as a single unit."
+                },
+                {
+                    "id": "o3",
+                    "text": "It uses an external message broker queue for all internal function invocations."
+                },
+                {
+                    "id": "o4",
+                    "text": "Data storage is entirely restricted to memory cache arrays instead of hard disks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A monolith combines all business logic, data layers, and user interfaces inside a single structural program package deployed together onto hardware. It contrast directly with distributed microservice networks."
+        },
+        {
+            "id": "q31",
+            "question": "What is the primary function of an API Gateway in a microservices architecture?",
+            "type": "single-choice",
+            "topic": "API Design",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To permanently store client session data in a relational format"
+                },
+                {
+                    "id": "o2",
+                    "text": "To compile background code for multiple microservices simultaneously"
+                },
+                {
+                    "id": "o3",
+                    "text": "To act as a single entry point for clients, routing requests to the appropriate backend services"
+                },
+                {
+                    "id": "o4",
+                    "text": "To manually scale up physical server hardware during traffic spikes"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "An API Gateway sits between clients and backend services. It acts as a reverse proxy, routing requests to the correct microservice, and often handles cross-cutting concerns like authentication, rate limiting, and logging."
+        },
+        {
+            "id": "q32",
+            "question": "Why would a system designer implement 'Rate Limiting' (or Throttling) on a public API?",
+            "type": "single-choice",
+            "topic": "Security & Throttling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To prevent abuse and Denial of Service (DoS) attacks by restricting the number of requests a user can make in a given timeframe"
+                },
+                {
+                    "id": "o2",
+                    "text": "To increase the network bandwidth automatically for premium users"
+                },
+                {
+                    "id": "o3",
+                    "text": "To ensure that all database queries are converted to asynchronous background jobs"
+                },
+                {
+                    "id": "o4",
+                    "text": "To guarantee 100% cache hit rates for all incoming requests"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Rate limiting controls the rate of traffic sent or received by a network. It is crucial for protecting APIs from accidental overuse, scraping, or malicious brute-force/DoS attacks."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following is a common use case for implementing an asynchronous background job queue (e.g., Celery, Sidekiq)?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Rendering immediate HTML responses for the user's home page"
+                },
+                {
+                    "id": "o2",
+                    "text": "Checking the DNS resolution for a local IP address"
+                },
+                {
+                    "id": "o3",
+                    "text": "Storing lightweight, transient user session cookies"
+                },
+                {
+                    "id": "o4",
+                    "text": "Processing time-consuming tasks like sending emails or generating large reports without blocking the main web server"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Background job queues offload heavy, slow, or scheduled tasks from the main request-response cycle, allowing the web server to respond to the user immediately while the task is processed asynchronously."
+        },
+        {
+            "id": "q34",
+            "question": "When designing an API that must return a list of thousands of records, which technique should be used to avoid overloading the client and server?",
+            "type": "single-choice",
+            "topic": "API Design",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Long Polling"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pagination"
+                },
+                {
+                    "id": "o3",
+                    "text": "Consistent Hashing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Normalization"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Pagination is the process of dividing a large dataset into smaller, discrete pages. The client requests data one page (or batch) at a time, minimizing memory usage and network payload size."
+        },
+        {
+            "id": "q35",
+            "question": "What does 'Fault Tolerance' mean in the context of distributed systems?",
+            "type": "single-choice",
+            "topic": "Availability & Reliability",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The ability of a system to completely prevent any hardware from ever breaking"
+                },
+                {
+                    "id": "o2",
+                    "text": "The ability of a system to continue operating properly even if one or more of its components fail"
+                },
+                {
+                    "id": "o3",
+                    "text": "The metric used to determine how fast a developer can fix a production bug"
+                },
+                {
+                    "id": "o4",
+                    "text": "The process of intentionally shutting down servers to save electricity"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Fault tolerance is a design principle where a system is built with redundancy and graceful degradation capabilities, allowing it to remain functional despite partial system failures."
+        },
+        {
+            "id": "q36",
+            "question": "What is a primary reason a system designer might choose to 'denormalize' a database?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To improve read performance by reducing the need for complex, resource-heavy table joins"
+                },
+                {
+                    "id": "o2",
+                    "text": "To strictly enforce foreign key constraints across all data tables"
+                },
+                {
+                    "id": "o3",
+                    "text": "To eliminate all redundant data and save maximum storage space on the hard drive"
+                },
+                {
+                    "id": "o4",
+                    "text": "To encrypt sensitive user passwords automatically"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Denormalization involves intentionally adding redundant data to a database. While it increases storage space and write complexity, it dramatically speeds up read query performance by avoiding expensive JOIN operations."
+        },
+        {
+            "id": "q37",
+            "question": "Which of the following are characteristics of traditional REST APIs compared to GraphQL? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "API Design",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Uses standard HTTP methods (GET, POST, PUT, DELETE) to define actions on specific endpoints"
+                },
+                {
+                    "id": "o2",
+                    "text": "Allows the client to request only the exact fields they need in a single query"
+                },
+                {
+                    "id": "o3",
+                    "text": "Often suffers from over-fetching or under-fetching of data depending on endpoint design"
+                },
+                {
+                    "id": "o4",
+                    "text": "Relies exclusively on WebSockets for all data transfer"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "REST relies on fixed endpoints and HTTP verbs, which can lead to over-fetching (getting more data than needed) or under-fetching (needing multiple requests). GraphQL solves this by letting the client specify exactly what data fields to return."
+        },
+        {
+            "id": "q38",
+            "question": "How does a load balancer typically determine if a backend server is healthy and capable of receiving traffic?",
+            "type": "single-choice",
+            "topic": "Load Balancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By checking the server's CPU temperature via hardware sensors"
+                },
+                {
+                    "id": "o2",
+                    "text": "By waiting for the backend server to email an administrator"
+                },
+                {
+                    "id": "o3",
+                    "text": "By periodically sending automated 'health check' or 'heartbeat' requests to the server"
+                },
+                {
+                    "id": "o4",
+                    "text": "By reviewing the server's source code for syntax errors"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Load balancers continuously monitor backend servers using health checks (like an HTTP GET request to a /health endpoint). If a server fails the check, the load balancer temporarily stops sending traffic to it."
+        },
+        {
+            "id": "q39",
+            "question": "Which type of storage system is best suited for storing vast amounts of unstructured, immutable static media files, like user-uploaded images and videos?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Relational Database (e.g., PostgreSQL)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Object Storage (e.g., Amazon S3)"
+                },
+                {
+                    "id": "o3",
+                    "text": "In-Memory Cache (e.g., Redis)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Graph Database (e.g., Neo4j)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Object storage is designed to handle massive scale for unstructured data. It stores files as 'objects' with metadata and a unique identifier, making it highly scalable and cost-effective for media assets."
+        },
+        {
+            "id": "q40",
+            "question": "In system design, what does 'Bandwidth' refer to?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The time it takes for a single ping to travel to a server and back"
+                },
+                {
+                    "id": "o2",
+                    "text": "The maximum rate of data transfer across a network path over a given amount of time"
+                },
+                {
+                    "id": "o3",
+                    "text": "The physical width of the server rack in the datacenter"
+                },
+                {
+                    "id": "o4",
+                    "text": "The limit of concurrent active database connections"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Bandwidth is the capacity of a wired or wireless network communications link to transmit the maximum amount of data from one point to another over a computer network or internet connection in a given amount of time (usually measured in bps or Mbps)."
+        },
+        {
+            "id": "q41",
+            "question": "What is the primary goal of a Disaster Recovery (DR) plan?",
+            "type": "single-choice",
+            "topic": "Availability & Reliability",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To restore critical system operations and data after a catastrophic event or major outage"
+                },
+                {
+                    "id": "o2",
+                    "text": "To ensure developers write code without any syntax errors"
+                },
+                {
+                    "id": "o3",
+                    "text": "To permanently transition all on-premise servers to a public cloud provider"
+                },
+                {
+                    "id": "o4",
+                    "text": "To balance network traffic between two active database shards"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Disaster Recovery involves a set of policies, tools, and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human-induced disaster."
+        },
+        {
+            "id": "q42",
+            "question": "Which mechanism allows a server to proactively push real-time event notifications to a client via HTTP POST requests, rather than the client polling for them?",
+            "type": "single-choice",
+            "topic": "Networking & Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Domain Name Resolution"
+                },
+                {
+                    "id": "o2",
+                    "text": "Asymmetric Routing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Database Indexing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Webhooks"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "A webhook is an HTTP-based callback function that allows lightweight, event-driven communication between two APIs. When an event occurs on the server, it sends an HTTP POST payload to the client's configured URL."
+        },
+        {
+            "id": "q43",
+            "question": "Which of the following statements about encryption are true? (Choose two)",
+            "type": "multiple-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Symmetric encryption requires a public key to decrypt data."
+                },
+                {
+                    "id": "o2",
+                    "text": "Symmetric encryption uses the same key for both encrypting and decrypting data."
+                },
+                {
+                    "id": "o3",
+                    "text": "Asymmetric encryption uses a public key for encryption and a private key for decryption."
+                },
+                {
+                    "id": "o4",
+                    "text": "Asymmetric encryption is generally much faster than symmetric encryption."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Symmetric encryption is fast because it uses a single shared key for both locking and unlocking data. Asymmetric encryption is slower but more secure for key exchange, using a public key to encrypt and a strictly protected private key to decrypt."
+        },
+        {
+            "id": "q44",
+            "question": "Which technique is commonly used in distributed caching systems to minimize data reorganization when a cache server is added or removed?",
+            "type": "single-choice",
+            "topic": "Distributed Systems",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Round Robin DNS"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data Denormalization"
+                },
+                {
+                    "id": "o3",
+                    "text": "Two-Phase Commit"
+                },
+                {
+                    "id": "o4",
+                    "text": "Consistent Hashing"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Consistent hashing is a hashing technique that maps keys to nodes in a way that minimizes the number of keys that need to be remapped when a node (server) is added or removed from the cluster."
+        },
+        {
+            "id": "q45",
+            "question": "Which HTTP header is commonly used to instruct a web browser to cache a static asset locally for a specific duration?",
+            "type": "single-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Cache-Control"
+                },
+                {
+                    "id": "o2",
+                    "text": "Content-Type"
+                },
+                {
+                    "id": "o3",
+                    "text": "Authorization"
+                },
+                {
+                    "id": "o4",
+                    "text": "X-Forwarded-For"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'Cache-Control' HTTP header specifies directives for caching mechanisms in both requests and responses. It tells the browser or CDN how long it is allowed to cache a resource locally (e.g., max-age=3600)."
+        },
+        {
+            "id": "q46",
+            "question": "What is the primary function of a 'Forward Proxy'?",
+            "type": "single-choice",
+            "topic": "Networking & Proxies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To intercept and route incoming traffic to backend web servers"
+                },
+                {
+                    "id": "o2",
+                    "text": "To act on behalf of a client machine to request resources from the internet, hiding the client's identity"
+                },
+                {
+                    "id": "o3",
+                    "text": "To cache relational database queries in local memory"
+                },
+                {
+                    "id": "o4",
+                    "text": "To permanently store backup data in object storage"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A forward proxy sits in front of client machines (users) and intercepts their outgoing requests to the internet. It is often used for client anonymity, bypassing content restrictions, or corporate network filtering."
+        },
+        {
+            "id": "q47",
+            "question": "In the context of load balancing, what do 'Sticky Sessions' (Session Affinity) achieve?",
+            "type": "single-choice",
+            "topic": "Load Balancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They ensure a user's requests are consistently routed to the same backend server for the duration of a session"
+                },
+                {
+                    "id": "o2",
+                    "text": "They automatically encrypt the session data stored in a user's browser cookie"
+                },
+                {
+                    "id": "o3",
+                    "text": "They distribute database write operations evenly across all available shards"
+                },
+                {
+                    "id": "o4",
+                    "text": "They force the user to re-authenticate on every single HTTP request"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Sticky sessions bind a user's session to a specific server so that all subsequent requests from that user are routed to the same server, which is useful if the server stores session state locally in its RAM."
+        },
+        {
+            "id": "q48",
+            "question": "What is the primary difference between Synchronous and Asynchronous database replication?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Synchronous replication uses NoSQL, while Asynchronous uses relational databases."
+                },
+                {
+                    "id": "o2",
+                    "text": "Synchronous waits for all replica nodes to confirm a write before responding to the client, whereas Asynchronous responds immediately after writing to the primary node."
+                },
+                {
+                    "id": "o3",
+                    "text": "Synchronous replication compresses data before sending it, while Asynchronous sends raw text."
+                },
+                {
+                    "id": "o4",
+                    "text": "There is no difference; both terms describe the exact same process."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Synchronous replication ensures data consistency across all nodes before acknowledging a write, trading latency for high consistency. Asynchronous replication is faster but risks temporary data loss if the primary fails before copying data."
+        },
+        {
+            "id": "q49",
+            "question": "Which of the following principles make up the 'BASE' database model often used in NoSQL systems? (Choose three)",
+            "type": "multiple-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Basically Available"
+                },
+                {
+                    "id": "o2",
+                    "text": "Binary Accessibility"
+                },
+                {
+                    "id": "o3",
+                    "text": "Soft State"
+                },
+                {
+                    "id": "o4",
+                    "text": "Eventual Consistency"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "BASE stands for Basically Available (system guarantees availability), Soft state (state may change without input due to eventual consistency), and Eventual consistency (the system will eventually become consistent). It contrasts with ACID properties."
+        },
+        {
+            "id": "q50",
+            "question": "What is the core concept of 'Auto-scaling' in cloud architecture?",
+            "type": "single-choice",
+            "topic": "Scaling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Automatically rewriting inefficient code to execute faster"
+                },
+                {
+                    "id": "o2",
+                    "text": "Dynamically adding or removing computational resources (like servers) based on current traffic demands"
+                },
+                {
+                    "id": "o3",
+                    "text": "Shrinking image files automatically to save bandwidth"
+                },
+                {
+                    "id": "o4",
+                    "text": "Automatically deleting user accounts that have been inactive for over a year"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Auto-scaling allows systems to automatically adjust the number of active servers or resources up or down depending on real-time CPU utilization, memory usage, or network traffic load, ensuring performance and cost-efficiency."
+        },
+        {
+            "id": "q51",
+            "question": "Why is containerization (using tools like Docker) highly beneficial in modern system design?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It completely eliminates the need for database software."
+                },
+                {
+                    "id": "o2",
+                    "text": "It packages an application and its dependencies together, ensuring it runs consistently across any computing environment."
+                },
+                {
+                    "id": "o3",
+                    "text": "It converts asynchronous message queues into synchronous REST APIs."
+                },
+                {
+                    "id": "o4",
+                    "text": "It provides unlimited vertical scaling on a single physical machine."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Containers bundle the application code, libraries, and configurations into a single standardized unit. This eliminates the 'it works on my machine' problem by providing a consistent environment from development to production."
+        },
+        {
+            "id": "q52",
+            "question": "What main problem do container orchestration platforms like Kubernetes solve?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Managing the automated deployment, scaling, networking, and health monitoring of hundreds or thousands of containers"
+                },
+                {
+                    "id": "o2",
+                    "text": "Translating frontend JavaScript code into backend database SQL queries"
+                },
+                {
+                    "id": "o3",
+                    "text": "Designing user interfaces for monolithic web applications"
+                },
+                {
+                    "id": "o4",
+                    "text": "Storing raw video files in edge location CDNs"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "While Docker helps you create containers, Kubernetes helps you manage them at scale. It automates load balancing, restarts failed containers, and orchestrates rollouts and rollbacks across a cluster of machines."
+        },
+        {
+            "id": "q53",
+            "question": "If an architecture is designed to handle a 'Read-heavy' workload, what does this imply?",
+            "type": "single-choice",
+            "topic": "System Metrics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The system processes significantly more data requests (fetching data) than data modifications (saving data)."
+                },
+                {
+                    "id": "o2",
+                    "text": "Users are primarily uploading large video files rather than streaming them."
+                },
+                {
+                    "id": "o3",
+                    "text": "The database exclusively uses synchronous replication across all nodes."
+                },
+                {
+                    "id": "o4",
+                    "text": "The system requires massive write throughput to handle real-time logging."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A read-heavy system (like Twitter or Wikipedia) has a high ratio of read requests compared to write requests. System designers optimize these workloads by implementing robust caching layers and read replicas."
+        },
+        {
+            "id": "q54",
+            "question": "In messaging systems, what defines the 'Publish-Subscribe' (Pub/Sub) pattern?",
+            "type": "single-choice",
+            "topic": "Architecture Patterns",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A client requests a resource and waits idly until the server responds."
+                },
+                {
+                    "id": "o2",
+                    "text": "Senders broadcast messages to a topic without knowing who will receive them, and receivers listen only to topics of interest."
+                },
+                {
+                    "id": "o3",
+                    "text": "A direct, one-to-one encrypted TCP connection between two microservices."
+                },
+                {
+                    "id": "o4",
+                    "text": "A database synchronization technique that copies data on a nightly cron schedule."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In the Pub/Sub pattern, message senders (publishers) do not send messages directly to specific receivers (subscribers). Instead, they categorize messages into topics, and subscribers receive messages from topics they have subscribed to, highly decoupling the system."
+        },
+        {
+            "id": "q55",
+            "question": "What is a 'Soft Delete' in database and system design?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Deleting a record only from the cache but leaving it in the database."
+                },
+                {
+                    "id": "o2",
+                    "text": "Marking a record as 'deleted' using a flag (like 'is_deleted = true') instead of physically removing it from the disk."
+                },
+                {
+                    "id": "o3",
+                    "text": "Deleting data asynchronously during off-peak hours to save CPU."
+                },
+                {
+                    "id": "o4",
+                    "text": "Compressing old records to save storage space on the database server."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A soft delete adds a boolean column or timestamp to indicate a record is deleted. It hides the data from regular application queries while retaining it in the database for auditing, recovery, or historical reference."
+        },
+        {
+            "id": "q56",
+            "question": "What is the purpose of implementing an 'Idempotency Key' in a transactional API?",
+            "type": "single-choice",
+            "topic": "API Design",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To guarantee that retrying the exact same request multiple times produces the same result without duplicate side effects (like double-charging a credit card)."
+                },
+                {
+                    "id": "o2",
+                    "text": "To encrypt passwords before they are transmitted over the network."
+                },
+                {
+                    "id": "o3",
+                    "text": "To compress API JSON responses automatically."
+                },
+                {
+                    "id": "o4",
+                    "text": "To bypass the API gateway rate limiting rules for administrative users."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "An idempotency key allows clients to safely retry requests (e.g., in case of a network timeout). The server recognizes the key and ensures the operation (like a financial transaction) is only executed once, avoiding duplicates."
+        },
+        {
+            "id": "q57",
+            "question": "What is the 'Circuit Breaker' pattern used for in microservices architectures?",
+            "type": "single-choice",
+            "topic": "Availability & Reliability",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To physically shut down a server rack if it overheats."
+                },
+                {
+                    "id": "o2",
+                    "text": "To prevent an application from repeatedly trying to execute an operation that is highly likely to fail, giving the failing service time to recover."
+                },
+                {
+                    "id": "o3",
+                    "text": "To stop infinite loops inside a monolithic code block."
+                },
+                {
+                    "id": "o4",
+                    "text": "To forcefully disconnect idle WebSocket connections to save memory."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Just like an electrical circuit breaker prevents damage by cutting power during a surge, the software circuit breaker prevents cascading failures by temporarily blocking requests to a failing microservice until it becomes healthy again."
+        },
+        {
+            "id": "q58",
+            "question": "What is the 'N+1 query problem' commonly found when using databases?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "When a database cluster has one more secondary node than primary nodes."
+                },
+                {
+                    "id": "o2",
+                    "text": "A performance issue where an application executes one initial query to fetch a list of items, and then 'N' additional queries to fetch related data for each item."
+                },
+                {
+                    "id": "o3",
+                    "text": "A security flaw where a hacker appends an extra query to an SQL statement."
+                },
+                {
+                    "id": "o4",
+                    "text": "A requirement to always backup data to N+1 different locations."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The N+1 problem occurs when an application makes a query to retrieve N records, and then loops through those records making a separate database query for each one. This causes heavy latency and should be fixed by using SQL JOINs or data fetching batches."
+        },
+        {
+            "id": "q59",
+            "question": "Which of the following scenarios is BEST suited for a Graph Database (like Neo4j)?",
+            "type": "single-choice",
+            "topic": "Databases",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Storing millions of isolated, unstructured user-uploaded photographs."
+                },
+                {
+                    "id": "o2",
+                    "text": "Handling simple session token lookups by string keys in memory."
+                },
+                {
+                    "id": "o3",
+                    "text": "Mapping complex, highly connected relationship data, such as a social network's 'friend of a friend' features."
+                },
+                {
+                    "id": "o4",
+                    "text": "Running complex analytical batch reports on tabular accounting data overnight."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Graph databases represent data as nodes and edges, making them exceptionally fast and intuitive for traversing highly interconnected data, such as social networks, recommendation engines, and fraud detection."
+        },
+        {
+            "id": "q60",
+            "question": "What is the definition of 'Time-to-Live' (TTL) in system design?",
+            "type": "single-choice",
+            "topic": "Caching & Content Delivery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The exact lifespan of a physical hard drive before it requires replacement."
+                },
+                {
+                    "id": "o2",
+                    "text": "A value that dictates how long a packet of data or a cached record should be kept before it is discarded or refreshed."
+                },
+                {
+                    "id": "o3",
+                    "text": "The time it takes for a newly deployed application server to boot up."
+                },
+                {
+                    "id": "o4",
+                    "text": "A metric indicating the total time a user spends on a web page."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "TTL determines the freshness of data. In caching or DNS, it is an expiration timer. Once the TTL expires, the cached copy is considered stale and the system must fetch a fresh copy from the origin server."
+        }
+    ]
+}

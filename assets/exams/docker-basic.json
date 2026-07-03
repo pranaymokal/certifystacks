@@ -1,0 +1,1707 @@
+{
+    "id": "docker-basic",
+    "name": "Docker Fundamentals - Beginner",
+    "vendor": "Docker",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which of the following best describes a Docker image?",
+            "type": "single-choice",
+            "topic": "Docker Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A running instance of an application"
+                },
+                {
+                    "id": "o2",
+                    "text": "A lightweight, standalone, executable package of software"
+                },
+                {
+                    "id": "o3",
+                    "text": "A virtual machine operating system"
+                },
+                {
+                    "id": "o4",
+                    "text": "A network driver for connecting containers"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Docker image is a read-only template that contains a set of instructions for creating a container that can run on the Docker platform. It packages the application and its dependencies."
+        },
+        {
+            "id": "q2",
+            "question": "Which command is used to list all actively running Docker containers?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker list"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker ps"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker containers"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker show"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'docker ps' command lists all running containers. Adding the '-a' flag (docker ps -a) will list all containers, including those that are stopped."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following are valid benefits of using Docker? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Docker Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Consistent environments from development to production"
+                },
+                {
+                    "id": "o2",
+                    "text": "Complete hardware virtualization"
+                },
+                {
+                    "id": "o3",
+                    "text": "High resource efficiency compared to traditional VMs"
+                },
+                {
+                    "id": "o4",
+                    "text": "Portability across different operating systems"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Docker provides environment consistency, high efficiency by sharing the host OS kernel, and portability. It does not provide hardware virtualization (which is what a Hypervisor does for VMs)."
+        },
+        {
+            "id": "q4",
+            "question": "What is the default public registry where Docker looks for images if no other registry is specified?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Container Registry"
+                },
+                {
+                    "id": "o2",
+                    "text": "Docker Store"
+                },
+                {
+                    "id": "o3",
+                    "text": "Amazon ECR"
+                },
+                {
+                    "id": "o4",
+                    "text": "Docker Hub"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Docker Hub is the default public registry for Docker images. When you run a command like 'docker pull ubuntu', Docker Engine fetches it from Docker Hub by default."
+        },
+        {
+            "id": "q5",
+            "question": "Which instruction must typically be the first command in a Dockerfile?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "RUN"
+                },
+                {
+                    "id": "o2",
+                    "text": "START"
+                },
+                {
+                    "id": "o3",
+                    "text": "FROM"
+                },
+                {
+                    "id": "o4",
+                    "text": "CMD"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'FROM' instruction initializes a new build stage and sets the Base Image for subsequent instructions. A valid Dockerfile must usually start with a 'FROM' instruction."
+        },
+        {
+            "id": "q6",
+            "question": "You want to run a container in the background (detached mode) and print the container ID. Which flag should you use with 'docker run'?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "-b"
+                },
+                {
+                    "id": "o2",
+                    "text": "-d"
+                },
+                {
+                    "id": "o3",
+                    "text": "--background"
+                },
+                {
+                    "id": "o4",
+                    "text": "-it"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '-d' (or --detach) flag runs the container in the background and prints the new container ID to the terminal."
+        },
+        {
+            "id": "q7",
+            "question": "Which commands can be used to remove Docker resources? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker rm"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker delete"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker rmi"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker clear"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "'docker rm' is used to remove one or more containers, and 'docker rmi' is used to remove one or more images. 'delete' and 'clear' are not standard Docker CLI commands for this purpose."
+        },
+        {
+            "id": "q8",
+            "question": "What does the 'docker build' command do?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pushes an image to a remote registry"
+                },
+                {
+                    "id": "o2",
+                    "text": "Builds a Docker image from a Dockerfile"
+                },
+                {
+                    "id": "o3",
+                    "text": "Compiles the source code inside a running container"
+                },
+                {
+                    "id": "o4",
+                    "text": "Starts a multi-container application"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'docker build' command is used to build Docker images from a text document called a Dockerfile, which contains all the commands a user could call on the command line to assemble an image."
+        },
+        {
+            "id": "q9",
+            "question": "Which Docker feature is primarily used to persist data generated by and used by Docker containers, independent of the container's lifecycle?",
+            "type": "single-choice",
+            "topic": "Storage and Volumes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Docker Images"
+                },
+                {
+                    "id": "o2",
+                    "text": "Docker Volumes"
+                },
+                {
+                    "id": "o3",
+                    "text": "Docker Networks"
+                },
+                {
+                    "id": "o4",
+                    "text": "Docker Compose"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Docker Volumes are the preferred mechanism for persisting data generated by and used by Docker containers, as they are entirely managed by Docker and exist outside the container's writable layer."
+        },
+        {
+            "id": "q10",
+            "question": "What is the primary purpose of Docker Compose?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To write Dockerfiles in a YAML format"
+                },
+                {
+                    "id": "o2",
+                    "text": "To define and run multi-container Docker applications"
+                },
+                {
+                    "id": "o3",
+                    "text": "To orchestrate containers across multiple host machines"
+                },
+                {
+                    "id": "o4",
+                    "text": "To secure communication between containers"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure application services and starts them with a single command."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following instructions in a Dockerfile are used to execute a command during the image build process? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "RUN"
+                },
+                {
+                    "id": "o2",
+                    "text": "CMD"
+                },
+                {
+                    "id": "o3",
+                    "text": "ENTRYPOINT"
+                },
+                {
+                    "id": "o4",
+                    "text": "COPY"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Only the 'RUN' instruction executes commands during the build phase to create a new layer in the image. 'CMD' and 'ENTRYPOINT' define commands that run when a container starts, not during the build."
+        },
+        {
+            "id": "q12",
+            "question": "Which command allows you to download an image from a registry to your local machine without creating or starting a container?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker fetch"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker pull"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker download"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker get"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'docker pull' command fetches the image from a configured registry (like Docker Hub) and stores it on your local system for future use."
+        },
+        {
+            "id": "q13",
+            "question": "If you want to gracefully stop a running container by sending a SIGTERM signal, which command should you use?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker kill"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker halt"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker stop"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker pause"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'docker stop' sends a SIGTERM signal to the container, allowing it to shut down gracefully. 'docker kill' sends a SIGKILL, forcing it to stop immediately."
+        },
+        {
+            "id": "q14",
+            "question": "Which of the following ports map syntax is correct when using the 'docker run -p' command to map host port 8080 to container port 80?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "80:8080"
+                },
+                {
+                    "id": "o2",
+                    "text": "8080>80"
+                },
+                {
+                    "id": "o3",
+                    "text": "8080:80"
+                },
+                {
+                    "id": "o4",
+                    "text": "80-8080"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The correct syntax for port mapping using the -p flag is 'HOST_PORT:CONTAINER_PORT'. Therefore, '8080:80' maps port 8080 on the host to port 80 in the container."
+        },
+        {
+            "id": "q15",
+            "question": "Which of the following Dockerfile instructions copies files from the host machine into the Docker image?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "MOVE"
+                },
+                {
+                    "id": "o2",
+                    "text": "ADD"
+                },
+                {
+                    "id": "o3",
+                    "text": "TRANSFER"
+                },
+                {
+                    "id": "o4",
+                    "text": "EXPORT"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Both the 'COPY' and 'ADD' instructions can copy files from the host to the image. Among the options provided, 'ADD' is the only valid Dockerfile instruction for this purpose."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following commands is used to log in to a Docker registry, such as Docker Hub?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker signin"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker connect"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker auth"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker login"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'docker login' command is the official CLI command used to authenticate against a local or remote Docker registry."
+        },
+        {
+            "id": "q17",
+            "question": "What happens to the data inside a container's writable layer when the container is deleted, if no volumes are attached?",
+            "type": "single-choice",
+            "topic": "Storage and Volumes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The data is permanently lost."
+                },
+                {
+                    "id": "o2",
+                    "text": "The data is automatically backed up to Docker Hub."
+                },
+                {
+                    "id": "o3",
+                    "text": "The data moves to the host machine's temporary folder."
+                },
+                {
+                    "id": "o4",
+                    "text": "The data remains accessible inside the base image."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A container's writable layer is tightly coupled to the lifecycle of the container. When the container is deleted, its writable layer and all non-persisted data are permanently destroyed."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following commands can be used to view the logs of a specific running or stopped container? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker logs [container_id]"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker container logs [container_id]"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker show logs [container_id]"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker output [container_id]"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Both 'docker logs' and its modern management command equivalent 'docker container logs' are valid methods for retrieving stdout and stderr logs from a container."
+        },
+        {
+            "id": "q19",
+            "question": "In a Dockerfile, what is the main difference between the COPY and ADD instructions?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "COPY can pull files from remote URLs, while ADD cannot."
+                },
+                {
+                    "id": "o2",
+                    "text": "ADD can automatically unpack local tar archives, while COPY cannot."
+                },
+                {
+                    "id": "o3",
+                    "text": "COPY changes file permissions, while ADD keeps them identical."
+                },
+                {
+                    "id": "o4",
+                    "text": "ADD is faster and more resource-efficient than COPY."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "While both copy local files, the 'ADD' instruction has extra features such as downloading files from remote URLs and automatically extracting local tar archives into the image."
+        },
+        {
+            "id": "q20",
+            "question": "Which command is used to display detailed configuration information about a Docker resource (like a container, image, or network) in JSON format?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker status"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker details"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker inspect"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker info"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'docker inspect' returns low-level, detailed configuration structures of Docker objects in JSON format. 'docker info' displays system-wide information instead."
+        },
+        {
+            "id": "q21",
+            "question": "Which Docker network driver is the default choice for standalone containers when no driver is explicitly declared?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "host"
+                },
+                {
+                    "id": "o2",
+                    "text": "overlay"
+                },
+                {
+                    "id": "o3",
+                    "text": "bridge"
+                },
+                {
+                    "id": "o4",
+                    "text": "macvlan"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'bridge' network driver is the default network driver for containers. If you don't specify a network type, Docker places the container on a default bridge network."
+        },
+        {
+            "id": "q22",
+            "question": "What is the purpose of the 'ENV' instruction in a Dockerfile?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It sets the entrypoint path for the application."
+                },
+                {
+                    "id": "o2",
+                    "text": "It defines environment variables that persist when the container runs."
+                },
+                {
+                    "id": "o3",
+                    "text": "It encrypts the container files for production safety."
+                },
+                {
+                    "id": "o4",
+                    "text": "It establishes a secure network environment connection."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'ENV' instruction sets an environment variable key to a value. This value will be available in the environment during the build stage and when the container is running."
+        },
+        {
+            "id": "q23",
+            "question": "Which of the following files is used by Docker Compose to define services, networks, and volumes?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker-compose.json"
+                },
+                {
+                    "id": "o2",
+                    "text": "Dockerfile"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker-compose.yml"
+                },
+                {
+                    "id": "o4",
+                    "text": "compose.config"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Docker Compose relies standardly on a YAML configuration file, usually named 'docker-compose.yml' (or 'compose.yaml'), to orchestrate multiple containers."
+        },
+        {
+            "id": "q24",
+            "question": "Which command allows you to execute a new interactive command or bash session inside a container that is ALREADY running?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker run"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker attach"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker start"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker exec"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "'docker exec' runs a new command within a container that is already up and running. 'docker run' creates and starts a brand-new container instance instead."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following tags are true regarding Docker container layers? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Docker Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Image layers are read-only."
+                },
+                {
+                    "id": "o2",
+                    "text": "The container adds a thin read-write layer on top."
+                },
+                {
+                    "id": "o3",
+                    "text": "Every container layer is completely isolated from other layers."
+                },
+                {
+                    "id": "o4",
+                    "text": "Modifying a container layer alters the underlying image for other containers."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Docker images consist of a series of read-only layers. When a container is launched, a thin read-write layer (the container layer) is added on top. Modifications do not alter the underlying image layers."
+        },
+        {
+            "id": "q26",
+            "question": "What is the purpose of the 'WORKDIR' instruction in a Dockerfile?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It installs operating system dependencies."
+                },
+                {
+                    "id": "o2",
+                    "text": "It sets the working directory for subsequent instructions like RUN, CMD, and COPY."
+                },
+                {
+                    "id": "o3",
+                    "text": "It links the container to the host computer's home directory."
+                },
+                {
+                    "id": "o4",
+                    "text": "It indicates the port where the work application listens."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'WORKDIR' instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it in the Dockerfile."
+        },
+        {
+            "id": "q27",
+            "question": "Which Docker Compose command builds, (re)creates, starts, and attaches to containers for a service in the background if the '-d' flag is passed?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker-compose start"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker-compose run"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker-compose up"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker-compose deploy"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'docker-compose up' aggregates the output of each container and handles the full provisioning loop. Combined with '-d', it sets up the defined stack directly in detached mode."
+        },
+        {
+            "id": "q28",
+            "question": "What does the 'EXPOSE' instruction do in a Dockerfile?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It opens a port automatically on the host machine."
+                },
+                {
+                    "id": "o2",
+                    "text": "It acts as documentation to indicate which ports the container intends to listen on."
+                },
+                {
+                    "id": "o3",
+                    "text": "It downloads external packages from the public internet."
+                },
+                {
+                    "id": "o4",
+                    "text": "It shares a local folder with other distinct containers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'EXPOSE' instruction informs Docker that the container listens on the specified network ports at runtime. It serves primarily as documentation between the image builder and container runner; it does not map ports automatically."
+        },
+        {
+            "id": "q29",
+            "question": "Which command is used to upload a local Docker image to a registry like Docker Hub?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker upload"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker send"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker push"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker export"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker push' command uploads a locally configured image to a remote repository or registry, provided the user has authenticated access."
+        },
+        {
+            "id": "q30",
+            "question": "How can you specify a specific version tag of an image (like 'alpine version 3.18') when running a container?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker run alpine-3.18"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker run alpine:3.18"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker run alpine@3.18"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker run alpine/3.18"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Docker identifies image tags using a colon delimiter (':') right after the repository name. Thus, 'alpine:3.18' points explicitly to that specific tagged layer version."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following commands stops all running containers and removes all containers, networks, and volumes defined in a Docker Compose file?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker-compose stop"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker-compose clean"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker-compose down"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker-compose remove"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker-compose down' command stops containers and removes containers, networks, volumes, and images created by 'docker-compose up'."
+        },
+        {
+            "id": "q32",
+            "question": "What is the purpose of the '.dockerignore' file?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It lists the images that Docker should not pull from Docker Hub."
+                },
+                {
+                    "id": "o2",
+                    "text": "It prevents specified local files and directories from being sent to the Docker build context."
+                },
+                {
+                    "id": "o3",
+                    "text": "It specifies which users are blocked from running Docker commands."
+                },
+                {
+                    "id": "o4",
+                    "text": "It defines network ports that should remain completely hidden from the host."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Before the docker CLI sends the context to the Docker daemon, it looks for a file named '.dockerignore' in the root directory of the context. Files matching the patterns are excluded to speed up builds and keep images small."
+        },
+        {
+            "id": "q33",
+            "question": "Which command allows you to view the real-time resource utilization (CPU, memory, network I/O) of your running containers?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker top"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker monitor"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker info"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker stats"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'docker stats' command returns a live data stream for running containers, displaying CPU percentage, memory usage, limits, and network/block I/O metrics."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following are valid mount types supported by Docker for data persistence? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Storage and Volumes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Volume mounts"
+                },
+                {
+                    "id": "o2",
+                    "text": "Cache mounts"
+                },
+                {
+                    "id": "o3",
+                    "text": "Bind mounts"
+                },
+                {
+                    "id": "o4",
+                    "text": "Link mounts"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Docker mainly supports volume mounts (stored in a part of the host filesystem managed by Docker) and bind mounts (which can be stored anywhere on the host system)."
+        },
+        {
+            "id": "q35",
+            "question": "What does the instruction 'USER node' do inside a Dockerfile?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It creates a new user account named 'node' on the host machine."
+                },
+                {
+                    "id": "o2",
+                    "text": "It sets the username or UID to use when running the image for any subsequent RUN, CMD, and ENTRYPOINT instructions."
+                },
+                {
+                    "id": "o3",
+                    "text": "It downloads the official Node.js runtime environment layer."
+                },
+                {
+                    "id": "o4",
+                    "text": "It allows the container to connect to external Node.js server clusters."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'USER' instruction sets the user name (or UID) and optionally the user group (or GID) to use as the default user for the remainder of the current stage."
+        },
+        {
+            "id": "q36",
+            "question": "Which flag is used with 'docker run' to automatically remove a container when it exits or stops running?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "-d"
+                },
+                {
+                    "id": "o2",
+                    "text": "--rm"
+                },
+                {
+                    "id": "o3",
+                    "text": "--clean"
+                },
+                {
+                    "id": "o4",
+                    "text": "-x"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '--rm' flag tells Docker to automatically clean up the container and remove its file system when the container exits. This is useful for short-lived foreground tasks."
+        },
+        {
+            "id": "q37",
+            "question": "What is the primary difference between a Docker container and a traditional Virtual Machine (VM)?",
+            "type": "single-choice",
+            "topic": "Docker Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Containers require a dedicated hypervisor like Hyper-V or VirtualBox."
+                },
+                {
+                    "id": "o2",
+                    "text": "Containers share the host operating system's kernel, while VMs include a full guest operating system."
+                },
+                {
+                    "id": "o3",
+                    "text": "VMs are highly portable across cloud providers, while containers are locked to a single host."
+                },
+                {
+                    "id": "o4",
+                    "text": "Containers offer stronger hardware-level security isolation than VMs."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Containers sit on top of a single physical server and its host OS, sharing the kernel. Virtual machines include a full copy of a guest operating system, virtual hardware, and the application, making them significantly larger and slower to boot."
+        },
+        {
+            "id": "q38",
+            "question": "Which command is used to tag an existing local image (e.g., 'myapp:latest') with a new name or repository target (e.g., 'myregistry.com/myapp:v1')?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker rename"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker label"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker tag"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker alias"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker tag' command creates a new reference pointer (tag) pointing to an existing image ID, allowing you to easily target specific repositories or version names."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following options can be used to pass environment variables to a container at runtime using the 'docker run' command? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "-e KEY=VALUE"
+                },
+                {
+                    "id": "o2",
+                    "text": "--env-file [file_path]"
+                },
+                {
+                    "id": "o3",
+                    "text": "--var KEY=VALUE"
+                },
+                {
+                    "id": "o4",
+                    "text": "-v KEY=VALUE"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "The '-e' (or '--env') option passes individual environment variables inline, and '--env-file' allows loading multiple environment variables from a text file. The '-v' option is reserved for volumes."
+        },
+        {
+            "id": "q40",
+            "question": "What is the purpose of the 'docker history' command?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To show a history of all commands typed into the Docker CLI terminal."
+                },
+                {
+                    "id": "o2",
+                    "text": "To show the build layers and instructions used to create a specific image."
+                },
+                {
+                    "id": "o3",
+                    "text": "To view a timeline logs of when containers were created or deleted."
+                },
+                {
+                    "id": "o4",
+                    "text": "To roll back an image to a previous version version."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'docker history' command prints the list of layers, their sizes, and the Dockerfile instructions that contributed to creating that particular image."
+        },
+        {
+            "id": "q41",
+            "question": "When configuring port forwarding in a 'docker-compose.yml' file, which syntax accurately mirrors mapping host port 5000 to container port 5000?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ports: [“5000->5000”]"
+                },
+                {
+                    "id": "o2",
+                    "text": "ports:\n  - “5000: 5000”"
+                },
+                {
+                    "id": "o3",
+                    "text": "expose:\n  - 5000"
+                },
+                {
+                    "id": "o4",
+                    "text": "forward: 5000/5000"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Docker Compose files, ports are defined as a list using a standard hyphen syntax, with the values enclosed in quotes as 'HOST_PORT:CONTAINER_PORT'."
+        },
+        {
+            "id": "q42",
+            "question": "Which of the following commands safely removes all unused containers, networks, and dangling images all at once?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker system prune"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker system clean"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker clear all"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker destroy stopped"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'docker system prune' is a shortcut command that removes all stopped containers, unused networks, dangling images, and optionally build caches to reclaim disk space."
+        },
+        {
+            "id": "q43",
+            "question": "What happens if you run 'docker run' for an image that does not exist on your local machine?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The command fails immediately with an error."
+                },
+                {
+                    "id": "o2",
+                    "text": "Docker prompts you to type a Dockerfile manually."
+                },
+                {
+                    "id": "o3",
+                    "text": "Docker automatically pulls the image from the configured registry, then runs it."
+                },
+                {
+                    "id": "o4",
+                    "text": "Docker creates an empty container with no operating system."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "When 'docker run' is called, Docker Engine checks locally first. If it cannot find the target image, it automatically executes a pull request to the remote registry before proceeding to create and start the container."
+        },
+        {
+            "id": "q44",
+            "question": "Which Dockerfile instruction is used to copy files from an external stage or previous build step when performing multi-stage builds?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "COPY --from"
+                },
+                {
+                    "id": "o2",
+                    "text": "FETCH --stage"
+                },
+                {
+                    "id": "o3",
+                    "text": "ADD --source"
+                },
+                {
+                    "id": "o4",
+                    "text": "IMPORT"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "In multi-stage builds, the 'COPY --from=STAGE_NAME' flag tells Docker to grab files from an earlier built image stage rather than from the local host context directory."
+        },
+        {
+            "id": "q45",
+            "question": "Which command is used to display the processes currently running inside a specific container?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker ps -all"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker processes"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker top"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker inspect --proc"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker top' command displays a list of the active processes currently running inside the designated target container, including their PIDs and active users."
+        },
+        {
+            "id": "q46",
+            "question": "What is the primary role of the Docker daemon (dockerd)?",
+            "type": "single-choice",
+            "topic": "Docker Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To provide a graphical user interface for developers."
+                },
+                {
+                    "id": "o2",
+                    "text": "To listen for Docker API requests and manage Docker objects like images, containers, networks, and volumes."
+                },
+                {
+                    "id": "o3",
+                    "text": "To act as a remote public registry for downloading images."
+                },
+                {
+                    "id": "o4",
+                    "text": "To parse YAML files into production-ready orchestration stacks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Docker daemon (dockerd) is the background service running on the host that listens for API requests and manages Docker objects, effectively doing the heavy lifting of building, running, and distributing containers."
+        },
+        {
+            "id": "q47",
+            "question": "Which command displays the public-facing ports that are NAT-mapped to a specific running container?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker expose"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker map"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker port"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker network"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker port' command lists the port mappings or a specific mapping for the container, showing how container ports are mapped to the host."
+        },
+        {
+            "id": "q48",
+            "question": "Which command is used to copy files or directories between a container and the local host filesystem?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker copy"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker transfer"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker cp"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker mv"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'docker cp' command is used to copy files and directories from a container's filesystem to the local machine, or vice versa."
+        },
+        {
+            "id": "q49",
+            "question": "Which of the following are valid Docker restart policies for a container? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "always"
+                },
+                {
+                    "id": "o2",
+                    "text": "sometimes"
+                },
+                {
+                    "id": "o3",
+                    "text": "on-failure"
+                },
+                {
+                    "id": "o4",
+                    "text": "never"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Docker supports restart policies such as 'no' (default), 'always', 'on-failure', and 'unless-stopped'. 'sometimes' and 'never' are not valid Docker restart policies."
+        },
+        {
+            "id": "q50",
+            "question": "Why is the 'alpine' image frequently used as a base image in Dockerfiles?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It contains a pre-configured Java runtime environment."
+                },
+                {
+                    "id": "o2",
+                    "text": "It is highly secure because it intentionally lacks a shell."
+                },
+                {
+                    "id": "o3",
+                    "text": "It is extremely small and lightweight, which drastically reduces overall image sizes."
+                },
+                {
+                    "id": "o4",
+                    "text": "It automatically generates a web interface for the container."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Alpine Linux is a security-oriented, lightweight Linux distribution. Its base image is around 5MB, making it incredibly popular for creating small, efficient Docker images."
+        },
+        {
+            "id": "q51",
+            "question": "What is the function of the 'docker commit' command?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It creates a new image from a container's current file changes and settings."
+                },
+                {
+                    "id": "o2",
+                    "text": "It pushes local source code directly to a GitHub repository."
+                },
+                {
+                    "id": "o3",
+                    "text": "It permanently saves the current state of a Docker volume."
+                },
+                {
+                    "id": "o4",
+                    "text": "It finalizes a Docker Compose deployment and locks the network."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'docker commit' command creates a new image locally based on the changes made to an existing container. However, using Dockerfiles is generally the preferred method for building images."
+        },
+        {
+            "id": "q52",
+            "question": "If a Dockerfile ends with 'CMD [“python”, “app.py”]', what happens if you run the image using the command 'docker run myimage echo “hello”?",
+            "type": "single-choice",
+            "topic": "Dockerfile Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Both commands run sequentially."
+                },
+                {
+                    "id": "o2",
+                    "text": "The container immediately throws a syntax error."
+                },
+                {
+                    "id": "o3",
+                    "text": "The 'echo “hello” command overrides the default CMD and executes instead."
+                },
+                {
+                    "id": "o4",
+                    "text": "The Python app executes first, followed by the echo command."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Arguments passed to 'docker run' after the image name override the default 'CMD' instruction specified in the Dockerfile."
+        },
+        {
+            "id": "q53",
+            "question": "Which command explicitly creates a new Docker volume manually before attaching it to any container?",
+            "type": "single-choice",
+            "topic": "Storage and Volumes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker volume make"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker volume create"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker volume add"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker volume new"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'docker volume create' command is used to manually create a volume that can later be mounted to one or more containers."
+        },
+        {
+            "id": "q54",
+            "question": "Which command safely removes all local Docker volumes that are not currently used by at least one container?",
+            "type": "single-choice",
+            "topic": "Storage and Volumes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker volume prune"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker volume clean"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker volume rm --all"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker rm -v"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'docker volume prune' command deletes all unused (dangling) volumes, freeing up disk space on the host machine."
+        },
+        {
+            "id": "q55",
+            "question": "Which command suspends all processes running inside a container without terminating them?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "docker stop"
+                },
+                {
+                    "id": "o2",
+                    "text": "docker wait"
+                },
+                {
+                    "id": "o3",
+                    "text": "docker sleep"
+                },
+                {
+                    "id": "o4",
+                    "text": "docker pause"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'docker pause' command uses the cgroups freezer to suspend all processes in the specified container(s) temporarily. You can resume them using 'docker unpause'."
+        },
+        {
+            "id": "q56",
+            "question": "What happens when a container is run with the '--network host' flag on a Linux host?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The container gets a completely isolated IP address assigned by the host."
+                },
+                {
+                    "id": "o2",
+                    "text": "The container shares the host machine's networking stack and does not get its own IP address."
+                },
+                {
+                    "id": "o3",
+                    "text": "The container can only communicate with other containers on the same host."
+                },
+                {
+                    "id": "o4",
+                    "text": "The container is completely disconnected from all networks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "When using the 'host' network driver, the container's network stack is not isolated from the Docker host. The container shares the host's IP address and networking namespace directly."
+        },
+        {
+            "id": "q57",
+            "question": "In Docker Compose, how can you run multiple instances of a specific service?",
+            "type": "single-choice",
+            "topic": "Docker Compose",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By using the '--scale' flag with 'docker-compose up'."
+                },
+                {
+                    "id": "o2",
+                    "text": "By defining a 'replicas' loop inside a standard Dockerfile."
+                },
+                {
+                    "id": "o3",
+                    "text": "By copy-pasting the service multiple times in the YAML file with the exact same name."
+                },
+                {
+                    "id": "o4",
+                    "text": "By using the 'docker duplicate' command."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "You can scale services using the '--scale SERVICE=NUM' flag with 'docker-compose up' (e.g., docker-compose up --scale web=3). Note that you should ensure port mappings don't conflict."
+        },
+        {
+            "id": "q58",
+            "question": "If you run 'docker pull ubuntu' without specifying a version tag, which tag does Docker automatically attempt to pull?",
+            "type": "single-choice",
+            "topic": "Images and Registries",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "default"
+                },
+                {
+                    "id": "o2",
+                    "text": "stable"
+                },
+                {
+                    "id": "o3",
+                    "text": "latest"
+                },
+                {
+                    "id": "o4",
+                    "text": "lts"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "When no tag is specified during a pull or run command, the Docker daemon automatically defaults to pulling the image tagged with 'latest'."
+        },
+        {
+            "id": "q59",
+            "question": "What does the '-f' (or '--follow') flag do when used with the 'docker logs' command?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It forces the logs to output in a structured JSON format."
+                },
+                {
+                    "id": "o2",
+                    "text": "It follows the container if it moves to another Docker host cluster."
+                },
+                {
+                    "id": "o3",
+                    "text": "It streams the live log output continuously to the terminal."
+                },
+                {
+                    "id": "o4",
+                    "text": "It filters the logs based on a specific user-defined keyword."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "By default, 'docker logs' shows the logs at that exact moment and exits. The '-f' (follow) flag keeps the terminal open and streams the log output in real-time as it is generated."
+        },
+        {
+            "id": "q60",
+            "question": "When using 'docker exec', which flags are commonly combined to allocate a pseudo-TTY and keep STDIN open, allowing interactive terminal access?",
+            "type": "single-choice",
+            "topic": "Docker CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "-d and -p"
+                },
+                {
+                    "id": "o2",
+                    "text": "-i and -t"
+                },
+                {
+                    "id": "o3",
+                    "text": "-a and -x"
+                },
+                {
+                    "id": "o4",
+                    "text": "-r and -m"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '-i' (interactive) flag keeps STDIN open even if not attached, and '-t' allocates a pseudo-TTY. Together as '-it', they allow you to interact with the container via a shell terminal."
+        }
+    ]
+}

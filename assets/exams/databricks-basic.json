@@ -1,0 +1,1720 @@
+{
+    "id": "databricks-basic",
+    "name": "Databricks Fundamentals",
+    "vendor": "Databricks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which open-source unified analytics engine forms the core distributed computing foundation of the Databricks platform?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Apache Hadoop"
+                },
+                {
+                    "id": "o2",
+                    "text": "Apache Kafka"
+                },
+                {
+                    "id": "o3",
+                    "text": "Apache Spark"
+                },
+                {
+                    "id": "o4",
+                    "text": "Apache Flink"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Databricks was founded by the original creators of Apache Spark, and Spark serves as the core distributed data processing engine that powers the Databricks Data Intelligence Platform."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following programming languages are natively supported in Databricks notebooks? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Python"
+                },
+                {
+                    "id": "o2",
+                    "text": "C++"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL"
+                },
+                {
+                    "id": "o4",
+                    "text": "Scala"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Databricks notebooks natively support Python, SQL, Scala, and R. C++ is not natively supported for notebook cell execution."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary function of Delta Lake within the Databricks ecosystem?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It is a real-time streaming ingestion tool."
+                },
+                {
+                    "id": "o2",
+                    "text": "It is an open-source storage layer that brings reliability, ACID transactions, and time travel to data lakes."
+                },
+                {
+                    "id": "o4",
+                    "text": "It is a business intelligence dashboarding application."
+                },
+                {
+                    "id": "o5",
+                    "text": "It is the underlying hardware layer that manages GPU resources."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Delta Lake is an open-format storage layer that delivers reliability, security, and performance on your data lake by providing ACID transactions, scalable metadata handling, and unified streaming and batch data processing."
+        },
+        {
+            "id": "q4",
+            "question": "Which component of the Databricks architecture is responsible for managing clusters, scheduling jobs, and storing notebook code?",
+            "type": "single-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Data Plane"
+                },
+                {
+                    "id": "o2",
+                    "text": "The Control Plane"
+                },
+                {
+                    "id": "o3",
+                    "text": "The Medallion Architecture"
+                },
+                {
+                    "id": "o4",
+                    "text": "The Unity Catalog"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Control Plane consists of the backend services managed by Databricks in their own cloud account, which handle workspace management, cluster configuration, job scheduling, and notebook storage. The Data Plane is where the actual data processing occurs in the customer's cloud account."
+        },
+        {
+            "id": "q5",
+            "question": "What are the three standard layers in the Medallion Architecture commonly used in Databricks data pipelines? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Modeling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bronze"
+                },
+                {
+                    "id": "o2",
+                    "text": "Iron"
+                },
+                {
+                    "id": "o3",
+                    "text": "Silver"
+                },
+                {
+                    "id": "o4",
+                    "text": "Gold"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The Medallion Architecture describes a data design pattern that logically organizes data in a lakehouse into Bronze (raw), Silver (cleansed/filtered), and Gold (business-level aggregates) layers."
+        },
+        {
+            "id": "q6",
+            "question": "Which Databricks feature provides a unified governance solution for data and AI assets across multiple clouds?",
+            "type": "single-choice",
+            "topic": "Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks SQL"
+                },
+                {
+                    "id": "o2",
+                    "text": "Delta Live Tables"
+                },
+                {
+                    "id": "o3",
+                    "text": "Unity Catalog"
+                },
+                {
+                    "id": "o4",
+                    "text": "MLflow"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Unity Catalog is the unified governance solution for all data and AI assets (files, tables, machine learning models, dashboards) across the Databricks Lakehouse."
+        },
+        {
+            "id": "q7",
+            "question": "You need to run an automated, scheduled data pipeline without user interaction. Which type of Databricks cluster is the most cost-effective and appropriate for this task?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "All-Purpose Cluster"
+                },
+                {
+                    "id": "o2",
+                    "text": "Job Cluster"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL Warehouse"
+                },
+                {
+                    "id": "o4",
+                    "text": "Serverless Cluster"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Job clusters are created when you run a job and terminate when the job ends. They are specifically designed for automated workloads and are billed at a lower rate than All-Purpose clusters, making them more cost-effective."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following capabilities does Delta Lake provide over standard Parquet files? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ACID Transactions"
+                },
+                {
+                    "id": "o2",
+                    "text": "Direct execution of JavaScript functions"
+                },
+                {
+                    "id": "o3",
+                    "text": "Time Travel (Data versioning)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Automatic translation of SQL to Python"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Delta Lake uses Parquet as its underlying data format but adds a transaction log that enables ACID transactions, Time Travel (querying past versions of data), schema enforcement, and concurrent reads/writes."
+        },
+        {
+            "id": "q9",
+            "question": "Which Databricks persona-based workspace is optimized specifically for executing ad-hoc queries, creating dashboards, and sharing reports?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Machine Learning"
+                },
+                {
+                    "id": "o2",
+                    "text": "Databricks Data Science & Engineering"
+                },
+                {
+                    "id": "o3",
+                    "text": "Databricks SQL"
+                },
+                {
+                    "id": "o4",
+                    "text": "Databricks DevOps"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Databricks SQL provides an intuitive, SQL-native interface for data analysts to run queries, build dashboards, and set up alerts on their data lakehouse without needing to write complex code."
+        },
+        {
+            "id": "q10",
+            "question": "What is the primary open-source platform integrated into Databricks to manage the machine learning lifecycle, including experimentation, reproducibility, and deployment?",
+            "type": "single-choice",
+            "topic": "Machine Learning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "TensorFlow"
+                },
+                {
+                    "id": "o2",
+                    "text": "PyTorch"
+                },
+                {
+                    "id": "o3",
+                    "text": "MLflow"
+                },
+                {
+                    "id": "o4",
+                    "text": "AutoML"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "MLflow is an open-source platform developed by Databricks to manage the complete machine learning lifecycle. It tracks experiments, packages code, and manages model deployment and registries."
+        },
+        {
+            "id": "q11",
+            "question": "In Databricks, what is the purpose of Delta Live Tables (DLT)?",
+            "type": "single-choice",
+            "topic": "Data Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To build reliable, maintainable, and testable data processing pipelines."
+                },
+                {
+                    "id": "o2",
+                    "text": "To provide a live chat interface for data engineers."
+                },
+                {
+                    "id": "o3",
+                    "text": "To stream video content directly to end users."
+                },
+                {
+                    "id": "o4",
+                    "text": "To monitor infrastructure costs in real-time."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Delta Live Tables (DLT) is a declarative framework for building reliable, maintainable, and testable data processing pipelines. It automatically manages task dependencies, quality controls, and infrastructure scaling."
+        },
+        {
+            "id": "q12",
+            "question": "Which engine was developed by Databricks to provide natively vectorized query execution, drastically improving performance for SQL workloads on the lakehouse?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Presto"
+                },
+                {
+                    "id": "o2",
+                    "text": "Photon"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hive"
+                },
+                {
+                    "id": "o4",
+                    "text": "Tungsten"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Photon is a high-performance, native vectorized query engine developed by Databricks. It is written in C++ and designed to dramatically speed up data processing and SQL queries on modern hardware."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following are valid methods for securely authenticating and managing access to REST APIs in Databricks? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Personal Access Tokens (PATs)"
+                },
+                {
+                    "id": "o2",
+                    "text": "FTP Usernames and Passwords"
+                },
+                {
+                    "id": "o3",
+                    "text": "OAuth 2.0"
+                },
+                {
+                    "id": "o4",
+                    "text": "Anonymous Open Access"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Databricks REST APIs can be securely accessed using Personal Access Tokens (PATs) or OAuth 2.0 (such as Microsoft Entra ID tokens in Azure Databricks). FTP and anonymous access are not secure or supported API authentication methods."
+        },
+        {
+            "id": "q14",
+            "question": "You want to organize multiple tasks (notebooks, DLT pipelines, and Python scripts) into a sequential workflow with dependencies. Which Databricks feature should you use?",
+            "type": "single-choice",
+            "topic": "Orchestration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Repos"
+                },
+                {
+                    "id": "o2",
+                    "text": "Databricks Workflows (Jobs)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Databricks Feature Store"
+                },
+                {
+                    "id": "o4",
+                    "text": "Databricks Container Services"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Databricks Workflows (previously Databricks Jobs) is the fully managed orchestration service that allows you to run multiple tasks with dependencies, passing parameters between them and managing schedules."
+        },
+        {
+            "id": "q15",
+            "question": "What is the function of a 'Cluster' in a Databricks Workspace?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It defines the organizational folder structure for notebooks."
+                },
+                {
+                    "id": "o2",
+                    "text": "It provides the compute resources and environments required to run workloads and queries."
+                },
+                {
+                    "id": "o3",
+                    "text": "It serves as the permanent storage backend for Delta tables."
+                },
+                {
+                    "id": "o4",
+                    "text": "It acts as the primary firewall for the workspace."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Databricks cluster is a set of computation resources and configurations on which you run data engineering, data science, and data analytics workloads, such as production ETL pipelines or ad-hoc analytics."
+        },
+        {
+            "id": "q16",
+            "question": "In a standard Apache Spark architecture used by Databricks, which node is responsible for translating the user code into discrete execution tasks and coordinating the workers?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Worker Node"
+                },
+                {
+                    "id": "o2",
+                    "text": "Driver Node"
+                },
+                {
+                    "id": "o3",
+                    "text": "Storage Node"
+                },
+                {
+                    "id": "o4",
+                    "text": "Metadata Node"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Driver Node is the heart of the Spark application. It maintains information about the Spark application, responds to the user's program or input, and analyzes, distributes, and schedules work across the Worker Nodes."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following describes the behavior of Lazy Evaluation in Apache Spark?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data is instantly cached in memory as soon as a transformation is defined."
+                },
+                {
+                    "id": "o2",
+                    "text": "Transformations are not executed immediately; instead, Spark builds a lineage graph until an action is called."
+                },
+                {
+                    "id": "o3",
+                    "text": "Queries are slowed down deliberately to prevent hardware overheating."
+                },
+                {
+                    "id": "o4",
+                    "text": "Write operations are executed only when the cluster terminates."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Lazy evaluation means that Spark will not start executing transformations immediately when they are defined. Instead, it records the sequence of transformations (creating a Directed Acyclic Graph or DAG) and only computes them when an explicit 'action' (like count, collect, or save) is requested."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following Apache Spark operations are categorized as Actions rather than Transformations? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "select()"
+                },
+                {
+                    "id": "o2",
+                    "text": "count()"
+                },
+                {
+                    "id": "o3",
+                    "text": "filter()"
+                },
+                {
+                    "id": "o4",
+                    "text": "collect()"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "Operations like select() and filter() are transformations that return a new DataFrame without executing the underlying query. Operations like count() and collect() are actions that trigger data computation and return a result to the driver or write it to storage."
+        },
+        {
+            "id": "q19",
+            "question": "What happens to the underlying data when you drop an External (Unmanaged) table in Databricks?",
+            "type": "single-choice",
+            "topic": "Data Modeling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Both the metadata definition and the actual data files are permanently deleted."
+                },
+                {
+                    "id": "o2",
+                    "text": "Only the actual data files are deleted, while the metadata structure remains."
+                },
+                {
+                    "id": "o3",
+                    "text": "Only the metadata definition is removed from the catalog; the actual data files remain intact in storage."
+                },
+                {
+                    "id": "o4",
+                    "text": "The table is moved to a temporary recycle bin for 30 days."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "When you drop an External (Unmanaged) table, Databricks only removes the metadata from the metastore/catalog. The underlying data files remain completely safe in your cloud storage bucket. For Managed tables, dropping the table deletes both metadata and data."
+        },
+        {
+            "id": "q20",
+            "question": "Which specialized notebook mechanism allows you to parameterize your code and pass input values dynamically into a Databricks notebook cell?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Dashboards"
+                },
+                {
+                    "id": "o2",
+                    "text": "Databricks Widgets"
+                },
+                {
+                    "id": "o3",
+                    "text": "Databricks Secrets"
+                },
+                {
+                    "id": "o4",
+                    "text": "Databricks Variables"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Databricks Widgets allow you to add input fields, dropdown menus, and parameters directly to your notebooks. They are excellent for building interactive dashboards or parameterizing execution pipelines."
+        },
+        {
+            "id": "q21",
+            "question": "Which component of a Databricks Deployment architecture belongs in the Customer's Cloud Account (Data Plane)? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The web application interface and workspace manager"
+                },
+                {
+                    "id": "o2",
+                    "text": "Compute clusters (Virtual Machines)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Object cloud storage buckets (e.g., S3, ADLS Gen2)"
+                },
+                {
+                    "id": "o4",
+                    "text": "The centralized job scheduling coordinator"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Databricks uses a split-plane architecture. The Data Plane resides within the customer's cloud account and hosts the compute clusters (VMs) and the cloud storage where data resides. The Control Plane is hosted by Databricks and manages notebooks, configurations, and job coordination."
+        },
+        {
+            "id": "q22",
+            "question": "What is the primary objective of running the OPTIMIZE command on a Delta Lake table?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt the table data using AES-256 keys."
+                },
+                {
+                    "id": "o2",
+                    "text": "To convert the table format from Delta into JSON."
+                },
+                {
+                    "id": "o3",
+                    "text": "To compact small files into larger, uniform files to improve query read performance."
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically drop unused columns from the table."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Over time, frequent writes to a Delta table can create many small files, hurting query performance (the 'small file problem'). The OPTIMIZE command compacts these small files into larger, optimized Parquet files."
+        },
+        {
+            "id": "q23",
+            "question": "Which Delta Lake feature allows you to query historical versions of a dataset or roll back accidental data deletions?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Schema Enforcement"
+                },
+                {
+                    "id": "o2",
+                    "text": "Time Travel"
+                },
+                {
+                    "id": "o3",
+                    "text": "Z-Ordering"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Skipping"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Delta Lake's Time Travel capabilities allow users to query older snapshots of data using either a specific timestamp or a version number, making auditing and rollback straightforward."
+        },
+        {
+            "id": "q24",
+            "question": "What command should you run to safely delete older data files that are no longer needed by a Delta table's history log, helping free up cloud storage?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "CLEANUP TABLE"
+                },
+                {
+                    "id": "o2",
+                    "text": "PURGE HISTORY"
+                },
+                {
+                    "id": "o3",
+                    "text": "VACUUM"
+                },
+                {
+                    "id": "o4",
+                    "text": "OPTIMIZE"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The VACUUM command removes data files that are no longer referenced by the Delta table and are older than a specified retention threshold (default is 7 days), saving cloud storage costs."
+        },
+        {
+            "id": "q25",
+            "question": "In Databricks Unity Catalog, which three objects form the primary three-tier namespace hierarchy for referencing tables and views? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Catalog"
+                },
+                {
+                    "id": "o2",
+                    "text": "Cluster"
+                },
+                {
+                    "id": "o3",
+                    "text": "Schema (Database)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Table/View"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Unity Catalog structures data using a explicit three-tier namespace: catalog.schema.table (or catalog.schema.view) to accurately locate data assets across the architecture."
+        },
+        {
+            "id": "q26",
+            "question": "What is the primary benefit of utilizing an Auto-Scaling cluster configuration in Databricks?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It automatically rewrites inefficient Python code into optimized SQL."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically adjusts the number of worker nodes based on workload demands to minimize cost and optimize execution."
+                },
+                {
+                    "id": "o3",
+                    "text": "It connects your workspace directly to external databases without credentials."
+                },
+                {
+                    "id": "o4",
+                    "text": "It migrates local computers into the cloud automatically."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Auto-scaling allows Databricks to dynamically add worker nodes during resource-heavy computations (like massive joins) and remove them when the cluster is idle, preventing over-provisioning and managing cost efficiently."
+        },
+        {
+            "id": "q27",
+            "question": "Which built-in Databricks tool lets you securely store sensitive strings like database passwords or API keys so they are not hardcoded inside a notebook?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Key-Store"
+                },
+                {
+                    "id": "o2",
+                    "text": "Databricks Secret Scopes"
+                },
+                {
+                    "id": "o3",
+                    "text": "Unity Storage Locker"
+                },
+                {
+                    "id": "o4",
+                    "text": "Databricks Passwords API"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Databricks Secret Scopes allow you to securely store credentials, API keys, and passwords. You can fetch them safely inside notebooks using the dbutils.secrets.get() function instead of exposed text."
+        },
+        {
+            "id": "q28",
+            "question": "What utility group in Databricks notebooks provides commands to perform file system operations (like listing files, moving files, or checking directory paths)?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "dbutils.fs"
+                },
+                {
+                    "id": "o2",
+                    "text": "spark.fileSystem"
+                },
+                {
+                    "id": "o3",
+                    "text": "sys.storage"
+                },
+                {
+                    "id": "o4",
+                    "text": "dbutils.notebook"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The Databricks Utilities file system package (dbutils.fs) provides direct commands to interact with the Databricks File System (DBFS) and cloud storage providers, offering methods like cp, ls, mkdirs, and rm."
+        },
+        {
+            "id": "q29",
+            "question": "What language magic command would you place at the very top of a cell to write and run native SQL queries inside an otherwise Python-configured Databricks notebook?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "%run-sql"
+                },
+                {
+                    "id": "o2",
+                    "text": "%sql"
+                },
+                {
+                    "id": "o3",
+                    "text": "@sql"
+                },
+                {
+                    "id": "o4",
+                    "text": "#sql"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Magic commands like %sql, %python, %scala, and %r allow developers to switch languages seamlessly cell-by-cell within a single Databricks notebook environment."
+        },
+        {
+            "id": "q30",
+            "question": "Which engine serves as the underlying framework behind Delta Live Tables to continuously ingest new data files as they arrive in cloud object storage?",
+            "type": "single-choice",
+            "topic": "Data Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Apache Hadoop MapReduce"
+                },
+                {
+                    "id": "o2",
+                    "text": "Spark Structured Streaming (and Auto Loader)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Databricks Git Folders"
+                },
+                {
+                    "id": "o4",
+                    "text": "Sqoop Ingestion Platform"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Delta Live Tables and Auto Loader leverage Spark Structured Streaming to incrementally and efficiently process incoming files from cloud data sources in near real-time without scheduling complex overhead."
+        },
+        {
+            "id": "q31",
+            "question": "What is a Databricks SQL Warehouse?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A physical database server located in a Databricks data center."
+                },
+                {
+                    "id": "o2",
+                    "text": "A specialized compute cluster optimized specifically for running SQL workloads and queries."
+                },
+                {
+                    "id": "o3",
+                    "text": "A repository for storing machine learning models."
+                },
+                {
+                    "id": "o4",
+                    "text": "A graphical tool for creating user interfaces."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Databricks SQL Warehouse is a compute resource that lets you run SQL commands on data objects within Databricks SQL. They are highly optimized for SQL execution, concurrency, and performance."
+        },
+        {
+            "id": "q32",
+            "question": "Which Databricks feature allows you to incrementally and efficiently ingest new files from cloud storage into Delta tables as they arrive?",
+            "type": "single-choice",
+            "topic": "Data Ingestion",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks SQL"
+                },
+                {
+                    "id": "o2",
+                    "text": "MLflow Tracking"
+                },
+                {
+                    "id": "o3",
+                    "text": "Auto Loader"
+                },
+                {
+                    "id": "o4",
+                    "text": "Unity Catalog"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Auto Loader incrementally and efficiently processes new data files as they arrive in cloud storage without requiring complex state management or manual file tracking."
+        },
+        {
+            "id": "q33",
+            "question": "In Unity Catalog, what is automatically captured when you execute SQL queries or DataFrame operations?",
+            "type": "single-choice",
+            "topic": "Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Automated billing reports"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data lineage (tracking the flow of data from source to destination)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Machine learning model weights"
+                },
+                {
+                    "id": "o4",
+                    "text": "Automatic index creation for all columns"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Unity Catalog automatically captures runtime data lineage across queries run on Databricks, providing end-to-end visibility into how data flows (both at the table and column level)."
+        },
+        {
+            "id": "q34",
+            "question": "Which feature of Delta Lake prevents bad data from being written to a table by rejecting records that do not match the table's defined structure?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Schema Evolution"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data Skipping"
+                },
+                {
+                    "id": "o3",
+                    "text": "Time Travel"
+                },
+                {
+                    "id": "o4",
+                    "text": "Schema Enforcement"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Schema Enforcement (or schema validation) is a safeguard in Delta Lake that ensures data quality by rejecting writes to a table that do not match the table's schema."
+        },
+        {
+            "id": "q35",
+            "question": "Which cluster configuration setting automatically shuts down a cluster after a specified period of inactivity to save costs?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Auto-scaling"
+                },
+                {
+                    "id": "o2",
+                    "text": "Auto-termination"
+                },
+                {
+                    "id": "o3",
+                    "text": "Spot Instances"
+                },
+                {
+                    "id": "o4",
+                    "text": "Photon Engine"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Auto-termination ensures that clusters do not run indefinitely when idle, shutting them down automatically after a user-defined number of minutes of inactivity."
+        },
+        {
+            "id": "q36",
+            "question": "What Databricks feature should you use to synchronize your notebook code with external version control providers like GitHub, GitLab, or Azure DevOps?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks File System (DBFS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Delta Live Tables"
+                },
+                {
+                    "id": "o3",
+                    "text": "Databricks Git Folders (Repos)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Databricks Secrets"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Databricks Git folders (formerly Repos) provide repository-level integration with Git providers, allowing you to develop code using standard CI/CD and version control best practices."
+        },
+        {
+            "id": "q37",
+            "question": "What is the primary purpose of the MLflow Model Registry in Databricks?",
+            "type": "single-choice",
+            "topic": "Machine Learning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To store raw training datasets securely."
+                },
+                {
+                    "id": "o2",
+                    "text": "To act as a centralized store for managing the lifecycle of machine learning models (e.g., Staging, Production)."
+                },
+                {
+                    "id": "o3",
+                    "text": "To provide GPU compute resources for deep learning."
+                },
+                {
+                    "id": "o4",
+                    "text": "To write distributed SQL queries for business intelligence."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The MLflow Model Registry is a centralized model store, set of APIs, and UI to collaboratively manage the full lifecycle of an MLflow Model, including transitioning models through stages like Staging, Production, and Archived."
+        },
+        {
+            "id": "q38",
+            "question": "How does Delta Lake provide ACID transaction guarantees on top of cloud object storage?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By maintaining an ordered transaction log (the _delta_log folder)."
+                },
+                {
+                    "id": "o2",
+                    "text": "By using an external relational database like PostgreSQL as the primary storage."
+                },
+                {
+                    "id": "o3",
+                    "text": "By keeping all data continuously cached in cluster memory."
+                },
+                {
+                    "id": "o4",
+                    "text": "By limiting access to one user per workspace."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Delta Lake achieves ACID transactions by storing an ordered, atomic transaction log (often referred to as the Delta Log) alongside the Parquet data files. This log tracks exactly which files are added or removed in every transaction."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following are benefits of using Delta Live Tables (DLT) for data pipelines? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Engineering",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Automated infrastructure management and task orchestration"
+                },
+                {
+                    "id": "o2",
+                    "text": "Built-in data quality expectations and monitoring"
+                },
+                {
+                    "id": "o3",
+                    "text": "Automatic conversion of non-Databricks code into Spark SQL"
+                },
+                {
+                    "id": "o4",
+                    "text": "Ability to host public-facing websites"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Delta Live Tables simplifies ETL by automatically managing the cluster infrastructure, orchestrating task dependencies, and enforcing data quality through defined 'expectations'."
+        },
+        {
+            "id": "q40",
+            "question": "In Databricks Workflows, which of the following can be used as automated triggers to start a job? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Orchestration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A scheduled time (Cron syntax)"
+                },
+                {
+                    "id": "o2",
+                    "text": "A physical hardware button press on the cluster node"
+                },
+                {
+                    "id": "o3",
+                    "text": "The arrival of a new file in a configured cloud storage location"
+                },
+                {
+                    "id": "o4",
+                    "text": "An email sent to the workspace administrator"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Databricks Workflows can be triggered manually, via REST API, on a scheduled basis (cron jobs), or automatically upon the arrival of new files in a specified cloud storage location."
+        },
+        {
+            "id": "q41",
+            "question": "What is an 'External Location' in the context of Databricks Unity Catalog?",
+            "type": "single-choice",
+            "topic": "Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A disaster recovery site located in a different geographical region."
+                },
+                {
+                    "id": "o2",
+                    "text": "An object that combines a cloud storage path with an identity credential that authorizes access to that path."
+                },
+                {
+                    "id": "o3",
+                    "text": "A temporary workspace for guest users outside your organization."
+                },
+                {
+                    "id": "o4",
+                    "text": "A local file system mounted on a developer's laptop."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Unity Catalog, an External Location securely maps cloud storage locations (like S3 buckets or ADLS containers) to a storage credential, allowing governed access to data sitting outside the managed storage."
+        },
+        {
+            "id": "q42",
+            "question": "What is the primary advantage of utilizing Databricks Serverless Compute?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It provides root access to the virtual machines for deep OS-level tuning."
+                },
+                {
+                    "id": "o2",
+                    "text": "It eliminates the need for users to manage cloud infrastructure and provides near-instant cluster startup times."
+                },
+                {
+                    "id": "o3",
+                    "text": "It runs the workloads entirely on the user's local laptop."
+                },
+                {
+                    "id": "o4",
+                    "text": "It disables all security protocols to guarantee maximum processing speed."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Serverless compute abstracts the cloud infrastructure away from the customer. Databricks manages the underlying compute resources, allowing SQL warehouses and job clusters to start almost instantly without administrative overhead."
+        },
+        {
+            "id": "q43",
+            "question": "If you intentionally want to modify a table's schema (e.g., append data with new columns) during a write operation, which Delta Lake feature must you explicitly enable?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Schema Enforcement"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data Skipping"
+                },
+                {
+                    "id": "o3",
+                    "text": "Schema Evolution"
+                },
+                {
+                    "id": "o4",
+                    "text": "Z-Ordering"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Schema Evolution allows users to easily accommodate changing data structures over time. By enabling it (e.g., using .option('mergeSchema', 'true')), new columns present in the source data will automatically be added to the target Delta table."
+        },
+        {
+            "id": "q44",
+            "question": "Which primary user personas are the target audience for the Databricks SQL workspace experience? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data Analysts"
+                },
+                {
+                    "id": "o2",
+                    "text": "Business Intelligence (BI) Developers"
+                },
+                {
+                    "id": "o3",
+                    "text": "DevOps Engineers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deep Learning Researchers"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Databricks SQL provides a familiar, SQL-native interface tailored for Data Analysts and BI Developers to query data, build visualizations, and connect BI tools (like Tableau or PowerBI) directly to the Lakehouse."
+        },
+        {
+            "id": "q45",
+            "question": "What is the unified, default format used by Databricks for storing tabular data in the Lakehouse?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "CSV"
+                },
+                {
+                    "id": "o2",
+                    "text": "JSON"
+                },
+                {
+                    "id": "o3",
+                    "text": "Delta (Delta Lake)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Apache Avro"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Delta (Delta Lake) is the default and standard format for all tables created in Databricks. It provides the foundation of the Lakehouse architecture, combining the benefits of data warehouses and data lakes."
+        },
+        {
+            "id": "q46",
+            "question": "Which component of an Apache Spark cluster is responsible for executing the individual tasks assigned by the driver node?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Executor"
+                },
+                {
+                    "id": "o2",
+                    "text": "Catalog"
+                },
+                {
+                    "id": "o3",
+                    "text": "Metastore"
+                },
+                {
+                    "id": "o4",
+                    "text": "Secret Scope"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Executors are worker processes that run individual tasks in a spark job. They execute the code assigned to them by the driver node and store data in memory or disk storage for the application."
+        },
+        {
+            "id": "q47",
+            "question": "What type of table is created when you define a table in Databricks without specifying a custom 'LOCATION' path?",
+            "type": "single-choice",
+            "topic": "Data Modeling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "External Table"
+                },
+                {
+                    "id": "o2",
+                    "text": "Managed Table"
+                },
+                {
+                    "id": "o3",
+                    "text": "Temporary View"
+                },
+                {
+                    "id": "o4",
+                    "text": "Unmanaged Table"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "By default, if you do not provide a specific storage location path, Databricks creates a Managed Table. For managed tables, Databricks manages both the metadata and the physical data files in the default root storage location."
+        },
+        {
+            "id": "q48",
+            "question": "What is the primary function of the Databricks File System (DBFS)?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A relational database management system for running high-speed transaction processing."
+                },
+                {
+                    "id": "o2",
+                    "text": "A virtual object storage layer mounted on a Databricks workspace that allows users to interact with cloud storage using directory paths."
+                },
+                {
+                    "id": "o3",
+                    "text": "An operating system used to run cluster nodes."
+                },
+                {
+                    "id": "o4",
+                    "text": "A specialized machine learning package for text analytics."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "DBFS is a virtual file system mounted on a Databricks workspace, which maps actions back to the underlying cloud object storage, allowing data professionals to use standard file paths without needing cloud credentials for every query."
+        },
+        {
+            "id": "q49",
+            "question": "Which of the following describes the difference between a Standard View and a Temporary View in Databricks SQL?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A Standard View is saved to the catalog and visible across sessions, while a Temporary View exists only for the duration of the current notebook session."
+                },
+                {
+                    "id": "o2",
+                    "text": "A Standard View can only contain Python code, while a Temporary View only contains SQL."
+                },
+                {
+                    "id": "o3",
+                    "text": "A Temporary View physically duplicates data on disk, while a Standard View does not."
+                },
+                {
+                    "id": "o4",
+                    "text": "There is no difference; they are exact aliases."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Standard Views are persisted objects within a schema database and can be accessed by any user with permission. Temporary views are session-scoped and are automatically dropped when the notebook session or connection terminates."
+        },
+        {
+            "id": "q50",
+            "question": "Which clause can be attached to a Delta Lake table definition to enforce data quality by ensuring values in a column do not violate specific conditions (e.g., age > 0)?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "CHECK Constraints"
+                },
+                {
+                    "id": "o2",
+                    "text": "ENFORCE RULES"
+                },
+                {
+                    "id": "o3",
+                    "text": "VALIDATE COLUMN"
+                },
+                {
+                    "id": "o4",
+                    "text": "ASSERT TYPE"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Delta Lake supports standard SQL CHECK constraints. You can add them to a table using the ALTER TABLE ADD CONSTRAINT command to guarantee that data appended to the table satisfies the defined boolean expression."
+        },
+        {
+            "id": "q51",
+            "question": "When configuring a Databricks Workflows job task, which of the following asset types can be executed directly as a task? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Orchestration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Notebook"
+                },
+                {
+                    "id": "o2",
+                    "text": "Delta Live Tables (DLT) pipeline"
+                },
+                {
+                    "id": "o3",
+                    "text": "Python script (.py file)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Power BI Desktop file (.pbix)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Databricks Workflows natively orchestrates Databricks Notebooks, Delta Live Tables pipelines, Python scripts, JAR files, SQL queries, and dbt projects. Local desktop formats like Power BI files cannot be executed directly as tasks."
+        },
+        {
+            "id": "q52",
+            "question": "What does the 'Z-Order' optimization technique do when applied to a Delta Lake table?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It compresses the table using a zip algorithm to reduce space."
+                },
+                {
+                    "id": "o2",
+                    "text": "It co-locates related information in the same set of files to dramatically improve the efficiency of data skipping during queries."
+                },
+                {
+                    "id": "o3",
+                    "text": "It sorts the columns alphabetically in the metadata schema."
+                },
+                {
+                    "id": "o4",
+                    "text": "It encrypts the log files using a zero-trust architecture."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Z-Ordering is a form of multi-dimensional clustering that maps data to specific files along specified columns. This grouping maximizes the effectiveness of Delta Lake's built-in data-skipping algorithm, reducing the volume of data read."
+        },
+        {
+            "id": "q53",
+            "question": "What is the primary function of the 'Driver Node' in a Databricks All-Purpose cluster?",
+            "type": "single-choice",
+            "topic": "Compute",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To store the raw data files permanently."
+                },
+                {
+                    "id": "o2",
+                    "text": "To execute the main loop of the user's program, compile code, coordinate execution tasks, and communicate with workers."
+                },
+                {
+                    "id": "o3",
+                    "text": "To manage physical electricity connections to the servers."
+                },
+                {
+                    "id": "o4",
+                    "text": "To act as an external firewall blocking internet access."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The driver node runs the main driver application process containing the SparkContext. It breaks user instructions into execution units (stages and tasks) and schedules them to run on the worker nodes."
+        },
+        {
+            "id": "q54",
+            "question": "Which of the following describes the key capability of Delta Lake's 'Time Travel'?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It automatically adjusts cluster clock times across different time zones."
+                },
+                {
+                    "id": "o2",
+                    "text": "It allows users to query a table as it existed at a specific historical point in time or version number."
+                },
+                {
+                    "id": "o3",
+                    "text": "It predicts future data values using machine learning algorithms."
+                },
+                {
+                    "id": "o4",
+                    "text": "It speeds up network latency by routing traffic backward through cloud regions."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Because Delta Lake records every transaction in its log files, users can specify options like timestampAsOf or versionAsOf to query precise historical snapshots of their data."
+        },
+        {
+            "id": "q55",
+            "question": "Which of the following statement types are valid Data Manipulation Language (DML) commands supported natively by Delta Lake tables? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "INSERT"
+                },
+                {
+                    "id": "o2",
+                    "text": "UPDATE"
+                },
+                {
+                    "id": "o3",
+                    "text": "MERGE INTO"
+                },
+                {
+                    "id": "o4",
+                    "text": "CREATE SCHEDULER"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Delta Lake brings full support for traditional database operations like INSERT, UPDATE, DELETE, and MERGE INTO (upserts) directly to data lakes, unlike traditional Parquet file stores which require rewriting the entire dataset."
+        },
+        {
+            "id": "q56",
+            "question": "In the Databricks Lakehouse architecture, what is a key feature of the 'Silver' layer in a Medallion design?",
+            "type": "single-choice",
+            "topic": "Data Modeling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It contains completely raw, unprocessed data directly from the source system."
+                },
+                {
+                    "id": "o2",
+                    "text": "It contains cleansed, filtered, and enriched data that is ready for deeper down-stream analytics."
+                },
+                {
+                    "id": "o3",
+                    "text": "It contains final aggregated metrics for direct consumption in BI dashboards."
+                },
+                {
+                    "id": "o4",
+                    "text": "It is an archival tier stored exclusively on tape drives."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In a medallion architecture, the Silver layer serves as an intermediary staging step where raw data from Bronze is validated, parsed, cleansed, and joined with lookup tables to form an organized, trustworthy structure."
+        },
+        {
+            "id": "q57",
+            "question": "Which component in Databricks provides a collaborative environment where multiple users can write code, add narrative text, and visualize data simultaneously?",
+            "type": "single-choice",
+            "topic": "Workspace and Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Databricks Notebooks"
+                },
+                {
+                    "id": "o2",
+                    "text": "Databricks Secret Scopes"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL Warehouses"
+                },
+                {
+                    "id": "o4",
+                    "text": "Unity Catalog Credential Manager"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Databricks notebooks provide a collaborative web interface that supports real-time co-authoring, automatic versioning, comments, and mixed languages for data science and engineering teams."
+        },
+        {
+            "id": "q58",
+            "question": "What is the consequence of executing a VACUUM command with a retention period of 0 hours (assuming you have disabled safety checks)?",
+            "type": "single-choice",
+            "topic": "Delta Lake",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It immediately deletes all historical data files not referenced by the current version, breaking the ability to use Time Travel to look at older snapshots."
+                },
+                {
+                    "id": "o2",
+                    "text": "It updates all data formats into JSON files."
+                },
+                {
+                    "id": "o3",
+                    "text": "It optimizes the table schema by adding indexes."
+                },
+                {
+                    "id": "o4",
+                    "text": "It terminates the cluster instantly."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "VACUUM deletes physical data files that are no longer part of the current table state. Running it with 0 hours retention removes all historical versions, freeing storage space but rendering Time Travel back to previous snapshots impossible."
+        },
+        {
+            "id": "q59",
+            "question": "Which permission level is required in Unity Catalog to allow a user to look at a table's data using a SELECT query?",
+            "type": "single-choice",
+            "topic": "Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "OWNER"
+                },
+                {
+                    "id": "o2",
+                    "text": "SELECT"
+                },
+                {
+                    "id": "o3",
+                    "text": "MODIFY"
+                },
+                {
+                    "id": "o4",
+                    "text": "ALL PRIVILEGES"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Unity Catalog uses standard SQL data access control privileges. The SELECT privilege gives a user read-only access to query records from a specific table or view."
+        },
+        {
+            "id": "q60",
+            "question": "What is the primary objective of the Databricks Lakehouse platform approach?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To split data warehouses and data lakes into completely separate vendor systems."
+                },
+                {
+                    "id": "o2",
+                    "text": "To combine the data management and ACID capabilities of a data warehouse with the low-cost object storage scale of a data lake."
+                },
+                {
+                    "id": "o3",
+                    "text": "To enforce data storage exclusively on local user desktops."
+                },
+                {
+                    "id": "o4",
+                    "text": "To host application servers for enterprise websites."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Lakehouse architecture unifies data warehousing capabilities (ACID transactions, governance, performance optimization) directly onto scalable, cheap cloud object storage systems, eliminating data silo architectures."
+        }
+    ]
+}

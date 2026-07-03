@@ -1,0 +1,1707 @@
+{
+    "id": "python-basic",
+    "name": "Python Basic Certification",
+    "vendor": "CertifyStacks-Basics",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the output of print(type(5 / 2)) in Python 3?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "<class 'int'>"
+                },
+                {
+                    "id": "o2",
+                    "text": "<class 'float'>"
+                },
+                {
+                    "id": "o3",
+                    "text": "<class 'double'>"
+                },
+                {
+                    "id": "o4",
+                    "text": "<class 'number'>"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Python 3, the division operator (/) always returns a floating-point number, even if the division results in a whole number."
+        },
+        {
+            "id": "q2",
+            "question": "Which keyword is used to define a custom function in Python?",
+            "type": "single-choice",
+            "topic": "Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "func"
+                },
+                {
+                    "id": "o2",
+                    "text": "define"
+                },
+                {
+                    "id": "o3",
+                    "text": "def"
+                },
+                {
+                    "id": "o4",
+                    "text": "function"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'def' keyword is used in Python to declare a new function."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following built-in data types are mutable in Python? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "List"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tuple"
+                },
+                {
+                    "id": "o3",
+                    "text": "String"
+                },
+                {
+                    "id": "o4",
+                    "text": "Dictionary"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "Lists and Dictionaries are mutable, meaning their contents can be changed after they are created. Tuples and Strings are immutable."
+        },
+        {
+            "id": "q4",
+            "question": "How do you insert a single-line comment in Python code?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "// This is a comment"
+                },
+                {
+                    "id": "o2",
+                    "text": "/* This is a comment */"
+                },
+                {
+                    "id": "o3",
+                    "text": "# This is a comment"
+                },
+                {
+                    "id": "o4",
+                    "text": "-- This is a comment"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Python, the hash symbol (#) is used to start a single-line comment. Anything following it on that line is ignored by the interpreter."
+        },
+        {
+            "id": "q5",
+            "question": "What is the standard file extension for a Python source code file?",
+            "type": "single-choice",
+            "topic": "Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": ".pt"
+                },
+                {
+                    "id": "o2",
+                    "text": ".pyt"
+                },
+                {
+                    "id": "o3",
+                    "text": ".py"
+                },
+                {
+                    "id": "o4",
+                    "text": ".pyc"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The standard file extension for Python source files is '.py'. The '.pyc' extension is used for compiled bytecode files."
+        },
+        {
+            "id": "q6",
+            "question": "Which built-in function is used to obtain the number of items in a list?",
+            "type": "single-choice",
+            "topic": "Built-in Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "count()"
+                },
+                {
+                    "id": "o2",
+                    "text": "size()"
+                },
+                {
+                    "id": "o3",
+                    "text": "length()"
+                },
+                {
+                    "id": "o4",
+                    "text": "len()"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The built-in len() function returns the number of items in an object, such as a list, string, or dictionary."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following are valid variable names in Python? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "_my_var"
+                },
+                {
+                    "id": "o2",
+                    "text": "2myvar"
+                },
+                {
+                    "id": "o3",
+                    "text": "my-var"
+                },
+                {
+                    "id": "o4",
+                    "text": "my_var"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "Variable names in Python must start with a letter or an underscore, and can only contain alphanumeric characters and underscores. They cannot start with a number (2myvar) or contain hyphens (my-var)."
+        },
+        {
+            "id": "q8",
+            "question": "What is the result of the expression: 3  2 ?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "6"
+                },
+                {
+                    "id": "o2",
+                    "text": "9"
+                },
+                {
+                    "id": "o3",
+                    "text": "1"
+                },
+                {
+                    "id": "o4",
+                    "text": "TypeError"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The double asterisk () is the exponentiation operator in Python. Therefore, 3  2 calculates 3 to the power of 2, which equals 9."
+        },
+        {
+            "id": "q9",
+            "question": "How do you correctly assign the integer value 5 to a variable named x?",
+            "type": "single-choice",
+            "topic": "Variables",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int x = 5;"
+                },
+                {
+                    "id": "o2",
+                    "text": "x = 5"
+                },
+                {
+                    "id": "o3",
+                    "text": "x <- 5"
+                },
+                {
+                    "id": "o4",
+                    "text": "let x = 5"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Python is dynamically typed and uses the equals sign (=) for assignment. You do not need to declare the variable type or use keywords like 'let' or 'int'."
+        },
+        {
+            "id": "q10",
+            "question": "Which Python collection is ordered, changeable, and allows duplicate members?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Set"
+                },
+                {
+                    "id": "o2",
+                    "text": "Dictionary"
+                },
+                {
+                    "id": "o3",
+                    "text": "Tuple"
+                },
+                {
+                    "id": "o4",
+                    "text": "List"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Lists are ordered sequences that can be modified (changeable/mutable) and can hold duplicate values. Sets do not allow duplicates, and Tuples are not changeable."
+        },
+        {
+            "id": "q11",
+            "question": "What is the output of the following expression: “Py” + “thon” ?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Py thon"
+                },
+                {
+                    "id": "o2",
+                    "text": "Python"
+                },
+                {
+                    "id": "o3",
+                    "text": "TypeError"
+                },
+                {
+                    "id": "o4",
+                    "text": "Py+thon"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The plus (+) operator is used for string concatenation in Python. It joins the two strings together without adding any spaces."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following statements are used to create iterative loops in Python? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "for"
+                },
+                {
+                    "id": "o2",
+                    "text": "while"
+                },
+                {
+                    "id": "o3",
+                    "text": "loop"
+                },
+                {
+                    "id": "o4",
+                    "text": "switch"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Python has two primitive loop commands: 'while' loops and 'for' loops. It does not have a 'loop' or standard 'switch' command for iteration."
+        },
+        {
+            "id": "q13",
+            "question": "What is the correct syntax to output the text 'Hello World' to the console in Python?",
+            "type": "single-choice",
+            "topic": "Input/Output",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "echo “Hello World”"
+                },
+                {
+                    "id": "o2",
+                    "text": "print(“Hello World”)"
+                },
+                {
+                    "id": "o3",
+                    "text": "printf(“Hello World”);"
+                },
+                {
+                    "id": "o4",
+                    "text": "console.log(“Hello World”)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The print() function is the standard way to output data to the standard output device (console) in Python."
+        },
+        {
+            "id": "q14",
+            "question": "Which keyword is used to exit a loop completely before it has naturally finished iterating?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "continue"
+                },
+                {
+                    "id": "o2",
+                    "text": "exit"
+                },
+                {
+                    "id": "o3",
+                    "text": "break"
+                },
+                {
+                    "id": "o4",
+                    "text": "pass"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'break' statement is used to terminate a 'for' or 'while' loop entirely. 'continue' only skips the current iteration."
+        },
+        {
+            "id": "q15",
+            "question": "What data type does the built-in input() function return by default?",
+            "type": "single-choice",
+            "topic": "Input/Output",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int"
+                },
+                {
+                    "id": "o2",
+                    "text": "float"
+                },
+                {
+                    "id": "o3",
+                    "text": "str"
+                },
+                {
+                    "id": "o4",
+                    "text": "bool"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The input() function reads a line from the input, converts it into a string (str), and returns it, regardless of whether the user typed numbers or letters."
+        },
+        {
+            "id": "q16",
+            "question": "What is the output of the expression 10 // 3 in Python?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "3.3333333333333335"
+                },
+                {
+                    "id": "o2",
+                    "text": "3"
+                },
+                {
+                    "id": "o3",
+                    "text": "1"
+                },
+                {
+                    "id": "o4",
+                    "text": "4"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The double forward slash (//) is the floor division operator. It divides the first number by the second and rounds down to the nearest whole integer."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following collection types does NOT allow duplicate elements?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "list"
+                },
+                {
+                    "id": "o2",
+                    "text": "tuple"
+                },
+                {
+                    "id": "o3",
+                    "text": "set"
+                },
+                {
+                    "id": "o4",
+                    "text": "array"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Python set is an unordered collection of unique elements. If you try to add a duplicate element to a set, it will automatically be ignored."
+        },
+        {
+            "id": "q18",
+            "question": "Which method is used to add an item to the end of an existing list?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "add()"
+                },
+                {
+                    "id": "o2",
+                    "text": "append()"
+                },
+                {
+                    "id": "o3",
+                    "text": "extend()"
+                },
+                {
+                    "id": "o4",
+                    "text": "insert()"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The append() method modifies a list by inserting a single item directly at the very end of the list."
+        },
+        {
+            "id": "q19",
+            "question": "What is the correct way to handle exceptions and prevent a crash in Python?",
+            "type": "single-choice",
+            "topic": "Exception Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "try / catch"
+                },
+                {
+                    "id": "o2",
+                    "text": "try / except"
+                },
+                {
+                    "id": "o3",
+                    "text": "do / catch"
+                },
+                {
+                    "id": "o4",
+                    "text": "try / handle"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Python uses a try block to test a block of code for errors, combined with an except block to handle any specific errors that arise."
+        },
+        {
+            "id": "q20",
+            "question": "What is the output of the code snippet: print(“Python”[1:4])?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pyt"
+                },
+                {
+                    "id": "o2",
+                    "text": "yth"
+                },
+                {
+                    "id": "o3",
+                    "text": "ytho"
+                },
+                {
+                    "id": "o4",
+                    "text": "tho"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "String slicing [start:end] is inclusive of the start index and exclusive of the end index. Since indexing starts at 0, index 1 is 'y', index 2 is 't', and index 3 is 'h'."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following values will evaluate to False in a boolean context? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "0"
+                },
+                {
+                    "id": "o2",
+                    "text": "“False”"
+                },
+                {
+                    "id": "o3",
+                    "text": "[]"
+                },
+                {
+                    "id": "o4",
+                    "text": "[0]"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "In Python, the integer 0 and empty collections (like an empty list []) evaluate to False. A non-empty string like “False” or a list containing elements like [0] evaluate to True."
+        },
+        {
+            "id": "q22",
+            "question": "How do you access the value associated with the key 'age' in the dictionary person = {'name': 'Alice', 'age': 25}?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "person('age')"
+                },
+                {
+                    "id": "o2",
+                    "text": "person.age"
+                },
+                {
+                    "id": "o3",
+                    "text": "person['age']"
+                },
+                {
+                    "id": "o4",
+                    "text": "person.get(age)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Dictionary elements are accessed using square brackets containing the key string, as in person['age']. Alternatively, person.get('age') works, but option o4 lacks quotes."
+        },
+        {
+            "id": "q23",
+            "question": "What will be the output of the expression 10 % 3?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "3"
+                },
+                {
+                    "id": "o2",
+                    "text": "1"
+                },
+                {
+                    "id": "o3",
+                    "text": "0"
+                },
+                {
+                    "id": "o4",
+                    "text": "3.33"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The modulo operator (%) returns the remainder of a division. 10 divided by 3 is 3 with a remainder of 1."
+        },
+        {
+            "id": "q24",
+            "question": "Which keyword is used to pass a block of code without executing any statement?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "continue"
+                },
+                {
+                    "id": "o2",
+                    "text": "skip"
+                },
+                {
+                    "id": "o3",
+                    "text": "null"
+                },
+                {
+                    "id": "o4",
+                    "text": "pass"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'pass' statement is used as a placeholder for future code. When it is executed, nothing happens, preventing syntax errors in empty blocks."
+        },
+        {
+            "id": "q25",
+            "question": "What is the output of the expression: “a” * 3?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "aaa"
+                },
+                {
+                    "id": "o2",
+                    "text": "a3"
+                },
+                {
+                    "id": "o3",
+                    "text": "TypeError"
+                },
+                {
+                    "id": "o4",
+                    "text": "['a', 'a', 'a']"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "In Python, multiplying a string by an integer repeats the string that number of times. This is called string repetition."
+        },
+        {
+            "id": "q26",
+            "question": "Which block in a try-except statement will execute regardless of whether an exception was raised or not?",
+            "type": "single-choice",
+            "topic": "Exception Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "else"
+                },
+                {
+                    "id": "o2",
+                    "text": "finally"
+                },
+                {
+                    "id": "o3",
+                    "text": "catch"
+                },
+                {
+                    "id": "o4",
+                    "text": "always"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'finally' block lets you execute code, regardless of the outcome of the try-and-except blocks, making it ideal for clean-up actions."
+        },
+        {
+            "id": "q27",
+            "question": "What sequence of numbers does range(1, 5) generate when iterated?",
+            "type": "single-choice",
+            "topic": "Built-in Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "1, 2, 3, 4, 5"
+                },
+                {
+                    "id": "o2",
+                    "text": "1, 2, 3, 4"
+                },
+                {
+                    "id": "o3",
+                    "text": "0, 1, 2, 3, 4"
+                },
+                {
+                    "id": "o4",
+                    "text": "2, 3, 4, 5"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The range(start, stop) function generates integers starting from 'start' up to, but not including, 'stop'."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following operators are used for structural comparison rather than identity checking? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": ""
+                },
+                {
+                    "id": "o2",
+                    "text": "is"
+                },
+                {
+                    "id": "o3",
+                    "text": "!="
+                },
+                {
+                    "id": "o4",
+                    "text": "is not"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "The operators '' and '!=' compare the actual values (equality/inequality) of objects. The 'is' and 'is not' operators compare the unique memory identity of objects."
+        },
+        {
+            "id": "q29",
+            "question": "How do you check if a specific key exists within a Python dictionary?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "key in dictionary"
+                },
+                {
+                    "id": "o2",
+                    "text": "dictionary.has(key)"
+                },
+                {
+                    "id": "o3",
+                    "text": "dictionary.contains(key)"
+                },
+                {
+                    "id": "o4",
+                    "text": "key inside dictionary"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The standard and clean way to check for a key's presence in a dictionary is using the 'in' membership operator."
+        },
+        {
+            "id": "q30",
+            "question": "What keyword is used inside a function to create or modify a variable that belongs to the global scope?",
+            "type": "single-choice",
+            "topic": "Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "public"
+                },
+                {
+                    "id": "o2",
+                    "text": "global"
+                },
+                {
+                    "id": "o3",
+                    "text": "nonlocal"
+                },
+                {
+                    "id": "o4",
+                    "text": "extern"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'global' keyword allows you to modify a variable outside of the current local function scope, explicitly targeting the global scope."
+        },
+        {
+            "id": "q31",
+            "question": "Which keyword is used to create small, anonymous functions in Python?",
+            "type": "single-choice",
+            "topic": "Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "anon"
+                },
+                {
+                    "id": "o2",
+                    "text": "def"
+                },
+                {
+                    "id": "o3",
+                    "text": "lambda"
+                },
+                {
+                    "id": "o4",
+                    "text": "inline"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'lambda' keyword is used to create small, one-line anonymous functions in Python that do not require a standard 'def' declaration."
+        },
+        {
+            "id": "q32",
+            "question": "What does the pop() method do when called on a list without any arguments?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Removes and returns the first element of the list."
+                },
+                {
+                    "id": "o2",
+                    "text": "Removes and returns the last element of the list."
+                },
+                {
+                    "id": "o3",
+                    "text": "Deletes the entire list from memory."
+                },
+                {
+                    "id": "o4",
+                    "text": "Raises an IndexError."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "By default, calling pop() on a list removes and returns the item at the very end (index -1) of the list."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following statements correctly imports only the 'sqrt' function from the 'math' module?",
+            "type": "single-choice",
+            "topic": "Modules",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "import sqrt from math"
+                },
+                {
+                    "id": "o2",
+                    "text": "include math.sqrt"
+                },
+                {
+                    "id": "o3",
+                    "text": "from math import sqrt"
+                },
+                {
+                    "id": "o4",
+                    "text": "import math.sqrt"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'from ... import ...' syntax allows you to import specific attributes or functions from a module directly into your current namespace."
+        },
+        {
+            "id": "q34",
+            "question": "How do you correctly define a tuple containing exactly one integer element (the number 5)?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "(5)"
+                },
+                {
+                    "id": "o2",
+                    "text": "[5]"
+                },
+                {
+                    "id": "o3",
+                    "text": "(5,)"
+                },
+                {
+                    "id": "o4",
+                    "text": "tuple(5)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "To create a single-element tuple, you must include a trailing comma. Without the comma, (5) is simply evaluated as the integer 5 inside parentheses."
+        },
+        {
+            "id": "q35",
+            "question": "Which built-in string method is used to remove whitespace from both the beginning and the end of a string?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "trim()"
+                },
+                {
+                    "id": "o2",
+                    "text": "strip()"
+                },
+                {
+                    "id": "o3",
+                    "text": "clean()"
+                },
+                {
+                    "id": "o4",
+                    "text": "replace()"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end) characters (space is the default)."
+        },
+        {
+            "id": "q36",
+            "question": "Which keyword is used to provide an alternative condition in an 'if' statement chain?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "else if"
+                },
+                {
+                    "id": "o2",
+                    "text": "elseif"
+                },
+                {
+                    "id": "o3",
+                    "text": "elif"
+                },
+                {
+                    "id": "o4",
+                    "text": "alt"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Python uses 'elif', which is short for 'else if', to check multiple expressions for true value sequentially."
+        },
+        {
+            "id": "q37",
+            "question": "Which string mode is used with the open() function to open a file specifically for reading?",
+            "type": "single-choice",
+            "topic": "File Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "'w'"
+                },
+                {
+                    "id": "o2",
+                    "text": "'x'"
+                },
+                {
+                    "id": "o3",
+                    "text": "'a'"
+                },
+                {
+                    "id": "o4",
+                    "text": "'r'"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'r' mode stands for read. It is the default mode when opening a file and allows you to read its contents but not modify them."
+        },
+        {
+            "id": "q38",
+            "question": "What is the result of casting the 'None' object to a boolean using bool(None)?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "True"
+                },
+                {
+                    "id": "o2",
+                    "text": "False"
+                },
+                {
+                    "id": "o3",
+                    "text": "None"
+                },
+                {
+                    "id": "o4",
+                    "text": "TypeError"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'None' keyword is used to define a null value. In Python, None is always evaluated as False when converted to a boolean."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following are valid dictionary methods used to retrieve data views? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "keys()"
+                },
+                {
+                    "id": "o2",
+                    "text": "indexes()"
+                },
+                {
+                    "id": "o3",
+                    "text": "values()"
+                },
+                {
+                    "id": "o4",
+                    "text": "elements()"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "The keys() method returns a view object of the dictionary's keys, and values() returns a view object of its values. 'indexes' and 'elements' are not valid dictionary methods."
+        },
+        {
+            "id": "q40",
+            "question": "What does the augmented assignment operator '+=' do in Python?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Checks if two values are positive and equal."
+                },
+                {
+                    "id": "o2",
+                    "text": "Adds the right operand to the left operand and assigns the result to the left operand."
+                },
+                {
+                    "id": "o3",
+                    "text": "Increments a variable by 1, ignoring the right operand."
+                },
+                {
+                    "id": "o4",
+                    "text": "Concatenates strings without assigning them to a variable."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '+=' operator is a shorthand way to add a value to a variable and immediately assign the new sum back to that same variable (e.g., x += 5 is equivalent to x = x + 5)."
+        },
+        {
+            "id": "q41",
+            "question": "What does the expression '“Py” in “Python”' evaluate to?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "True"
+                },
+                {
+                    "id": "o2",
+                    "text": "False"
+                },
+                {
+                    "id": "o3",
+                    "text": "0"
+                },
+                {
+                    "id": "o4",
+                    "text": "TypeError"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'in' operator checks for substring membership. Since 'Py' is a substring of 'Python', the expression evaluates to True."
+        },
+        {
+            "id": "q42",
+            "question": "Which built-in function is used to round a floating-point number to the nearest integer?",
+            "type": "single-choice",
+            "topic": "Built-in Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ceil()"
+                },
+                {
+                    "id": "o2",
+                    "text": "floor()"
+                },
+                {
+                    "id": "o3",
+                    "text": "int()"
+                },
+                {
+                    "id": "o4",
+                    "text": "round()"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The round() function rounds a number to a given precision in decimal digits. When given only one argument, it rounds to the nearest integer."
+        },
+        {
+            "id": "q43",
+            "question": "Which of the following operations can be used to mathematically combine two sets into a single set containing all unique elements? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "set1 + set2"
+                },
+                {
+                    "id": "o2",
+                    "text": "set1 | set2"
+                },
+                {
+                    "id": "o3",
+                    "text": "set1.union(set2)"
+                },
+                {
+                    "id": "o4",
+                    "text": "set1.concat(set2)"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "You can perform a set union using either the pipe operator (|) or the built-in union() method. The plus operator (+) is not supported for sets."
+        },
+        {
+            "id": "q44",
+            "question": "What will the expression type({}) evaluate to in Python?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "<class 'set'>"
+                },
+                {
+                    "id": "o2",
+                    "text": "<class 'dict'>"
+                },
+                {
+                    "id": "o3",
+                    "text": "<class 'tuple'>"
+                },
+                {
+                    "id": "o4",
+                    "text": "<class 'object'>"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "While curly braces are used for both sets and dictionaries, an empty pair of curly braces {} defaults to an empty dictionary in Python."
+        },
+        {
+            "id": "q45",
+            "question": "Which function should you use to convert the string '123' into an integer data type?",
+            "type": "single-choice",
+            "topic": "Built-in Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "str()"
+                },
+                {
+                    "id": "o2",
+                    "text": "float()"
+                },
+                {
+                    "id": "o3",
+                    "text": "integer()"
+                },
+                {
+                    "id": "o4",
+                    "text": "int()"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The int() function attempts to convert the specified value into an integer number. Passing '123' to it will return the integer 123."
+        },
+        {
+            "id": "q46",
+            "question": "Which of the following is the correct syntax to format a string using f-strings (formatted string literals) in Python 3.6+?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "f“Hello {name}”"
+                },
+                {
+                    "id": "o2",
+                    "text": "“Hello {name}”.format()"
+                },
+                {
+                    "id": "o3",
+                    "text": "f(“Hello {name}”)"
+                },
+                {
+                    "id": "o4",
+                    "text": "“Hello %s” % name"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "F-strings are created by prefixing the string with the letter 'f' or 'F' and placing variables or expressions inside curly braces {} directly within the string."
+        },
+        {
+            "id": "q47",
+            "question": "What is the output of the logical expression: True or False?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "True"
+                },
+                {
+                    "id": "o2",
+                    "text": "False"
+                },
+                {
+                    "id": "o3",
+                    "text": "None"
+                },
+                {
+                    "id": "o4",
+                    "text": "TypeError"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The logical 'or' operator returns True if at least one of the operands is True. Since the first operand is True, the entire expression evaluates to True."
+        },
+        {
+            "id": "q48",
+            "question": "Which special method is automatically called to initialize a newly created object in a Python class (often referred to as the constructor)?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "init()"
+                },
+                {
+                    "id": "o2",
+                    "text": "start()"
+                },
+                {
+                    "id": "o3",
+                    "text": "constructor()"
+                },
+                {
+                    "id": "o4",
+                    "text": "init()"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The init() method is a reserved method (a 'dunder' method) in Python classes. It acts as a constructor and is executed immediately when an object of the class is instantiated."
+        },
+        {
+            "id": "q49",
+            "question": "Which list method should you use to append all elements from another iterable (like another list) to the end of an existing list?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "append()"
+                },
+                {
+                    "id": "o2",
+                    "text": "extend()"
+                },
+                {
+                    "id": "o3",
+                    "text": "insert()"
+                },
+                {
+                    "id": "o4",
+                    "text": "add()"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The extend() method iterates over its argument and adds each element to the list, effectively joining the lists. append() would add the entire iterable as a single new element."
+        },
+        {
+            "id": "q50",
+            "question": "Which string method breaks a string into a list of substrings based on a specified separator character?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "slice()"
+                },
+                {
+                    "id": "o2",
+                    "text": "split()"
+                },
+                {
+                    "id": "o3",
+                    "text": "divide()"
+                },
+                {
+                    "id": "o4",
+                    "text": "cut()"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The split() method splits a string into a list. You can specify the separator (default is any whitespace)."
+        },
+        {
+            "id": "q51",
+            "question": "Which string method converts all lowercase characters in a string into uppercase characters?",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "toUpper()"
+                },
+                {
+                    "id": "o2",
+                    "text": "uppercase()"
+                },
+                {
+                    "id": "o3",
+                    "text": "upper()"
+                },
+                {
+                    "id": "o4",
+                    "text": "capitalize()"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The upper() method returns a string where all characters are in upper case. capitalize() only capitalizes the first letter of the string."
+        },
+        {
+            "id": "q52",
+            "question": "Which dictionary method returns a view object displaying a list of the dictionary's (key, value) tuple pairs?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "pairs()"
+                },
+                {
+                    "id": "o2",
+                    "text": "elements()"
+                },
+                {
+                    "id": "o3",
+                    "text": "items()"
+                },
+                {
+                    "id": "o4",
+                    "text": "tuples()"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The items() method returns a dict_items view object containing tuples of all key-value pairs in the dictionary, which is highly useful for iterating over dictionaries in a for loop."
+        },
+        {
+            "id": "q53",
+            "question": "If you have a tuple defined as t = (10, 20, 30), how many variables are required to successfully unpack it without raising a ValueError?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "1"
+                },
+                {
+                    "id": "o2",
+                    "text": "2"
+                },
+                {
+                    "id": "o3",
+                    "text": "3"
+                },
+                {
+                    "id": "o4",
+                    "text": "4"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Tuple unpacking requires exactly the same number of variables on the left side of the assignment as there are elements in the tuple. Since there are 3 elements, you need 3 variables (e.g., a, b, c = t)."
+        },
+        {
+            "id": "q54",
+            "question": "What will the expression '5 in [1, 2, 3, 4]' evaluate to?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "True"
+                },
+                {
+                    "id": "o2",
+                    "text": "False"
+                },
+                {
+                    "id": "o3",
+                    "text": "None"
+                },
+                {
+                    "id": "o4",
+                    "text": "IndexError"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'in' operator checks if a specified value is present within an iterable. Since the number 5 is not in the list [1, 2, 3, 4], it evaluates to False."
+        },
+        {
+            "id": "q55",
+            "question": "What is the specific data type of the 'None' keyword in Python?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "null"
+                },
+                {
+                    "id": "o2",
+                    "text": "NoneType"
+                },
+                {
+                    "id": "o3",
+                    "text": "bool"
+                },
+                {
+                    "id": "o4",
+                    "text": "void"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Python, 'None' is a special constant representing the absence of a value. Its data type is an object of the unique class 'NoneType'."
+        },
+        {
+            "id": "q56",
+            "question": "Which keyword is commonly used alongside the open() function to ensure that a file is automatically and safely closed after its block of code finishes executing?",
+            "type": "single-choice",
+            "topic": "File Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "using"
+                },
+                {
+                    "id": "o2",
+                    "text": "open"
+                },
+                {
+                    "id": "o3",
+                    "text": "with"
+                },
+                {
+                    "id": "o4",
+                    "text": "auto"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'with' statement sets up a context manager. When dealing with files, it ensures the file is automatically closed when the nested block is exited, even if an exception occurs."
+        },
+        {
+            "id": "q57",
+            "question": "Which built-in function returns the total calculated sum of all items in an iterable containing numbers?",
+            "type": "single-choice",
+            "topic": "Built-in Functions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "add()"
+                },
+                {
+                    "id": "o2",
+                    "text": "total()"
+                },
+                {
+                    "id": "o3",
+                    "text": "sum()"
+                },
+                {
+                    "id": "o4",
+                    "text": "calc()"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The sum() function takes an iterable (like a list or tuple) of numbers and returns their sum."
+        },
+        {
+            "id": "q58",
+            "question": "Which keyword is used to remove an item from a list given its index, or to completely delete a variable from memory?",
+            "type": "single-choice",
+            "topic": "Data Structures",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "remove"
+                },
+                {
+                    "id": "o2",
+                    "text": "delete"
+                },
+                {
+                    "id": "o3",
+                    "text": "del"
+                },
+                {
+                    "id": "o4",
+                    "text": "drop"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'del' statement removes items by index (e.g., del my_list[0]) and can also be used to delete entire variables from the namespace."
+        },
+        {
+            "id": "q59",
+            "question": "Which statement is used inside a loop to immediately skip the remainder of the code for the current iteration and move on to the next iteration?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "break"
+                },
+                {
+                    "id": "o2",
+                    "text": "pass"
+                },
+                {
+                    "id": "o3",
+                    "text": "continue"
+                },
+                {
+                    "id": "o4",
+                    "text": "skip"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'continue' statement stops the current iteration of the loop, skipping any code below it, and continues with the next iteration. 'break' would stop the loop entirely."
+        },
+        {
+            "id": "q60",
+            "question": "Which of the following are valid, built-in numeric data types in Python? (Select two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int"
+                },
+                {
+                    "id": "o2",
+                    "text": "float"
+                },
+                {
+                    "id": "o3",
+                    "text": "double"
+                },
+                {
+                    "id": "o4",
+                    "text": "char"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Python's primary built-in numeric types are int (integers), float (floating-point numbers), and complex. Python does not have built-in 'double' or 'char' data types."
+        }
+    ]
+}

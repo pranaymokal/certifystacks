@@ -1,0 +1,1727 @@
+{
+    "id": "java-basic",
+    "name": "Basic Java Core Concepts",
+    "vendor": "Oracle",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which Java component is primarily responsible for executing Java bytecode?",
+            "type": "single-choice",
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Java Compiler (javac)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Java Virtual Machine (JVM)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Java Development Kit (JDK)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Java Runtime Environment (JRE)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Java Virtual Machine (JVM) is the engine that drives the Java code. It converts Java bytecode into machine-specific instructions for execution."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following are valid variable names in Java?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "myVar"
+                },
+                {
+                    "id": "o2",
+                    "text": "$amount"
+                },
+                {
+                    "id": "o3",
+                    "text": "1stPlace"
+                },
+                {
+                    "id": "o4",
+                    "text": "my-var"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Java identifiers can begin with a letter, underscore (), or dollar sign ($). They cannot start with a number (1stPlace) or contain hyphens (my-var)."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following are primitive data types in Java?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int"
+                },
+                {
+                    "id": "o2",
+                    "text": "String"
+                },
+                {
+                    "id": "o3",
+                    "text": "boolean"
+                },
+                {
+                    "id": "o4",
+                    "text": "Integer"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "int and boolean are primitive data types. String and Integer are object reference types (classes)."
+        },
+        {
+            "id": "q4",
+            "question": "What is the correct signature for the main method in a standalone Java application?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "public void main(String args[])"
+                },
+                {
+                    "id": "o2",
+                    "text": "public static int main(String[] args)"
+                },
+                {
+                    "id": "o3",
+                    "text": "public static void main(String[] args)"
+                },
+                {
+                    "id": "o4",
+                    "text": "static void main(String args)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The main method must be public (accessible anywhere), static (callable without instantiating the class), void (returns no value), and accept an array of Strings as arguments."
+        },
+        {
+            "id": "q5",
+            "question": "When used with object references, what does the '' operator compare?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Object values"
+                },
+                {
+                    "id": "o2",
+                    "text": "Memory addresses (references)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hash codes"
+                },
+                {
+                    "id": "o4",
+                    "text": "String lengths"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '' operator checks if two reference variables point to the exact same object in memory. To compare logical values, the .equals() method should be used."
+        },
+        {
+            "id": "q6",
+            "question": "Which statement correctly creates an array of 5 integers?",
+            "type": "single-choice",
+            "topic": "Arrays",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int arr[] = new int[];"
+                },
+                {
+                    "id": "o2",
+                    "text": "int[] arr = {5};"
+                },
+                {
+                    "id": "o3",
+                    "text": "int arr[5] = new int[];"
+                },
+                {
+                    "id": "o4",
+                    "text": "int[] arr = new int[5];"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "To instantiate an array, you must specify the size during the initialization with the 'new' keyword, such as new int[5]."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following access modifiers allow a class member to be accessed from another class within the SAME package?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "public"
+                },
+                {
+                    "id": "o2",
+                    "text": "private"
+                },
+                {
+                    "id": "o3",
+                    "text": "protected"
+                },
+                {
+                    "id": "o4",
+                    "text": "default (no modifier)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Members marked as public, protected, or with no modifier (package-private) can be accessed by any class in the same package. Private members are restricted strictly to their own class."
+        },
+        {
+            "id": "q8",
+            "question": "What is the default value of a boolean instance variable in Java?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "true"
+                },
+                {
+                    "id": "o2",
+                    "text": "false"
+                },
+                {
+                    "id": "o3",
+                    "text": "null"
+                },
+                {
+                    "id": "o4",
+                    "text": "0"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Java, instance variables of type boolean are initialized to false by default."
+        },
+        {
+            "id": "q9",
+            "question": "Which loop construct is guaranteed to execute its code block at least once?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "for"
+                },
+                {
+                    "id": "o2",
+                    "text": "while"
+                },
+                {
+                    "id": "o3",
+                    "text": "do-while"
+                },
+                {
+                    "id": "o4",
+                    "text": "for-each"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The do-while loop evaluates its condition after the execution of the loop body, guaranteeing that the code block runs at least once regardless of the condition."
+        },
+        {
+            "id": "q10",
+            "question": "Which keyword is used to explicitly trigger an exception in Java?",
+            "type": "single-choice",
+            "topic": "Exceptions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "throws"
+                },
+                {
+                    "id": "o2",
+                    "text": "catch"
+                },
+                {
+                    "id": "o3",
+                    "text": "try"
+                },
+                {
+                    "id": "o4",
+                    "text": "throw"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'throw' keyword is used to manually throw a specific exception. The 'throws' keyword is used in a method signature to declare that a method might throw an exception."
+        },
+        {
+            "id": "q11",
+            "question": "Which keyword is used to establish inheritance between two classes?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "implements"
+                },
+                {
+                    "id": "o2",
+                    "text": "inherits"
+                },
+                {
+                    "id": "o3",
+                    "text": "extends"
+                },
+                {
+                    "id": "o4",
+                    "text": "super"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'extends' keyword is used for class inheritance in Java. 'implements' is used to implement interfaces."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following are reserved keywords in Java?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "class"
+                },
+                {
+                    "id": "o2",
+                    "text": "static"
+                },
+                {
+                    "id": "o3",
+                    "text": "package"
+                },
+                {
+                    "id": "o4",
+                    "text": "String"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "class, static, and package are reserved keywords. String is not a keyword; it is a built-in class in the java.lang package."
+        },
+        {
+            "id": "q13",
+            "question": "What is the default value of an uninitialized object reference variable?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "void"
+                },
+                {
+                    "id": "o2",
+                    "text": "null"
+                },
+                {
+                    "id": "o3",
+                    "text": "0"
+                },
+                {
+                    "id": "o4",
+                    "text": "“”(empty string)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "All object reference variables are initialized to null by default when declared as instance or class variables."
+        },
+        {
+            "id": "q14",
+            "question": "Which of the following MUST differ for two methods in the same class to be correctly overloaded?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Method name"
+                },
+                {
+                    "id": "o2",
+                    "text": "Number of parameters"
+                },
+                {
+                    "id": "o3",
+                    "text": "Parameter data types"
+                },
+                {
+                    "id": "o4",
+                    "text": "Return type"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Overloaded methods must have the same name but differ in their parameter list (either by the number of parameters or the types of parameters). Changing only the return type is not allowed."
+        },
+        {
+            "id": "q15",
+            "question": "How do you correctly write a single-line comment in Java?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "/* comment /"
+                },
+                {
+                    "id": "o2",
+                    "text": ""
+                },
+                {
+                    "id": "o3",
+                    "text": "// comment"
+                },
+                {
+                    "id": "o4",
+                    "text": "# comment"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Java, a single-line comment is denoted by two forward slashes (//). The / */ syntax is used for multi-line comments."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is true about a 'final' class in Java?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It cannot be instantiated."
+                },
+                {
+                    "id": "o2",
+                    "text": "It cannot be subclassed (extended)."
+                },
+                {
+                    "id": "o3",
+                    "text": "All of its methods must be static."
+                },
+                {
+                    "id": "o4",
+                    "text": "It cannot contain instance variables."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "When a class is declared with the 'final' keyword, it prevents other classes from inheriting or extending it. A classic example is the java.lang.String class."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following statements are true regarding Java Strings? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Strings are mutable objects."
+                },
+                {
+                    "id": "o2",
+                    "text": "Strings are immutable objects."
+                },
+                {
+                    "id": "o3",
+                    "text": "String objects can be created using literals."
+                },
+                {
+                    "id": "o4",
+                    "text": "The String class is an interface."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Java Strings are immutable, meaning their state cannot be changed after creation. They can be created using literals (e.g., “hello”) which are managed inside the String Constant Pool."
+        },
+        {
+            "id": "q18",
+            "question": "What will be the output of the following code snippet?\n\nint x = 5;\nSystem.out.println(x++);",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "5"
+                },
+                {
+                    "id": "o2",
+                    "text": "6"
+                },
+                {
+                    "id": "o3",
+                    "text": "0"
+                },
+                {
+                    "id": "o4",
+                    "text": "Compilation Error"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The expression uses the postfix increment operator (x++). It evaluates to the current value of x (which is 5) for the print statement, and then increments x to 6 immediately afterward."
+        },
+        {
+            "id": "q19",
+            "question": "Which block is executed after a try-catch block regardless of whether an exception was thrown or caught?",
+            "type": "single-choice",
+            "topic": "Exceptions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "final"
+                },
+                {
+                    "id": "o2",
+                    "text": "throw"
+                },
+                {
+                    "id": "o3",
+                    "text": "finally"
+                },
+                {
+                    "id": "o4",
+                    "text": "catchall"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'finally' block always executes when the try block exits, making it ideal for resource cleanup tasks like closing database connections or file streams."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following data types can be used in a switch statement condition in modern Java? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "int"
+                },
+                {
+                    "id": "o2",
+                    "text": "String"
+                },
+                {
+                    "id": "o3",
+                    "text": "double"
+                },
+                {
+                    "id": "o4",
+                    "text": "enum"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "Java switch statements support primitive integral types (byte, short, char, int), their respective wrapper classes, Strings, and enums. Floating-point types like float and double are not supported."
+        },
+        {
+            "id": "q21",
+            "question": "What keyword is used by a class to use the capabilities defined in an interface?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "extends"
+                },
+                {
+                    "id": "o2",
+                    "text": "implements"
+                },
+                {
+                    "id": "o3",
+                    "text": "imports"
+                },
+                {
+                    "id": "o4",
+                    "text": "exports"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A class uses the 'implements' keyword to sign a contract with an interface and promise to provide concrete bodies for its abstract methods."
+        },
+        {
+            "id": "q22",
+            "question": "What is the process of binding data variables and the methods that operate on them together into a single unit called?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Polymorphism"
+                },
+                {
+                    "id": "o2",
+                    "text": "Inheritance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Encapsulation"
+                },
+                {
+                    "id": "o4",
+                    "text": "Abstraction"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Encapsulation is the OOP mechanism of wrapping data (variables) and code (methods) together as a single unit, typically achieved by making variables private and exposing public getter/setter methods."
+        },
+        {
+            "id": "q23",
+            "question": "What is the index of the very first element in a Java array?",
+            "type": "single-choice",
+            "topic": "Arrays",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "-1"
+                },
+                {
+                    "id": "o2",
+                    "text": "0"
+                },
+                {
+                    "id": "o3",
+                    "text": "1"
+                },
+                {
+                    "id": "o4",
+                    "text": "It depends on the array size"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Java arrays are zero-indexed, meaning the first element is accessed at index 0, and the last element is at index (length - 1)."
+        },
+        {
+            "id": "q24",
+            "question": "Which of these exceptions are checked exceptions (must be caught or declared)? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Exceptions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "IOException"
+                },
+                {
+                    "id": "o2",
+                    "text": "NullPointerException"
+                },
+                {
+                    "id": "o3",
+                    "text": "ArithmeticException"
+                },
+                {
+                    "id": "o4",
+                    "text": "ClassNotFoundException"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "IOException and ClassNotFoundException inherit from Exception directly and are checked exceptions. NullPointerException and ArithmeticException inherit from RuntimeException and are unchecked exceptions."
+        },
+        {
+            "id": "q25",
+            "question": "Which keyword is used to refer to the immediate parent class object?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "this"
+                },
+                {
+                    "id": "o2",
+                    "text": "super"
+                },
+                {
+                    "id": "o3",
+                    "text": "parent"
+                },
+                {
+                    "id": "o4",
+                    "text": "base"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'super' keyword is a reference variable used to invoke parent class constructors, methods, or hidden fields. 'this' refers to the current class instance."
+        },
+        {
+            "id": "q26",
+            "question": "What happens when you compile a Java file that contains syntax errors?",
+            "type": "single-choice",
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The JVM will crash at runtime."
+                },
+                {
+                    "id": "o2",
+                    "text": "A .class file is generated but cannot run."
+                },
+                {
+                    "id": "o3",
+                    "text": "The compiler (javac) reports errors and fails to generate a .class file."
+                },
+                {
+                    "id": "o4",
+                    "text": "The errors are automatically bypassed."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Syntax validation happens during compilation. If there are syntax errors, javac prints the errors to the console and halts without outputting any bytecode (.class file)."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following are valid logical operators in Java? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "&&"
+                },
+                {
+                    "id": "o2",
+                    "text": "and"
+                },
+                {
+                    "id": "o3",
+                    "text": "||"
+                },
+                {
+                    "id": "o4",
+                    "text": "or"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Java uses symbols for conditional logical operators: '&&' stands for logical AND, and '||' stands for logical OR. Literal words like 'and' or 'or' are invalid syntax."
+        },
+        {
+            "id": "q28",
+            "question": "What is the return type of a constructor method in Java?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "void"
+                },
+                {
+                    "id": "o2",
+                    "text": "The class type itself"
+                },
+                {
+                    "id": "o3",
+                    "text": "Object"
+                },
+                {
+                    "id": "o4",
+                    "text": "Constructors do not have a return type"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Constructors look similar to methods, but they explicitly do not declare any return type—not even void. Their sole purpose is to initialize a newly created object state."
+        },
+        {
+            "id": "q29",
+            "question": "Which package is automatically imported into every Java program without an explicit import statement?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "java.util"
+                },
+                {
+                    "id": "o2",
+                    "text": "java.io"
+                },
+                {
+                    "id": "o3",
+                    "text": "java.lang"
+                },
+                {
+                    "id": "o4",
+                    "text": "java.net"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The java.lang package contains essential classes fundamental to the Java language design (such as String, System, Math, Exception), and it is automatically imported into all source files."
+        },
+        {
+            "id": "q30",
+            "question": "What is the value of the expression: 11 % 3?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "3"
+                },
+                {
+                    "id": "o2",
+                    "text": "2"
+                },
+                {
+                    "id": "o3",
+                    "text": "1"
+                },
+                {
+                    "id": "o4",
+                    "text": "0"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '%' symbol is the modulus operator, which returns the remainder of a division operation. 11 divided by 3 equals 3 with a remainder of 2."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following memory areas in Java is primarily responsible for storing objects and their instance variables?",
+            "type": "single-choice",
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Stack Memory"
+                },
+                {
+                    "id": "o2",
+                    "text": "Heap Memory"
+                },
+                {
+                    "id": "o3",
+                    "text": "Method Area"
+                },
+                {
+                    "id": "o4",
+                    "text": "PC Register"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In Java, all objects and their corresponding instance variables are allocated memory dynamically on the Heap. Stack memory is used for local variables and method execution frames."
+        },
+        {
+            "id": "q32",
+            "question": "What is the consequence of failing to include a 'break' statement at the end of a case block in a standard switch statement?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A compilation error occurs."
+                },
+                {
+                    "id": "o2",
+                    "text": "The program crashes with a RuntimeException."
+                },
+                {
+                    "id": "o3",
+                    "text": "Execution 'falls through' to the subsequent case blocks."
+                },
+                {
+                    "id": "o4",
+                    "text": "The switch statement terminates immediately."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Without a 'break' statement, execution continues ('falls through') into the next case's statements sequentially, regardless of whether that case's matching condition is met."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following are valid ways to initialize a boolean variable in Java? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "boolean isReady = true;"
+                },
+                {
+                    "id": "o2",
+                    "text": "boolean isReady = 1;"
+                },
+                {
+                    "id": "o3",
+                    "text": "boolean isReady = false;"
+                },
+                {
+                    "id": "o4",
+                    "text": "boolean isReady = “true”;"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Java booleans only accept the literal values 'true' or 'false'. Unlike C/C++, numeric values like 1 cannot be implicitly cast to a boolean, nor can a String literal be directly assigned."
+        },
+        {
+            "id": "q34",
+            "question": "Which keyword is used to restrict a method from being overridden by any subclass?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "static"
+                },
+                {
+                    "id": "o2",
+                    "text": "abstract"
+                },
+                {
+                    "id": "o3",
+                    "text": "final"
+                },
+                {
+                    "id": "o4",
+                    "text": "private"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Applying the 'final' keyword to a method signature prevents subclasses from overriding that specific method implementation."
+        },
+        {
+            "id": "q35",
+            "question": "What will be the output of the following code snippet?\n\nString s1 = “Java”;\nString s2 = s1.concat(“ SE”);\nSystem.out.println(s1);",
+            "type": "single-choice",
+            "topic": "Strings",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Java"
+                },
+                {
+                    "id": "o2",
+                    "text": "Java SE"
+                },
+                {
+                    "id": "o3",
+                    "text": "SE"
+                },
+                {
+                    "id": "o4",
+                    "text": "Compilation Error"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Strings are immutable. The concat() method returns a brand new String object (“Java SE”), but does not alter the original string stored in 's1'. Therefore, s1 remains “Java”."
+        },
+        {
+            "id": "q36",
+            "question": "Which of the following statements about an abstract class are true? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It can be instantiated directly using the 'new' keyword."
+                },
+                {
+                    "id": "o2",
+                    "text": "It cannot be instantiated directly."
+                },
+                {
+                    "id": "o3",
+                    "text": "It can contain both abstract and concrete methods."
+                },
+                {
+                    "id": "o4",
+                    "text": "All methods inside an abstract class must be abstract."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "An abstract class serves as a blueprint and cannot be directly instantiated. It can possess a mixture of abstract methods (without bodies) and concrete methods (with bodies)."
+        },
+        {
+            "id": "q37",
+            "question": "What is the purpose of the 'import' statement in Java?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To copy the source code of another class into the current file."
+                },
+                {
+                    "id": "o2",
+                    "text": "To inform the compiler where to look for classes referenced in the code."
+                },
+                {
+                    "id": "o3",
+                    "text": "To download external dependencies from the internet."
+                },
+                {
+                    "id": "o4",
+                    "text": "To execute another Java program before this one runs."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'import' statement makes classes and packages available to the current class file by telling the compiler exactly where to find those outside dependencies during compilation."
+        },
+        {
+            "id": "q38",
+            "question": "Which exception is automatically thrown when a program attempts to access an invalid index position in an array?",
+            "type": "single-choice",
+            "topic": "Exceptions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "NullPointerException"
+                },
+                {
+                    "id": "o2",
+                    "text": "IndexOutOfBoundsException"
+                },
+                {
+                    "id": "o3",
+                    "text": "ArrayIndexOutOfBoundsException"
+                },
+                {
+                    "id": "o4",
+                    "text": "ArrayLengthMismatchException"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Java throws an ArrayIndexOutOfBoundsException if an index is negative or greater than or equal to the total length of the target array."
+        },
+        {
+            "id": "q39",
+            "question": "What is the size of a primitive 'int' data type in Java?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "8 bits"
+                },
+                {
+                    "id": "o2",
+                    "text": "16 bits"
+                },
+                {
+                    "id": "o3",
+                    "text": "32 bits"
+                },
+                {
+                    "id": "o4",
+                    "text": "64 bits"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Java, a primitive 'int' is a signed 32-bit (4-byte) two's complement integer, regardless of the underlying platform or operating system architecture."
+        },
+        {
+            "id": "q40",
+            "question": "Which operator is used to evaluate if an object belongs to a specific class or implements a specific interface?",
+            "type": "single-choice",
+            "topic": "Operators",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "typeof"
+                },
+                {
+                    "id": "o2",
+                    "text": "instanceof"
+                },
+                {
+                    "id": "o3",
+                    "text": "isClass"
+                },
+                {
+                    "id": "o4",
+                    "text": "extends"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'instanceof' operator compares an object reference against a specific type and returns 'true' if the object is an instance of that type, subclass, or interface."
+        },
+        {
+            "id": "q41",
+            "question": "Which of the following collection types allow you to store key-value pairs? (Choose one)",
+            "type": "single-choice",
+            "topic": "Collections",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ArrayList"
+                },
+                {
+                    "id": "o2",
+                    "text": "HashSet"
+                },
+                {
+                    "id": "o3",
+                    "text": "HashMap"
+                },
+                {
+                    "id": "o4",
+                    "text": "LinkedList"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A HashMap maps unique keys to values. ArrayList, HashSet, and LinkedList are collections designed for storing individual elements rather than pairs."
+        },
+        {
+            "id": "q42",
+            "question": "Which keyword is used to access instance variables or methods hidden by local variables with the same name?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "super"
+                },
+                {
+                    "id": "o2",
+                    "text": "this"
+                },
+                {
+                    "id": "o3",
+                    "text": "self"
+                },
+                {
+                    "id": "o4",
+                    "text": "local"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'this' keyword is a reference to the current object instance, and it is frequently used to disambiguate class fields from method parameters with matching names."
+        },
+        {
+            "id": "q43",
+            "question": "Which of these are valid structural elements inside a Java interface? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Abstract method signatures"
+                },
+                {
+                    "id": "o2",
+                    "text": "Instance variable declarations"
+                },
+                {
+                    "id": "o3",
+                    "text": "Constant variables (public static final)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Protected constructors"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Interfaces declare abstract method behaviors and constants. They cannot contain instance variables or constructors, as interfaces cannot be directly instantiated."
+        },
+        {
+            "id": "q44",
+            "question": "What is the return type of a method that does not return any data to its caller?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "null"
+                },
+                {
+                    "id": "o2",
+                    "text": "empty"
+                },
+                {
+                    "id": "o3",
+                    "text": "void"
+                },
+                {
+                    "id": "o4",
+                    "text": "blank"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'void' keyword explicitly specifies that a method does not return any value upon execution completion."
+        },
+        {
+            "id": "q45",
+            "question": "What will happen if you attempt to use an array index that evaluates to a negative number?",
+            "type": "single-choice",
+            "topic": "Arrays",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It will access elements backwards from the end of the array."
+                },
+                {
+                    "id": "o2",
+                    "text": "It will return a default value of 0 or null."
+                },
+                {
+                    "id": "o3",
+                    "text": "It will throw an ArrayIndexOutOfBoundsException at runtime."
+                },
+                {
+                    "id": "o4",
+                    "text": "It will cause a compiler failure."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Unlike some modern languages like Python, Java does not support negative array indexing. Doing so will always throw a runtime ArrayIndexOutOfBoundsException."
+        },
+        {
+            "id": "q46",
+            "question": "Which of the following is the correct wrapper class for the primitive data type 'char'?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Char"
+                },
+                {
+                    "id": "o2",
+                    "text": "Character"
+                },
+                {
+                    "id": "o3",
+                    "text": "String"
+                },
+                {
+                    "id": "o4",
+                    "text": "CharSequence"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Character class wraps a value of the primitive type char in an object. 'Char' is not a valid class in the java.lang package."
+        },
+        {
+            "id": "q47",
+            "question": "Where are String literals (e.g., “Hello”) stored in Java memory?",
+            "type": "single-choice",
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "String Constant Pool"
+                },
+                {
+                    "id": "o2",
+                    "text": "Stack Memory"
+                },
+                {
+                    "id": "o3",
+                    "text": "PC Register"
+                },
+                {
+                    "id": "o4",
+                    "text": "Native Method Stack"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "String literals are stored in a special memory area inside the Heap called the String Constant Pool (or String Pool) to optimize memory usage and allow sharing of identical strings."
+        },
+        {
+            "id": "q48",
+            "question": "Which access modifiers allow a subclass to access a parent class's method if they reside in different packages? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "private"
+                },
+                {
+                    "id": "o2",
+                    "text": "default (no modifier)"
+                },
+                {
+                    "id": "o3",
+                    "text": "protected"
+                },
+                {
+                    "id": "o4",
+                    "text": "public"
+                }
+            ],
+            "correctAnswers": [
+                "o3",
+                "o4"
+            ],
+            "explanation": "Methods marked as public can be accessed from anywhere. Methods marked as protected can be accessed by subclasses even if they are in a different package. Private and default are restricted."
+        },
+        {
+            "id": "q49",
+            "question": "Which annotation is used to explicitly inform the compiler that a method is intended to override a method in a superclass?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Overload"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Override"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Super"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Inherit"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The @Override annotation is used to instruct the compiler that the annotated method must override a method from its superclass. It helps prevent spelling or signature mistakes."
+        },
+        {
+            "id": "q50",
+            "question": "Which keyword is used to skip the current iteration of a loop and proceed immediately to the next iteration?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "break"
+                },
+                {
+                    "id": "o2",
+                    "text": "return"
+                },
+                {
+                    "id": "o3",
+                    "text": "continue"
+                },
+                {
+                    "id": "o4",
+                    "text": "skip"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'continue' statement breaks one iteration (in the loop) if a specified condition occurs, and continues with the next iteration in the loop."
+        },
+        {
+            "id": "q51",
+            "question": "Which keyword is used to allocate memory dynamically for a new object in Java?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "create"
+                },
+                {
+                    "id": "o2",
+                    "text": "alloc"
+                },
+                {
+                    "id": "o3",
+                    "text": "new"
+                },
+                {
+                    "id": "o4",
+                    "text": "init"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'new' keyword is used to instantiate a class by allocating memory for a new object on the heap and returning a reference to that memory."
+        },
+        {
+            "id": "q52",
+            "question": "Which of the following are primary characteristics of the Java programming language? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Platform-dependent"
+                },
+                {
+                    "id": "o2",
+                    "text": "Platform-independent"
+                },
+                {
+                    "id": "o3",
+                    "text": "Object-Oriented"
+                },
+                {
+                    "id": "o4",
+                    "text": "Unmanaged memory (manual allocation/deallocation)"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Java is heavily Object-Oriented and designed to be platform-independent (“Write Once, Run Anywhere”). It uses managed memory via Garbage Collection."
+        },
+        {
+            "id": "q53",
+            "question": "What does the 'static' keyword signify when applied to a class variable?",
+            "type": "single-choice",
+            "topic": "Object-Oriented Programming",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The variable cannot be changed after initialization."
+                },
+                {
+                    "id": "o2",
+                    "text": "The variable is shared among all instances of the class."
+                },
+                {
+                    "id": "o3",
+                    "text": "The variable is only accessible from static methods."
+                },
+                {
+                    "id": "o4",
+                    "text": "The variable is stored in the local thread stack."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A static variable belongs to the class itself rather than any specific instance. All objects of the class share the exact same copy of the static variable."
+        },
+        {
+            "id": "q54",
+            "question": "Which component is responsible for automatically destroying objects that are no longer referenced by the program?",
+            "type": "single-choice",
+            "topic": "Java Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Java Compiler"
+                },
+                {
+                    "id": "o2",
+                    "text": "The Garbage Collector"
+                },
+                {
+                    "id": "o3",
+                    "text": "The ClassLoader"
+                },
+                {
+                    "id": "o4",
+                    "text": "The Security Manager"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Garbage Collector (GC) runs in the background of the JVM and reclaims heap memory by destroying objects that are no longer reachable or referenced."
+        },
+        {
+            "id": "q55",
+            "question": "Which of the following methods are provided by the java.lang.Math class? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core APIs",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "abs()"
+                },
+                {
+                    "id": "o2",
+                    "text": "sqrt()"
+                },
+                {
+                    "id": "o3",
+                    "text": "max()"
+                },
+                {
+                    "id": "o4",
+                    "text": "concat()"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "abs(), sqrt(), and max() are mathematical utility methods provided by the Math class. concat() is a method of the String class."
+        },
+        {
+            "id": "q56",
+            "question": "In a switch statement, which keyword is used to define the block of code that runs if no case matches the evaluated expression?",
+            "type": "single-choice",
+            "topic": "Control Flow",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "else"
+                },
+                {
+                    "id": "o2",
+                    "text": "default"
+                },
+                {
+                    "id": "o3",
+                    "text": "finally"
+                },
+                {
+                    "id": "o4",
+                    "text": "catch"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'default' keyword specifies the code to run if there is no matching case in the switch block. It functions similarly to an 'else' block in an if-else statement."
+        },
+        {
+            "id": "q57",
+            "question": "What is the process of manually converting a larger primitive data type (like double) into a smaller one (like int) called?",
+            "type": "single-choice",
+            "topic": "Data Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Widening Casting"
+                },
+                {
+                    "id": "o2",
+                    "text": "Autoboxing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Narrowing Casting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Unboxing"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Narrowing casting (explicit type casting) must be done manually by placing the target type in parentheses, as converting a larger type to a smaller type can result in data loss."
+        },
+        {
+            "id": "q58",
+            "question": "A variable declared with which keyword is treated as a constant, meaning its value cannot be reassigned?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "const"
+                },
+                {
+                    "id": "o2",
+                    "text": "static"
+                },
+                {
+                    "id": "o3",
+                    "text": "final"
+                },
+                {
+                    "id": "o4",
+                    "text": "immutable"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'final' keyword applied to a variable means its value cannot be modified after it is initialized. (Note: Java reserves 'const' but does not use it)."
+        },
+        {
+            "id": "q59",
+            "question": "Which of the following statements about command-line arguments in Java are true? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They are passed as an array of Strings to the main method."
+                },
+                {
+                    "id": "o2",
+                    "text": "They are passed as a single comma-separated String."
+                },
+                {
+                    "id": "o3",
+                    "text": "The first argument (index 0) is the name of the Java program."
+                },
+                {
+                    "id": "o4",
+                    "text": "The first argument (index 0) is the first actual parameter passed after the class name."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "Command-line arguments are stored in the String[] args array. Unlike C/C++, args[0] contains the first parameter passed to the program, not the name of the executable/class itself."
+        },
+        {
+            "id": "q60",
+            "question": "In a standard Java source file, which of the following declarations must appear first (excluding comments and whitespace)?",
+            "type": "single-choice",
+            "topic": "Syntax",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "class declaration"
+                },
+                {
+                    "id": "o2",
+                    "text": "import statements"
+                },
+                {
+                    "id": "o3",
+                    "text": "package declaration"
+                },
+                {
+                    "id": "o4",
+                    "text": "main method"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "If a file defines a class that belongs to a specific package, the 'package' declaration must be the very first statement in the file, followed by any 'import' statements, and then the class declaration."
+        }
+    ]
+}
