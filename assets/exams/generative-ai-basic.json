@@ -95,6 +95,7 @@
             "id": "q4",
             "question": "Which of the following are common use cases for text-based Generative AI models? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Applications",
             "options": [
                 {
@@ -320,6 +321,7 @@
             "id": "q12",
             "question": "Which of the following parameters are used to control token selection during generation? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Model Parameters",
             "options": [
                 {
@@ -517,6 +519,7 @@
             "id": "q19",
             "question": "Which of the following are considered 'Parameter-Efficient Fine-Tuning' (PEFT) techniques? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Model Customization",
             "options": [
                 {
@@ -714,6 +717,7 @@
             "id": "q26",
             "question": "What category of models is primarily used to generate realistic synthetic images from raw text descriptions? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Model Architectures",
             "options": [
                 {

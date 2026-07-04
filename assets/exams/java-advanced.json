@@ -123,6 +123,7 @@
             "id": "q5",
             "question": "When configuring a custom ForkJoinPool, which parameters are mandatory or directly dictate how the async tasks are prioritized/scheduled? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Advanced Concurrency",
             "options": [
                 {
@@ -152,6 +153,7 @@
             "id": "q6",
             "question": "You are writing a low-latency garbage collection strategy using the Z Garbage Collector (ZGC). Which statements accurately reflect ZGC behavior in modern Java? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "JVM Internals & Garbage Collection",
             "options": [
                 {
@@ -377,6 +379,7 @@
             "id": "q14",
             "question": "Which of the following descriptions accurately capture the constraints of a 'sealed' interface in Java? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Language Features & Sealed Classes",
             "options": [
                 {
@@ -518,6 +521,7 @@
             "id": "q19",
             "question": "Which components are strictly required as arguments when invoking the Collectors.teeing() method introduced in Java 12? (Choose three)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Stream API & Collections",
             "options": [
                 {
@@ -604,6 +608,7 @@
             "id": "q22",
             "question": "Which compiler optimizations are directly enabled by the C2 JIT compiler's Escape Analysis if it determines that an object does NOT escape the current method? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "JVM JIT Compiler",
             "options": [
                 {
@@ -1137,6 +1142,7 @@
             "id": "q41",
             "question": "When using a parallel Stream's reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner) method, what strict requirements apply to the identity parameter? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Stream API",
             "options": [
                 {
@@ -1362,6 +1368,7 @@
             "id": "q49",
             "question": "When managing collections using Stream API parallel pipelines, which operation is highly discouraged because it destroys the performance benefit of parallelism due to upstream thread synchronization? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Stream API",
             "options": [
                 {
@@ -1587,6 +1594,7 @@
             "id": "q57",
             "question": "What condition will trigger a PatternMatchException or compilation failure in an exhaustive pattern-matching configuration? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Language Features & Pattern Matching",
             "options": [
                 {

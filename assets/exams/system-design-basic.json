@@ -67,6 +67,7 @@
             "id": "q3",
             "question": "Which of the following are benefits of implementing a Content Delivery Network (CDN)? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Caching & Content Delivery",
             "options": [
                 {
@@ -180,6 +181,7 @@
             "id": "q7",
             "question": "Which of the following are common NoSQL database categories? (Choose three)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Databases",
             "options": [
                 {
@@ -490,6 +492,7 @@
             "id": "q18",
             "question": "Which properties are guaranteed by a traditional relational database adhering to ACID compliance? (Choose three)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Databases",
             "options": [
                 {
@@ -744,6 +747,7 @@
             "id": "q27",
             "question": "Which of the following are valid strategies for invalidating data inside a cache layer? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Caching & Content Delivery",
             "options": [
                 {
@@ -1025,6 +1029,7 @@
             "id": "q37",
             "question": "Which of the following are characteristics of traditional REST APIs compared to GraphQL? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "API Design",
             "options": [
                 {
@@ -1194,6 +1199,7 @@
             "id": "q43",
             "question": "Which of the following statements about encryption are true? (Choose two)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Security",
             "options": [
                 {
@@ -1363,6 +1369,7 @@
             "id": "q49",
             "question": "Which of the following principles make up the 'BASE' database model often used in NoSQL systems? (Choose three)",
             "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Databases",
             "options": [
                 {
