@@ -1,0 +1,1715 @@
+{
+    "id": "azure-basic",
+    "name": "Microsoft Azure Fundamentals (AZ-900)",
+    "vendor": "Microsoft",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "The ability of a cloud system to dynamically allocate and de-allocate resources automatically in response to varying demand is known as what?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "High Availability"
+                },
+                {
+                    "id": "o2",
+                    "text": "Fault Tolerance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Elasticity"
+                },
+                {
+                    "id": "o4",
+                    "text": "Disaster Recovery"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Elasticity is the concept of automatically scaling resources up or down dynamically based on workload demands, ensuring you have the right amount of resources at any given time without manual intervention."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of an Azure Region Pair?",
+            "type": "single-choice",
+            "topic": "Core Azure Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To improve network latency for local users"
+                },
+                {
+                    "id": "o2",
+                    "text": "To provide automatic data replication and ensure business continuity during regional outages"
+                },
+                {
+                    "id": "o3",
+                    "text": "To load balance traffic between different geographical areas"
+                },
+                {
+                    "id": "o4",
+                    "text": "To reduce the overall cost of Azure resources"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure regions are paired with another region within the same geography (at least 300 miles away). This pairing is used to replicate resources and data to ensure business continuity and protect against massive regional disasters."
+        },
+        {
+            "id": "q3",
+            "question": "Which tool should you use to estimate the potential cost savings of migrating your on-premises data center workloads to Azure?",
+            "type": "single-choice",
+            "topic": "Pricing and Support",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Pricing Calculator"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Advisor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Cost Management"
+                },
+                {
+                    "id": "o4",
+                    "text": "Total Cost of Ownership (TCO) Calculator"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The Total Cost of Ownership (TCO) Calculator helps you estimate the cost savings you can realize by migrating your on-premises workloads to Azure by comparing existing hardware costs with Azure infrastructure costs."
+        },
+        {
+            "id": "q4",
+            "question": "You need to establish a dedicated, high-speed private connection from your on-premises data center to Azure that does not travel over the public internet. Which networking service should you choose?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure VPN Gateway"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure ExpressRoute"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Front Door"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Bastion"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure ExpressRoute provides a dedicated, private connection to Azure data centers that does not go over the public internet, offering higher security, reliability, and speeds compared to a standard VPN connection."
+        },
+        {
+            "id": "q5",
+            "question": "Which service provides personalized alerts and guidance when ongoing Azure service issues, planned maintenance, or regional outages affect your specific resources?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Monitor"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Service Health"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Advisor"
+                },
+                {
+                    "id": "o4",
+                    "text": "Application Insights"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Service Health provides a personalized view of the health of the Azure services and regions you're using. It alerts you about service outages, planned maintenance, and health advisories."
+        },
+        {
+            "id": "q6",
+            "question": "How can you logically group and organize Azure resources by attaching custom name-value pairs for billing, tracking, and management purposes?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Resource Groups"
+                },
+                {
+                    "id": "o2",
+                    "text": "Management Groups"
+                },
+                {
+                    "id": "o3",
+                    "text": "Resource Tags"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Policies"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Tags are name-value pairs applied to Azure resources that allow you to logically organize them into a taxonomy, which is especially useful for tracking costs and assigning billing to different departments."
+        },
+        {
+            "id": "q7",
+            "question": "Which Azure service allows you to manage on-premises, multi-cloud, and edge environments directly from the Azure portal as if they were native Azure resources?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Resource Manager (ARM)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Arc"
+                },
+                {
+                    "id": "o3",
+                    "text": "Microsoft Entra ID"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure DevTest Labs"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Arc extends Azure management and security to any infrastructure, allowing you to govern and manage on-premises, multi-cloud, and edge resources directly from the Azure portal."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following cloud concepts describes the process of accommodating increased demand by adding more identical resources to a workload (e.g., adding more virtual machines to a cluster)?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Scaling up (Vertical scaling)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Scaling out (Horizontal scaling)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Cloud agility"
+                },
+                {
+                    "id": "o4",
+                    "text": "Geo-distribution"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Scaling out (or horizontal scaling) refers to adding more instances of a resource, such as adding extra virtual machines behind a load balancer, to handle an increase in demand."
+        },
+        {
+            "id": "q9",
+            "question": "You need an interactive, authenticated, and browser-based command-line environment for managing Azure resources without installing any tools locally. Which tool should you use?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Cloud Shell"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Portal GUI"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Data Studio"
+                },
+                {
+                    "id": "o4",
+                    "text": "Windows PowerShell IDE"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Azure Cloud Shell is an interactive, authenticated, browser-accessible shell for managing Azure resources. It comes pre-installed with popular CLI tools and is accessible directly from the Azure Portal."
+        },
+        {
+            "id": "q10",
+            "question": "Which system provides fine-grained access management and dictates what actions a specific user, group, or service principal can perform on Azure resources?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Policy"
+                },
+                {
+                    "id": "o2",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Microsoft Defender for Cloud"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Key Vault"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Role-Based Access Control (RBAC) is an authorization system built on Azure Resource Manager that provides fine-grained access management to Azure resources, defining who has access and what they can do."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following Azure services falls strictly under the Infrastructure as a Service (IaaS) cloud model?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure SQL Database"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure App Service"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Virtual Machines"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Functions"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure Virtual Machines are an example of Infrastructure as a Service (IaaS) because they provide raw compute infrastructure (virtual servers, storage, network) requiring you to manage the OS and applications."
+        },
+        {
+            "id": "q12",
+            "question": "Which security model assumes that every request to access a resource is a potential breach and dictates that you should 'never trust, always verify'?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Defense in depth"
+                },
+                {
+                    "id": "o2",
+                    "text": "Zero Trust"
+                },
+                {
+                    "id": "o3",
+                    "text": "Perimeter security"
+                },
+                {
+                    "id": "o4",
+                    "text": "Shared responsibility model"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Zero Trust model operates on the principle of 'never trust, always verify.' It assumes breach and verifies each request as though it originates from an open network, regardless of where the request originates."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following are supported access tiers for managing costs in Azure Blob Storage? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hot"
+                },
+                {
+                    "id": "o2",
+                    "text": "Warm"
+                },
+                {
+                    "id": "o3",
+                    "text": "Cool"
+                },
+                {
+                    "id": "o4",
+                    "text": "Archive"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Azure Blob Storage offers three primary access tiers: Hot (frequently accessed data), Cool (infrequently accessed data stored for at least 30 days), and Archive (rarely accessed data stored for at least 180 days with highest latency)."
+        },
+        {
+            "id": "q14",
+            "question": "What are the primary interfaces available to interact with the Azure Resource Manager (ARM) API to manage resources? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Portal"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure CLI"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure PowerShell"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure ExpressRoute"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "The Azure Portal, Azure CLI, Azure PowerShell, and REST APIs are all clients that interact directly with the Azure Resource Manager (ARM) to manage resources. ExpressRoute is a networking service."
+        },
+        {
+            "id": "q15",
+            "question": "Which of the following statements about Azure Subscriptions are accurate? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A single resource can belong to multiple subscriptions simultaneously"
+                },
+                {
+                    "id": "o2",
+                    "text": "An Azure account can have multiple subscriptions"
+                },
+                {
+                    "id": "o3",
+                    "text": "Subscriptions serve as a billing boundary"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deleting a subscription retains its resources indefinitely"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "An Azure account can have multiple subscriptions, which is useful for organizing resources. Subscriptions act as a billing boundary, meaning separate invoices are generated per subscription. A resource can only belong to one subscription at a time."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is a common use case for Infrastructure as a Service (IaaS)?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Developing web applications without managing underlying web servers"
+                },
+                {
+                    "id": "o2",
+                    "text": "Using a hosted email service like Microsoft 365"
+                },
+                {
+                    "id": "o3",
+                    "text": "Migrating existing on-premises virtual machines to the cloud (lift-and-shift)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deploying code in a serverless environment"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "IaaS provides maximum control over infrastructure, making it ideal for migrating existing workloads 'as-is' (lift-and-shift) without needing to rewrite applications."
+        },
+        {
+            "id": "q17",
+            "question": "You need a fully managed file share in the cloud that can be accessed using the standard Server Message Block (SMB) protocol. Which service should you use?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Blob Storage"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Files"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Disk Storage"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure NetApp Files"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Files offers fully managed file shares in the cloud that are accessible via the industry-standard SMB protocol, allowing you to map them like a traditional network drive."
+        },
+        {
+            "id": "q18",
+            "question": "When an application automatically adds more virtual machines to a backend pool to handle an increase in user traffic, which cloud computing concept is being demonstrated?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Vertical scaling (scaling up)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Horizontal scaling (scaling out)"
+                },
+                {
+                    "id": "o3",
+                    "text": "High availability"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fault tolerance"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Horizontal scaling (scaling out) refers to adding more resources of the same type, such as adding more virtual machines, to distribute the load."
+        },
+        {
+            "id": "q19",
+            "question": "In Azure, what represents a geographical area on the planet that contains at least one, but potentially multiple datacenters that are networked together?",
+            "type": "single-choice",
+            "topic": "Core Azure Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Availability Zone"
+                },
+                {
+                    "id": "o2",
+                    "text": "Region"
+                },
+                {
+                    "id": "o3",
+                    "text": "Resource Group"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Boundary"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Azure Region is a geographical area that contains one or more datacenters networked together with a low-latency network."
+        },
+        {
+            "id": "q20",
+            "question": "Which Azure service is a fully managed relational database engine built for the cloud, based on the latest stable version of the Microsoft SQL Server database engine?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Cosmos DB"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure SQL Database"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure HDInsight"
+                },
+                {
+                    "id": "o4",
+                    "text": "SQL Server on Azure Virtual Machines"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure SQL Database is a fully managed Platform as a Service (PaaS) database engine that handles most database management functions like upgrading, patching, backups, and monitoring."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following statements about Azure Resource Groups are true? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Azure Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A resource can belong to multiple resource groups at the same time."
+                },
+                {
+                    "id": "o2",
+                    "text": "Resources can be moved from one resource group to another."
+                },
+                {
+                    "id": "o3",
+                    "text": "A resource group can only contain resources from a single Azure region."
+                },
+                {
+                    "id": "o4",
+                    "text": "A resource group can contain resources from multiple different Azure regions."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "Resources can be moved between resource groups, and a resource group can contain resources that reside in different regions. However, a resource can only belong to one resource group at a time."
+        },
+        {
+            "id": "q22",
+            "question": "You need to grant a new employee the ability to restart a specific virtual machine, but they must not be able to modify the machine's network settings. What should you use?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Policy"
+                },
+                {
+                    "id": "o2",
+                    "text": "Resource Locks"
+                },
+                {
+                    "id": "o3",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Microsoft Defender for Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure Role-Based Access Control (RBAC) is an authorization system built on Azure Resource Manager that provides fine-grained access management of Azure resources."
+        },
+        {
+            "id": "q23",
+            "question": "Purchasing new physical servers for a company's on-premises datacenter is an example of which type of financial model?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Operational Expenditure (OpEx)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Capital Expenditure (CapEx)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Consumption-based modeling"
+                },
+                {
+                    "id": "o4",
+                    "text": "Pay-as-you-go"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Capital Expenditure (CapEx) refers to the upfront spending of money on physical infrastructure, such as servers, cooling, and network equipment."
+        },
+        {
+            "id": "q24",
+            "question": "Which Azure service is the fundamental building block for your private network in Azure, allowing resources to securely communicate with each other, the internet, and on-premises networks?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Virtual Network (VNet)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure ExpressRoute"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure VPN Gateway"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Traffic Manager"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Azure Virtual Network (VNet) is the fundamental building block for private networks in Azure, providing isolation and secure communication for Azure resources."
+        },
+        {
+            "id": "q25",
+            "question": "You want to organize your Azure resources by department (e.g., HR, Finance, IT) for easier billing allocation. What Azure feature provides the most direct way to do this?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Blueprints"
+                },
+                {
+                    "id": "o2",
+                    "text": "Management Groups"
+                },
+                {
+                    "id": "o3",
+                    "text": "Resource Tags"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Active Directory Groups"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Resource Tags consist of name-value pairs (e.g., Department: Finance) that allow you to logically organize resources and resource groups for billing and management purposes."
+        },
+        {
+            "id": "q26",
+            "question": "Which Azure service collects, analyzes, and acts on telemetry data from your cloud and on-premises environments to help you maximize performance and availability?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Service Health"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Monitor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Advisor"
+                },
+                {
+                    "id": "o4",
+                    "text": "Log Analytics workspace"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Monitor delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments."
+        },
+        {
+            "id": "q27",
+            "question": "Under the shared responsibility model in an Infrastructure as a Service (IaaS) deployment, which two components are solely the responsibility of the cloud provider? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Information and data"
+                },
+                {
+                    "id": "o2",
+                    "text": "Physical network"
+                },
+                {
+                    "id": "o3",
+                    "text": "Operating system configuration"
+                },
+                {
+                    "id": "o4",
+                    "text": "Physical hosts (servers)"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "In an IaaS model, the cloud provider manages the physical infrastructure, including the physical network, physical hosts, and physical datacenter security."
+        },
+        {
+            "id": "q28",
+            "question": "Your company is planning to migrate its existing on-premises virtual machines to Azure. Which tool can you use to estimate the potential cost savings of this migration?",
+            "type": "single-choice",
+            "topic": "Pricing and Support",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Pricing Calculator"
+                },
+                {
+                    "id": "o2",
+                    "text": "Total Cost of Ownership (TCO) Calculator"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Cost Management"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Migrate"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Total Cost of Ownership (TCO) Calculator helps you estimate the cost savings you can realize by migrating your workloads to Azure from an on-premises datacenter."
+        },
+        {
+            "id": "q29",
+            "question": "What defines the formal commitment and guaranteed uptime Microsoft provides for specific Azure services?",
+            "type": "single-choice",
+            "topic": "Pricing and Support",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Service Level Agreement (SLA)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Terms of Service (ToS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Microsoft Online Services Terms"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Subscription Agreement"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A Service Level Agreement (SLA) describes Microsoft's commitments for uptime and connectivity, usually presented as a percentage like 99.9%."
+        },
+        {
+            "id": "q30",
+            "question": "You have resources hosted across Azure, on-premises datacenters, and AWS. Which Azure service helps you manage all these environments from a single unified pane of glass?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Logic Apps"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Resource Manager (ARM)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Arc"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Bastion"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure Arc extends the Azure control plane, allowing you to manage resources hosted across on-premises, edge, and multicloud environments from within the Azure portal."
+        },
+        {
+            "id": "q31",
+            "question": "What is the primary benefit of cloud agility?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The ability to allocate resources based on geographic demand"
+                },
+                {
+                    "id": "o2",
+                    "text": "The ability to allocate resources programmatically and rapidly adapt to changing business requirements"
+                },
+                {
+                    "id": "o3",
+                    "text": "The ability to guarantee a 99.99% system availability rate"
+                },
+                {
+                    "id": "o4",
+                    "text": "The ability to forecast long-term capital expenditure with precision"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Cloud agility refers to the ease and speed with which an organization can provision, configure, and scale resources to meet rapidly shifting business and operational needs without infrastructure delays."
+        },
+        {
+            "id": "q32",
+            "question": "You need a serverless containerized solution to run a lightweight application without configuring a full container orchestration platform. Which service should you use?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Kubernetes Service (AKS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Virtual Machines"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Container Instances (ACI)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure App Service"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure Container Instances (ACI) is a serverless, lightweight container hosting solution that lets you run containers without managing any underlying virtual machines or orchestration platforms like AKS."
+        },
+        {
+            "id": "q33",
+            "question": "Which feature of Microsoft Entra ID allows you to grant or deny access to applications based on specific signals, such as user location or device compliance?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Multi-Factor Authentication (MFA)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Conditional Access"
+                },
+                {
+                    "id": "o3",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Privileged Identity Management (PIM)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Conditional Access is the tool used by Microsoft Entra ID to aggregate signals, make identity decisions, and enforce organizational compliance policies before granting access."
+        },
+        {
+            "id": "q34",
+            "question": "A company wants to prevent accidental deletion or modification of a production Azure Storage Account. Which feature should be used?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Policy"
+                },
+                {
+                    "id": "o2",
+                    "text": "Resource Locks"
+                },
+                {
+                    "id": "o3",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Microsoft Defender for Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Resource Locks can be applied to subscriptions, resource groups, or individual resources to prevent accidental deletion (CanNotDelete) or unauthorized changes (ReadOnly)."
+        },
+        {
+            "id": "q35",
+            "question": "Which Azure Storage replication option copies your data synchronously three times within a single physical location in the primary region?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Geo-redundant storage (GRS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Zone-redundant storage (ZRS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Locally redundant storage (LRS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Read-access geo-redundant storage (RA-GRS)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Locally redundant storage (LRS) replicates your data three times within a single facility inside the primary region, providing cost-effective protection against localized hardware failures."
+        },
+        {
+            "id": "q36",
+            "question": "Which Azure service provides Layer 7 load balancing and routing capabilities, making it ideal for managing HTTP/HTTPS web traffic?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Load Balancer"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Application Gateway"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Traffic Manager"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Network Security Group"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Application Gateway is a web traffic load balancer that operates at Layer 7 (Application layer) of the OSI model, supporting advanced capabilities like URL-based routing and SSL termination."
+        },
+        {
+            "id": "q37",
+            "question": "Where in the Azure Portal can you view personalized alerts regarding Azure service issues, planned maintenance, and health advisories that specifically affect your active subscriptions?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Monitor"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Advisor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Service Health"
+                },
+                {
+                    "id": "o4",
+                    "text": "Microsoft Defender for Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure Service Health provides a personalized dashboard tracking the specific Azure services and regions you use, keeping you updated on outages, upcoming maintenance, and advisories."
+        },
+        {
+            "id": "q38",
+            "question": "You need a fully managed cloud service that acts as a central message hub for bi-directional communication between your cloud backend and millions of connected Internet of Things devices. Which service should you choose?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure IoT Central"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure IoT Hub"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Event Hubs"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Stream Analytics"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure IoT Hub is a managed service that enables highly secure and reliable bi-directional communication between millions of IoT devices and an attached cloud backend solution."
+        },
+        {
+            "id": "q39",
+            "question": "Which category of Azure services provides pre-built, customizable AI models for natural language processing, computer vision, and speech translation without requiring deep data science expertise?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Machine Learning"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure AI Services"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Synapse Analytics"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Databricks"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure AI Services provides pre-built, production-ready APIs and models that make it easy for developers to add intelligent vision, speech, language, and search capabilities to applications."
+        },
+        {
+            "id": "q40",
+            "question": "Which benefit allows customers to use their existing on-premises Windows Server or SQL Server licenses with active Software Assurance to significantly reduce costs on Azure?",
+            "type": "single-choice",
+            "topic": "Pricing and Support",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Hybrid Benefit"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Reserved Instances"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Free Account"
+                },
+                {
+                    "id": "o4",
+                    "text": "Enterprise Agreement"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Azure Hybrid Benefit is a licensing offer that helps you maximize the value of your existing on-premises Windows Server and SQL Server license investments when migrating workloads to Azure."
+        },
+        {
+            "id": "q41",
+            "question": "Which type of Azure network connection offers a dedicated, private connection from an on-premises datacenter to Azure that does NOT travel over the public internet?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Point-to-Site VPN"
+                },
+                {
+                    "id": "o2",
+                    "text": "Site-to-Site VPN"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure ExpressRoute"
+                },
+                {
+                    "id": "o4",
+                    "text": "Virtual Network Peering"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure ExpressRoute lets you extend your local networks into the Microsoft cloud over a private connection facilitated by a connectivity provider, bypassing the public internet entirely."
+        },
+        {
+            "id": "q42",
+            "question": "What are the core guiding principles of the Zero Trust security model? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Verify explicitly"
+                },
+                {
+                    "id": "o2",
+                    "text": "Use least privilege access"
+                },
+                {
+                    "id": "o3",
+                    "text": "Assume breach"
+                },
+                {
+                    "id": "o4",
+                    "text": "Trust by default within the corporate network"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "The three core principles of a Zero Trust model are to verify explicitly based on all available data points, limit user access with least privilege (Just-In-Time/Just-Enough-Access), and assume that breaches have occurred to minimize damage blast radiuses."
+        },
+        {
+            "id": "q43",
+            "question": "Which of the following are examples of Infrastructure as Code (IaC) tools native to Azure? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Resource Manager (ARM) templates"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Bicep"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure CLI"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure PowerShell"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "ARM templates (JSON) and Azure Bicep are native declarative Infrastructure as Code (IaC) mechanisms used to define, version, and consistently deploy Azure resources."
+        },
+        {
+            "id": "q44",
+            "question": "Which of the following factors primarily affect the cost of running services in Azure? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Pricing and Support",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The specific Azure region where the resource is deployed"
+                },
+                {
+                    "id": "o2",
+                    "text": "The subscription type being used (e.g., Pay-As-You-Go vs Enterprise Agreement)"
+                },
+                {
+                    "id": "o3",
+                    "text": "The volume of outbound data transfer (egress) out of Azure"
+                },
+                {
+                    "id": "o4",
+                    "text": "The geographic location of your local system administrators"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Azure costs depend heavily on the resource configuration/type, the region it runs in, subscription billing models, and usage metrics like outbound bandwidth. Administrator locations do not impact resource pricing."
+        },
+        {
+            "id": "q45",
+            "question": "What is the primary purpose of the Microsoft Trust Center?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To download software updates and security patches for on-premises infrastructure"
+                },
+                {
+                    "id": "o2",
+                    "text": "To provide a centralized portal containing comprehensive information on Azure security, privacy, compliance, and regulatory standards"
+                },
+                {
+                    "id": "o3",
+                    "text": "To purchase premium security add-ons for Microsoft Entra ID"
+                },
+                {
+                    "id": "o4",
+                    "text": "To monitor live security threats inside your virtual network"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Microsoft Trust Center is an informational portal that provides in-depth whitepapers, compliance documentation, and principles regarding security, privacy, and regulatory adherence within Microsoft Cloud services."
+        },
+        {
+            "id": "q46",
+            "question": "Which Azure Blob Storage access tier is the most cost-effective for storing data that is rarely accessed and can tolerate retrieval latency of several hours?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hot tier"
+                },
+                {
+                    "id": "o2",
+                    "text": "Cool tier"
+                },
+                {
+                    "id": "o3",
+                    "text": "Archive tier"
+                },
+                {
+                    "id": "o4",
+                    "text": "Cold tier"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The Archive tier has the lowest storage costs but the highest data retrieval costs and latency compared to the Hot, Cool, and Cold tiers, making it ideal for long-term backup and archival data."
+        },
+        {
+            "id": "q47",
+            "question": "Which cloud computing model is best suited for an organization operating in a highly regulated industry that mandates complete physical control and exclusive use of underlying computing infrastructure?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public Cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "Private Cloud"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hybrid Cloud"
+                },
+                {
+                    "id": "o4",
+                    "text": "Community Cloud"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Private Cloud consists of computing resources used exclusively by a single business or organization, providing the highest level of control over security, compliance, and underlying physical infrastructure."
+        },
+        {
+            "id": "q48",
+            "question": "You want to automate business processes by creating visual, workflow-based integrations between various Microsoft and third-party applications without writing code. Which Azure service should you use?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Functions"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Logic Apps"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure App Service"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Event Grid"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Logic Apps is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems, heavily utilizing a visual designer."
+        },
+        {
+            "id": "q49",
+            "question": "Which Microsoft service provides a comprehensive suite of developer tools, including version control repositories, automated CI/CD pipelines, and agile project management boards?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure DevTest Labs"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure DevOps"
+                },
+                {
+                    "id": "o3",
+                    "text": "Microsoft Entra ID"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Blueprint"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure DevOps provides developer services for support teams to plan work, collaborate on code development, and build and deploy applications (including Azure Repos, Azure Pipelines, and Azure Boards)."
+        },
+        {
+            "id": "q50",
+            "question": "What is a primary financial advantage of using the Operational Expenditure (OpEx) model in cloud computing?",
+            "type": "single-choice",
+            "topic": "Cloud Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "You can deduct the cost of physical servers as depreciating assets over time."
+                },
+                {
+                    "id": "o2",
+                    "text": "You pay upfront for long-term capacity, securing permanent infrastructure."
+                },
+                {
+                    "id": "o3",
+                    "text": "You are billed only for the resources you actively consume, eliminating upfront investments."
+                },
+                {
+                    "id": "o4",
+                    "text": "You assume ownership of the datacenter facilities."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The OpEx model allows organizations to avoid heavy initial capital investments by shifting to a 'pay-as-you-go' billing structure based purely on actual consumption."
+        },
+        {
+            "id": "q51",
+            "question": "Which Azure service automatically monitors your virtual network traffic and mitigates volumetric network attacks designed to overwhelm your application?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Firewall"
+                },
+                {
+                    "id": "o2",
+                    "text": "Network Security Group (NSG)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure DDoS Protection"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Application Gateway"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Azure DDoS Protection analyzes network traffic patterns and scrubs malicious traffic intended to overwhelm your services, providing protection against Distributed Denial of Service attacks."
+        },
+        {
+            "id": "q52",
+            "question": "Which of the following statements accurately describe the differences between Authentication and Authorization? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Authentication verifies the identity of a user or service."
+                },
+                {
+                    "id": "o2",
+                    "text": "Authentication dictates the level of access an identity has to a resource."
+                },
+                {
+                    "id": "o3",
+                    "text": "Authorization verifies the identity of a user or service."
+                },
+                {
+                    "id": "o4",
+                    "text": "Authorization dictates the level of access an authenticated identity has to a resource."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o4"
+            ],
+            "explanation": "Authentication (AuthN) establishes who the user is, while Authorization (AuthZ) establishes what the user is allowed to do within the system."
+        },
+        {
+            "id": "q53",
+            "question": "Which of the following are valid organizational reasons to create multiple Azure Subscriptions? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To establish separate billing environments for different departments."
+                },
+                {
+                    "id": "o2",
+                    "text": "To combine multiple independent Microsoft Entra ID tenants into a single tenant."
+                },
+                {
+                    "id": "o3",
+                    "text": "To enforce strict access control and resource management boundaries between production and development."
+                },
+                {
+                    "id": "o4",
+                    "text": "To bypass the geographic data sovereignty laws of a specific region."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Multiple subscriptions are commonly used to scale environments by creating distinct boundaries for billing management and access control (e.g., isolating production workloads from development)."
+        },
+        {
+            "id": "q54",
+            "question": "You require an enterprise analytics service that accelerates time to insight across both massive data warehouses and big data systems. Which Azure service fits this description?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure SQL Database"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Synapse Analytics"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Cosmos DB"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Data Factory"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing, and big data analytics."
+        },
+        {
+            "id": "q55",
+            "question": "Where should a compliance officer navigate to download official audit reports (such as SOC or ISO certificates) regarding Microsoft's cloud operations?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Microsoft Defender for Cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Policy"
+                },
+                {
+                    "id": "o3",
+                    "text": "Service Trust Portal"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Service Health"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The Service Trust Portal is Microsoft's public site for publishing audit reports and compliance information relevant to Microsoft's cloud services."
+        },
+        {
+            "id": "q56",
+            "question": "Which Azure governance tool enables architects to define a repeatable set of Azure resources that implement and adhere to an organization's standards, patterns, and requirements?",
+            "type": "single-choice",
+            "topic": "Management and Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Blueprints"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Monitor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Advisor"
+                },
+                {
+                    "id": "o4",
+                    "text": "Resource Tags"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Azure Blueprints allows cloud architects to define a repeatable set of Azure resources, including role assignments, policy assignments, ARM templates, and Resource Groups."
+        },
+        {
+            "id": "q57",
+            "question": "What is the primary purpose of an Azure Availability Set?",
+            "type": "single-choice",
+            "topic": "Core Azure Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To replicate data to a completely different geographic region."
+                },
+                {
+                    "id": "o2",
+                    "text": "To ensure virtual machines are distributed across multiple isolated fault and update domains within a single datacenter."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically scale out the number of running virtual machines based on CPU load."
+                },
+                {
+                    "id": "o4",
+                    "text": "To physically separate virtual machines across different buildings in a region."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Availability Sets provide logical grouping capabilities to ensure that virtual machines deployed within them are isolated from each other across fault domains (rack failures) and update domains (patching schedules) inside a single datacenter."
+        },
+        {
+            "id": "q58",
+            "question": "Which command-line utility is optimized for high-performance data transfer to and from Azure Blob Storage and Azure Files?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Storage Explorer"
+                },
+                {
+                    "id": "o2",
+                    "text": "AzCopy"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure File Sync"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure Data Box"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "AzCopy is a robust, lightweight command-line utility used to copy data to and from Azure storage accounts efficiently using parallel processing."
+        },
+        {
+            "id": "q59",
+            "question": "Your company is developing a consumer-facing application and needs an identity management service to allow customers to sign in using their existing social accounts (like Facebook or Google). Which service should you choose?",
+            "type": "single-choice",
+            "topic": "Identity, Access, and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Microsoft Entra ID (Azure AD) B2B"
+                },
+                {
+                    "id": "o2",
+                    "text": "Microsoft Entra External ID (Azure AD B2C)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Key Vault"
+                },
+                {
+                    "id": "o4",
+                    "text": "Azure ExpressRoute"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Microsoft Entra External ID for customers (formerly Azure AD B2C) is designed as a customer identity access management (CIAM) solution, enabling external users to sign in with standard or social identities."
+        },
+        {
+            "id": "q60",
+            "question": "Which fully managed Azure service enables you to securely deliver a virtual desktop experience and remote apps to any device, effectively replacing traditional on-premises VDI environments?",
+            "type": "single-choice",
+            "topic": "Core Azure Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Azure Virtual Network"
+                },
+                {
+                    "id": "o2",
+                    "text": "Azure Virtual Desktop"
+                },
+                {
+                    "id": "o3",
+                    "text": "Azure Bastion"
+                },
+                {
+                    "id": "o4",
+                    "text": "Windows Server Update Services (WSUS)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Azure Virtual Desktop is a desktop and app virtualization service that runs in the cloud, allowing users to securely access a full Windows 10/11 experience from nearly any device."
+        }
+    ]
+}

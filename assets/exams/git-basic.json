@@ -1,0 +1,1708 @@
+{
+    "id": "git-basic",
+    "name": "Git Fundamentals",
+    "vendor": "Git",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which command is used to create an empty Git repository or reinitialize an existing one?",
+            "type": "single-choice",
+            "topic": "Repository Initialization",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git create"
+                },
+                {
+                    "id": "o2",
+                    "text": "git init"
+                },
+                {
+                    "id": "o3",
+                    "text": "git start"
+                },
+                {
+                    "id": "o4",
+                    "text": "git new"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'git init' command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty directory."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following commands can be used to set your Git username and email address?",
+            "type": "multi-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git config --global user.name “Name”"
+                },
+                {
+                    "id": "o2",
+                    "text": "git setup --global user.name “Name”"
+                },
+                {
+                    "id": "o3",
+                    "text": "git config --global user.email “email@example.com”"
+                },
+                {
+                    "id": "o4",
+                    "text": "git env set user.email “email@example.com”"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Git uses the 'git config' command to get and set configuration variables. Setting 'user.name' and 'user.email' is essential for associating your commits with your identity."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary purpose of the 'git status' command?",
+            "type": "single-choice",
+            "topic": "Status and Inspection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To view the commit history of the repository"
+                },
+                {
+                    "id": "o2",
+                    "text": "To list all branches in the repository"
+                },
+                {
+                    "id": "o3",
+                    "text": "To display the state of the working directory and the staging area"
+                },
+                {
+                    "id": "o4",
+                    "text": "To show the differences between two branches"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'git status' displays paths that have differences between the index file (staging area) and the current HEAD commit, as well as untracked files."
+        },
+        {
+            "id": "q4",
+            "question": "Which command is used to add file contents to the staging area?",
+            "type": "single-choice",
+            "topic": "Staging Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git stage"
+                },
+                {
+                    "id": "o2",
+                    "text": "git commit"
+                },
+                {
+                    "id": "o3",
+                    "text": "git push"
+                },
+                {
+                    "id": "o4",
+                    "text": "git add"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'git add' command updates the index using the current content found in the working tree, preparing the content staged for the next commit."
+        },
+        {
+            "id": "q5",
+            "question": "According to Git architecture, what are the three main states that your files can reside in?",
+            "type": "multi-choice",
+            "topic": "Git Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Modified"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tracked"
+                },
+                {
+                    "id": "o3",
+                    "text": "Staged"
+                },
+                {
+                    "id": "o4",
+                    "text": "Committed"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Files in Git can primarily be in one of three states: Modified (changed but not added to the database), Staged (marked to go into the next commit snapshot), and Committed (data safely stored in the local database)."
+        },
+        {
+            "id": "q6",
+            "question": "Which command is used to record changes to the repository?",
+            "type": "single-choice",
+            "topic": "Committing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git record"
+                },
+                {
+                    "id": "o2",
+                    "text": "git save"
+                },
+                {
+                    "id": "o3",
+                    "text": "git commit"
+                },
+                {
+                    "id": "o4",
+                    "text": "git snapshot"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'git commit' stores the current contents of the index in a new commit along with a log message from the user describing the changes."
+        },
+        {
+            "id": "q7",
+            "question": "How do you download a copy of an existing remote repository to your local machine?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git copy "
+                },
+                {
+                    "id": "o2",
+                    "text": "git clone "
+                },
+                {
+                    "id": "o3",
+                    "text": "git fetch "
+                },
+                {
+                    "id": "o4",
+                    "text": "git pull "
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git clone' creates a copy of an existing repository, including its history, branches, and remote connections."
+        },
+        {
+            "id": "q8",
+            "question": "Which command allows you to view the commit history of a repository?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git show"
+                },
+                {
+                    "id": "o2",
+                    "text": "git history"
+                },
+                {
+                    "id": "o3",
+                    "text": "git log"
+                },
+                {
+                    "id": "o4",
+                    "text": "git trace"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'git log' shows the commit logs. It lists the commits made in the repository in reverse chronological order."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the .gitignore file?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To permanently delete tracked files from the repository"
+                },
+                {
+                    "id": "o2",
+                    "text": "To specify intentionally untracked files that Git should ignore"
+                },
+                {
+                    "id": "o3",
+                    "text": "To hide secret keys from remote viewers automatically"
+                },
+                {
+                    "id": "o4",
+                    "text": "To configure global user permissions for the project"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The .gitignore file tells Git which files or directories to ignore and not track, such as build artifacts, temporary files, or local environment configurations."
+        },
+        {
+            "id": "q10",
+            "question": "Which of the following commands can be used to create a new branch in Git?",
+            "type": "multi-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch "
+                },
+                {
+                    "id": "o2",
+                    "text": "git checkout -b "
+                },
+                {
+                    "id": "o3",
+                    "text": "git switch -c "
+                },
+                {
+                    "id": "o4",
+                    "text": "git new-branch "
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "'git branch' creates a branch but keeps you on the current one. 'git checkout -b' and 'git switch -c' create a new branch and immediately transition you to it."
+        },
+        {
+            "id": "q11",
+            "question": "Which command is used to upload local repository content to a remote repository?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git push"
+                },
+                {
+                    "id": "o2",
+                    "text": "git pull"
+                },
+                {
+                    "id": "o3",
+                    "text": "git upload"
+                },
+                {
+                    "id": "o4",
+                    "text": "git send"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'git push' updates remote refs using local refs, essentially sending your locally committed changes to a remote repository."
+        },
+        {
+            "id": "q12",
+            "question": "Which command is used to fetch and download content from a remote repository and immediately update the local repository to match that content?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git fetch"
+                },
+                {
+                    "id": "o2",
+                    "text": "git pull"
+                },
+                {
+                    "id": "o3",
+                    "text": "git sync"
+                },
+                {
+                    "id": "o4",
+                    "text": "git update"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git pull' incorporates changes from a remote repository into the current branch. In its default mode, it is a combination of 'git fetch' followed by 'git merge'."
+        },
+        {
+            "id": "q13",
+            "question": "Which command shows the changes between your working directory and the index (staging area)?",
+            "type": "single-choice",
+            "topic": "Status and Inspection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git status"
+                },
+                {
+                    "id": "o2",
+                    "text": "git diff"
+                },
+                {
+                    "id": "o3",
+                    "text": "git compare"
+                },
+                {
+                    "id": "o4",
+                    "text": "git check"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git diff' shows the line-by-line differences. By default, running it without arguments compares the working directory to the staging area."
+        },
+        {
+            "id": "q14",
+            "question": "How do you join two or more development histories (branches) together?",
+            "type": "single-choice",
+            "topic": "Merging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git rebase"
+                },
+                {
+                    "id": "o2",
+                    "text": "git join"
+                },
+                {
+                    "id": "o3",
+                    "text": "git combine"
+                },
+                {
+                    "id": "o4",
+                    "text": "git merge"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "'git merge' incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch."
+        },
+        {
+            "id": "q15",
+            "question": "What happens when you run 'git add .' in a repository?",
+            "type": "single-choice",
+            "topic": "Staging Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It commits all changes in the current directory."
+                },
+                {
+                    "id": "o2",
+                    "text": "It stages new files and modifications, but ignores deletions."
+                },
+                {
+                    "id": "o3",
+                    "text": "It stages all new, modified, and deleted files in the current directory and its subdirectories."
+                },
+                {
+                    "id": "o4",
+                    "text": "It pushes all local changes to the remote origin."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'git add .' updates the index with all changes (additions, modifications, and deletions) found in the current directory and subdirectories, preparing them for the next commit."
+        },
+        {
+            "id": "q16",
+            "question": "Which command is used to remove a file from both the Git staging area and the working directory?",
+            "type": "single-choice",
+            "topic": "File Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git delete "
+                },
+                {
+                    "id": "o2",
+                    "text": "git remove "
+                },
+                {
+                    "id": "o3",
+                    "text": "git rm "
+                },
+                {
+                    "id": "o4",
+                    "text": "git discard "
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'git rm' command removes files from the working tree and from the index (staging area). This action is then staged for the next commit."
+        },
+        {
+            "id": "q17",
+            "question": "How can you rename a file in Git without manually renaming it in the operating system and then staging the deletion and addition?",
+            "type": "single-choice",
+            "topic": "File Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git rename  "
+                },
+                {
+                    "id": "o2",
+                    "text": "git mv  "
+                },
+                {
+                    "id": "o3",
+                    "text": "git move  "
+                },
+                {
+                    "id": "o4",
+                    "text": "git change  "
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'git mv' command is used to move or rename a file, directory, or symlink. It automatically handles the OS-level rename and stages the change in Git."
+        },
+        {
+            "id": "q18",
+            "question": "Which command shortcut combines staging all modified, previously tracked files and committing them in a single step?",
+            "type": "single-choice",
+            "topic": "Committing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git commit -a -m “message”"
+                },
+                {
+                    "id": "o2",
+                    "text": "git commit --all"
+                },
+                {
+                    "id": "o3",
+                    "text": "git commit -u -m “message”"
+                },
+                {
+                    "id": "o4",
+                    "text": "git commit --quick “message”"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Using the '-a' (or '--all') flag with 'git commit' tells Git to automatically stage files that have been modified and deleted, but it ignores newly created (untracked) files. The '-m' flag is used to provide the commit message."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following commands can be used to remove a file from the staging area (unstage it) without losing the modifications in your working directory?",
+            "type": "multi-choice",
+            "topic": "Undoing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git restore --staged "
+                },
+                {
+                    "id": "o2",
+                    "text": "git reset HEAD "
+                },
+                {
+                    "id": "o3",
+                    "text": "git checkout -- "
+                },
+                {
+                    "id": "o4",
+                    "text": "git clean -fd "
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Both 'git restore --staged ' (introduced in newer Git versions) and 'git reset HEAD ' successfully unstage a file, moving the changes back to the working directory without deleting your work."
+        },
+        {
+            "id": "q20",
+            "question": "What command displays the URLs of the remote repositories currently configured for your local repository?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git remote list"
+                },
+                {
+                    "id": "o2",
+                    "text": "git remote show"
+                },
+                {
+                    "id": "o3",
+                    "text": "git remote -v"
+                },
+                {
+                    "id": "o4",
+                    "text": "git config --remotes"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'git remote -v' (or --verbose) command shows the URLs that Git has stored for the shortnames of your remote repositories to be used for reading and writing."
+        },
+        {
+            "id": "q21",
+            "question": "Which command provides a condensed view of the commit history, displaying each commit on a single line with its shortened hash and message?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git log --short"
+                },
+                {
+                    "id": "o2",
+                    "text": "git log --oneline"
+                },
+                {
+                    "id": "o3",
+                    "text": "git log --compact"
+                },
+                {
+                    "id": "o4",
+                    "text": "git log --brief"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '--oneline' flag condenses each commit to a single line, showing only the short commit hash and the commit message, which is useful for getting a high-level overview of the project history."
+        },
+        {
+            "id": "q22",
+            "question": "What are the standard commands to safely delete a local branch that has already been fully merged into your current branch?",
+            "type": "multi-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch -x "
+                },
+                {
+                    "id": "o2",
+                    "text": "git branch -d "
+                },
+                {
+                    "id": "o3",
+                    "text": "git branch --delete "
+                },
+                {
+                    "id": "o4",
+                    "text": "git branch -rm "
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "The '-d' flag is an alias for '--delete'. Both 'git branch -d' and 'git branch --delete' safely delete the specified branch, preventing deletion if it has unmerged changes."
+        },
+        {
+            "id": "q23",
+            "question": "In Git terminology, what does the 'HEAD' pointer typically represent?",
+            "type": "single-choice",
+            "topic": "Git Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The most recent commit on the remote repository"
+                },
+                {
+                    "id": "o2",
+                    "text": "The first commit made in the repository"
+                },
+                {
+                    "id": "o3",
+                    "text": "A reference to the currently checked-out commit or branch"
+                },
+                {
+                    "id": "o4",
+                    "text": "The staging area where files are prepared"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Git, HEAD is a special pointer that indicates the local branch you are currently on. If you check out a specific commit, HEAD points directly to that commit (a detached HEAD state)."
+        },
+        {
+            "id": "q24",
+            "question": "If you have modified a tracked file but have NOT yet staged it, which commands will discard your local modifications and revert the file to its state in the last commit?",
+            "type": "multi-choice",
+            "topic": "Undoing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git restore "
+                },
+                {
+                    "id": "o2",
+                    "text": "git checkout -- "
+                },
+                {
+                    "id": "o3",
+                    "text": "git reset --hard "
+                },
+                {
+                    "id": "o4",
+                    "text": "git revert "
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "'git restore ' (newer command) and 'git checkout -- ' (older command) both discard unstaged changes in the working directory for a specific file. 'git reset --hard' affects the whole working tree, and 'git revert' creates a new commit to undo past changes."
+        },
+        {
+            "id": "q25",
+            "question": "Which command allows you to temporarily save local changes that are not ready to be committed, leaving you with a clean working directory?",
+            "type": "single-choice",
+            "topic": "Stashing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git save"
+                },
+                {
+                    "id": "o2",
+                    "text": "git cache"
+                },
+                {
+                    "id": "o3",
+                    "text": "git stash"
+                },
+                {
+                    "id": "o4",
+                    "text": "git park"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "'git stash' takes your modified tracked files and staged changes, saves them on a stack of unfinished changes that you can reapply at any time, and reverts the working directory to match the HEAD commit."
+        },
+        {
+            "id": "q26",
+            "question": "What is the correct syntax to add a new remote repository connection named 'origin'?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git remote new origin "
+                },
+                {
+                    "id": "o2",
+                    "text": "git add remote origin "
+                },
+                {
+                    "id": "o3",
+                    "text": "git remote add origin "
+                },
+                {
+                    "id": "o4",
+                    "text": "git remote connect origin "
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'git remote add  ' command creates a new connection to a remote repository. 'origin' is the conventional default name given to the primary remote repository."
+        },
+        {
+            "id": "q27",
+            "question": "Which command lists all branches, including both local and remote-tracking branches?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch -r"
+                },
+                {
+                    "id": "o2",
+                    "text": "git branch -l"
+                },
+                {
+                    "id": "o3",
+                    "text": "git branch -a"
+                },
+                {
+                    "id": "o4",
+                    "text": "git branch --remote"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The '-a' or '--all' flag tells the 'git branch' command to list both the local branches and the remote-tracking branches."
+        },
+        {
+            "id": "q28",
+            "question": "Where does Git store the local, repository-specific configuration settings?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "In the ~/.gitconfig file"
+                },
+                {
+                    "id": "o2",
+                    "text": "In the .git/config file"
+                },
+                {
+                    "id": "o3",
+                    "text": "In the .gitignore file"
+                },
+                {
+                    "id": "o4",
+                    "text": "In the system-wide /etc/gitconfig file"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Repository-specific configurations are stored in the '.git/config' file inside the repository directory. The '~/.gitconfig' file is used for global user settings."
+        },
+        {
+            "id": "q29",
+            "question": "Which command is used to list all the existing tags in a Git repository?",
+            "type": "single-choice",
+            "topic": "Tagging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git show-tags"
+                },
+                {
+                    "id": "o2",
+                    "text": "git tag"
+                },
+                {
+                    "id": "o3",
+                    "text": "git list-tags"
+                },
+                {
+                    "id": "o4",
+                    "text": "git log --tags"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Running 'git tag' without any arguments lists the existing tags in alphabetical order."
+        },
+        {
+            "id": "q30",
+            "question": "Which of the following Git operations intrinsically require communication with a remote server over a network?",
+            "type": "multi-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git fetch"
+                },
+                {
+                    "id": "o2",
+                    "text": "git commit"
+                },
+                {
+                    "id": "o3",
+                    "text": "git push"
+                },
+                {
+                    "id": "o4",
+                    "text": "git status"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "'git fetch' downloads data from a remote repository, and 'git push' uploads local changes to a remote repository. Operations like 'git commit' and 'git status' act entirely on the local database and working directory."
+        },
+        {
+            "id": "q31",
+            "question": "Which command allows you to switch to an existing branch?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git change "
+                },
+                {
+                    "id": "o2",
+                    "text": "git branch --switch "
+                },
+                {
+                    "id": "o3",
+                    "text": "git checkout "
+                },
+                {
+                    "id": "o4",
+                    "text": "git jump "
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'git checkout' command (and the newer 'git switch') is used to switch between branches or restore working tree files."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following actions occur when you execute 'git pull'?",
+            "type": "multi-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It fetches changes from the remote repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "It immediately merges the fetched changes into your current branch."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically deletes your local uncommitted changes."
+                },
+                {
+                    "id": "o4",
+                    "text": "It pushes your local commits to the remote repository."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "By default, 'git pull' performs a 'git fetch' to update your remote-tracking branches and then performs a 'git merge' to integrate those changes into your current working branch."
+        },
+        {
+            "id": "q33",
+            "question": "What is the purpose of the 'git reflog' command?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To show the contributors of the repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "To record when the tips of branches and other references were updated in the local repository."
+                },
+                {
+                    "id": "o3",
+                    "text": "To generate a report of all merged branches."
+                },
+                {
+                    "id": "o4",
+                    "text": "To permanently remove old commits from the history."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git reflog' tracks where your HEAD has been. It is a powerful safety net that allows you to recover commits that might otherwise be 'lost' after rebasing or resetting."
+        },
+        {
+            "id": "q34",
+            "question": "Which command allows you to re-apply the latest stashed changes back into your working directory?",
+            "type": "single-choice",
+            "topic": "Stashing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git stash apply"
+                },
+                {
+                    "id": "o2",
+                    "text": "git stash pop"
+                },
+                {
+                    "id": "o3",
+                    "text": "git stash restore"
+                },
+                {
+                    "id": "o4",
+                    "text": "git stash load"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git stash pop' applies the changes from the most recent stash and then removes it from the stash list. 'git stash apply' applies the changes but keeps the stash."
+        },
+        {
+            "id": "q35",
+            "question": "What does a 'merge conflict' signify in Git?",
+            "type": "single-choice",
+            "topic": "Merging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Two people are editing the same file at the same time."
+                },
+                {
+                    "id": "o2",
+                    "text": "Git cannot automatically resolve the differences between two commits."
+                },
+                {
+                    "id": "o3",
+                    "text": "The remote repository is offline."
+                },
+                {
+                    "id": "o4",
+                    "text": "You do not have permission to merge."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A merge conflict occurs when Git sees changes in the same line of a file in both branches it is trying to merge, and it requires manual human intervention to choose the correct final state."
+        },
+        {
+            "id": "q36",
+            "question": "Which command displays the contents of a commit?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git view "
+                },
+                {
+                    "id": "o2",
+                    "text": "git show "
+                },
+                {
+                    "id": "o3",
+                    "text": "git log "
+                },
+                {
+                    "id": "o4",
+                    "text": "git inspect "
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git show' is used to display various types of objects (commits, tags, trees). When provided with a commit hash, it shows the commit metadata and the patch (diff) of the changes."
+        },
+        {
+            "id": "q37",
+            "question": "How do you stage only specific files in a commit?",
+            "type": "single-choice",
+            "topic": "Staging Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git add --only "
+                },
+                {
+                    "id": "o2",
+                    "text": "git stage --select "
+                },
+                {
+                    "id": "o3",
+                    "text": "git add "
+                },
+                {
+                    "id": "o4",
+                    "text": "git commit "
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "You can selectively stage files by providing their filenames or paths to the 'git add' command, which adds those specific files to the staging area."
+        },
+        {
+            "id": "q38",
+            "question": "Which of the following are valid ways to create a tag in Git?",
+            "type": "multi-choice",
+            "topic": "Tagging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git tag -a v1.0 -m “Version 1.0”"
+                },
+                {
+                    "id": "o2",
+                    "text": "git tag v1.0"
+                },
+                {
+                    "id": "o3",
+                    "text": "git create-tag v1.0"
+                },
+                {
+                    "id": "o4",
+                    "text": "git tag --message v1.0"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Git supports 'lightweight' tags (just a name, 'git tag v1.0') and 'annotated' tags (which include a message, the -a flag)."
+        },
+        {
+            "id": "q39",
+            "question": "What happens to your changes if you run 'git checkout .' in the root of a repository?",
+            "type": "single-choice",
+            "topic": "Undoing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It stages all changes in the current directory."
+                },
+                {
+                    "id": "o2",
+                    "text": "It discards all unstaged changes in the current directory."
+                },
+                {
+                    "id": "o3",
+                    "text": "It commits all changes in the current directory."
+                },
+                {
+                    "id": "o4",
+                    "text": "It deletes all untracked files."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git checkout .' (or 'git restore .') resets all tracked files in the current working directory to the version stored in the current branch (HEAD), effectively discarding unstaged modifications."
+        },
+        {
+            "id": "q40",
+            "question": "Which flag is used with 'git commit' to include a commit message directly in the command line?",
+            "type": "single-choice",
+            "topic": "Committing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "--message"
+                },
+                {
+                    "id": "o2",
+                    "text": "-m"
+                },
+                {
+                    "id": "o3",
+                    "text": "-msg"
+                },
+                {
+                    "id": "o4",
+                    "text": "-c"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '-m' flag is the standard shorthand for '--message', allowing you to provide the commit message inline without opening a text editor."
+        },
+        {
+            "id": "q41",
+            "question": "Which command is used to view the list of stashed changes?",
+            "type": "single-choice",
+            "topic": "Stashing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git stash show"
+                },
+                {
+                    "id": "o2",
+                    "text": "git stash list"
+                },
+                {
+                    "id": "o3",
+                    "text": "git stash view"
+                },
+                {
+                    "id": "o4",
+                    "text": "git list-stashes"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "'git stash list' displays all the stashes currently stored in your repository, showing their identifier (e.g., stash@{0}) and the message associated with them."
+        },
+        {
+            "id": "q42",
+            "question": "What is the result of running 'git branch' without any arguments?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It lists all local branches."
+                },
+                {
+                    "id": "o2",
+                    "text": "It creates a new branch named 'main'."
+                },
+                {
+                    "id": "o3",
+                    "text": "It shows the status of the current branch."
+                },
+                {
+                    "id": "o4",
+                    "text": "It deletes the current branch."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Running 'git branch' lists the branches in the local repository and highlights the branch you are currently on with an asterisk (*)."
+        },
+        {
+            "id": "q43",
+            "question": "Which of the following is true regarding 'git rebase'?",
+            "type": "multi-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It rewrites commit history."
+                },
+                {
+                    "id": "o2",
+                    "text": "It is safer than 'git merge' for shared branches."
+                },
+                {
+                    "id": "o3",
+                    "text": "It moves or combines a sequence of commits to a new base commit."
+                },
+                {
+                    "id": "o4",
+                    "text": "It creates a new merge commit automatically."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "'git rebase' moves the entire feature branch to begin on the tip of the main branch, effectively incorporating all of the new commits in main. It rewrites history, so it should be avoided on public/shared branches."
+        },
+        {
+            "id": "q44",
+            "question": "What is the default behavior of 'git push' if no remote or branch is specified?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It prompts for the remote and branch name."
+                },
+                {
+                    "id": "o2",
+                    "text": "It pushes to the 'origin' remote by default (based on configuration)."
+                },
+                {
+                    "id": "o3",
+                    "text": "It does nothing."
+                },
+                {
+                    "id": "o4",
+                    "text": "It pushes all local branches."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Most modern Git configurations default to 'simple' push behavior, which pushes the current branch to the upstream remote branch with the same name, typically 'origin'."
+        },
+        {
+            "id": "q45",
+            "question": "Which file in the .git directory contains the SHA-1 hash of the current commit?",
+            "type": "single-choice",
+            "topic": "Git Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": ".git/HEAD"
+                },
+                {
+                    "id": "o2",
+                    "text": ".git/refs/heads/main"
+                },
+                {
+                    "id": "o3",
+                    "text": ".git/index"
+                },
+                {
+                    "id": "o4",
+                    "text": ".git/config"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The '.git/HEAD' file is a reference that usually points to a branch (e.g., 'ref: refs/heads/main'), which in turn contains the SHA-1 hash of the latest commit on that branch."
+        },
+        {
+            "id": "q46",
+            "question": "Which command is used to show the commit log with a visual graph of branches and merges?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git log --graph"
+                },
+                {
+                    "id": "o2",
+                    "text": "git log --visual"
+                },
+                {
+                    "id": "o3",
+                    "text": "git branch --graph"
+                },
+                {
+                    "id": "o4",
+                    "text": "git show --tree"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The '--graph' flag in 'git log' draws an ASCII-based graph representing the commit history, making it significantly easier to visualize how branches and merges interact."
+        },
+        {
+            "id": "q47",
+            "question": "If you want to discard all changes in your working directory and reset your branch to match the remote 'origin/main', which sequence of commands is most appropriate?",
+            "type": "multi-choice",
+            "topic": "Undoing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git fetch origin"
+                },
+                {
+                    "id": "o2",
+                    "text": "git reset --hard origin/main"
+                },
+                {
+                    "id": "o3",
+                    "text": "git pull origin main"
+                },
+                {
+                    "id": "o4",
+                    "text": "git branch --reset"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "First, 'git fetch origin' updates your local tracking of the remote repository. Then, 'git reset --hard origin/main' forcefully moves your current branch pointer to match the remote and updates the working directory."
+        },
+        {
+            "id": "q48",
+            "question": "What is the command to create a new branch and immediately switch to it?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch -n "
+                },
+                {
+                    "id": "o2",
+                    "text": "git checkout -b "
+                },
+                {
+                    "id": "o3",
+                    "text": "git switch "
+                },
+                {
+                    "id": "o4",
+                    "text": "git checkout -c "
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '-b' flag with 'git checkout' is a shortcut that creates the branch and checks it out simultaneously. 'git switch -c' is the newer, equivalent command."
+        },
+        {
+            "id": "q49",
+            "question": "Which of the following describes the 'staging area' (index) correctly?",
+            "type": "single-choice",
+            "topic": "Git Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A place where files are stored before being moved to the remote repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "A file that stores the information about what will go into your next commit."
+                },
+                {
+                    "id": "o3",
+                    "text": "A temporary folder created by Git during a merge."
+                },
+                {
+                    "id": "o4",
+                    "text": "The location where deleted files are kept for recovery."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The index (or staging area) is a file in the Git directory that contains a snapshot of the working tree's content, which forms the basis for the next commit."
+        },
+        {
+            "id": "q50",
+            "question": "When configuring Git, what does the '--global' flag mean?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It applies the setting to all users on the computer."
+                },
+                {
+                    "id": "o2",
+                    "text": "It applies the configuration to your user account for all repositories."
+                },
+                {
+                    "id": "o3",
+                    "text": "It forces the setting to be pushed to the remote server."
+                },
+                {
+                    "id": "o4",
+                    "text": "It makes the configuration readable by other Git tools."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The '--global' flag tells Git to write the configuration to the user-specific file (usually ~/.gitconfig), meaning it applies to all Git repositories that the current user operates on."
+        },
+        {
+            "id": "q51",
+            "question": "Which command displays the difference between two specific branches?",
+            "type": "single-choice",
+            "topic": "Status and Inspection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git diff  "
+                },
+                {
+                    "id": "o2",
+                    "text": "git log .."
+                },
+                {
+                    "id": "o3",
+                    "text": "git compare  "
+                },
+                {
+                    "id": "o4",
+                    "text": "git check  "
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'git diff' is a powerful tool to show changes between any two Git tree-ish objects, including branch names, commit hashes, or tags."
+        },
+        {
+            "id": "q52",
+            "question": "If you need to discard an entire stash, which command do you use?",
+            "type": "single-choice",
+            "topic": "Stashing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git stash clear"
+                },
+                {
+                    "id": "o2",
+                    "text": "git stash remove"
+                },
+                {
+                    "id": "o3",
+                    "text": "git stash delete"
+                },
+                {
+                    "id": "o4",
+                    "text": "git stash purge"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'git stash clear' removes all stashes from your stash list. 'git stash drop' can be used to remove a specific, single stash entry."
+        },
+        {
+            "id": "q53",
+            "question": "What is the purpose of 'git remote update'?",
+            "type": "single-choice",
+            "topic": "Remote Repositories",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It fetches updates for all configured remote repositories."
+                },
+                {
+                    "id": "o2",
+                    "text": "It pushes local changes to all configured remotes."
+                },
+                {
+                    "id": "o3",
+                    "text": "It synchronizes local branches with the latest remote ones."
+                },
+                {
+                    "id": "o4",
+                    "text": "It updates the remote repository URL."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'git remote update' fetches the latest changes from all configured remote repositories, updating your remote-tracking branches."
+        },
+        {
+            "id": "q54",
+            "question": "Which command is used to combine the changes from a specific branch into your current branch, without switching to that branch first?",
+            "type": "single-choice",
+            "topic": "Merging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git merge "
+                },
+                {
+                    "id": "o2",
+                    "text": "git pull "
+                },
+                {
+                    "id": "o3",
+                    "text": "git incorporate "
+                },
+                {
+                    "id": "o4",
+                    "text": "git join "
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'git merge' takes the contents of the branch you specify and integrates them into the branch you currently have checked out."
+        },
+        {
+            "id": "q55",
+            "question": "Which of these are true about 'git commit --amend'?",
+            "type": "multi-choice",
+            "topic": "Committing Changes",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It is used to change the message of the most recent commit."
+                },
+                {
+                    "id": "o2",
+                    "text": "It can be used to add missed files to the most recent commit."
+                },
+                {
+                    "id": "o3",
+                    "text": "It creates a new commit object and replaces the old one."
+                },
+                {
+                    "id": "o4",
+                    "text": "It deletes the history of all previous commits."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "'git commit --amend' is a useful way to fix the last commit. It effectively replaces the previous commit with a new one that includes any currently staged changes and/or a modified message."
+        },
+        {
+            "id": "q56",
+            "question": "How do you view a list of files that were changed in a specific commit?",
+            "type": "single-choice",
+            "topic": "History and Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git log --name-only "
+                },
+                {
+                    "id": "o2",
+                    "text": "git show --files "
+                },
+                {
+                    "id": "o3",
+                    "text": "git ls-tree "
+                },
+                {
+                    "id": "o4",
+                    "text": "git commit --list-files "
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Adding the '--name-only' flag to 'git log' will show the names of the files that were modified in each commit listed."
+        },
+        {
+            "id": "q57",
+            "question": "What is the command to rename the current branch?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch -m "
+                },
+                {
+                    "id": "o2",
+                    "text": "git rename "
+                },
+                {
+                    "id": "o3",
+                    "text": "git branch -r "
+                },
+                {
+                    "id": "o4",
+                    "text": "git checkout -m "
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The '-m' (move) flag is used with 'git branch' to rename the current branch or a specified branch."
+        },
+        {
+            "id": "q58",
+            "question": "Which command is used to list remote-tracking branches only?",
+            "type": "single-choice",
+            "topic": "Branching",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "git branch -r"
+                },
+                {
+                    "id": "o2",
+                    "text": "git branch -remote"
+                },
+                {
+                    "id": "o3",
+                    "text": "git remote list"
+                },
+                {
+                    "id": "o4",
+                    "text": "git branch -t"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The '-r' flag stands for 'remote', and it restricts the 'git branch' output to show only remote-tracking branches."
+        },
+        {
+            "id": "q59",
+            "question": "What are the common benefits of using Git for version control?",
+            "type": "multi-choice",
+            "topic": "Git Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It supports offline work."
+                },
+                {
+                    "id": "o2",
+                    "text": "It enables easy branching and merging."
+                },
+                {
+                    "id": "o3",
+                    "text": "It is a distributed version control system."
+                },
+                {
+                    "id": "o4",
+                    "text": "It requires a constant internet connection."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Git is distributed, meaning everyone has a full copy of the history locally, which enables offline work. It is also famous for its lightweight branching and powerful merge capabilities."
+        },
+        {
+            "id": "q60",
+            "question": "Which character combination indicates a conflict in a file after a failed merge?",
+            "type": "single-choice",
+            "topic": "Merging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "<<<<<<<, =======, >>>>>>>"
+                },
+                {
+                    "id": "o2",
+                    "text": "(((((((, |||||||, )))))))"
+                },
+                {
+                    "id": "o3",
+                    "text": "{{{{{{{, =======, }}}}}}}"
+                },
+                {
+                    "id": "o4",
+                    "text": "[[[[, =, ]]]]"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "When a merge conflict occurs, Git marks the conflicted areas with '<<<<<<<', '=', and '>>>>>>>', which delineate the code from your local version and the incoming version."
+        }
+    ]
+}

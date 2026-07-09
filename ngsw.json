@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1783082855625,
+  "timestamp": 1783607097541,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -74,6 +74,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/assets/images/certifystacks.png",
         "/assets/images/pranaymokal.png",
         "/assets/images/qr-bnb.png",
         "/assets/images/qr-btc.png",
@@ -95,6 +96,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/images/certifystacks.png": "98e5d8dcd01cfc14deebfdc2cff8e94ea2477588",
     "/assets/images/pranaymokal.png": "80a8679b1f624af13fa94f2ea83f16e887f41308",
     "/assets/images/qr-bnb.png": "39c0bc63b058878443b0a58c70a37446bedf9f7d",
     "/assets/images/qr-btc.png": "065896430eab39d068b34f4957a76c7ef0d7c711",
@@ -157,7 +159,7 @@
     "/icons/icon-32x32.png": "8559d33fff16ca06bf40ed32bbb61205a444ac2a",
     "/icons/icon-512x512.png": "2d0220ac6152a32baf5153a7534870ec65619857",
     "/icons/icon-64x64.png": "a8a20f0662cad66d2e264e7fa76970b62ba2d104",
-    "/index.html": "1d43b34bbcec591a7b4b8b7ced0db87dd466a828",
+    "/index.html": "b05e0b93bea504292bd498477283aba4b3079aba",
     "/main-RL53ZTGV.js": "cd95d386edcf8f156c0ff4ff9704e94e4140b151",
     "/manifest.webmanifest": "c48ea0d26c4cb5b94033842257cc30273005c6e0",
     "/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",

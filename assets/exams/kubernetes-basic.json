@@ -1,0 +1,1711 @@
+{
+    "id": "kubernetes-basic",
+    "name": "Kubernetes Basic",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the smallest and simplest deployable object in the Kubernetes object model?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Container"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pod"
+                },
+                {
+                    "id": "o3",
+                    "text": "Service"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deployment"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Pod is the smallest deployable unit in Kubernetes, representing a single instance of a running process. It can contain one or more tightly coupled containers."
+        },
+        {
+            "id": "q2",
+            "question": "Which component of the Kubernetes control plane acts as the primary datastore, storing the cluster state and configuration?",
+            "type": "single-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kube-apiserver"
+                },
+                {
+                    "id": "o2",
+                    "text": "kube-scheduler"
+                },
+                {
+                    "id": "o3",
+                    "text": "etcd"
+                },
+                {
+                    "id": "o4",
+                    "text": "kube-controller-manager"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "etcd is a consistent and highly-available key-value store used as Kubernetes' backing store for all cluster data and state information."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following components run natively on every worker node in a Kubernetes cluster? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubelet"
+                },
+                {
+                    "id": "o2",
+                    "text": "kube-scheduler"
+                },
+                {
+                    "id": "o3",
+                    "text": "kube-proxy"
+                },
+                {
+                    "id": "o4",
+                    "text": "kube-controller-manager"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "The kubelet ensures containers are running in a Pod, and kube-proxy maintains network rules on nodes. kube-scheduler and kube-controller-manager are control plane components."
+        },
+        {
+            "id": "q4",
+            "question": "Which kubectl command correctly fetches the logs of a pod named 'web-server'?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl get logs web-server"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl logs web-server"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl view logs web-server"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl describe logs web-server"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The standard command to retrieve logs from a specific pod is kubectl logs <pod-name>."
+        },
+        {
+            "id": "q5",
+            "question": "What mechanism does a Kubernetes Service use to target and route traffic to a specific group of Pods?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Annotations"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pod IP addresses"
+                },
+                {
+                    "id": "o3",
+                    "text": "Label Selectors"
+                },
+                {
+                    "id": "o4",
+                    "text": "Namespaces"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Services use label selectors to dynamically discover and route traffic to Pods that match the specified key-value label pairs."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following are valid Kubernetes Service types? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ClusterIP"
+                },
+                {
+                    "id": "o2",
+                    "text": "NodePort"
+                },
+                {
+                    "id": "o3",
+                    "text": "LoadBalancer"
+                },
+                {
+                    "id": "o4",
+                    "text": "HostIP"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "ClusterIP, NodePort, and LoadBalancer are core, built-in Kubernetes Service types. HostIP is not a valid Service type resource definition."
+        },
+        {
+            "id": "q7",
+            "question": "What is the primary purpose of a Namespace in Kubernetes?",
+            "type": "single-choice",
+            "topic": "Cluster Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To isolate container filesystems"
+                },
+                {
+                    "id": "o2",
+                    "text": "To divide cluster resources between multiple teams or projects"
+                },
+                {
+                    "id": "o3",
+                    "text": "To secure communication between control plane components"
+                },
+                {
+                    "id": "o4",
+                    "text": "To load balance traffic across multiple regions"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Namespaces provide a scope for names and a mechanism to divide cluster resources among multiple users or teams through resource quotas and isolation."
+        },
+        {
+            "id": "q8",
+            "question": "Which Kubernetes workload resource is best suited for deploying stateless applications and managing declarative updates to Pods?",
+            "type": "single-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "StatefulSet"
+                },
+                {
+                    "id": "o2",
+                    "text": "DaemonSet"
+                },
+                {
+                    "id": "o3",
+                    "text": "Deployment"
+                },
+                {
+                    "id": "o4",
+                    "text": "Job"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Deployment provides declarative updates for Pods and ReplicaSets, making it the standard resource for managing stateless applications."
+        },
+        {
+            "id": "q9",
+            "question": "What is the default Service type assigned by Kubernetes if you do not explicitly specify one in the Service manifest?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "NodePort"
+                },
+                {
+                    "id": "o2",
+                    "text": "ClusterIP"
+                },
+                {
+                    "id": "o3",
+                    "text": "LoadBalancer"
+                },
+                {
+                    "id": "o4",
+                    "text": "ExternalName"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "If a Service's spec.type is not specified, Kubernetes defaults it to ClusterIP, exposing the service on a cluster-internal IP address."
+        },
+        {
+            "id": "q10",
+            "question": "Which command is used to apply or update a resource configuration defined in a local file named 'deployment.yaml'?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl apply -f deployment.yaml"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl create -f deployment.yaml"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl run -f deployment.yaml"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl set -f deployment.yaml"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "kubectl apply -f is the recommended declarative way to manage Kubernetes applications by applying configuration file changes directly to the live cluster state."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following are benefits of managing Pods through a Deployment rather than creating them directly? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Automatic rescheduling and self-healing if a node fails"
+                },
+                {
+                    "id": "o2",
+                    "text": "Seamless rolling updates and easy rollbacks"
+                },
+                {
+                    "id": "o3",
+                    "text": "Automatic persistence of local container storage"
+                },
+                {
+                    "id": "o4",
+                    "text": "Guaranteed lower network latency between containers"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Deployments abstract Pod creation to offer automated self-healing (recreating dead pods) and zero-downtime rolling updates and rollbacks, which raw Pods do not possess."
+        },
+        {
+            "id": "q12",
+            "question": "Which component of the control plane is responsible for assigning a newly created Pod to a suitable worker node based on resource constraints?",
+            "type": "single-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kube-apiserver"
+                },
+                {
+                    "id": "o2",
+                    "text": "kube-scheduler"
+                },
+                {
+                    "id": "o3",
+                    "text": "kube-controller-manager"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubelet"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The kube-scheduler watches for newly created Pods that have no node assigned, evaluates node resource availability and constraints, and selects the optimal node for them."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following fields are required root-level keys in every standard Kubernetes resource manifest file? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "apiVersion"
+                },
+                {
+                    "id": "o2",
+                    "text": "kind"
+                },
+                {
+                    "id": "o3",
+                    "text": "metadata"
+                },
+                {
+                    "id": "o4",
+                    "text": "status"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Every valid Kubernetes YAML manifest requires apiVersion, kind, and metadata. The status field is automatically generated and tracked by the Kubernetes control plane, not specified by the user."
+        },
+        {
+            "id": "q14",
+            "question": "What does a Pod's phase standing at 'Pending' typically indicate?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Pod has completed its tasks and terminated successfully."
+                },
+                {
+                    "id": "o2",
+                    "text": "The Pod has been accepted by the cluster, but one or more containers are not yet running."
+                },
+                {
+                    "id": "o3",
+                    "text": "The Pod failed to start permanently due to an invalid configuration."
+                },
+                {
+                    "id": "o4",
+                    "text": "The Pod is currently being deleted from the node."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A 'Pending' status means the Pod has been accepted by the Kubernetes cluster, but is still waiting to be scheduled or is downloading container images before starting."
+        },
+        {
+            "id": "q15",
+            "question": "Which kubectl command allows you to inspect detailed operational status, configuration settings, and recent events for a specific resource?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl view pod "
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl status pod "
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl describe pod "
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl inspect pod "
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "kubectl describe extracts extensive operational data, configurations, and lifecycle events of a designated resource, serving as a primary troubleshooting command."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following resources is used to securely store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ConfigMap"
+                },
+                {
+                    "id": "o2",
+                    "text": "Secret"
+                },
+                {
+                    "id": "o3",
+                    "text": "ServiceAccount"
+                },
+                {
+                    "id": "o4",
+                    "text": "PrivateVolume"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Kubernetes Secret object lets you store and manage sensitive information independently from container images, reducing the risk of accidental exposure."
+        },
+        {
+            "id": "q17",
+            "question": "What is the primary role of a ConfigMap in Kubernetes?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt container file systems"
+                },
+                {
+                    "id": "o2",
+                    "text": "To bind persistent storage to pods"
+                },
+                {
+                    "id": "o3",
+                    "text": "To inject non-confidential configuration data into pods as environment variables or files"
+                },
+                {
+                    "id": "o4",
+                    "text": "To map node network interfaces to cluster internal IPs"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "ConfigMaps allow you to decouple environment-specific configuration artifacts from container images to make applications easily portable across environments."
+        },
+        {
+            "id": "q18",
+            "question": "Which field in a Pod manifest spec outlines the CPU and memory resources that a container is guaranteed to receive?",
+            "type": "single-choice",
+            "topic": "Resource Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "resources.limits"
+                },
+                {
+                    "id": "o2",
+                    "text": "resources.allocations"
+                },
+                {
+                    "id": "o3",
+                    "text": "resources.requests"
+                },
+                {
+                    "id": "o4",
+                    "text": "resources.reservations"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "resources.requests specifies the minimum amount of compute resources a container needs to be scheduled and guarantees that capacity on the node."
+        },
+        {
+            "id": "q19",
+            "question": "When configuring a Pod, what does setting a resource 'limit' do?",
+            "type": "single-choice",
+            "topic": "Resource Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Defines the absolute maximum amount of a resource that a container can consume."
+                },
+                {
+                    "id": "o2",
+                    "text": "Sets the minimum required resources for the scheduler to place the Pod."
+                },
+                {
+                    "id": "o3",
+                    "text": "Restricts the number of API calls a Pod can execute per minute."
+                },
+                {
+                    "id": "o4",
+                    "text": "Caps the total number of simultaneous container restarts."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "resources.limits prevents a container from consuming unlimited resources on a node, ensuring it gets throttled for CPU or terminated for exceeding memory thresholds."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following properties are characteristics of a Kubernetes ReplicaSet? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Ensures a specified number of pod replicas are running at any given time"
+                },
+                {
+                    "id": "o2",
+                    "text": "Directly exposes application endpoints to the public internet"
+                },
+                {
+                    "id": "o3",
+                    "text": "Acquires and manages pods using a label selector matching framework"
+                },
+                {
+                    "id": "o4",
+                    "text": "Manages network storage attachments for stateful containers"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "A ReplicaSet's primary responsibility is creating and deleting Pods to maintain a stable user-defined target count, querying active Pods via a selector filter."
+        },
+        {
+            "id": "q21",
+            "question": "What probe type should be used to determine if a container is running but unable to make progress, prompting Kubernetes to restart it?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Readiness Probe"
+                },
+                {
+                    "id": "o2",
+                    "text": "Liveness Probe"
+                },
+                {
+                    "id": "o3",
+                    "text": "Startup Probe"
+                },
+                {
+                    "id": "o4",
+                    "text": "Status Probe"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Liveness probes identify deadlocks or broken states within an application. If a liveness probe fails, the kubelet kills the container and initiates its restart lifecycle."
+        },
+        {
+            "id": "q22",
+            "question": "Which type of probe detects whether a container is ready to accept incoming network traffic?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Liveness Probe"
+                },
+                {
+                    "id": "o2",
+                    "text": "Startup Probe"
+                },
+                {
+                    "id": "o3",
+                    "text": "Readiness Probe"
+                },
+                {
+                    "id": "o4",
+                    "text": "Gateway Probe"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Readiness probes determine if a container is ready to service web requests. If a readiness probe fails, endpoints matching that pod are temporarily stripped from accompanying Services."
+        },
+        {
+            "id": "q23",
+            "question": "Which Kubernetes resource represents a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "PersistentVolumeClaim"
+                },
+                {
+                    "id": "o2",
+                    "text": "PersistentVolume"
+                },
+                {
+                    "id": "o3",
+                    "text": "VolumeMount"
+                },
+                {
+                    "id": "o4",
+                    "text": "LocalStorage"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A PersistentVolume (PV) is a cluster-wide storage element provisioned by an admin or plugin, possessing a lifecycle independent of any individual Pod that consumes it."
+        },
+        {
+            "id": "q24",
+            "question": "What resource does a developer use to request specific storage capacity, access modes, and configurations for their Pod?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "PersistentVolume"
+                },
+                {
+                    "id": "o2",
+                    "text": "StorageClass"
+                },
+                {
+                    "id": "o3",
+                    "text": "PersistentVolumeClaim"
+                },
+                {
+                    "id": "o4",
+                    "text": "VolumeAttachment"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A PersistentVolumeClaim (PVC) acts as a user's ticket or request for storage, allowing them to lease a matching PersistentVolume without coupling to direct underlying infrastructure specifics."
+        },
+        {
+            "id": "q25",
+            "question": "Which kubectl command will completely remove a namespace named 'development' along with all namespaced resources inside it?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl delete namespace development"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl purge namespace development"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl remove ns development"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl drop namespace development"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Running kubectl delete namespace <name> deletes the targeted namespace, cascading down to clean up and delete all active Pods, Services, and Deployments resident within it."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following are valid access modes for a Kubernetes PersistentVolume? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ReadWriteOnce"
+                },
+                {
+                    "id": "o2",
+                    "text": "ReadOnlyMany"
+                },
+                {
+                    "id": "o3",
+                    "text": "ReadWriteMany"
+                },
+                {
+                    "id": "o4",
+                    "text": "WriteOnceReadMany"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "The official access modes supported by Kubernetes volumes are ReadWriteOnce (RWO), ReadOnlyMany (ROX), ReadWriteMany (RWX), and ReadWriteOncePod (RWOP)."
+        },
+        {
+            "id": "q27",
+            "question": "What happens to data written to an 'emptyDir' volume when its hosting Pod is removed or deleted from a node?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The data is persisted permanently and mounted to the next scheduled Pod."
+                },
+                {
+                    "id": "o2",
+                    "text": "The data is backed up to etcd automatically."
+                },
+                {
+                    "id": "o3",
+                    "text": "The data is deleted permanently along with the Pod."
+                },
+                {
+                    "id": "o4",
+                    "text": "The data becomes read-only but remains cached on the node indefinitely."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "An emptyDir volume is created when a Pod is assigned to a node and exists only as long as that Pod runs on that node. Deleting the Pod explicitly wipes out the emptyDir storage contents."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following are control plane components in a Kubernetes architecture? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kube-apiserver"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubelet"
+                },
+                {
+                    "id": "o3",
+                    "text": "kube-controller-manager"
+                },
+                {
+                    "id": "o4",
+                    "text": "kube-scheduler"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The control plane consists of components like kube-apiserver, kube-controller-manager, kube-scheduler, and etcd. The kubelet is an agent running on the individual worker nodes."
+        },
+        {
+            "id": "q29",
+            "question": "Which Kubernetes resource manages external HTTP and HTTPS traffic to services inside a cluster, typically providing load balancing, SSL termination, and name-based virtual hosting?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "NetworkPolicy"
+                },
+                {
+                    "id": "o2",
+                    "text": "Ingress"
+                },
+                {
+                    "id": "o3",
+                    "text": "Egress"
+                },
+                {
+                    "id": "o4",
+                    "text": "ClusterIP"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Ingress is an API object that manages external access to the services in a cluster, acting as an entry point layer that handles routing rule definitions."
+        },
+        {
+            "id": "q30",
+            "question": "How can you view historical rollouts of a Deployment named 'my-app' using kubectl?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl rollout history deployment/my-app"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl get rollout deployment/my-app"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl view history deployment/my-app"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl logs rollout deployment/my-app"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The kubectl rollout history command allows you to inspect previous deployment versions and revisions, enabling precise rolling update auditing and structural lookbacks."
+        },
+        {
+            "id": "q31",
+            "question": "Which Kubernetes resource ensures that exactly one copy of a specific Pod runs on every eligible node in the cluster?",
+            "type": "single-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Deployment"
+                },
+                {
+                    "id": "o2",
+                    "text": "StatefulSet"
+                },
+                {
+                    "id": "o3",
+                    "text": "DaemonSet"
+                },
+                {
+                    "id": "o4",
+                    "text": "ReplicaSet"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A DaemonSet ensures that all (or some, based on node selectors) Nodes run a copy of a Pod. It is commonly used for cluster storage daemons, log collection, and node monitoring."
+        },
+        {
+            "id": "q32",
+            "question": "When defining sensitive data inside a Kubernetes Secret using a standard YAML manifest, how must the literal data values be formatted by default?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Encrypted using AES-256"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hashed using SHA-256"
+                },
+                {
+                    "id": "o3",
+                    "text": "Base64 encoded"
+                },
+                {
+                    "id": "o4",
+                    "text": "Plain text"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a Secret manifest, the values under the data field must be Base64 encoded. It is important to note that Base64 encoding is not encryption."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following are distinct characteristics of a StatefulSet compared to a standard Deployment? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Stable, unique network identifiers for each Pod"
+                },
+                {
+                    "id": "o2",
+                    "text": "Strict ordering of Pod creation and deletion"
+                },
+                {
+                    "id": "o3",
+                    "text": "Automatic creation of NodePort services"
+                },
+                {
+                    "id": "o4",
+                    "text": "Stable, persistent storage linked to specific Pod identities"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "StatefulSets are designed for stateful applications, providing stable network IDs (e.g., pod-0, pod-1), ordered deployment/scaling, and persistent volume claims that stay bound to their specific pods."
+        },
+        {
+            "id": "q34",
+            "question": "Which Kubernetes object is designed to create one or more Pods, ensure they successfully terminate, and then stop?",
+            "type": "single-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "CronJob"
+                },
+                {
+                    "id": "o2",
+                    "text": "Job"
+                },
+                {
+                    "id": "o3",
+                    "text": "DaemonSet"
+                },
+                {
+                    "id": "o4",
+                    "text": "Deployment"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Job creates Pods and tracks their successful completion. Once the specified number of successful completions is reached, the Job itself is considered complete."
+        },
+        {
+            "id": "q35",
+            "question": "What is the primary role of CoreDNS in a modern Kubernetes cluster?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To provide a centralized logging platform for the cluster"
+                },
+                {
+                    "id": "o2",
+                    "text": "To act as the primary Container Network Interface (CNI)"
+                },
+                {
+                    "id": "o3",
+                    "text": "To provide internal service discovery by resolving Service names to ClusterIPs"
+                },
+                {
+                    "id": "o4",
+                    "text": "To assign public IP addresses to worker nodes"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "CoreDNS is a flexible, extensible DNS server that serves as the default cluster DNS in Kubernetes, allowing Pods to find Services easily using internal DNS names instead of IP addresses."
+        },
+        {
+            "id": "q36",
+            "question": "What Kubernetes mechanism allows a Node to 'repel' certain Pods from being scheduled on it?",
+            "type": "single-choice",
+            "topic": "Scheduling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Taints"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tolerations"
+                },
+                {
+                    "id": "o3",
+                    "text": "Affinities"
+                },
+                {
+                    "id": "o4",
+                    "text": "Selectors"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Taints are applied to Nodes to repel Pods. A Pod will not be scheduled on a tainted Node unless the Pod has a matching Toleration."
+        },
+        {
+            "id": "q37",
+            "question": "If a Node is configured with a specific Taint, what must be added to a Pod's specification to allow it to be scheduled on that Node?",
+            "type": "single-choice",
+            "topic": "Scheduling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "NodeSelector"
+                },
+                {
+                    "id": "o2",
+                    "text": "Toleration"
+                },
+                {
+                    "id": "o3",
+                    "text": "NodeAffinity"
+                },
+                {
+                    "id": "o4",
+                    "text": "PodAntiAffinity"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Tolerations are applied to Pods and allow (but do not mandate) the Pods to be scheduled onto nodes with matching taints."
+        },
+        {
+            "id": "q38",
+            "question": "Which built-in Kubernetes component provides cluster-level metrics (like CPU and Memory usage) that are required for features like the Horizontal Pod Autoscaler?",
+            "type": "single-choice",
+            "topic": "Observability",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Prometheus"
+                },
+                {
+                    "id": "o2",
+                    "text": "kube-state-metrics"
+                },
+                {
+                    "id": "o3",
+                    "text": "Metrics Server"
+                },
+                {
+                    "id": "o4",
+                    "text": "cAdvisor"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines (like HPA) and kubectl top commands."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following commands can be effectively used to troubleshoot a Pod that is continually crashing or failing to start? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl describe pod "
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl exec -it  -- bash"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl logs "
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl scale pod  --replicas=2"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "kubectl describe pod shows recent events and status changes (e.g., image pull errors, scheduling failures), while kubectl logs displays the standard output/error of the container's application, which is vital for identifying application-level crashes."
+        },
+        {
+            "id": "q40",
+            "question": "What happens if a Pod attempts to mount a ConfigMap as a volume, but the ConfigMap does not exist in the namespace?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Kubernetes automatically creates an empty ConfigMap."
+                },
+                {
+                    "id": "o2",
+                    "text": "The Pod successfully starts but the volume remains empty."
+                },
+                {
+                    "id": "o3",
+                    "text": "The Pod stays in a 'Pending' or 'ContainerCreating' state until the ConfigMap is created."
+                },
+                {
+                    "id": "o4",
+                    "text": "The apiserver immediately deletes the Pod."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "If a required ConfigMap is missing, the kubelet will fail to mount the volume, and the Pod will remain stuck in the 'ContainerCreating' state until the ConfigMap is successfully created."
+        },
+        {
+            "id": "q41",
+            "question": "Which volume type mounts a file or directory from the host node's filesystem directly into a Pod?",
+            "type": "single-choice",
+            "topic": "Storage",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "emptyDir"
+                },
+                {
+                    "id": "o2",
+                    "text": "hostPath"
+                },
+                {
+                    "id": "o3",
+                    "text": "local"
+                },
+                {
+                    "id": "o4",
+                    "text": "nfs"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A hostPath volume mounts a file or directory from the host node's filesystem into your Pod. It poses security risks and reduces portability, so it is typically reserved for system-level daemonsets."
+        },
+        {
+            "id": "q42",
+            "question": "The Horizontal Pod Autoscaler (HPA) typically scales the number of deployed Pods based on which observed metrics? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Scaling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Node disk capacity"
+                },
+                {
+                    "id": "o2",
+                    "text": "CPU utilization"
+                },
+                {
+                    "id": "o3",
+                    "text": "Memory utilization"
+                },
+                {
+                    "id": "o4",
+                    "text": "Database transaction count"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "By default, HPA scales pods based on observed CPU utilization and Memory utilization. Custom metrics can also be configured, but node disk capacity is not a standard HPA pod-scaling metric."
+        },
+        {
+            "id": "q43",
+            "question": "In Kubernetes Role-Based Access Control (RBAC), what is the difference between a Role and a ClusterRole?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A Role applies to user accounts, while a ClusterRole applies to ServiceAccounts."
+                },
+                {
+                    "id": "o2",
+                    "text": "A Role grants read-only access, while a ClusterRole grants administrative access."
+                },
+                {
+                    "id": "o3",
+                    "text": "A Role always grants permission within a specific namespace, whereas a ClusterRole is a non-namespaced resource."
+                },
+                {
+                    "id": "o4",
+                    "text": "A Role can only be bound to a single user, whereas a ClusterRole can be bound to multiple groups."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In RBAC, a Role defines permissions within a single, specific namespace. A ClusterRole is non-namespaced and can define permissions for cluster-scoped resources (like Nodes) or across all namespaces."
+        },
+        {
+            "id": "q44",
+            "question": "Which of the following is a valid use case for a Kubernetes CronJob resource?",
+            "type": "single-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Running a long-lived web server application"
+                },
+                {
+                    "id": "o2",
+                    "text": "Creating a temporary pod to test database connectivity"
+                },
+                {
+                    "id": "o3",
+                    "text": "Scheduling a database backup script to run every midnight"
+                },
+                {
+                    "id": "o4",
+                    "text": "Ensuring a logging agent runs on every new node added to the cluster"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A CronJob creates Jobs on a repeating schedule (written in Cron format). It is ideal for periodic tasks like backups, report generation, or routine cleanup."
+        },
+        {
+            "id": "q45",
+            "question": "Which kubectl command lists all namespaces in the current cluster?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl get ns"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl list namespaces"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl describe namespaces"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl view ns"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "kubectl get namespaces (or its abbreviation kubectl get ns) is the standard command used to list all the namespaces in a Kubernetes cluster."
+        },
+        {
+            "id": "q46",
+            "question": "What is the primary purpose of applying Labels to Kubernetes objects?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt communication between specific resources"
+                },
+                {
+                    "id": "o2",
+                    "text": "To organize, categorize, and select subsets of objects"
+                },
+                {
+                    "id": "o3",
+                    "text": "To provide a unique DNS name for every pod"
+                },
+                {
+                    "id": "o4",
+                    "text": "To allocate specific hardware resources to an object"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Labels are key/value pairs attached to objects that are used to organize and select subsets of objects (e.g., via Label Selectors in Services or Deployments) without implying any strict core system semantics."
+        },
+        {
+            "id": "q47",
+            "question": "Which Kubernetes resource is specifically designed to provide an identity for processes that run inside a Pod?",
+            "type": "single-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "UserAccount"
+                },
+                {
+                    "id": "o2",
+                    "text": "RoleBinding"
+                },
+                {
+                    "id": "o3",
+                    "text": "ServiceAccount"
+                },
+                {
+                    "id": "o4",
+                    "text": "SecurityContext"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A ServiceAccount provides an identity for processes that run in a Pod, allowing those processes to securely authenticate with the Kubernetes API server."
+        },
+        {
+            "id": "q48",
+            "question": "Which environment variable is conventionally used to point the kubectl command-line tool to a specific cluster configuration file?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "KUBE_API_TOKEN"
+                },
+                {
+                    "id": "o2",
+                    "text": "KUBECTL_CONF"
+                },
+                {
+                    "id": "o3",
+                    "text": "KUBECONFIG"
+                },
+                {
+                    "id": "o4",
+                    "text": "CLUSTER_CONFIG"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The KUBECONFIG environment variable holds a list of paths to configuration files. If not set, kubectl defaults to checking ~/.kube/config."
+        },
+        {
+            "id": "q49",
+            "question": "Which command safely evicts all running Pods from a node in preparation for maintenance or decommissioning?",
+            "type": "single-choice",
+            "topic": "Cluster Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl cordon node "
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl drain "
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl evict node "
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl delete node "
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The kubectl drain command gracefully evicts all pods from a specified node and marks it as unschedulable (cordoned) so no new pods will arrive during maintenance."
+        },
+        {
+            "id": "q50",
+            "question": "Which Kubernetes object provides constraints that limit aggregate resource consumption (like total CPU, Memory, or Pod count) per Namespace?",
+            "type": "single-choice",
+            "topic": "Resource Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "LimitRange"
+                },
+                {
+                    "id": "o2",
+                    "text": "ResourceQuota"
+                },
+                {
+                    "id": "o3",
+                    "text": "PodSecurityPolicy"
+                },
+                {
+                    "id": "o4",
+                    "text": "NetworkPolicy"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A ResourceQuota provides constraints that limit aggregate resource consumption per namespace. LimitRanges, on the other hand, restrict resource allocations for individual Pods or Containers within a namespace."
+        },
+        {
+            "id": "q51",
+            "question": "Which of the following are defining characteristics of an Init Container? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They always run to completion before any app containers start."
+                },
+                {
+                    "id": "o2",
+                    "text": "They share the exact same lifecycle and readiness probes as app containers."
+                },
+                {
+                    "id": "o3",
+                    "text": "They are executed in sequential order if multiple are defined."
+                },
+                {
+                    "id": "o4",
+                    "text": "They restart automatically if the main app container fails."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Init containers run to completion before regular containers start. If multiple are defined, they execute sequentially. They do not support readiness probes."
+        },
+        {
+            "id": "q52",
+            "question": "Which command is used to display cluster events, often utilized to debug scheduling issues or track resource lifecycles?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl get logs"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl get events"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl show activity"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl describe history"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "kubectl get events lists recent events across the cluster (or namespace), such as pod scheduling, image pulling, and container restarts."
+        },
+        {
+            "id": "q53",
+            "question": "What is Helm commonly referred to as within the Kubernetes ecosystem?",
+            "type": "single-choice",
+            "topic": "Ecosystem",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Kubernetes package manager"
+                },
+                {
+                    "id": "o2",
+                    "text": "The primary Container Network Interface (CNI)"
+                },
+                {
+                    "id": "o3",
+                    "text": "A replacement for the etcd datastore"
+                },
+                {
+                    "id": "o4",
+                    "text": "A built-in ingress controller"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Helm is widely known as the package manager for Kubernetes. It uses 'Charts' to define, install, and upgrade complex Kubernetes applications."
+        },
+        {
+            "id": "q54",
+            "question": "Which kubectl command displays the current active context defined in your kubeconfig file?",
+            "type": "single-choice",
+            "topic": "kubectl CLI",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl config view context"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl show context"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl config current-context"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl get context active"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "kubectl config current-context outputs the name of the currently active context, which defines the cluster, user, and namespace kubectl is currently targeting."
+        },
+        {
+            "id": "q55",
+            "question": "Which of the following are primary responsibilities of the kube-proxy component? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Maintaining network rules on nodes"
+                },
+                {
+                    "id": "o2",
+                    "text": "Scheduling pods onto nodes based on resource requests"
+                },
+                {
+                    "id": "o3",
+                    "text": "Allowing network communication to Pods from inside or outside the cluster"
+                },
+                {
+                    "id": "o4",
+                    "text": "Encrypting secrets stored in the etcd database"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "kube-proxy is a network proxy that runs on each node. It maintains network rules (using iptables or IPVS) to allow network communication to Pods and implements Kubernetes Service abstractions."
+        },
+        {
+            "id": "q56",
+            "question": "Which of the following are valid lifecycle phases of a Kubernetes Pod? (Select THREE)",
+            "type": "multi-choice",
+            "topic": "Workloads",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pending"
+                },
+                {
+                    "id": "o2",
+                    "text": "Running"
+                },
+                {
+                    "id": "o3",
+                    "text": "Succeeded"
+                },
+                {
+                    "id": "o4",
+                    "text": "Restarting"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "The standard Pod phases are Pending, Running, Succeeded, Failed, and Unknown. 'Restarting' is not a Pod phase, though individual containers may have a waiting or restarting state."
+        },
+        {
+            "id": "q57",
+            "question": "What is the default port range allocated by the Kubernetes control plane for NodePort Services?",
+            "type": "single-choice",
+            "topic": "Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "80 - 443"
+                },
+                {
+                    "id": "o2",
+                    "text": "1024 - 49151"
+                },
+                {
+                    "id": "o3",
+                    "text": "30000 - 32767"
+                },
+                {
+                    "id": "o4",
+                    "text": "8080 - 8443"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "By default, Kubernetes allocates NodePorts from a range of 30000 to 32767 to avoid conflicting with well-known and registered ports used by other system services."
+        },
+        {
+            "id": "q58",
+            "question": "Which of the following are valid ways to expose a Secret to a container running in a Pod? (Select TWO)",
+            "type": "multi-choice",
+            "topic": "Configuration and Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "As files in a mounted volume"
+                },
+                {
+                    "id": "o2",
+                    "text": "As environment variables"
+                },
+                {
+                    "id": "o3",
+                    "text": "By hardcoding it into the container image at runtime"
+                },
+                {
+                    "id": "o4",
+                    "text": "Through a direct API call to the kube-scheduler"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Secrets can be safely injected into a containerized application either by mounting them as data volumes or exporting them as environment variables inside the Pod manifest."
+        },
+        {
+            "id": "q59",
+            "question": "Which command is used to forward one or more local ports to a port on a specific Pod for direct debugging and testing?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kubectl expose pod"
+                },
+                {
+                    "id": "o2",
+                    "text": "kubectl proxy"
+                },
+                {
+                    "id": "o3",
+                    "text": "kubectl port-forward"
+                },
+                {
+                    "id": "o4",
+                    "text": "kubectl route"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "kubectl port-forward allows you to access and interact with internal Kubernetes cluster processes directly from your localhost by establishing a secure tunnel."
+        },
+        {
+            "id": "q60",
+            "question": "If the 'etcd' datastore suffers a total unrecoverable data loss, what is the immediate impact on the Kubernetes cluster?",
+            "type": "single-choice",
+            "topic": "Architecture",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The cluster continues to function normally using cached memory."
+                },
+                {
+                    "id": "o2",
+                    "text": "All running application Pods are immediately terminated."
+                },
+                {
+                    "id": "o3",
+                    "text": "The cluster state is lost, and no new resources can be created or updated until restored from a backup."
+                },
+                {
+                    "id": "o4",
+                    "text": "The kubelet takes over as the primary control plane."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "etcd is the source of truth for the cluster. If it is lost, existing Pods may continue to run on nodes, but the API server cannot orchestrate, track, or update any cluster state until the datastore is restored."
+        }
+    ]
+}

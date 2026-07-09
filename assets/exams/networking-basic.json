@@ -1,0 +1,1719 @@
+{
+    "id": "networking-basic",
+    "name": "Basic Networking Concepts",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the primary function of a network router?",
+            "type": "single-choice",
+            "topic": "Network Devices",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To connect devices within the same local network"
+                },
+                {
+                    "id": "o2",
+                    "text": "To forward data packets between different computer networks"
+                },
+                {
+                    "id": "o3",
+                    "text": "To convert domain names into IP addresses"
+                },
+                {
+                    "id": "o4",
+                    "text": "To filter web traffic based on content"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A router operates at the Network layer (Layer 3) and is responsible for directing data packets between different networks, determining the best path for data to travel."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following characteristics apply to the User Datagram Protocol (UDP)? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Transport Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Connectionless communication"
+                },
+                {
+                    "id": "o2",
+                    "text": "Guaranteed delivery of packets"
+                },
+                {
+                    "id": "o3",
+                    "text": "Lower overhead and faster than TCP"
+                },
+                {
+                    "id": "o4",
+                    "text": "Uses a three-way handshake"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "UDP is a connectionless protocol that does not guarantee delivery, order, or error checking, which makes it faster and more efficient than TCP for time-sensitive applications like video streaming."
+        },
+        {
+            "id": "q3",
+            "question": "How many layers are defined in the OSI (Open Systems Interconnection) model?",
+            "type": "single-choice",
+            "topic": "OSI Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "4"
+                },
+                {
+                    "id": "o2",
+                    "text": "5"
+                },
+                {
+                    "id": "o3",
+                    "text": "7"
+                },
+                {
+                    "id": "o4",
+                    "text": "9"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The OSI model consists of 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application."
+        },
+        {
+            "id": "q4",
+            "question": "Which network service translates human-readable domain names (like www.example.com) into IP addresses?",
+            "type": "single-choice",
+            "topic": "Network Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "DHCP (Dynamic Host Configuration Protocol)"
+                },
+                {
+                    "id": "o2",
+                    "text": "ARP (Address Resolution Protocol)"
+                },
+                {
+                    "id": "o3",
+                    "text": "DNS (Domain Name System)"
+                },
+                {
+                    "id": "o4",
+                    "text": "NAT (Network Address Translation)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "DNS acts as the phonebook of the internet, translating domain names that humans remember into IP addresses that computers use to identify each other on the network."
+        },
+        {
+            "id": "q5",
+            "question": "What is the standard, default port number used for secure web traffic (HTTPS)?",
+            "type": "single-choice",
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Port 80"
+                },
+                {
+                    "id": "o2",
+                    "text": "Port 21"
+                },
+                {
+                    "id": "o3",
+                    "text": "Port 443"
+                },
+                {
+                    "id": "o4",
+                    "text": "Port 22"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "HTTPS (Hypertext Transfer Protocol Secure) uses port 443 by default to securely transfer data over the web. Port 80 is used for unencrypted HTTP."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following IP addresses fall within the defined ranges for private IPv4 addresses? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "10.15.0.25"
+                },
+                {
+                    "id": "o2",
+                    "text": "192.168.1.100"
+                },
+                {
+                    "id": "o3",
+                    "text": "8.8.8.8"
+                },
+                {
+                    "id": "o4",
+                    "text": "169.255.0.1"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "RFC 1918 defines the private IPv4 address ranges: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. The address 8.8.8.8 is a public IP, and 169.254.x.x (not 169.255) is APIPA."
+        },
+        {
+            "id": "q7",
+            "question": "At which layer of the OSI model does a standard network switch primarily operate to forward frames based on MAC addresses?",
+            "type": "single-choice",
+            "topic": "OSI Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Layer 1 (Physical Layer)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Layer 2 (Data Link Layer)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Layer 3 (Network Layer)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Layer 4 (Transport Layer)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A standard switch operates at Layer 2 (Data Link Layer) and uses Media Access Control (MAC) addresses to determine where to forward data frames on a local area network."
+        },
+        {
+            "id": "q8",
+            "question": "What is the primary purpose of the DHCP (Dynamic Host Configuration Protocol)?",
+            "type": "single-choice",
+            "topic": "Network Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To secure communications over a public network"
+                },
+                {
+                    "id": "o2",
+                    "text": "To translate private IP addresses to public IP addresses"
+                },
+                {
+                    "id": "o3",
+                    "text": "To dynamically assign IP addresses and network configuration to devices"
+                },
+                {
+                    "id": "o4",
+                    "text": "To verify the physical connection of a network cable"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "DHCP automates the process of configuring devices on an IP network by dynamically assigning an IP address, subnet mask, default gateway, and DNS servers."
+        },
+        {
+            "id": "q9",
+            "question": "How many bits are used in an IPv4 address?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "32 bits"
+                },
+                {
+                    "id": "o2",
+                    "text": "48 bits"
+                },
+                {
+                    "id": "o3",
+                    "text": "64 bits"
+                },
+                {
+                    "id": "o4",
+                    "text": "128 bits"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "An IPv4 address is 32 bits long, typically formatted as four 8-bit decimal numbers separated by dots (e.g., 192.168.1.1). IPv6 addresses are 128 bits long."
+        },
+        {
+            "id": "q10",
+            "question": "Which protocol is responsible for translating a known IP address into a corresponding physical MAC address on a local network segment?",
+            "type": "single-choice",
+            "topic": "Core Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "DNS (Domain Name System)"
+                },
+                {
+                    "id": "o2",
+                    "text": "BGP (Border Gateway Protocol)"
+                },
+                {
+                    "id": "o3",
+                    "text": "ARP (Address Resolution Protocol)"
+                },
+                {
+                    "id": "o4",
+                    "text": "ICMP (Internet Control Message Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "ARP broadcasts a request on the local network asking 'Who has this IP address?' The device with that IP replies with its MAC address so data can be delivered at Layer 2."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following statements accurately describe a MAC (Media Access Control) address? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Network Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It is a logical address that changes based on your location"
+                },
+                {
+                    "id": "o2",
+                    "text": "It is a physical address typically burned into a device's Network Interface Card (NIC)"
+                },
+                {
+                    "id": "o3",
+                    "text": "It is exactly 48 bits in length, usually represented in hexadecimal"
+                },
+                {
+                    "id": "o4",
+                    "text": "It is used to route packets across the global Internet"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "A MAC address is a physical address embedded in the hardware (NIC) and is 48 bits long (represented as 6 pairs of hexadecimal digits). Logical addressing and global routing are handled by IP addresses."
+        },
+        {
+            "id": "q12",
+            "question": "What command-line tool is commonly used to test basic network connectivity by sending ICMP Echo Request messages to a destination IP address?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ping"
+                },
+                {
+                    "id": "o2",
+                    "text": "ipconfig"
+                },
+                {
+                    "id": "o3",
+                    "text": "netstat"
+                },
+                {
+                    "id": "o4",
+                    "text": "nslookup"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'ping' command uses the Internet Control Message Protocol (ICMP) to verify end-to-end connectivity to a destination and measure the round-trip time."
+        },
+        {
+            "id": "q13",
+            "question": "What is the function of a subnet mask in IP networking?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It hides the internal IP structure of a network from the Internet"
+                },
+                {
+                    "id": "o2",
+                    "text": "It divides an IP address into a network portion and a host portion"
+                },
+                {
+                    "id": "o3",
+                    "text": "It encrypts data packets before they traverse a wide area network"
+                },
+                {
+                    "id": "o4",
+                    "text": "It translates an IPv4 address into an IPv6 address"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A subnet mask distinguishes which part of an IP address refers to the network (and subnet) and which part identifies the specific host device on that network."
+        },
+        {
+            "id": "q14",
+            "question": "Which of the following hardware components are generally required to set up a basic wireless local area network (WLAN) for clients to access the Internet? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Wireless Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A Wireless Access Point (WAP) or Wireless Router"
+                },
+                {
+                    "id": "o2",
+                    "text": "Client devices with Wireless Network Interface Cards (NICs)"
+                },
+                {
+                    "id": "o3",
+                    "text": "A fiber-optic termination unit on every client device"
+                },
+                {
+                    "id": "o4",
+                    "text": "A VPN concentrator"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "A basic WLAN requires a central device broadcasting the wireless signal (Access Point or Wireless Router) and client devices equipped with wireless NICs to receive and transmit data over radio waves."
+        },
+        {
+            "id": "q15",
+            "question": "Which type of physical network cabling is completely immune to Electromagnetic Interference (EMI)?",
+            "type": "single-choice",
+            "topic": "Network Media",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Unshielded Twisted Pair (UTP)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Shielded Twisted Pair (STP)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Coaxial cable"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fiber optic cable"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Fiber optic cable transmits data as pulses of light through glass or plastic threads. Because it uses light instead of electricity, it is entirely immune to Electromagnetic Interference (EMI)."
+        },
+        {
+            "id": "q16",
+            "question": "What is the primary function of the Transport Layer (Layer 4) in the OSI model?",
+            "type": "single-choice",
+            "topic": "OSI Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To route packets across different logical networks"
+                },
+                {
+                    "id": "o2",
+                    "text": "To provide host-to-host communication services for applications"
+                },
+                {
+                    "id": "o3",
+                    "text": "To manage physical electrical signals on the wire"
+                },
+                {
+                    "id": "o4",
+                    "text": "To format and encrypt data for the presentation layer"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Transport Layer is responsible for end-to-end communication, flow control, error detection, and ensuring data reliability between host applications using protocols like TCP and UDP."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following application layer protocols utilize TCP as their underlying transport protocol by default? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "HTTP (Hypertext Transfer Protocol)"
+                },
+                {
+                    "id": "o2",
+                    "text": "TFTP (Trivial File Transfer Protocol)"
+                },
+                {
+                    "id": "o3",
+                    "text": "SSH (Secure Shell)"
+                },
+                {
+                    "id": "o4",
+                    "text": "SNMP (Simple Network Management Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "HTTP and SSH require reliable, connection-oriented data delivery and therefore use TCP. TFTP and SNMP typically use UDP for faster, low-overhead communication."
+        },
+        {
+            "id": "q18",
+            "question": "What type of network topology connects every single node directly to every other node, providing maximum redundancy?",
+            "type": "single-choice",
+            "topic": "Network Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Star topology"
+                },
+                {
+                    "id": "o2",
+                    "text": "Bus topology"
+                },
+                {
+                    "id": "o3",
+                    "text": "Full Mesh topology"
+                },
+                {
+                    "id": "o4",
+                    "text": "Ring topology"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a full mesh topology, every device features a point-to-point connection to every other device on the network. This provides high fault tolerance but is expensive and complex to implement."
+        },
+        {
+            "id": "q19",
+            "question": "Which statement correctly describes a major advantage of IPv6 over IPv4?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "IPv6 reduces the size of the packet header completely"
+                },
+                {
+                    "id": "o2",
+                    "text": "IPv6 provides a vastly larger address space to eliminate address exhaustion"
+                },
+                {
+                    "id": "o3",
+                    "text": "IPv6 removes the need for any physical network switches"
+                },
+                {
+                    "id": "o4",
+                    "text": "IPv6 uses backward-compatible 32-bit addresses formatted in hexadecimal"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "IPv6 uses 128-bit addresses compared to IPv4's 32-bit limits, exponentially increasing the pool of unique IP addresses available globally."
+        },
+        {
+            "id": "q20",
+            "question": "What is the purpose of Network Address Translation (NAT)?",
+            "type": "single-choice",
+            "topic": "Network Services",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To automatically back up network configurations to the cloud"
+                },
+                {
+                    "id": "o2",
+                    "text": "To modify IP address information in IP packet headers while in transit across a traffic routing device"
+                },
+                {
+                    "id": "o3",
+                    "text": "To detect physical hardware faults on local ethernet segments"
+                },
+                {
+                    "id": "o4",
+                    "text": "To securely resolve human-readable domain names to public keys"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "NAT maps private IP addresses within a local network to one or more public IP addresses, allowing multiple internal devices to share a single public IP and browse the Internet safely."
+        },
+        {
+            "id": "q21",
+            "question": "What information does a Layer 2 switch use to build its forwarding table (MAC address table)?",
+            "type": "single-choice",
+            "topic": "Network Devices",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The destination IP address of incoming packets"
+                },
+                {
+                    "id": "o2",
+                    "text": "The source MAC address of incoming frames"
+                },
+                {
+                    "id": "o3",
+                    "text": "The destination port number within TCP segments"
+                },
+                {
+                    "id": "o4",
+                    "text": "The dynamic configurations provided by a local DHCP server"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A switch learns MAC addresses dynamically by examining the source MAC address of frames arriving on its physical ports, mapping that address to the port it was received on."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following are common administrative default subnet masks for IPv4 Classless/Classful networks? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "255.0.0.0"
+                },
+                {
+                    "id": "o2",
+                    "text": "255.255.0.0"
+                },
+                {
+                    "id": "o3",
+                    "text": "255.255.255.0"
+                },
+                {
+                    "id": "o4",
+                    "text": "255.255.255.255"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "255.0.0.0 (/8), 255.255.0.0 (/16), and 255.255.255.0 (/24) are standard subnet masks used to define Class A, B, and C size networks. 255.255.255.255 represents a single host route, not a standard network mask."
+        },
+        {
+            "id": "q23",
+            "question": "Which transport layer mechanism is used by TCP to manage data flow and prevent a fast sender from overwhelming a slow receiver?",
+            "type": "single-choice",
+            "topic": "Transport Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Checksumming"
+                },
+                {
+                    "id": "o2",
+                    "text": "Sliding Window / Flow Control"
+                },
+                {
+                    "id": "o3",
+                    "text": "Broadcast storm filtering"
+                },
+                {
+                    "id": "o4",
+                    "text": "Encapsulation"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "TCP uses a dynamic sliding window mechanism for flow control, adjusting how much data the sender can transmit before waiting for an acknowledgment from the receiver."
+        },
+        {
+            "id": "q24",
+            "question": "What is the primary objective of a Virtual Local Area Network (VLAN)?",
+            "type": "single-choice",
+            "topic": "Network Segmentation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To boost the physical transmission speeds of standard copper cabling"
+                },
+                {
+                    "id": "o2",
+                    "text": "To logically segment a single physical switch into multiple distinct broadcast domains"
+                },
+                {
+                    "id": "o3",
+                    "text": "To dynamically map public URLs to destination internal server files"
+                },
+                {
+                    "id": "o4",
+                    "text": "To bypass the need for configuring access lists on firewall devices"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "VLANs isolate traffic within a physical switch by creating logical broadcast domains, improving security, organization, and reducing unnecessary network broadcast traffic."
+        },
+        {
+            "id": "q25",
+            "question": "Which port number is uniquely reserved for the Secure Shell (SSH) protocol for secure remote command-line access?",
+            "type": "single-choice",
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Port 21"
+                },
+                {
+                    "id": "o2",
+                    "text": "Port 22"
+                },
+                {
+                    "id": "o3",
+                    "text": "Port 23"
+                },
+                {
+                    "id": "o4",
+                    "text": "Port 25"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "SSH uses port 22 by default. Port 21 is for FTP, port 23 is for unencrypted Telnet, and port 25 is assigned to SMTP."
+        },
+        {
+            "id": "q26",
+            "question": "When a network device fails to contact a DHCP server, what type of automatic IPv4 address starting with 169.254.x.x might it assign itself?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A loopback address"
+                },
+                {
+                    "id": "o2",
+                    "text": "A static global unicast address"
+                },
+                {
+                    "id": "o3",
+                    "text": "An Automatic Private IP Addressing (APIPA) address"
+                },
+                {
+                    "id": "o4",
+                    "text": "A multicast distribution address"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "APIPA is a feature in mainstream operating systems that automatically configures a unique link-local IPv4 address in the 169.254.0.1 to 169.254.255.254 range when a DHCP server is unreachable."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following are considered Layer 1 (Physical Layer) standards or devices? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "OSI Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Network Hub"
+                },
+                {
+                    "id": "o2",
+                    "text": "Ethernet Frame Header"
+                },
+                {
+                    "id": "o3",
+                    "text": "RJ-45 Connectors and Twisted-Pair Cables"
+                },
+                {
+                    "id": "o4",
+                    "text": "IP Routing Table"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Layer 1 deals with the physical connection mediums and bit transmission. Hubs, cables, pins, and connectors are all Layer 1 components. Frames exist at Layer 2, and routing tables exist at Layer 3."
+        },
+        {
+            "id": "q28",
+            "question": "What does a client utility like 'tracert' (Windows) or 'traceroute' (Linux) map out?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The physical mapping of underground fiber conduits"
+                },
+                {
+                    "id": "o2",
+                    "text": "The precise physical locations of server racks within a center"
+                },
+                {
+                    "id": "o3",
+                    "text": "The path and intermediary hop routers a packet takes to reach a destination"
+                },
+                {
+                    "id": "o4",
+                    "text": "The exact MAC address changes happening inside local switches"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Traceroute uses the ICMP Time-to-Live (TTL) field modifications to display the sequence of Layer 3 hop gateways/routers that a packet passes through to reach its destination."
+        },
+        {
+            "id": "q29",
+            "question": "What is the primary difference between a Half-Duplex and a Full-Duplex network connection?",
+            "type": "single-choice",
+            "topic": "Network Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Half-duplex uses fiber cables while full-duplex only uses wireless radio signals"
+                },
+                {
+                    "id": "o2",
+                    "text": "Half-duplex allows data to travel in both directions simultaneously; full-duplex is one-way only"
+                },
+                {
+                    "id": "o3",
+                    "text": "Half-duplex allows data transmission in both directions but only one direction at a time; full-duplex allows simultaneous bidirectional transmission"
+                },
+                {
+                    "id": "o4",
+                    "text": "Half-duplex relies entirely on software-driven encryption metrics"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In half-duplex mode, a device can either send or receive data at one time (like a walkie-talkie). Full-duplex allows devices to send and receive data at the same time without collisions."
+        },
+        {
+            "id": "q30",
+            "question": "Which wireless security standard provides the strongest enterprise grade encryption and security mechanisms among the choices listed?",
+            "type": "single-choice",
+            "topic": "Wireless Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "WEP (Wired Equivalent Privacy)"
+                },
+                {
+                    "id": "o2",
+                    "text": "WPA (Wi-Fi Protected Access)"
+                },
+                {
+                    "id": "o3",
+                    "text": "WPA3"
+                },
+                {
+                    "id": "o4",
+                    "text": "WPA2"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "WPA3 is the latest generation of Wi-Fi security, replacing WPA2 with more robust cryptographic algorithms and protections against brute-force attacks."
+        },
+        {
+            "id": "q31",
+            "question": "What is the primary purpose of a default gateway in a computer network?",
+            "type": "single-choice",
+            "topic": "Routing Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To dynamically assign IP addresses to new devices"
+                },
+                {
+                    "id": "o2",
+                    "text": "To serve as an access point to pass traffic to devices on other networks"
+                },
+                {
+                    "id": "o3",
+                    "text": "To filter malicious web traffic coming from the Internet"
+                },
+                {
+                    "id": "o4",
+                    "text": "To resolve human-readable domain names into IP addresses"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A default gateway (usually a router) is the node in a computer network that serves as the forwarding host to other networks when no other route specification matches the destination IP address of a packet."
+        },
+        {
+            "id": "q32",
+            "question": "Which type of network connects computers and devices across a large geographic area, such as a city, country, or the globe?",
+            "type": "single-choice",
+            "topic": "Network Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "LAN (Local Area Network)"
+                },
+                {
+                    "id": "o2",
+                    "text": "PAN (Personal Area Network)"
+                },
+                {
+                    "id": "o3",
+                    "text": "WAN (Wide Area Network)"
+                },
+                {
+                    "id": "o4",
+                    "text": "WLAN (Wireless Local Area Network)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Wide Area Network (WAN) spans a large geographical area and typically connects multiple smaller networks like LANs. The Internet is the largest example of a WAN."
+        },
+        {
+            "id": "q33",
+            "question": "Which command-line utility is used on Windows operating systems to display the current TCP/IP network configuration values, including the IP address and subnet mask?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ipconfig"
+                },
+                {
+                    "id": "o2",
+                    "text": "ifconfig"
+                },
+                {
+                    "id": "o3",
+                    "text": "netstat"
+                },
+                {
+                    "id": "o4",
+                    "text": "ping"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'ipconfig' is the Windows command used to view IP configuration. 'ifconfig' was traditionally used in Linux/Unix environments for the same purpose."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following application layer protocols are commonly used by email clients to retrieve emails from a mail server? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "SMTP (Simple Mail Transfer Protocol)"
+                },
+                {
+                    "id": "o2",
+                    "text": "IMAP (Internet Message Access Protocol)"
+                },
+                {
+                    "id": "o3",
+                    "text": "POP3 (Post Office Protocol version 3)"
+                },
+                {
+                    "id": "o4",
+                    "text": "FTP (File Transfer Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "IMAP and POP3 are used to receive or retrieve emails. SMTP is used exclusively for sending or routing emails between servers."
+        },
+        {
+            "id": "q35",
+            "question": "What are the two primary radio frequency bands used in standard modern Wi-Fi networks (802.11 standards)? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Wireless Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "900 MHz"
+                },
+                {
+                    "id": "o2",
+                    "text": "2.4 GHz"
+                },
+                {
+                    "id": "o3",
+                    "text": "5 GHz"
+                },
+                {
+                    "id": "o4",
+                    "text": "60 GHz"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "Modern Wi-Fi operates primarily on the 2.4 GHz and 5 GHz frequency bands. Some newer standards (like Wi-Fi 6E) have introduced 6 GHz, but 2.4 and 5 are the established primary bands."
+        },
+        {
+            "id": "q36",
+            "question": "What technology establishes a secure, encrypted tunnel over an untrusted network, allowing users to securely access private network resources over the Internet?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "VLAN (Virtual Local Area Network)"
+                },
+                {
+                    "id": "o2",
+                    "text": "VPN (Virtual Private Network)"
+                },
+                {
+                    "id": "o3",
+                    "text": "NAT (Network Address Translation)"
+                },
+                {
+                    "id": "o4",
+                    "text": "DHCP (Dynamic Host Configuration Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Virtual Private Network (VPN) encrypts data traffic and routes it through a secure tunnel over the public internet, masking the user's IP and protecting data from interception."
+        },
+        {
+            "id": "q37",
+            "question": "What is the primary function of a network firewall?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To dynamically allocate IP addresses to network devices"
+                },
+                {
+                    "id": "o2",
+                    "text": "To boost the signal strength of wireless access points"
+                },
+                {
+                    "id": "o3",
+                    "text": "To monitor and control incoming and outgoing network traffic based on predetermined security rules"
+                },
+                {
+                    "id": "o4",
+                    "text": "To translate private IP addresses to public IP addresses exclusively"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A firewall acts as a barrier between a trusted network and an untrusted network (like the Internet), inspecting traffic and enforcing rules to block unauthorized or malicious access."
+        },
+        {
+            "id": "q38",
+            "question": "Which technology allows a single twisted-pair Ethernet cable to provide both data connection and electrical power to devices such as IP cameras or VoIP phones?",
+            "type": "single-choice",
+            "topic": "Network Technologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "PoE (Power over Ethernet)"
+                },
+                {
+                    "id": "o2",
+                    "text": "VoIP (Voice over IP)"
+                },
+                {
+                    "id": "o3",
+                    "text": "QoS (Quality of Service)"
+                },
+                {
+                    "id": "o4",
+                    "text": "STP (Spanning Tree Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Power over Ethernet (PoE) passes electrical power safely along with data on Ethernet cabling, eliminating the need for separate power supplies for compatible endpoints."
+        },
+        {
+            "id": "q39",
+            "question": "Which two default port numbers are traditionally associated with the File Transfer Protocol (FTP) for establishing the data and control connections? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Port 20"
+                },
+                {
+                    "id": "o2",
+                    "text": "Port 21"
+                },
+                {
+                    "id": "o3",
+                    "text": "Port 22"
+                },
+                {
+                    "id": "o4",
+                    "text": "Port 23"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "FTP uses two ports: Port 21 is used to establish the command/control connection, and Port 20 is used for the actual data transfer in active mode."
+        },
+        {
+            "id": "q40",
+            "question": "Which protocol is primarily used by network devices to send error messages and operational information, such as notifying a sender that a destination host is unreachable?",
+            "type": "single-choice",
+            "topic": "Core Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "TCP (Transmission Control Protocol)"
+                },
+                {
+                    "id": "o2",
+                    "text": "UDP (User Datagram Protocol)"
+                },
+                {
+                    "id": "o3",
+                    "text": "ICMP (Internet Control Message Protocol)"
+                },
+                {
+                    "id": "o4",
+                    "text": "ARP (Address Resolution Protocol)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "ICMP is a network layer protocol used by routers and hosts to communicate error information, operational data, and diagnostics (like ping echo requests)."
+        },
+        {
+            "id": "q41",
+            "question": "While the OSI model consists of 7 layers, the original Department of Defense (DoD) TCP/IP reference model consists of how many layers?",
+            "type": "single-choice",
+            "topic": "Network Models",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "3"
+                },
+                {
+                    "id": "o2",
+                    "text": "4"
+                },
+                {
+                    "id": "o3",
+                    "text": "5"
+                },
+                {
+                    "id": "o4",
+                    "text": "6"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The original TCP/IP model defines 4 layers: Application, Transport, Internet, and Network Access (Link) layer. (Note: Some modern text variations define it as 5 layers by splitting the Link layer, but the original DoD model is 4)."
+        },
+        {
+            "id": "q42",
+            "question": "Why are network switches vastly preferred over network hubs in modern local area networks?",
+            "type": "single-choice",
+            "topic": "Network Devices",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Hubs require devices to have static IP addresses configured manually"
+                },
+                {
+                    "id": "o2",
+                    "text": "Switches read MAC addresses and forward traffic only to the specific port of the recipient, reducing network collisions"
+                },
+                {
+                    "id": "o3",
+                    "text": "Switches automatically encrypt all local traffic using WPA3"
+                },
+                {
+                    "id": "o4",
+                    "text": "Hubs operate at Layer 3 of the OSI model, which introduces routing latency"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A hub broadcasts incoming data to all connected ports, leading to collisions. A switch is intelligent (Layer 2); it learns MAC addresses and sends frames only to the intended destination, maximizing bandwidth."
+        },
+        {
+            "id": "q43",
+            "question": "What is the correct sequence of control flags exchanged during a standard TCP three-way handshake to establish a reliable connection?",
+            "type": "single-choice",
+            "topic": "Transport Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "SYN, SYN-ACK, ACK"
+                },
+                {
+                    "id": "o2",
+                    "text": "REQ, RES, ACK"
+                },
+                {
+                    "id": "o3",
+                    "text": "SYN, ACK, FIN"
+                },
+                {
+                    "id": "o4",
+                    "text": "ACK, SYN, SYN-ACK"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "To establish a TCP connection, the client sends a Synchronize (SYN) packet, the server responds with a Synchronize-Acknowledgment (SYN-ACK), and the client finishes with an Acknowledgment (ACK)."
+        },
+        {
+            "id": "q44",
+            "question": "Which IPv4 address is universally reserved as the standard local loopback address used to test a machine's own network interface and TCP/IP stack?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "0.0.0.0"
+                },
+                {
+                    "id": "o2",
+                    "text": "127.0.0.1"
+                },
+                {
+                    "id": "o3",
+                    "text": "169.254.0.1"
+                },
+                {
+                    "id": "o4",
+                    "text": "255.255.255.255"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 127.0.0.0/8 block is reserved for loopback testing. The address 127.0.0.1 (often referred to as 'localhost') is pinged to verify that the local operating system's TCP/IP protocol is functioning correctly."
+        },
+        {
+            "id": "q45",
+            "question": "In IPv4 networking, what does the CIDR (Classless Inter-Domain Routing) notation “/24” indicate at the end of an IP address?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The maximum number of allowed host devices on the network is 24"
+                },
+                {
+                    "id": "o2",
+                    "text": "The first 24 bits of the IP address represent the network portion"
+                },
+                {
+                    "id": "o3",
+                    "text": "The subnet uses a 24-bit physical MAC address"
+                },
+                {
+                    "id": "o4",
+                    "text": "The router requires 24 milliseconds of latency tolerance"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A /24 means the first 24 bits (out of 32) are reserved for identifying the network, leaving the remaining 8 bits to identify specific hosts (providing up to 254 usable IPs). This is equivalent to a 255.255.255.0 subnet mask."
+        },
+        {
+            "id": "q46",
+            "question": "Which of the following is the standard port number used by unencrypted HTTP (Hypertext Transfer Protocol) web traffic?",
+            "type": "single-choice",
+            "topic": "Ports and Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Port 23"
+                },
+                {
+                    "id": "o2",
+                    "text": "Port 53"
+                },
+                {
+                    "id": "o3",
+                    "text": "Port 80"
+                },
+                {
+                    "id": "o4",
+                    "text": "Port 443"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Port 80 is assigned by IANA for standard, unencrypted web traffic using HTTP. Port 443 is used for secure HTTPS traffic, port 53 for DNS, and port 23 for Telnet."
+        },
+        {
+            "id": "q47",
+            "question": "What primary mechanism does a router use to determine the next hop or path for an incoming packet destined for a remote network?",
+            "type": "single-choice",
+            "topic": "Routing Basics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ARP cache"
+                },
+                {
+                    "id": "o2",
+                    "text": "Routing table"
+                },
+                {
+                    "id": "o3",
+                    "text": "MAC address table"
+                },
+                {
+                    "id": "o4",
+                    "text": "DNS records"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Routers lookup destination IP addresses within their internal routing tables. The routing table contains paths, metrics, and outgoing interfaces to forward packets toward their ultimate destination."
+        },
+        {
+            "id": "q48",
+            "question": "Which of the following are benefits of implementing a VLAN network setup? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Network Segmentation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Increased broadcast domain size"
+                },
+                {
+                    "id": "o2",
+                    "text": "Enhanced security by isolating sensitive traffic"
+                },
+                {
+                    "id": "o3",
+                    "text": "Elimination of the need for Layer 3 devices entirely"
+                },
+                {
+                    "id": "o4",
+                    "text": "Reduced network congestion by limiting broadcast traffic"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "VLANs segment a network, which reduces the size of broadcast domains (mitigating congestion) and isolates departments or data types logically for security. Communication between VLANs still requires a Layer 3 device."
+        },
+        {
+            "id": "q49",
+            "question": "What is the name of the protocol data unit (PDU) at the Data Link Layer (Layer 2) of the OSI model?",
+            "type": "single-choice",
+            "topic": "OSI Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Segment"
+                },
+                {
+                    "id": "o2",
+                    "text": "Packet"
+                },
+                {
+                    "id": "o3",
+                    "text": "Frame"
+                },
+                {
+                    "id": "o4",
+                    "text": "Bit"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Data at the Data Link layer is packaged into Frames, which include physical MAC addressing. Layer 4 handles Segments, Layer 3 handles Packets, and Layer 1 handles raw Bits."
+        },
+        {
+            "id": "q50",
+            "question": "Which wireless frequency band offers faster peak data transmission speeds but has a shorter coverage range and lower ability to penetrate solid walls?",
+            "type": "single-choice",
+            "topic": "Wireless Networking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "2.4 GHz"
+                },
+                {
+                    "id": "o2",
+                    "text": "5 GHz"
+                },
+                {
+                    "id": "o3",
+                    "text": "900 MHz"
+                },
+                {
+                    "id": "o4",
+                    "text": "4G LTE"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 5 GHz band features wider channel bandwidths for faster speeds, but higher frequency signals attenuate more quickly over distance and struggle more to pass through physical barriers than the lower 2.4 GHz band."
+        },
+        {
+            "id": "q51",
+            "question": "What does a Loopback Address do when configured or pinged on a local system?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It sends a probe out to verify the local default gateway's response status"
+                },
+                {
+                    "id": "o2",
+                    "text": "It routes a test packet through the nearest ISP routing node and back"
+                },
+                {
+                    "id": "o3",
+                    "text": "It directs traffic straight back to the local device without sending it over the physical network"
+                },
+                {
+                    "id": "o4",
+                    "text": "It clears the dynamic entries out of the physical switch's MAC lookup directory"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The loopback address (127.0.0.1 in IPv4, ::1 in IPv6) routes traffic internally inside the machine's local IP stack, allowing developers and administrators to test network software components independently of physical network hardware."
+        },
+        {
+            "id": "q52",
+            "question": "Which of the following descriptions accurately match the purpose of a Subnet Mask? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It explicitly isolates the network portion of an IP address from the host portion"
+                },
+                {
+                    "id": "o2",
+                    "text": "It translates a local private IP into a secure global routing registry identifier"
+                },
+                {
+                    "id": "o3",
+                    "text": "It is used by a host to determine if a destination IP is local or on a remote network"
+                },
+                {
+                    "id": "o4",
+                    "text": "It assigns a permanent physical serial address token to computer network interface devices"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "A subnet mask uses binary tracking to delineate network ID bits from host ID bits. Hosts perform an AND operation using their mask against target destinations to evaluate if the traffic requires a gateway hop or can be delivered locally."
+        },
+        {
+            "id": "q53",
+            "question": "What is the purpose of the 'netstat' command-line utility?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To change the physical allocation profile parameters of network routers"
+                },
+                {
+                    "id": "o2",
+                    "text": "To display active network connections, routing tables, and interface statistics"
+                },
+                {
+                    "id": "o3",
+                    "text": "To format local storage arrays over network file protocol connections"
+                },
+                {
+                    "id": "o4",
+                    "text": "To dynamically renew lease configurations from active DHCP infrastructure pools"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'netstat' (Network Statistics) utility shows inbound and outbound network connections, helping administrators check which local ports are open, listening, or actively communicating with remote sockets."
+        },
+        {
+            "id": "q54",
+            "question": "Which type of twisted-pair copper network cable specification includes an internal metallic foil wrapper designed specifically to defend data integrity against Electromagnetic Interference (EMI)?",
+            "type": "single-choice",
+            "topic": "Network Media",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "UTP"
+                },
+                {
+                    "id": "o2",
+                    "text": "STP"
+                },
+                {
+                    "id": "o3",
+                    "text": "Coaxial"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fiber optic"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "STP (Shielded Twisted Pair) uses additional shielding insulation barriers around internal copper pairs to obstruct exterior radio and electrical noise. UTP (Unshielded Twisted Pair) does not possess this foil wrap layer."
+        },
+        {
+            "id": "q55",
+            "question": "What core characteristic differentiates a public IP address from a private IP address?",
+            "type": "single-choice",
+            "topic": "IP Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public IP addresses cannot be routed across the Internet"
+                },
+                {
+                    "id": "o2",
+                    "text": "Public IP addresses are globally unique and routable over the Internet"
+                },
+                {
+                    "id": "o3",
+                    "text": "Private IP addresses must be rented directly from global domain authorities"
+                },
+                {
+                    "id": "o4",
+                    "text": "Private IP addresses are only used by hardware switches at Layer 2"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Public IP addresses are managed globally and are internet-routable. Private IP addresses are designated for internal networks and are intentionally dropped by internet-facing routers to prevent conflicts, requiring NAT for external surfing access."
+        },
+        {
+            "id": "q56",
+            "question": "Which basic network topology features a layout where all peripheral terminal nodes depend on a single centralized device (like a switch or hub) to exchange data?",
+            "type": "single-choice",
+            "topic": "Network Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bus topology"
+                },
+                {
+                    "id": "o2",
+                    "text": "Ring topology"
+                },
+                {
+                    "id": "o3",
+                    "text": "Star topology"
+                },
+                {
+                    "id": "o4",
+                    "text": "Mesh topology"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a star topology, each machine is linked independently to a core central connection point. If one cable fails, only that node goes down, making it the dominant architectural scheme for modern LAN designs."
+        },
+        {
+            "id": "q57",
+            "question": "Which structural components compose the fundamental composition of a standard TCP three-way handshake? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Transport Protocols",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An initial SYN flag packet forwarded by the initiating client"
+                },
+                {
+                    "id": "o2",
+                    "text": "A return FIN-ACK payload frame terminating the connection window"
+                },
+                {
+                    "id": "o3",
+                    "text": "A combo SYN-ACK flag acknowledgment response issued by the recipient host"
+                },
+                {
+                    "id": "o4",
+                    "text": "A concluding ACK packet validating the state sync step completed"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The correct operational phases of establishing a TCP session are the client sending a SYN, the server replying with a SYN-ACK, and the client answering back with a final ACK. FIN packets are used exclusively during session teardowns."
+        },
+        {
+            "id": "q58",
+            "question": "What structural tracking attribute defines the unique signature identifier code string mapped inside a standard network MAC address?",
+            "type": "single-choice",
+            "topic": "Network Addressing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A 32-bit logical sequence issued dynamically by software brokers"
+                },
+                {
+                    "id": "o2",
+                    "text": "A 48-bit physical hexadecimal layout universally hardcoded on the hardware"
+                },
+                {
+                    "id": "o3",
+                    "text": "A 128-bit alphabetical text notation resolving domain structures"
+                },
+                {
+                    "id": "o4",
+                    "text": "A variable length parameter appended onto network security firewalls"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "MAC addresses are physical identifiers that span 48 bits, typically presented as twelve hexadecimal symbols separated by colons or hyphens (e.g., 00:0a:95:9d:68:16)."
+        },
+        {
+            "id": "q59",
+            "question": "Which diagnostic utility allows an administrator to test domain name resolution accuracy by querying active network DNS servers manually?",
+            "type": "single-choice",
+            "topic": "Troubleshooting",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ping"
+                },
+                {
+                    "id": "o2",
+                    "text": "tracert"
+                },
+                {
+                    "id": "o3",
+                    "text": "nslookup"
+                },
+                {
+                    "id": "o4",
+                    "text": "arp -a"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'nslookup' (Name Server Lookup) command can pinpoint DNS issues by enabling direct lookups to map text names to destination IPs or check what configuration records reside on specific servers."
+        },
+        {
+            "id": "q60",
+            "question": "What basic operational characteristic separates a Hub from a standard Network Switch?",
+            "type": "single-choice",
+            "topic": "Network Devices",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Switches only process unencrypted fiber media conversions"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hubs replicate incoming traffic across all open ports indiscriminately, creating collision issues"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hubs isolate traffic based on software network protocol policies at Layer 4"
+                },
+                {
+                    "id": "o4",
+                    "text": "Switches operate as passive conduits without reading hardware physical address parameters"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Hubs are simple electrical distribution tools that forward any inbound data frame to all connected ports, causing congestion. Switches read Layer 2 source/destination information to target traffic dynamically to the correct intended port."
+        }
+    ]
+}

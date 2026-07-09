@@ -1,0 +1,1290 @@
+{
+    "id": "security-basic",
+    "name": "Basic Cloud Security Concepts",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q16",
+            "question": "Which security concept ensures that a user or system is exactly who they claim to be?",
+            "type": "single-choice",
+            "topic": "Security Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Authorization"
+                },
+                {
+                    "id": "o2",
+                    "text": "Authentication"
+                },
+                {
+                    "id": "o3",
+                    "text": "Accounting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Non-repudiation"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Authentication is the process of verifying the identity of a user, process, or device. Authorization determines what permissions they have after identity is verified, Accounting tracks their actions, and Non-repudiation ensures a party cannot deny an action."
+        },
+        {
+            "id": "q17",
+            "question": "Under the Cloud Shared Responsibility Model, which of the following areas is always the responsibility of the customer, regardless of the deployment model (IaaS, PaaS, or SaaS)?",
+            "type": "single-choice",
+            "topic": "Shared Responsibility Model",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Physical security of datacenters"
+                },
+                {
+                    "id": "o2",
+                    "text": "Operating system patching"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data and identities"
+                },
+                {
+                    "id": "o4",
+                    "text": "Network hardware maintenance"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In all cloud computing models, data, information, identities, and accounts are the sole responsibility of the customer. Physical security and hardware maintenance are managed by the provider, while OS patching varies depending on the model (e.g., customer for IaaS, provider for PaaS/SaaS)."
+        },
+        {
+            "id": "q18",
+            "question": "What are the three primary components of the CIA Triad in information security? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Compliance"
+                },
+                {
+                    "id": "o2",
+                    "text": "Confidentiality"
+                },
+                {
+                    "id": "o3",
+                    "text": "Integrity"
+                },
+                {
+                    "id": "o4",
+                    "text": "Availability"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3",
+                "o4"
+            ],
+            "explanation": "The CIA Triad stands for Confidentiality (preventing unauthorized disclosure), Integrity (preventing unauthorized modification), and Availability (ensuring uptime and accessibility for authorized users). Compliance is an organizational governance goal, not a pillar of the basic CIA triad."
+        },
+        {
+            "id": "q19",
+            "question": "An organization wants to protect data while it is traveling over the public internet between a user's browser and a cloud application. Which mechanism should they use?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Encryption at rest"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data masking"
+                },
+                {
+                    "id": "o3",
+                    "text": "Encryption in transit"
+                },
+                {
+                    "id": "o4",
+                    "text": "Storage lifecycle management"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Encryption in transit uses cryptographic protocols like TLS/HTTPS to protect data while it moves across networks. Encryption at rest protects stored data on disks. Data masking hides sensitive characters on a UI but does not secure network traffic pipelines."
+        },
+        {
+            "id": "q20",
+            "question": "Which strategy adheres to the Principle of Least Privilege?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Granting all developers temporary administrator access to speed up deployment"
+                },
+                {
+                    "id": "o2",
+                    "text": "Providing users only the minimum access levels required to perform their specific job duties"
+                },
+                {
+                    "id": "o3",
+                    "text": "Using a single shared root account for all infrastructure management"
+                },
+                {
+                    "id": "o4",
+                    "text": "Giving read and write access to all internal company databases by default"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Principle of Least Privilege states that individuals and systems should only be given the absolute minimum access levels necessary to complete their assigned tasks, minimizing the blast radius of a security compromise."
+        },
+        {
+            "id": "q21",
+            "question": "What is the primary objective of a Distributed Denial of Service (DDoS) attack?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Stealing cryptographic certificates and private keys"
+                },
+                {
+                    "id": "o2",
+                    "text": "Modifying database tables via malicious input code"
+                },
+                {
+                    "id": "o3",
+                    "text": "Disrupting the availability of a service by overwhelming it with traffic"
+                },
+                {
+                    "id": "o4",
+                    "text": "Eavesdropping on cleartext wireless communications"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A DDoS attack targets the availability pillar of security. It uses a network of distributed machines (botnets) to flood a targeted server or network with excessive traffic, forcing it offline for legitimate users."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following describes the 'Zero Trust' security model?",
+            "type": "single-choice",
+            "topic": "Security Frameworks",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Trusting all traffic that originates from inside the internal corporate network"
+                },
+                {
+                    "id": "o2",
+                    "text": "Eliminating all usernames and relying solely on hardware biometrics"
+                },
+                {
+                    "id": "o3",
+                    "text": "Never trust, always verify every access request, regardless of where it originates"
+                },
+                {
+                    "id": "o4",
+                    "text": "Disabling firewalls once a secure Virtual Private Network (VPN) is established"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The core mantra of Zero Trust is 'never trust, always verify.' It assumes that threats exist both inside and outside the network perimeter, requiring continuous verification, validation, and authentication for every request."
+        },
+        {
+            "id": "q23",
+            "question": "Which type of security control is designed to restore systems back to normal operations after a malicious incident occurs?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Preventive control"
+                },
+                {
+                    "id": "o2",
+                    "text": "Corrective control"
+                },
+                {
+                    "id": "o3",
+                    "text": "Deterrent control"
+                },
+                {
+                    "id": "o4",
+                    "text": "Detective control"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Corrective controls are used to mitigate or clean up the damage and restore system functionality after an incident has occurred (e.g., restoring from backups). Preventive controls block the incident, detective controls discover it, and deterrent controls discourage it."
+        },
+        {
+            "id": "q24",
+            "question": "A company wants to prevent unauthorized network entry into their private cloud subnet. Which tool acts as a barrier by monitoring and filtering incoming and outgoing network traffic based on predefined security rules?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Firewall"
+                },
+                {
+                    "id": "o2",
+                    "text": "Load Balancer"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data Loss Prevention (DLP) system"
+                },
+                {
+                    "id": "o4",
+                    "text": "Key Management Service (KMS)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A firewall acts as a barrier that analyzes network traffic packets and blocks or allows them according to configured access control lists (ACLs) or security policies."
+        },
+        {
+            "id": "q25",
+            "question": "What elements can be used as factors in Multi-Factor Authentication (MFA) to verify identity? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Something you know (e.g., a password)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Something you have (e.g., a hardware token)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Something you are (e.g., a fingerprint scan)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Something you see (e.g., a graphical desktop wallpaper)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "MFA relies on multiple distinct categories: Knowledge (something you know), Possession (something you have), and Inherence (something you are). Seeing a specific wallpaper does not validate identity securely."
+        },
+        {
+            "id": "q26",
+            "question": "Which type of social engineering attack involves sending deceptive, targeted emails designed to trick specific high-profile individuals into revealing sensitive company information?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Ransomware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Spear Phishing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Man-in-the-Middle"
+                },
+                {
+                    "id": "o4",
+                    "text": "Brute Force"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Spear phishing is a highly targeted form of phishing focused on specific individuals or organizations. Ransomware is malicious software that encrypts files; Man-in-the-Middle is a communication intercept attack; Brute Force involves automated password guessing."
+        },
+        {
+            "id": "q27",
+            "question": "What is the primary purpose of an Identity Provider (IdP)?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To host web and application server infrastructure"
+                },
+                {
+                    "id": "o2",
+                    "text": "To create, maintain, and manage digital identity information and authenticate users"
+                },
+                {
+                    "id": "o3",
+                    "text": "To log network connection errors across distributed cloud routers"
+                },
+                {
+                    "id": "o4",
+                    "text": "To translate human-readable domain names into IP addresses"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Identity Provider (IdP) is a system that creates, maintains, and manages identity information for principals (users, services) while offering authentication services to relying applications."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following represents a best practice for securing administrative cloud accounts?",
+            "type": "single-choice",
+            "topic": "Security Best Practices",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Enabling MFA and avoiding daily operational tasks using root accounts"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hardcoding credentials into automation scripts to ensure smooth deployments"
+                },
+                {
+                    "id": "o3",
+                    "text": "Disabling logging to increase system performance"
+                },
+                {
+                    "id": "o4",
+                    "text": "Reusing identical credentials across development and production root accounts"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Administrative or root accounts should have Multi-Factor Authentication (MFA) enabled at all times, and everyday non-administrative tasks should be performed using standard user accounts with limited permissions to prevent accidental configuration errors or compromise."
+        },
+        {
+            "id": "q29",
+            "question": "If an attacker uses malicious software to lock an organization's files and demands payment to provide a decryption key, what category of threat is this?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Spyware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Trojan horse"
+                },
+                {
+                    "id": "o3",
+                    "text": "Ransomware"
+                },
+                {
+                    "id": "o4",
+                    "text": "Rootkit"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Ransomware is a specific class of malware that denies access to core system files or data through strong encryption and demands a monetary ransom to restore access."
+        },
+        {
+            "id": "q30",
+            "question": "What is the main purpose of auditing and log management within a cloud platform?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To track resource configuration changes and user activities for compliance and forensics"
+                },
+                {
+                    "id": "o2",
+                    "text": "To automatically optimize application source code for faster processing speeds"
+                },
+                {
+                    "id": "o3",
+                    "text": "To eliminate the need for firewalls and intrusion prevention infrastructure"
+                },
+                {
+                    "id": "o4",
+                    "text": "To dynamically scale cloud infrastructure based on unexpected customer demand surges"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Auditing and log management record historical security events, configuration modifications, and user identity actions. This log history is essential for validating compliance standards, troubleshooting errors, and conducting post-incident digital forensics."
+        },
+        {
+            "id": "q31",
+            "question": "Which access control model grants permissions based on a user's specific job function or title within an organization?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Discretionary Access Control (DAC)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Mandatory Access Control (MAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Rule-Based Access Control (RuBAC)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Role-Based Access Control (RBAC) assigns permissions to roles (e.g., Administrator, Auditor, Developer) rather than individual users, and users are granted access based on their assigned role."
+        },
+        {
+            "id": "q32",
+            "question": "What is the security strategy that employs multiple overlapping layers of protective controls to safeguard information and systems?",
+            "type": "single-choice",
+            "topic": "Security Frameworks",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Security through obscurity"
+                },
+                {
+                    "id": "o2",
+                    "text": "Defense in Depth"
+                },
+                {
+                    "id": "o3",
+                    "text": "Single Sign-On (SSO)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Continuous Integration"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Defense in Depth is an information security strategy that uses multiple layers of security controls (physical, network, application, etc.) so that if one layer fails, another layer is in place to stop the attack."
+        },
+        {
+            "id": "q33",
+            "question": "Which technology establishes a secure, encrypted tunnel over an untrusted network like the public internet?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Virtual Private Network (VPN)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Content Delivery Network (CDN)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Domain Name System (DNS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Local Area Network (LAN)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A Virtual Private Network (VPN) encrypts network traffic and routes it through a secure tunnel, providing privacy and security when communicating over public or untrusted networks."
+        },
+        {
+            "id": "q34",
+            "question": "Which cryptographic process is primarily used to ensure data integrity by generating a fixed-size mathematical representation of a file or message?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Symmetric encryption"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hashing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Steganography"
+                },
+                {
+                    "id": "o4",
+                    "text": "Asymmetric encryption"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Hashing takes input data and produces a fixed-size string of characters. It is a one-way function used to verify that data has not been altered (integrity), as even a tiny change in the file will result in a completely different hash value."
+        },
+        {
+            "id": "q35",
+            "question": "A social engineering attack conducted specifically over voice communication (like a phone call) is known as what?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Smishing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pharming"
+                },
+                {
+                    "id": "o3",
+                    "text": "Vishing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Whaling"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Vishing (voice phishing) uses telephone calls or voice messages to manipulate individuals into revealing sensitive information. Smishing uses SMS text messages, and whaling targets high-level executives."
+        },
+        {
+            "id": "q36",
+            "question": "Which type of malicious software self-replicates and spreads rapidly across networks without requiring user interaction or attaching itself to a host file?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Virus"
+                },
+                {
+                    "id": "o2",
+                    "text": "Worm"
+                },
+                {
+                    "id": "o3",
+                    "text": "Spyware"
+                },
+                {
+                    "id": "o4",
+                    "text": "Adware"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A worm is a standalone malware computer program that replicates itself in order to spread to other computers. Unlike a virus, it does not need to attach itself to an existing program or rely on a user to execute it."
+        },
+        {
+            "id": "q37",
+            "question": "Which of the following are considered distinct layers within a Defense in Depth strategy? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security Frameworks",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Physical Security"
+                },
+                {
+                    "id": "o2",
+                    "text": "Identity and Access"
+                },
+                {
+                    "id": "o3",
+                    "text": "Marketing Analytics"
+                },
+                {
+                    "id": "o4",
+                    "text": "Network Security"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "Defense in Depth layers include Physical security, Identity and access, Perimeter, Network, Compute, Application, and Data. Marketing analytics is unrelated to cybersecurity defense layers."
+        },
+        {
+            "id": "q38",
+            "question": "A disgruntled employee deliberately deletes critical production databases before leaving the company. This is an example of which type of security threat?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Advanced Persistent Threat (APT)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Insider Threat"
+                },
+                {
+                    "id": "o3",
+                    "text": "Zero-day Exploit"
+                },
+                {
+                    "id": "o4",
+                    "text": "Man-in-the-Middle"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An insider threat is a security risk that originates from within the targeted organization. It typically involves a current or former employee, contractor, or business partner who has inside information and authorized access to the organization's network, systems, or data."
+        },
+        {
+            "id": "q39",
+            "question": "What is the process of using automated tools to identify unpatched software, open ports, and system misconfigurations without actively exploiting them?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Penetration Testing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vulnerability Scanning"
+                },
+                {
+                    "id": "o3",
+                    "text": "Threat Hunting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Incident Response"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Vulnerability scanning is an automated, passive process that identifies known security weaknesses. Penetration testing goes a step further by actively attempting to exploit those vulnerabilities to simulate a real-world attack."
+        },
+        {
+            "id": "q40",
+            "question": "Which type of encryption uses the exact same key to both encrypt the plaintext and decrypt the ciphertext?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Asymmetric Encryption"
+                },
+                {
+                    "id": "o2",
+                    "text": "Public Key Infrastructure (PKI)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Symmetric Encryption"
+                },
+                {
+                    "id": "o4",
+                    "text": "Elliptic Curve Cryptography"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Symmetric encryption uses a single shared key for both encryption and decryption. Both parties must securely exchange this key beforehand. Asymmetric encryption uses two different keys (a public key and a private key)."
+        },
+        {
+            "id": "q41",
+            "question": "Which security solution aggregates, analyzes, and correlates security event logs and alerts from across an entire network in real-time?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Security Information and Event Management (SIEM)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Intrusion Prevention System (IPS)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Web Application Firewall (WAF)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Loss Prevention (DLP)"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A SIEM (Security Information and Event Management) system provides real-time analysis of security alerts generated by applications and network hardware to identify anomalous behavior and potential incidents."
+        },
+        {
+            "id": "q42",
+            "question": "Which of the following are foundational principles of the Zero Trust security model? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security Frameworks",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Trust all internal network traffic implicitly"
+                },
+                {
+                    "id": "o2",
+                    "text": "Verify explicitly"
+                },
+                {
+                    "id": "o3",
+                    "text": "Use least privilege access"
+                },
+                {
+                    "id": "o4",
+                    "text": "Rely entirely on perimeter firewalls"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "The core principles of Zero Trust include 'Verify explicitly' (always authenticate and authorize based on all available data points), 'Use least privilege access' (limit user access with Just-In-Time and Just-Enough-Access), and 'Assume breach'."
+        },
+        {
+            "id": "q43",
+            "question": "Data stored physically on a database hard drive, an employee laptop, or an object storage bucket is referred to as what?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data in transit"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data at rest"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data in use"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data in motion"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Data at rest refers to inactive data that is stored physically in any digital form, such as on hard drives, mobile devices, databases, or cloud storage environments."
+        },
+        {
+            "id": "q44",
+            "question": "What is the critical process of identifying, acquiring, testing, and installing updates for software to fix known security vulnerabilities?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Patch Management"
+                },
+                {
+                    "id": "o2",
+                    "text": "Risk Acceptance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Network Segmentation"
+                },
+                {
+                    "id": "o4",
+                    "text": "Continuous Deployment"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Patch management is the routine practice of updating software and operating systems to remediate known vulnerabilities and improve security and stability."
+        },
+        {
+            "id": "q45",
+            "question": "Which of the following is an example of an inherence factor ('something you are') used in authentication?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A complex password"
+                },
+                {
+                    "id": "o2",
+                    "text": "A physical smart card"
+                },
+                {
+                    "id": "o3",
+                    "text": "A fingerprint scan"
+                },
+                {
+                    "id": "o4",
+                    "text": "A one-time PIN sent via SMS"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Inherence factors rely on biological characteristics that are unique to the individual, such as fingerprints, facial recognition, or iris scans. Passwords are knowledge factors, and smart cards/SMS tokens are possession factors."
+        },
+        {
+            "id": "q46",
+            "question": "What is the defining characteristic of a Trojan Horse malware?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It encrypts user files and demands a ransom payment."
+                },
+                {
+                    "id": "o2",
+                    "text": "It disguises itself as legitimate or desirable software to trick users into executing it."
+                },
+                {
+                    "id": "o3",
+                    "text": "It self-replicates across networks without requiring user interaction."
+                },
+                {
+                    "id": "o4",
+                    "text": "It intercepts and alters network traffic in transit."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Trojan Horse is malicious software that misleads users of its true intent by disguising itself as a legitimate program. Unlike a virus or worm, a Trojan does not replicate itself."
+        },
+        {
+            "id": "q47",
+            "question": "What is the primary purpose of a Data Loss Prevention (DLP) solution?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To prevent unauthorized users from accessing the corporate network."
+                },
+                {
+                    "id": "o2",
+                    "text": "To recover lost data from corrupted hard drives."
+                },
+                {
+                    "id": "o3",
+                    "text": "To detect and prevent sensitive or classified data from leaving the organization."
+                },
+                {
+                    "id": "o4",
+                    "text": "To balance network traffic across multiple database servers."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Data Loss Prevention (DLP) tools are designed to monitor, detect, and block sensitive data (like credit card numbers or intellectual property) from being exfiltrated or shared outside the corporate boundary."
+        },
+        {
+            "id": "q48",
+            "question": "Which of the following are valid phases within the standard Incident Response lifecycle? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Preparation"
+                },
+                {
+                    "id": "o2",
+                    "text": "Eradication"
+                },
+                {
+                    "id": "o3",
+                    "text": "Marketing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Recovery"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "The standard Incident Response lifecycle (as defined by NIST) includes Preparation, Detection & Analysis, Containment, Eradication, and Recovery, followed by Post-Incident Activity. Marketing is not a phase."
+        },
+        {
+            "id": "q49",
+            "question": "What is the term for a physical security breach where an unauthorized person follows an authorized person into a restricted area?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Phishing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tailgating"
+                },
+                {
+                    "id": "o3",
+                    "text": "Eavesdropping"
+                },
+                {
+                    "id": "o4",
+                    "text": "Spoofing"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Tailgating (also known as piggybacking) occurs when an unauthorized individual sneaks into a secure physical facility by closely following an authorized employee through a door or checkpoint."
+        },
+        {
+            "id": "q50",
+            "question": "In a Public Key Infrastructure (PKI), which key is used by a recipient to decrypt a confidential message that was encrypted using asymmetric encryption?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The sender's public key"
+                },
+                {
+                    "id": "o2",
+                    "text": "The sender's private key"
+                },
+                {
+                    "id": "o3",
+                    "text": "The recipient's private key"
+                },
+                {
+                    "id": "o4",
+                    "text": "The recipient's public key"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In asymmetric encryption, the sender uses the recipient's public key to encrypt the message. Only the recipient can decrypt the message using their own matching private key, ensuring confidentiality."
+        },
+        {
+            "id": "q51",
+            "question": "Which of the following are common characteristics of a strong, modern password policy? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Requiring a minimum password length"
+                },
+                {
+                    "id": "o2",
+                    "text": "Allowing passwords to be reused indefinitely"
+                },
+                {
+                    "id": "o3",
+                    "text": "Checking passwords against lists of known breached credentials"
+                },
+                {
+                    "id": "o4",
+                    "text": "Prohibiting the use of common dictionary words"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Strong password policies enforce length, prohibit common words, and check against breached databases. Allowing infinite password reuse is a poor security practice, as compromised credentials remain valid forever."
+        },
+        {
+            "id": "q52",
+            "question": "What type of attack involves a malicious actor secretly intercepting and potentially altering communications between two parties?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Denial of Service (DoS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Man-in-the-Middle (MitM)"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL Injection"
+                },
+                {
+                    "id": "o4",
+                    "text": "Cross-Site Scripting (XSS)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Man-in-the-Middle (MitM) attack occurs when an attacker positions themselves between two communicating parties to eavesdrop, intercept, or modify data in transit without either party knowing."
+        },
+        {
+            "id": "q53",
+            "question": "What does the term 'zero-day vulnerability' refer to?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A vulnerability that has been successfully patched for zero days."
+                },
+                {
+                    "id": "o2",
+                    "text": "A software flaw that is actively exploited before the vendor knows about it or has a patch available."
+                },
+                {
+                    "id": "o3",
+                    "text": "A network vulnerability that poses zero actual risk to the organization."
+                },
+                {
+                    "id": "o4",
+                    "text": "An attack vector that takes exactly zero days to execute on a target machine."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A zero-day vulnerability is a flaw in software, hardware, or firmware that is unknown to the vendor. Because the vendor has had 'zero days' to fix it, no official patch exists, making it highly dangerous."
+        },
+        {
+            "id": "q54",
+            "question": "What is the primary function of Endpoint Detection and Response (EDR) solutions?",
+            "type": "single-choice",
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To filter spam emails before they reach a user's inbox."
+                },
+                {
+                    "id": "o2",
+                    "text": "To monitor end-user devices for malicious activities, record telemetry, and respond to advanced threats."
+                },
+                {
+                    "id": "o3",
+                    "text": "To route traffic securely between different physical cloud regions."
+                },
+                {
+                    "id": "o4",
+                    "text": "To physically secure server hardware inside a corporate data center."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "EDR solutions provide advanced, continuous monitoring and response capabilities on endpoints (like laptops and mobile devices) to detect and mitigate malicious activity that traditional antivirus might miss."
+        },
+        {
+            "id": "q55",
+            "question": "Which security principle involves dividing critical tasks among multiple individuals so that no single person has total control over a process?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Separation of Duties"
+                },
+                {
+                    "id": "o2",
+                    "text": "Defense in Depth"
+                },
+                {
+                    "id": "o3",
+                    "text": "Need to Know"
+                },
+                {
+                    "id": "o4",
+                    "text": "Non-repudiation"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Separation of Duties (SoD) prevents fraud and errors by ensuring that critical tasks require the involvement of more than one person, meaning no single individual can execute an entire transaction independently."
+        },
+        {
+            "id": "q56",
+            "question": "What is the purpose of a Web Application Firewall (WAF)?",
+            "type": "single-choice",
+            "topic": "Application Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To block all HTTP traffic from entering the internal corporate network."
+                },
+                {
+                    "id": "o2",
+                    "text": "To filter, monitor, and block malicious HTTP/HTTPS traffic directed at a web application."
+                },
+                {
+                    "id": "o3",
+                    "text": "To establish encrypted VPN connections for remote workers."
+                },
+                {
+                    "id": "o4",
+                    "text": "To scan incoming network packets strictly at the transport layer."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A WAF protects web applications by analyzing incoming HTTP/HTTPS traffic and blocking specific application-layer attacks, such as SQL injection and Cross-Site Scripting (XSS)."
+        },
+        {
+            "id": "q57",
+            "question": "Which of the following represents a 'possession factor' (something you have) in multi-factor authentication (MFA)?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A complex password"
+                },
+                {
+                    "id": "o2",
+                    "text": "A retinal scan"
+                },
+                {
+                    "id": "o3",
+                    "text": "A physical hardware token or smart card"
+                },
+                {
+                    "id": "o4",
+                    "text": "A security question (e.g., 'First pet's name?')"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "MFA possession factors rely on a physical object the user controls, such as a smartphone, hardware token, or smart card. Passwords and security questions are knowledge factors (something you know), and retinal scans are inherence factors (something you are)."
+        },
+        {
+            "id": "q58",
+            "question": "What type of malware is designed to remain completely dormant until a specific condition, action, or date triggers its malicious payload?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Spyware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Logic Bomb"
+                },
+                {
+                    "id": "o3",
+                    "text": "Adware"
+                },
+                {
+                    "id": "o4",
+                    "text": "Keylogger"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Logic Bomb is a piece of malicious code intentionally inserted into software that lies dormant until specific conditions are met (e.g., a specific date, or an employee being removed from the payroll system), at which point it executes."
+        },
+        {
+            "id": "q59",
+            "question": "Which of the following are common methods used to improve the security of a wireless network? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Enabling WPA3 encryption"
+                },
+                {
+                    "id": "o2",
+                    "text": "Disabling the network firewall"
+                },
+                {
+                    "id": "o3",
+                    "text": "Using MAC address filtering"
+                },
+                {
+                    "id": "o4",
+                    "text": "Broadcasting the SSID in plain text without a password"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "WPA3 provides robust encryption for wireless traffic, and MAC address filtering limits network access only to devices with recognized physical hardware addresses. Disabling firewalls or leaving SSIDs open reduces security."
+        },
+        {
+            "id": "q60",
+            "question": "What is the main purpose of a 'honeypot' in a cybersecurity defense strategy?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To securely centralize the storage of root passwords and encryption keys."
+                },
+                {
+                    "id": "o2",
+                    "text": "To act as a decoy system to attract attackers, allowing defenders to study their methods."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically apply software patches to vulnerable servers on a schedule."
+                },
+                {
+                    "id": "o4",
+                    "text": "To boost overall network performance by caching static web content."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A honeypot is an intentionally vulnerable decoy system deployed alongside production networks. Its purpose is to lure malicious actors, isolate their attacks, and gather threat intelligence without risking real assets."
+        }
+    ]
+}

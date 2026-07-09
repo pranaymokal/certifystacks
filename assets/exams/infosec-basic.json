@@ -1,0 +1,1711 @@
+{
+    "id": "infosec-basic",
+    "name": "Information Security Basics",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which term describes the psychological manipulation of people into performing actions or divulging confidential information?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Social Engineering"
+                },
+                {
+                    "id": "o2",
+                    "text": "Penetration Testing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data Masking"
+                },
+                {
+                    "id": "o4",
+                    "text": "Network Sniffing"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Social engineering is a non-technical strategy cyber attackers use that relies heavily on human interaction and often involves tricking people into breaking normal security procedures to gain access to systems or data."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary characteristic of a 'brute force' attack?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bypassing physical locks using specialized tools."
+                },
+                {
+                    "id": "o2",
+                    "text": "Using automated software to guess passwords by systematically trying every possible combination."
+                },
+                {
+                    "id": "o3",
+                    "text": "Bribing an employee to hand over their login credentials."
+                },
+                {
+                    "id": "o4",
+                    "text": "Exploiting an unpatched vulnerability in a web server's operating system."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page. Hackers work through all possible combinations hoping to guess correctly."
+        },
+        {
+            "id": "q3",
+            "question": "In cybersecurity terminology, what is a 'White Hat' hacker?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An attacker who operates for financial gain or malicious purposes."
+                },
+                {
+                    "id": "o2",
+                    "text": "A hacker who strictly targets government organizations."
+                },
+                {
+                    "id": "o3",
+                    "text": "An ethical security professional who hacks into systems with permission to identify vulnerabilities."
+                },
+                {
+                    "id": "o4",
+                    "text": "An individual who develops destructive malware viruses."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "White hat hackers, or ethical hackers, use their skills to improve security by exposing vulnerabilities before malicious hackers (Black hats) can detect and exploit them. They operate with the permission of the system owner."
+        },
+        {
+            "id": "q4",
+            "question": "Which physical security policy requires employees to clear sensitive information from their workspaces and lock their screens at the end of the day?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Bring Your Own Device (BYOD) Policy"
+                },
+                {
+                    "id": "o2",
+                    "text": "Clean Desk Policy"
+                },
+                {
+                    "id": "o3",
+                    "text": "Acceptable Use Policy"
+                },
+                {
+                    "id": "o4",
+                    "text": "Incident Response Policy"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Clean Desk (and Clear Screen) policy ensures that all sensitive, confidential, or proprietary information is removed from a user's workspace and computers are locked when the area is unattended."
+        },
+        {
+            "id": "q5",
+            "question": "An attacker sits behind a victim in a coffee shop and records their login credentials by watching them type on their laptop keyboard. This is an example of:",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Eavesdropping"
+                },
+                {
+                    "id": "o2",
+                    "text": "Shoulder Surfing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Vishing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Dumpster Diving"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Shoulder surfing is the practice of spying on the user of an ATM, computer, or other electronic device in order to obtain their personal access information, passwords, or PINs."
+        },
+        {
+            "id": "q6",
+            "question": "At a fundamental level, what does 'encryption' do to data?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It permanently deletes the data so it cannot be recovered."
+                },
+                {
+                    "id": "o2",
+                    "text": "It converts readable plaintext into an unreadable format called ciphertext."
+                },
+                {
+                    "id": "o3",
+                    "text": "It copies data to an offsite backup location."
+                },
+                {
+                    "id": "o4",
+                    "text": "It compresses the data to save storage space on a hard drive."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Encryption is the process of converting human-readable data (plaintext) into an unreadable, scrambled format (ciphertext) using cryptographic algorithms, making it useless to anyone without the decryption key."
+        },
+        {
+            "id": "q7",
+            "question": "What is the primary function of Antivirus or Anti-malware software?",
+            "type": "single-choice",
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To detect, prevent, and remove malicious software from a computing device."
+                },
+                {
+                    "id": "o2",
+                    "text": "To physically cool down a computer's processor during heavy workloads."
+                },
+                {
+                    "id": "o3",
+                    "text": "To block all incoming internet traffic automatically."
+                },
+                {
+                    "id": "o4",
+                    "text": "To backup user files to a cloud storage provider."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Antivirus and anti-malware programs are designed to scan devices for known virus signatures or suspicious behaviors to prevent, quarantine, or remove malicious software."
+        },
+        {
+            "id": "q8",
+            "question": "When browsing the web, what does the 'S' in HTTPS stand for, and what does it indicate?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "System; it indicates the website has access to local system files."
+                },
+                {
+                    "id": "o2",
+                    "text": "Standard; it indicates the website follows basic internet protocols."
+                },
+                {
+                    "id": "o3",
+                    "text": "Secure; it indicates the communication between the browser and the website is encrypted."
+                },
+                {
+                    "id": "o4",
+                    "text": "Speed; it indicates a faster connection route."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'S' stands for Secure. HTTPS (Hypertext Transfer Protocol Secure) encrypts the data sent between your browser and the website, protecting it from interception or tampering."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following describes a 'Keylogger'?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A physical vault used to store cryptographic keys."
+                },
+                {
+                    "id": "o2",
+                    "text": "A type of spyware that secretly records every keystroke typed on a user's keyboard."
+                },
+                {
+                    "id": "o3",
+                    "text": "A tool used by administrators to generate strong passwords."
+                },
+                {
+                    "id": "o4",
+                    "text": "An audit log that tracks when a user logs into a database."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A keylogger is a form of malware or hardware device that records the keys struck on a keyboard, typically covertly, so that the person using the keyboard is unaware that their actions are being monitored and their passwords stolen."
+        },
+        {
+            "id": "q10",
+            "question": "What is 'Phishing'?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A method of securely exchanging encryption keys over a network."
+                },
+                {
+                    "id": "o2",
+                    "text": "A cybercrime where attackers pose as legitimate institutions via email to trick individuals into providing sensitive data."
+                },
+                {
+                    "id": "o3",
+                    "text": "A technique to optimize a computer network's bandwidth."
+                },
+                {
+                    "id": "o4",
+                    "text": "A process of verifying a user's biometric identity."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers, by disguising the communication as coming from a trusted source."
+        },
+        {
+            "id": "q11",
+            "question": "An attacker leaves a malware-infected USB drive labeled 'Q4 Employee Bonuses' in a company parking lot, hoping someone will plug it into their corporate computer. What is this attack called?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Baiting"
+                },
+                {
+                    "id": "o2",
+                    "text": "Phishing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Dumpster Diving"
+                },
+                {
+                    "id": "o4",
+                    "text": "Ransomware"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Baiting relies on the curiosity or greed of the victim. Attackers leave physical devices (like USBs) or digital links disguised as something appealing, hoping the victim will take the 'bait' and compromise their system."
+        },
+        {
+            "id": "q12",
+            "question": "Which authentication process allows a user to log in with one set of credentials and securely access multiple applications or websites without being prompted to log in again?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Two-Factor Authentication (2FA)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Single Sign-On (SSO)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Discretionary Access Control (DAC)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Single Sign-On (SSO) is a centralized session and user authentication service that permits a user to use one set of login credentials to access multiple mutually trusting applications."
+        },
+        {
+            "id": "q13",
+            "question": "What is the main goal of Security Awareness Training in an organization?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To train employees on how to program firewalls."
+                },
+                {
+                    "id": "o2",
+                    "text": "To educate employees on security policies, risks, and how to identify and prevent cyber threats."
+                },
+                {
+                    "id": "o3",
+                    "text": "To teach developers how to write faster software code."
+                },
+                {
+                    "id": "o4",
+                    "text": "To replace automated security software with human monitoring."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Security Awareness Training aims to mitigate user risk by equipping employees with the knowledge needed to recognize cyber threats (like phishing or social engineering) and respond appropriately."
+        },
+        {
+            "id": "q14",
+            "question": "What is a major security risk associated with Bring Your Own Device (BYOD) policies? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Corporate data mixing with personal data on unmanaged devices."
+                },
+                {
+                    "id": "o2",
+                    "text": "Lower hardware procurement costs for the organization."
+                },
+                {
+                    "id": "o3",
+                    "text": "Increased risk of device loss or theft leading to data breaches."
+                },
+                {
+                    "id": "o4",
+                    "text": "Improved employee satisfaction and productivity."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "While BYOD can lower costs and boost morale (options o2 and o4), the security risks involve a lack of control over the endpoint. This leads to personal and corporate data blending and an increased risk of data exposure if the unmanaged device is lost, stolen, or infected."
+        },
+        {
+            "id": "q15",
+            "question": "What is an Information Security Policy?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A piece of software installed on servers to block hackers."
+                },
+                {
+                    "id": "o2",
+                    "text": "A high-level document outlining the rules, expectations, and guidelines for how an organization protects its IT assets and data."
+                },
+                {
+                    "id": "o3",
+                    "text": "A legal contract signed between a cloud provider and a customer."
+                },
+                {
+                    "id": "o4",
+                    "text": "An automated system that backs up files on a nightly basis."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Information Security Policy is a foundational governance document that establishes management's commitment to security, defining the rules and procedures that all individuals must follow to secure the organization's information assets."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is considered a biometric authentication method?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A specialized USB hardware token"
+                },
+                {
+                    "id": "o2",
+                    "text": "A complex 16-character password"
+                },
+                {
+                    "id": "o3",
+                    "text": "A fingerprint scan"
+                },
+                {
+                    "id": "o4",
+                    "text": "A one-time PIN sent via text message"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Biometric authentication relies on unique physical characteristics of a person, such as a fingerprint, facial structure, or retina pattern, to verify their identity."
+        },
+        {
+            "id": "q17",
+            "question": "What type of malware is specifically designed to secretly monitor and record a user's computer activities without their consent?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Ransomware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Spyware"
+                },
+                {
+                    "id": "o3",
+                    "text": "Worm"
+                },
+                {
+                    "id": "o4",
+                    "text": "Logic Bomb"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Spyware is malicious software designed to enter a user's device, gather data about them, and forward it to a third party without their consent."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following are common tools used to protect a local network from external threats? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Firewall"
+                },
+                {
+                    "id": "o2",
+                    "text": "Word processor"
+                },
+                {
+                    "id": "o3",
+                    "text": "Intrusion Prevention System (IPS)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Graphics editor"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Firewalls and Intrusion Prevention Systems (IPS) are fundamental network security tools used to monitor, filter, and block malicious traffic entering or leaving a network."
+        },
+        {
+            "id": "q19",
+            "question": "Why is it important to maintain offsite backups of critical business data?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To increase the processing speed of the primary database."
+                },
+                {
+                    "id": "o2",
+                    "text": "To protect data availability in the event of a physical disaster at the main office."
+                },
+                {
+                    "id": "o3",
+                    "text": "To reduce the monthly cost of cloud computing services."
+                },
+                {
+                    "id": "o4",
+                    "text": "To prevent internal employees from reading the data."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Offsite backups ensure that if a physical disaster (like a fire, flood, or widespread power grid failure) destroys the primary location, a copy of the data safely survives elsewhere."
+        },
+        {
+            "id": "q20",
+            "question": "If a marketing employee requests access to the company's financial payroll database, which security principle dictates that this request should be denied?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Separation of Duties"
+                },
+                {
+                    "id": "o2",
+                    "text": "Principle of Least Privilege"
+                },
+                {
+                    "id": "o3",
+                    "text": "Non-repudiation"
+                },
+                {
+                    "id": "o4",
+                    "text": "Multi-Factor Authentication"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Principle of Least Privilege states that a user should only have the minimum level of access required to perform their specific job functions. A marketing employee does not need payroll access."
+        },
+        {
+            "id": "q21",
+            "question": "An authorized employee intentionally deletes important project files just before resigning. What kind of threat does this represent?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "External Threat"
+                },
+                {
+                    "id": "o2",
+                    "text": "Insider Threat"
+                },
+                {
+                    "id": "o3",
+                    "text": "Advanced Persistent Threat (APT)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Script Kiddie"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An insider threat is a malicious threat to an organization that comes from people within the organization, such as employees, former employees, contractors or business associates, who have inside information concerning the organization's security practices, data, and computer systems."
+        },
+        {
+            "id": "q22",
+            "question": "What is a 'security patch'?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A physical lock placed on a server rack in a datacenter."
+                },
+                {
+                    "id": "o2",
+                    "text": "A piece of software designed to update a computer program or its supporting data to fix a known vulnerability."
+                },
+                {
+                    "id": "o3",
+                    "text": "A specialized cable used to connect securely to a router."
+                },
+                {
+                    "id": "o4",
+                    "text": "An automated system that resets user passwords every 90 days."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A patch is a software update released by developers to fix bugs, address security vulnerabilities, or improve the performance of an application or operating system."
+        },
+        {
+            "id": "q23",
+            "question": "A user logs into a system using a password and a code sent via SMS to their phone. Which two authentication factors are being used? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Something you know"
+                },
+                {
+                    "id": "o2",
+                    "text": "Something you are"
+                },
+                {
+                    "id": "o3",
+                    "text": "Something you have"
+                },
+                {
+                    "id": "o4",
+                    "text": "Something you do"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "A password represents 'something you know' (knowledge factor), and the smartphone receiving the SMS code represents 'something you have' (possession factor)."
+        },
+        {
+            "id": "q24",
+            "question": "What is the term for searching through an organization's trash to find sensitive documents or discarded hardware containing confidential information?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Phishing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vishing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Dumpster Diving"
+                },
+                {
+                    "id": "o4",
+                    "text": "Tailgating"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Dumpster diving is a technique used to retrieve information that could be used to carry out an attack on a computer network. Dumpster divers look for discarded documents, passwords, or hardware."
+        },
+        {
+            "id": "q25",
+            "question": "Data that is actively moving across a network from a server to a client is referred to as what?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data at rest"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data in use"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data in transit"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data in escrow"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Data in transit (or data in motion) is data actively moving from one location to another, such as across the internet or through a private network. It should be protected using encryption protocols like TLS."
+        },
+        {
+            "id": "q26",
+            "question": "Which document outlines what employees can and cannot do on company-owned computers and networks?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Business Continuity Plan (BCP)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Acceptable Use Policy (AUP)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Service Level Agreement (SLA)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Incident Response Plan (IRP)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Acceptable Use Policy (AUP) is a document stipulating constraints and practices that a user must agree to for access to a corporate network, internet, or devices."
+        },
+        {
+            "id": "q27",
+            "question": "Which cryptographic process transforms data into a fixed-length string of characters and cannot be mathematically reversed back to its original form?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Asymmetric Encryption"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hashing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Symmetric Encryption"
+                },
+                {
+                    "id": "o4",
+                    "text": "Obfuscation"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Hashing is a one-way mathematical function used to verify data integrity. Unlike encryption, which is designed to be decrypted, a hash cannot be reverse-engineered back into the original data."
+        },
+        {
+            "id": "q28",
+            "question": "What is a common, critical security risk when installing a new hardware router or IoT device on a network?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The device might consume excessive electricity."
+                },
+                {
+                    "id": "o2",
+                    "text": "Leaving the manufacturer's default username and password unchanged."
+                },
+                {
+                    "id": "o3",
+                    "text": "The device might automatically upgrade its firmware."
+                },
+                {
+                    "id": "o4",
+                    "text": "Using a wired ethernet connection instead of Wi-Fi."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Default manufacturer credentials (like admin/admin) are widely known and publicly available. Failing to change them immediately allows attackers to easily log in and compromise the device."
+        },
+        {
+            "id": "q29",
+            "question": "Which of the following are examples of social engineering attacks? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Phishing"
+                },
+                {
+                    "id": "o2",
+                    "text": "Tailgating"
+                },
+                {
+                    "id": "o3",
+                    "text": "Pretexting"
+                },
+                {
+                    "id": "o4",
+                    "text": "SQL Injection"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Phishing (deceptive emails), Tailgating (sneaking into buildings), and Pretexting (creating a fabricated scenario to extract information) all rely on human manipulation. SQL Injection is a purely technical attack on a database."
+        },
+        {
+            "id": "q30",
+            "question": "Why is Multi-Factor Authentication (MFA) considered more secure than using only a strong password?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It prevents the user from ever forgetting their password."
+                },
+                {
+                    "id": "o2",
+                    "text": "It requires an attacker to compromise multiple distinct authentication mechanisms to gain access."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically encrypts the local hard drive."
+                },
+                {
+                    "id": "o4",
+                    "text": "It ensures the user's password never expires."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "MFA drastically increases security because even if an attacker steals a user's password, they cannot access the account without also obtaining the second factor (like a mobile device or hardware token)."
+        },
+        {
+            "id": "q31",
+            "question": "A network of compromised computers infected with malware and controlled remotely by a malicious actor is known as what?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Honeypot"
+                },
+                {
+                    "id": "o2",
+                    "text": "Botnet"
+                },
+                {
+                    "id": "o3",
+                    "text": "Intranet"
+                },
+                {
+                    "id": "o4",
+                    "text": "Virtual Private Network (VPN)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A botnet (robot network) is a collection of internet-connected devices infected by malware that allow hackers to control them. Botnets are often used to launch Distributed Denial of Service (DDoS) attacks or send spam."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following is considered a best practice for securely storing user passwords in a database?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Storing them in plain text for easy retrieval"
+                },
+                {
+                    "id": "o2",
+                    "text": "Encrypting them using a shared public key"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hashing the passwords with a unique salt"
+                },
+                {
+                    "id": "o4",
+                    "text": "Saving them in a hidden spreadsheet"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Passwords should never be stored in plain text or using reversible encryption. They should be hashed (a one-way cryptographic function) and 'salted' (adding random data before hashing) to protect against dictionary and rainbow table attacks."
+        },
+        {
+            "id": "q33",
+            "question": "A highly targeted social engineering attack focused on high-level executives, such as a CEO or CFO, is known as what?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Whaling"
+                },
+                {
+                    "id": "o2",
+                    "text": "Vishing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Smishing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Pharming"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Whaling is a specific form of spear phishing that targets high-profile employees, or 'whales,' in an attempt to steal sensitive company information or manipulate them into authorizing high-value wire transfers."
+        },
+        {
+            "id": "q34",
+            "question": "Which wireless security protocol is currently considered the most secure standard for protecting modern Wi-Fi networks?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "WEP (Wired Equivalent Privacy)"
+                },
+                {
+                    "id": "o2",
+                    "text": "WPA3 (Wi-Fi Protected Access 3)"
+                },
+                {
+                    "id": "o3",
+                    "text": "WPA (Wi-Fi Protected Access)"
+                },
+                {
+                    "id": "o4",
+                    "text": "MAC Address Filtering"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "WPA3 is the latest and most secure Wi-Fi security protocol, offering enhanced cryptographic strength and better protection against offline dictionary attacks compared to its predecessors like WPA2 and the heavily outdated WEP."
+        },
+        {
+            "id": "q35",
+            "question": "The process of identifying, evaluating, and prioritizing potential vulnerabilities and threats to an organization's assets is known as what?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Risk Assessment"
+                },
+                {
+                    "id": "o2",
+                    "text": "Incident Response"
+                },
+                {
+                    "id": "o3",
+                    "text": "Penetration Testing"
+                },
+                {
+                    "id": "o4",
+                    "text": "Patch Management"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A Risk Assessment is a foundational security exercise where an organization identifies its critical assets, discovers potential threats and vulnerabilities to those assets, and evaluates the potential impact and likelihood of a breach."
+        },
+        {
+            "id": "q36",
+            "question": "In which access control model does the operating system or system administrator strictly determine who has access to resources based on security labels and clearance levels?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Discretionary Access Control (DAC)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Mandatory Access Control (MAC)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Rule-Based Access Control (RuBAC)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Mandatory Access Control (MAC), access policies are determined centrally by an administrator and enforced by the system. Users cannot alter access rights to data they create. It is heavily used in government and military environments using classification labels."
+        },
+        {
+            "id": "q37",
+            "question": "Which security concept ensures that a sender cannot deny having sent a specific message and a receiver cannot deny having received it?",
+            "type": "single-choice",
+            "topic": "Security Fundamentals",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Confidentiality"
+                },
+                {
+                    "id": "o2",
+                    "text": "Integrity"
+                },
+                {
+                    "id": "o3",
+                    "text": "Non-repudiation"
+                },
+                {
+                    "id": "o4",
+                    "text": "Availability"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Non-repudiation provides indisputable proof of the origin, authenticity, and integrity of data. It ensures that neither the sender nor the recipient of a message can deny their participation in a digital transaction."
+        },
+        {
+            "id": "q38",
+            "question": "A physical security control consisting of a small space with two interlocking doors, designed to prevent unauthorized individuals from tailgating, is called what?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Turnstile"
+                },
+                {
+                    "id": "o2",
+                    "text": "Mantrap"
+                },
+                {
+                    "id": "o3",
+                    "text": "Faraday cage"
+                },
+                {
+                    "id": "o4",
+                    "text": "Demilitarized Zone (DMZ)"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A mantrap (or security vestibule) is a physical security mechanism where a person must successfully authenticate and pass through an initial door, which must close completely before the second door will open, effectively stopping tailgating."
+        },
+        {
+            "id": "q39",
+            "question": "Which type of cyber attack redirects a user to a fraudulent website even if the user types the correct and legitimate URL into their web browser?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pharming"
+                },
+                {
+                    "id": "o2",
+                    "text": "Phishing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Pretexting"
+                },
+                {
+                    "id": "o4",
+                    "text": "Dumpster Diving"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Pharming is a cyber attack intended to redirect a website's traffic to another, fake site. It is usually conducted by changing the hosts file on a victim's computer or by exploiting a vulnerability in DNS server software."
+        },
+        {
+            "id": "q40",
+            "question": "Which of the following are common examples of endpoint devices that require active security protections like Antivirus or EDR? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Laptops"
+                },
+                {
+                    "id": "o2",
+                    "text": "Smartphones"
+                },
+                {
+                    "id": "o3",
+                    "text": "Core Network Routers"
+                },
+                {
+                    "id": "o4",
+                    "text": "Desktop Computers"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o4"
+            ],
+            "explanation": "Endpoints are the physical devices that connect to and exchange information with a computer network. Examples include laptops, desktops, and mobile devices. A core network router is a network infrastructure device, not an endpoint."
+        },
+        {
+            "id": "q41",
+            "question": "What is the function of a Demilitarized Zone (DMZ) in network security?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A subnetwork that exposes an organization's public-facing services to an untrusted network, adding an extra layer of security to the internal LAN."
+                },
+                {
+                    "id": "o2",
+                    "text": "A highly secure internal network completely isolated from the internet, used strictly for storing classified data."
+                },
+                {
+                    "id": "o3",
+                    "text": "A physical area in a data center where servers are kept under armed guard."
+                },
+                {
+                    "id": "o4",
+                    "text": "A specialized software tool used to permanently delete sensitive files."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A DMZ is a physical or logical subnetwork that contains and exposes an organization's external-facing services (like web or email servers) to a larger and untrusted network, usually the internet, keeping them separate from the private internal network."
+        },
+        {
+            "id": "q42",
+            "question": "Replacing sensitive data with fictitious but structurally realistic data for use in software development or testing environments is known as what?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Data Encryption"
+                },
+                {
+                    "id": "o2",
+                    "text": "Data Masking"
+                },
+                {
+                    "id": "o3",
+                    "text": "Data Deduplication"
+                },
+                {
+                    "id": "o4",
+                    "text": "Data Hashing"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Data Masking (or data anonymization/obfuscation) creates a fake, but structurally similar, version of an organization's data that can be used for purposes like software testing and user training without exposing actual sensitive customer information."
+        },
+        {
+            "id": "q43",
+            "question": "Which of the following are common technical indicators that a computer system might be infected with malware? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Frequent system crashes or 'Blue Screens of Death'"
+                },
+                {
+                    "id": "o2",
+                    "text": "Unexpected and aggressive pop-up advertisements"
+                },
+                {
+                    "id": "o3",
+                    "text": "Unusually slow overall computer performance"
+                },
+                {
+                    "id": "o4",
+                    "text": "Faster internet download speeds"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2",
+                "o3"
+            ],
+            "explanation": "Malware consumes system resources and alters critical files, leading to slow performance, frequent crashes, unexpected pop-ups, and hijacked web browsers. It will not improve internet download speeds."
+        },
+        {
+            "id": "q44",
+            "question": "A cyber attack where an attacker inserts malicious code into a website's input form to manipulate the backend database and extract information is called what?",
+            "type": "single-choice",
+            "topic": "Application Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Cross-Site Scripting (XSS)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Buffer Overflow"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL Injection"
+                },
+                {
+                    "id": "o4",
+                    "text": "Distributed Denial of Service (DDoS)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "SQL Injection (SQLi) is a code injection technique used to attack data-driven applications, in which malicious SQL statements are inserted into entry fields for execution by the backend database."
+        },
+        {
+            "id": "q45",
+            "question": "During a major cybersecurity breach, what is the immediate primary goal of the 'Containment' phase in the incident response process?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To format all hard drives to erase the malware completely."
+                },
+                {
+                    "id": "o2",
+                    "text": "To identify the attacker and contact law enforcement agencies."
+                },
+                {
+                    "id": "o3",
+                    "text": "To restore all lost data from backups immediately."
+                },
+                {
+                    "id": "o4",
+                    "text": "To isolate the affected systems to prevent the threat from spreading further."
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The goal of containment is to limit the scope and magnitude of an incident. By isolating the affected systems (e.g., disconnecting them from the network), security teams prevent the attack from spreading to other systems or extracting more data."
+        },
+        {
+            "id": "q46",
+            "question": "What does the acronym PII stand for in the context of information security and privacy?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public Internet Infrastructure"
+                },
+                {
+                    "id": "o2",
+                    "text": "Personally Identifiable Information"
+                },
+                {
+                    "id": "o3",
+                    "text": "Primary Identity Indicator"
+                },
+                {
+                    "id": "o4",
+                    "text": "Protected Internal Interface"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "PII stands for Personally Identifiable Information. It refers to any data that can be used to distinguish or trace an individual's identity, such as a name, social security number, or biometric records."
+        },
+        {
+            "id": "q47",
+            "question": "Which of the following describes an 'Evil Twin' attack?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Two users attempting to log into the same account simultaneously."
+                },
+                {
+                    "id": "o2",
+                    "text": "A rogue Wi-Fi access point configured to mimic a legitimate hotspot to eavesdrop on users."
+                },
+                {
+                    "id": "o3",
+                    "text": "Malware that creates exact duplicates of files to consume hard drive space."
+                },
+                {
+                    "id": "o4",
+                    "text": "A physical server designed to act as a decoy for attackers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An Evil Twin is a fraudulent Wi-Fi access point that appears to be legitimate but is set up to eavesdrop on wireless communications and steal sensitive user data."
+        },
+        {
+            "id": "q48",
+            "question": "What is the primary purpose of a 'Rootkit'?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To hide the presence of malicious software and maintain privileged access to a system."
+                },
+                {
+                    "id": "o2",
+                    "text": "To automatically decrypt encrypted files on a corporate network."
+                },
+                {
+                    "id": "o3",
+                    "text": "To filter inbound network traffic based on physical MAC addresses."
+                },
+                {
+                    "id": "o4",
+                    "text": "To generate complex passwords for system administrators."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A rootkit is a collection of computer software designed to enable access to a computer or an area of its software that is not otherwise allowed, while masking its existence or the existence of other software."
+        },
+        {
+            "id": "q49",
+            "question": "What does the widely recommended '3-2-1 rule' for data backups entail?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Keep 3 copies of data, on 2 different systems, managed by 1 administrator."
+                },
+                {
+                    "id": "o2",
+                    "text": "Keep 3 total copies of data, on 2 different media types, with 1 copy stored offsite."
+                },
+                {
+                    "id": "o3",
+                    "text": "Perform backups 3 times a week, to 2 separate servers, for 1 year."
+                },
+                {
+                    "id": "o4",
+                    "text": "Retain 3 versions of software, on 2 operating systems, across 1 network."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 3-2-1 backup strategy dictates keeping three copies of your data: the original and two backups. These backups should be stored on two different types of media, with at least one backup kept securely offsite or in the cloud."
+        },
+        {
+            "id": "q50",
+            "question": "The practice of concealing a secret message or file inside an otherwise ordinary, non-secret file (such as an image or audio track) is known as:",
+            "type": "single-choice",
+            "topic": "Cryptography",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Steganography"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hashing"
+                },
+                {
+                    "id": "o3",
+                    "text": "Symmetric Encryption"
+                },
+                {
+                    "id": "o4",
+                    "text": "Obfuscation"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Steganography is the art and science of hiding information by embedding messages within other, seemingly harmless messages or files, avoiding drawing attention to the fact that a hidden message exists."
+        },
+        {
+            "id": "q51",
+            "question": "Which of the following best describes the concept of 'Chain of Custody' in a cybersecurity investigation?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The sequence of firewalls that network traffic must pass through."
+                },
+                {
+                    "id": "o2",
+                    "text": "The hierarchical structure of administrator permissions."
+                },
+                {
+                    "id": "o3",
+                    "text": "The chronological documentation that records the seizure, control, analysis, and storage of digital evidence."
+                },
+                {
+                    "id": "o4",
+                    "text": "The automated process of issuing and revoking digital certificates."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Chain of custody is a legal and forensic concept ensuring that digital evidence is tracked and handled carefully from the moment of collection to its presentation in court, proving the evidence was not tampered with."
+        },
+        {
+            "id": "q52",
+            "question": "Why do law enforcement and security professionals generally recommend against paying the ransom during a ransomware attack? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Paying the ransom funds further criminal activity and emboldens attackers."
+                },
+                {
+                    "id": "o2",
+                    "text": "Paying the ransom guarantees your files will be decrypted within 24 hours."
+                },
+                {
+                    "id": "o3",
+                    "text": "There is no guarantee that the attackers will actually provide a working decryption key."
+                },
+                {
+                    "id": "o4",
+                    "text": "Paying the ransom legally transfers liability to the attackers."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Paying ransoms does not guarantee data recovery, as you are dealing with criminals. Furthermore, payment provides the financial incentive for threat actors to continue developing and deploying ransomware."
+        },
+        {
+            "id": "q53",
+            "question": "What is the primary function of a network port scanner tool (such as Nmap)?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To permanently block all inbound traffic on a router."
+                },
+                {
+                    "id": "o2",
+                    "text": "To identify which network ports are open and what services are actively running on a target system."
+                },
+                {
+                    "id": "o3",
+                    "text": "To encrypt files before they are transmitted over the internet."
+                },
+                {
+                    "id": "o4",
+                    "text": "To securely wipe data from old hard drives."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Port scanning is a technique used to discover open doors (ports) on a computer or server. It helps administrators (and attackers) map the network surface and identify active services that might have vulnerabilities."
+        },
+        {
+            "id": "q54",
+            "question": "Which physical security control uses sturdy, vertical posts designed to prevent vehicles from ramming into building entrances or pedestrian areas?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Turnstiles"
+                },
+                {
+                    "id": "o2",
+                    "text": "Bollards"
+                },
+                {
+                    "id": "o3",
+                    "text": "Faraday cages"
+                },
+                {
+                    "id": "o4",
+                    "text": "Mantraps"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Bollards are heavy physical barriers installed outside buildings. They are specifically engineered to stop unauthorized vehicular traffic and protect structures from ram-raiding attacks."
+        },
+        {
+            "id": "q55",
+            "question": "What is a 'Dictionary Attack' in the context of password cracking?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An attack that systematically attempts every single possible combination of keyboard characters."
+                },
+                {
+                    "id": "o2",
+                    "text": "An attack that exploits misspelled domain names."
+                },
+                {
+                    "id": "o3",
+                    "text": "An attack that relies on a predefined list of common words, phrases, and passwords to gain unauthorized access."
+                },
+                {
+                    "id": "o4",
+                    "text": "An attack that manipulates database language syntax to bypass authentication."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A dictionary attack uses a targeted list (a 'dictionary') of words, known passwords, and common variations (like 'password123') rather than trying every random character combination (which is a brute force attack)."
+        },
+        {
+            "id": "q56",
+            "question": "In Identity and Access Management, what is a 'Smart Card'?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A credit card used exclusively to purchase cybersecurity software."
+                },
+                {
+                    "id": "o2",
+                    "text": "A physical device with an embedded microchip used for securely storing credentials and authenticating users."
+                },
+                {
+                    "id": "o3",
+                    "text": "A biometric scanner that reads a user's fingerprint."
+                },
+                {
+                    "id": "o4",
+                    "text": "A software application installed on a smartphone to generate temporary pins."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A smart card is a physical token (something you have) containing an embedded integrated circuit chip. It can securely store cryptographic keys and digital certificates used for strong authentication."
+        },
+        {
+            "id": "q57",
+            "question": "What is the primary security risk of connecting a laptop to an open, unencrypted public Wi-Fi network at a coffee shop?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The laptop's battery will drain significantly faster."
+                },
+                {
+                    "id": "o2",
+                    "text": "Data transmitted over the network can be easily intercepted and read by malicious actors."
+                },
+                {
+                    "id": "o3",
+                    "text": "The coffee shop can legally claim ownership of your device."
+                },
+                {
+                    "id": "o4",
+                    "text": "The laptop will be permanently unable to connect to private networks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Open public Wi-Fi networks typically lack encryption. This means any unencrypted traffic (passwords, emails, browsing history) sent between your device and the router can be sniffed and captured by attackers on the same network."
+        },
+        {
+            "id": "q58",
+            "question": "Which of the following are examples of Personally Identifiable Information (PII) that require protection? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A person's full legal name"
+                },
+                {
+                    "id": "o2",
+                    "text": "The generic model name of a corporate laptop"
+                },
+                {
+                    "id": "o3",
+                    "text": "A government-issued Social Security Number"
+                },
+                {
+                    "id": "o4",
+                    "text": "Biometric fingerprint records"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "PII includes any data that can trace an individual's identity, such as names, SSNs, and biometrics. A generic laptop model is hardware information and does not identify a specific human being."
+        },
+        {
+            "id": "q59",
+            "question": "What is the main purpose of a Business Continuity Plan (BCP)?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To guarantee that a company's stock price remains stable during a crisis."
+                },
+                {
+                    "id": "o2",
+                    "text": "To outline procedures ensuring that essential business functions can continue during and after a major disruption or disaster."
+                },
+                {
+                    "id": "o3",
+                    "text": "To prevent employees from discussing corporate secrets with competitors."
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically detect and remove malware from user workstations."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Business Continuity Plan (BCP) is a comprehensive organizational strategy designed to prevent operational downtime and ensure that critical business operations can persist in the face of disasters, cyberattacks, or natural emergencies."
+        },
+        {
+            "id": "q60",
+            "question": "Which type of threat actor is typically highly skilled, heavily funded, organized, and often operates on behalf of a nation-state government to conduct espionage or disruption?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Script Kiddie"
+                },
+                {
+                    "id": "o2",
+                    "text": "Advanced Persistent Threat (APT)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Hacktivist"
+                },
+                {
+                    "id": "o4",
+                    "text": "Insider Threat"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Advanced Persistent Threats (APTs) represent top-tier threat actors. They are usually state-sponsored groups with vast resources, tasked with infiltrating systems and remaining undetected for long periods to steal data or compromise critical infrastructure."
+        }
+    ]
+}

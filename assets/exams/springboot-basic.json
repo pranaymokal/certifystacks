@@ -1,0 +1,1719 @@
+{
+    "id": "springboot-basic",
+    "name": "Spring Boot Fundamentals",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "Which annotation is primarily used to mark a class as a Spring Boot application configuration class and enables auto-configuration and component scanning?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@EnableAutoConfiguration"
+                },
+                {
+                    "id": "o2",
+                    "text": "@SpringBootApplication"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Configuration"
+                },
+                {
+                    "id": "o4",
+                    "text": "@ComponentScan"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@SpringBootApplication is a convenience annotation that adds @Configuration, @EnableAutoConfiguration, and @ComponentScan."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following are valid ways to define properties in a Spring Boot application? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "application.properties"
+                },
+                {
+                    "id": "o2",
+                    "text": "application.xml"
+                },
+                {
+                    "id": "o3",
+                    "text": "application.yml"
+                },
+                {
+                    "id": "o4",
+                    "text": "config.json"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Spring Boot natively supports application.properties and application.yml (or .yaml) files for externalized configuration."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary purpose of Spring Boot Starters?",
+            "type": "single-choice",
+            "topic": "Dependency Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To compile the source code."
+                },
+                {
+                    "id": "o2",
+                    "text": "To provide a set of convenient dependency descriptors to include in your application."
+                },
+                {
+                    "id": "o3",
+                    "text": "To serve as a web server for the application."
+                },
+                {
+                    "id": "o4",
+                    "text": "To replace the JVM."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Starters are dependency descriptors that aggregate common dependencies to simplify build configuration."
+        },
+        {
+            "id": "q4",
+            "question": "Which embedded servlet container is included by default in the 'spring-boot-starter-web' dependency?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Jetty"
+                },
+                {
+                    "id": "o2",
+                    "text": "Undertow"
+                },
+                {
+                    "id": "o3",
+                    "text": "Apache Tomcat"
+                },
+                {
+                    "id": "o4",
+                    "text": "GlassFish"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Spring Boot uses Apache Tomcat as the default embedded servlet container for web applications."
+        },
+        {
+            "id": "q5",
+            "question": "Which annotation is used to create a RESTful web service endpoint that maps incoming HTTP requests to controller methods?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@RequestMapping"
+                },
+                {
+                    "id": "o2",
+                    "text": "@RestController"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Controller"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Service"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "@RestController is a specialized controller, and @RequestMapping (along with @GetMapping, @PostMapping, etc.) maps the actual HTTP requests."
+        },
+        {
+            "id": "q6",
+            "question": "How do you run a Spring Boot application from the command line using the Maven wrapper?",
+            "type": "single-choice",
+            "topic": "Build Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "mvn run"
+                },
+                {
+                    "id": "o2",
+                    "text": "./mvnw spring-boot:run"
+                },
+                {
+                    "id": "o3",
+                    "text": "java -jar app.jar"
+                },
+                {
+                    "id": "o4",
+                    "text": "mvn start"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The command './mvnw spring-boot:run' invokes the Maven wrapper to execute the spring-boot-maven-plugin to run the app."
+        },
+        {
+            "id": "q7",
+            "question": "Which annotation is used to inject a dependency automatically in a Spring component?",
+            "type": "single-choice",
+            "topic": "Dependency Injection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Inject"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Autowired"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Component"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Service"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@Autowired is the standard Spring annotation for dependency injection."
+        },
+        {
+            "id": "q8",
+            "question": "What is the benefit of using Spring Boot Actuator?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Monitoring",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Provides built-in endpoints for monitoring and managing the application."
+                },
+                {
+                    "id": "o2",
+                    "text": "Automatically optimizes database queries."
+                },
+                {
+                    "id": "o3",
+                    "text": "Exposes metrics, health information, and environment details."
+                },
+                {
+                    "id": "o4",
+                    "text": "Compiles the code at runtime."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Actuator provides production-ready features like health checks, metrics, and info endpoints to monitor the app."
+        },
+        {
+            "id": "q9",
+            "question": "Which file is typically used to manage project dependencies in a Spring Boot Maven project?",
+            "type": "single-choice",
+            "topic": "Dependency Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "build.gradle"
+                },
+                {
+                    "id": "o2",
+                    "text": "pom.xml"
+                },
+                {
+                    "id": "o3",
+                    "text": "settings.xml"
+                },
+                {
+                    "id": "o4",
+                    "text": "application.properties"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "pom.xml is the Project Object Model file used by Maven for configuration and dependency management."
+        },
+        {
+            "id": "q10",
+            "question": "Which annotation tells Spring that a class is a component that should be managed by the Spring container?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Configuration"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Component"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Bean"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Controller"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@Component is the generic stereotype for any Spring-managed component."
+        },
+        {
+            "id": "q11",
+            "question": "What is the main advantage of the Spring Boot Auto-configuration feature?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It automatically generates the source code."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically configures Spring beans based on the classpath dependencies."
+                },
+                {
+                    "id": "o3",
+                    "text": "It enforces a strict folder structure."
+                },
+                {
+                    "id": "o4",
+                    "text": "It eliminates the need for Java entirely."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Auto-configuration attempts to automatically configure your Spring application based on the jar dependencies that you have added."
+        },
+        {
+            "id": "q12",
+            "question": "Which of these are commonly used stereotype annotations in Spring Boot? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Service"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Repository"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Method"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Library"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "@Service and @Repository are standard Spring stereotype annotations used for service and data access layers."
+        },
+        {
+            "id": "q13",
+            "question": "Which dependency is required to enable Spring Boot's production-ready monitoring features?",
+            "type": "single-choice",
+            "topic": "Monitoring",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring-boot-starter-web"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring-boot-starter-data-jpa"
+                },
+                {
+                    "id": "o3",
+                    "text": "spring-boot-starter-actuator"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring-boot-starter-test"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "spring-boot-starter-actuator adds the dependency needed to expose management endpoints."
+        },
+        {
+            "id": "q14",
+            "question": "What is the primary purpose of the '@Value' annotation?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To validate method inputs."
+                },
+                {
+                    "id": "o2",
+                    "text": "To inject values from property files into fields."
+                },
+                {
+                    "id": "o3",
+                    "text": "To define a new bean."
+                },
+                {
+                    "id": "o4",
+                    "text": "To mark a class as a service."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The @Value annotation is used to inject values into fields from property files or system environment variables."
+        },
+        {
+            "id": "q15",
+            "question": "Which annotation is used to create a bean method within a configuration class?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Bean"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Component"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Inject"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Configuration"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@Bean is used on a method to indicate that it returns a bean to be managed by the Spring container."
+        },
+        {
+            "id": "q16",
+            "question": "Which file in a Spring Boot project is primarily used to override default configuration properties provided by starters?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "pom.xml"
+                },
+                {
+                    "id": "o2",
+                    "text": "application.properties"
+                },
+                {
+                    "id": "o3",
+                    "text": "web.xml"
+                },
+                {
+                    "id": "o4",
+                    "text": "BeanConfig.java"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "application.properties (or application.yml) is the standard location for externalized configuration that overrides Spring Boot's default settings."
+        },
+        {
+            "id": "q17",
+            "question": "Which of these are valid profiles in Spring Boot used for environment-specific configuration? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "dev"
+                },
+                {
+                    "id": "o2",
+                    "text": "prod"
+                },
+                {
+                    "id": "o3",
+                    "text": "global"
+                },
+                {
+                    "id": "o4",
+                    "text": "local-only"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "'dev' and 'prod' are standard naming conventions used for environment-specific profiles in Spring Boot."
+        },
+        {
+            "id": "q18",
+            "question": "What happens if you have both 'application.properties' and 'application.yml' in your classpath with conflicting settings?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The application fails to start."
+                },
+                {
+                    "id": "o2",
+                    "text": "application.properties takes precedence."
+                },
+                {
+                    "id": "o3",
+                    "text": "application.yml takes precedence."
+                },
+                {
+                    "id": "o4",
+                    "text": "Both are merged randomly."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "If both files exist, application.properties typically takes precedence over application.yml when loading configuration."
+        },
+        {
+            "id": "q19",
+            "question": "Which dependency is essential for building a Web application with Spring Boot?",
+            "type": "single-choice",
+            "topic": "Dependency Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring-boot-starter-jdbc"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring-boot-starter-web"
+                },
+                {
+                    "id": "o3",
+                    "text": "spring-boot-starter-test"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring-boot-starter-cache"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "spring-boot-starter-web is the standard starter for building web applications, including RESTful services using Spring MVC."
+        },
+        {
+            "id": "q20",
+            "question": "Which annotation is used to handle HTTP GET requests specifically?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@PostMapping"
+                },
+                {
+                    "id": "o2",
+                    "text": "@GetMapping"
+                },
+                {
+                    "id": "o3",
+                    "text": "@PutMapping"
+                },
+                {
+                    "id": "o4",
+                    "text": "@DeleteMapping"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET)."
+        },
+        {
+            "id": "q21",
+            "question": "How can you pass data from the URI path to a controller method?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@RequestParam"
+                },
+                {
+                    "id": "o2",
+                    "text": "@PathVariable"
+                },
+                {
+                    "id": "o3",
+                    "text": "@RequestBody"
+                },
+                {
+                    "id": "o4",
+                    "text": "@ModelAttribute"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@PathVariable is used to bind values from the URI template (e.g., /users/{id}) to method arguments."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following are valid scopes for a Spring Bean? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "singleton"
+                },
+                {
+                    "id": "o2",
+                    "text": "prototype"
+                },
+                {
+                    "id": "o3",
+                    "text": "constant"
+                },
+                {
+                    "id": "o4",
+                    "text": "static"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Singleton (default) and Prototype are standard bean scopes in the Spring Framework."
+        },
+        {
+            "id": "q23",
+            "question": "What is the default scope of a Spring Bean?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "prototype"
+                },
+                {
+                    "id": "o2",
+                    "text": "request"
+                },
+                {
+                    "id": "o3",
+                    "text": "singleton"
+                },
+                {
+                    "id": "o4",
+                    "text": "session"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In Spring, beans are singleton-scoped by default, meaning one instance per container."
+        },
+        {
+            "id": "q24",
+            "question": "Which Spring Boot annotation is used to enable scheduling tasks?",
+            "type": "single-choice",
+            "topic": "Advanced Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@EnableScheduling"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Scheduled"
+                },
+                {
+                    "id": "o3",
+                    "text": "@EnableTask"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Cron"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@EnableScheduling is used on a configuration class to enable the scheduler capability."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of the '@ConfigurationProperties' annotation?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To mark a class as a controller."
+                },
+                {
+                    "id": "o2",
+                    "text": "To bind properties from a file to a POJO."
+                },
+                {
+                    "id": "o3",
+                    "text": "To inject a dependency."
+                },
+                {
+                    "id": "o4",
+                    "text": "To define a database table."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@ConfigurationProperties is used to type-safely bind application properties to a Java class."
+        },
+        {
+            "id": "q26",
+            "question": "Which module in Spring Boot provides support for accessing data using JPA/Hibernate?",
+            "type": "single-choice",
+            "topic": "Data Access",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring-boot-starter-web"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring-boot-starter-data-jpa"
+                },
+                {
+                    "id": "o3",
+                    "text": "spring-boot-starter-hibernate"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring-boot-starter-data-rest"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "spring-boot-starter-data-jpa is the starter that brings in Spring Data JPA and Hibernate for database interaction."
+        },
+        {
+            "id": "q27",
+            "question": "Which of these are required to define a Repository interface in Spring Data JPA? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Data Access",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Extend JpaRepository"
+                },
+                {
+                    "id": "o2",
+                    "text": "Annotate with @Repository"
+                },
+                {
+                    "id": "o3",
+                    "text": "Define a main() method"
+                },
+                {
+                    "id": "o4",
+                    "text": "Extend ArrayList"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Typically, you extend JpaRepository and mark the interface with @Repository to allow Spring to create the proxy implementation."
+        },
+        {
+            "id": "q28",
+            "question": "What is the command to stop a Spring Boot application running as a JAR?",
+            "type": "single-choice",
+            "topic": "Deployment",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "kill -9 "
+                },
+                {
+                    "id": "o2",
+                    "text": "mvn stop"
+                },
+                {
+                    "id": "o3",
+                    "text": "exit"
+                },
+                {
+                    "id": "o4",
+                    "text": "stop app"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "When running as a JAR, it is a standalone process, so OS-level commands like 'kill' are used to terminate it."
+        },
+        {
+            "id": "q29",
+            "question": "Which Spring Boot feature helps in executing logic during application startup?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "CommandLineRunner"
+                },
+                {
+                    "id": "o2",
+                    "text": "StartupListener"
+                },
+                {
+                    "id": "o3",
+                    "text": "PostStartup"
+                },
+                {
+                    "id": "o4",
+                    "text": "init()"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "CommandLineRunner is an interface used to execute code after the application context has loaded."
+        },
+        {
+            "id": "q30",
+            "question": "Which annotation is used to map a JSON request body to a Java object in a controller?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@ResponseBody"
+                },
+                {
+                    "id": "o2",
+                    "text": "@RequestBody"
+                },
+                {
+                    "id": "o3",
+                    "text": "@JsonMapping"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Convert"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@RequestBody indicates that a method parameter should be bound to the body of the web request."
+        },
+        {
+            "id": "q31",
+            "question": "Which annotation is used to handle exceptions globally across all controllers in a Spring Boot application?",
+            "type": "single-choice",
+            "topic": "Exception Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@ExceptionHandler"
+                },
+                {
+                    "id": "o2",
+                    "text": "@ControllerAdvice"
+                },
+                {
+                    "id": "o3",
+                    "text": "@GlobalException"
+                },
+                {
+                    "id": "o4",
+                    "text": "@CatchAll"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@ControllerAdvice allows you to write global code that can be applied to a wide range of controllers, specifically for exception handling."
+        },
+        {
+            "id": "q32",
+            "question": "Which of these are true regarding the Spring Boot 'DevTools' module? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Development Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It provides automatic restarts on code changes."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically deploys the app to a production server."
+                },
+                {
+                    "id": "o3",
+                    "text": "It disables template caching for faster development."
+                },
+                {
+                    "id": "o4",
+                    "text": "It changes the default port to 80."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "DevTools provides features like automatic restart and disables template caching to improve the development loop."
+        },
+        {
+            "id": "q33",
+            "question": "Which interface should you implement to execute code once the Spring Boot application starts?",
+            "type": "single-choice",
+            "topic": "Application Lifecycle",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "ApplicationRunner"
+                },
+                {
+                    "id": "o2",
+                    "text": "StarterInterface"
+                },
+                {
+                    "id": "o3",
+                    "text": "BeanInitialization"
+                },
+                {
+                    "id": "o4",
+                    "text": "ContextStarted"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "ApplicationRunner is a functional interface that allows you to run code after the Spring application context has been started."
+        },
+        {
+            "id": "q34",
+            "question": "How do you specify a different server port in 'application.properties'?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "server.port=8081"
+                },
+                {
+                    "id": "o2",
+                    "text": "app.port=8081"
+                },
+                {
+                    "id": "o3",
+                    "text": "port.number=8081"
+                },
+                {
+                    "id": "o4",
+                    "text": "http.port=8081"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The 'server.port' property is the standard key used by Spring Boot to configure the embedded container port."
+        },
+        {
+            "id": "q35",
+            "question": "Which of the following are valid ways to inject a configuration property into a class? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Using @Value annotation"
+                },
+                {
+                    "id": "o2",
+                    "text": "Using Environment interface"
+                },
+                {
+                    "id": "o3",
+                    "text": "Using @InjectProperty"
+                },
+                {
+                    "id": "o4",
+                    "text": "Using @ConfigurationPropertyBinding"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Both the @Value annotation and the Environment abstraction are standard ways to access configuration properties."
+        },
+        {
+            "id": "q36",
+            "question": "What is the purpose of the 'spring-boot-starter-test' dependency?",
+            "type": "single-choice",
+            "topic": "Testing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It provides tools for database migrations."
+                },
+                {
+                    "id": "o2",
+                    "text": "It includes common testing libraries like JUnit, Mockito, and AssertJ."
+                },
+                {
+                    "id": "o3",
+                    "text": "It is used to profile the application memory usage."
+                },
+                {
+                    "id": "o4",
+                    "text": "It compiles Java source code."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The test starter is a meta-dependency that bundles the most popular testing frameworks for Spring Boot applications."
+        },
+        {
+            "id": "q37",
+            "question": "Which annotation is used to test a Spring Boot application by loading the full ApplicationContext?",
+            "type": "single-choice",
+            "topic": "Testing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@SpringBootTest"
+                },
+                {
+                    "id": "o2",
+                    "text": "@WebMvcTest"
+                },
+                {
+                    "id": "o3",
+                    "text": "@DataJpaTest"
+                },
+                {
+                    "id": "o4",
+                    "text": "@ContextTest"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@SpringBootTest is used to start the full application context for integration testing."
+        },
+        {
+            "id": "q38",
+            "question": "What happens if a required bean is not found at runtime?",
+            "type": "single-choice",
+            "topic": "Dependency Injection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Spring ignores the dependency."
+                },
+                {
+                    "id": "o2",
+                    "text": "The application throws a NoSuchBeanDefinitionException."
+                },
+                {
+                    "id": "o3",
+                    "text": "It automatically creates a dummy bean."
+                },
+                {
+                    "id": "o4",
+                    "text": "The application continues in a degraded state."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "If the Spring container cannot satisfy a dependency, it will fail to start and throw a NoSuchBeanDefinitionException."
+        },
+        {
+            "id": "q39",
+            "question": "Which of the following annotations are used for Field Validation? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Validation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@NotNull"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Size"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Validate"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Check"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "@NotNull and @Size are common annotations from the Java Bean Validation (JSR 380) spec."
+        },
+        {
+            "id": "q40",
+            "question": "What is the primary function of the 'mvn clean install' command?",
+            "type": "single-choice",
+            "topic": "Build Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It deletes the target folder and builds the project."
+                },
+                {
+                    "id": "o2",
+                    "text": "It only downloads dependencies."
+                },
+                {
+                    "id": "o3",
+                    "text": "It runs the application in debug mode."
+                },
+                {
+                    "id": "o4",
+                    "text": "It updates the IDE settings."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "'clean' removes the target directory, and 'install' compiles and packages the artifact into the local repository."
+        },
+        {
+            "id": "q41",
+            "question": "Which of the following describes the Spring Boot Actuator '/health' endpoint?",
+            "type": "single-choice",
+            "topic": "Monitoring",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It shows all loaded beans."
+                },
+                {
+                    "id": "o2",
+                    "text": "It provides information about application availability."
+                },
+                {
+                    "id": "o3",
+                    "text": "It lists all database tables."
+                },
+                {
+                    "id": "o4",
+                    "text": "It shows the current user sessions."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The /health endpoint is designed to provide status information about the application, useful for orchestrators like Kubernetes."
+        },
+        {
+            "id": "q42",
+            "question": "Which annotation is required in the main class of a Spring Boot app to enable component scanning?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@ComponentScan"
+                },
+                {
+                    "id": "o2",
+                    "text": "@EnableScan"
+                },
+                {
+                    "id": "o3",
+                    "text": "@AutoScan"
+                },
+                {
+                    "id": "o4",
+                    "text": "@LoadBeans"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@ComponentScan (which is included in @SpringBootApplication) tells Spring where to look for annotated components."
+        },
+        {
+            "id": "q43",
+            "question": "Which of these are valid HTTP methods supported by @RequestMapping? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GET"
+                },
+                {
+                    "id": "o2",
+                    "text": "POST"
+                },
+                {
+                    "id": "o3",
+                    "text": "SEND"
+                },
+                {
+                    "id": "o4",
+                    "text": "FETCH"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "GET and POST are fundamental HTTP methods supported by Spring MVC mappings."
+        },
+        {
+            "id": "q44",
+            "question": "What is the primary role of the 'spring-boot-starter-jdbc' dependency?",
+            "type": "single-choice",
+            "topic": "Data Access",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To provide a full-featured ORM solution."
+                },
+                {
+                    "id": "o2",
+                    "text": "To simplify JDBC connectivity by providing templates."
+                },
+                {
+                    "id": "o3",
+                    "text": "To act as an embedded database."
+                },
+                {
+                    "id": "o4",
+                    "text": "To manage non-relational databases."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The jdbc starter provides JdbcTemplate and other helpers to reduce boilerplate code when using native JDBC."
+        },
+        {
+            "id": "q45",
+            "question": "How do you enable lazy initialization in Spring Boot?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring.main.lazy-initialization=true"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring.bean.lazy=true"
+                },
+                {
+                    "id": "o3",
+                    "text": "@LazyInit"
+                },
+                {
+                    "id": "o4",
+                    "text": "lazy.beans=enabled"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Setting 'spring.main.lazy-initialization=true' allows beans to be created only when they are needed, rather than at startup."
+        },
+        {
+            "id": "q46",
+            "question": "Which Spring Boot annotation is used to indicate that a method should be executed after the dependency injection is complete and the bean is initialized?",
+            "type": "single-choice",
+            "topic": "Lifecycle",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@PostConstruct"
+                },
+                {
+                    "id": "o2",
+                    "text": "@PreDestroy"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Init"
+                },
+                {
+                    "id": "o4",
+                    "text": "@AfterInit"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@PostConstruct is a JSR-250 annotation used to execute a method after the bean has been fully initialized by the container."
+        },
+        {
+            "id": "q47",
+            "question": "What is the primary function of the '@Qualifier' annotation?",
+            "type": "single-choice",
+            "topic": "Dependency Injection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To mark a bean as optional."
+                },
+                {
+                    "id": "o2",
+                    "text": "To resolve ambiguity when multiple beans of the same type exist."
+                },
+                {
+                    "id": "o3",
+                    "text": "To enable lazy loading for a specific bean."
+                },
+                {
+                    "id": "o4",
+                    "text": "To change the bean scope to prototype."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "@Qualifier is used in conjunction with @Autowired to specify which bean to inject when multiple candidates exist."
+        },
+        {
+            "id": "q48",
+            "question": "Which of the following are valid ways to configure logging in a Spring Boot application? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Logging",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "logback-spring.xml"
+                },
+                {
+                    "id": "o2",
+                    "text": "application.properties"
+                },
+                {
+                    "id": "o3",
+                    "text": "log4j.properties"
+                },
+                {
+                    "id": "o4",
+                    "text": "server.log"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Spring Boot supports logging configuration via logback-spring.xml and directly within application.properties (e.g., logging.level.*)."
+        },
+        {
+            "id": "q49",
+            "question": "Which annotation is used to make a class a global controller advice for handling exceptions, model attributes, and data binding?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@ControllerAdvice"
+                },
+                {
+                    "id": "o2",
+                    "text": "@RestControllerAdvice"
+                },
+                {
+                    "id": "o3",
+                    "text": "@GlobalController"
+                },
+                {
+                    "id": "o4",
+                    "text": "@HandlerAdvice"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@ControllerAdvice is the standard way to define cross-cutting concerns for all controllers in a Spring MVC app."
+        },
+        {
+            "id": "q50",
+            "question": "Which of these are valid Spring Boot Starter dependencies? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Dependency Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring-boot-starter-data-redis"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring-boot-starter-thymeleaf"
+                },
+                {
+                    "id": "o3",
+                    "text": "spring-boot-starter-java"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring-boot-starter-run"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "spring-boot-starter-data-redis and spring-boot-starter-thymeleaf are official starters; the others do not exist."
+        },
+        {
+            "id": "q51",
+            "question": "What is the purpose of the '@ResponseStatus' annotation?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To set the HTTP status code for a response."
+                },
+                {
+                    "id": "o2",
+                    "text": "To mark a method as a REST endpoint."
+                },
+                {
+                    "id": "o3",
+                    "text": "To enable session tracking."
+                },
+                {
+                    "id": "o4",
+                    "text": "To validate the status of the server."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@ResponseStatus is used on methods or exception classes to declare the HTTP status code that should be returned."
+        },
+        {
+            "id": "q52",
+            "question": "Which annotation is used to include other configuration classes?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Import"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Include"
+                },
+                {
+                    "id": "o3",
+                    "text": "@InjectConfig"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Merge"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@Import is used to import additional @Configuration classes into the current configuration context."
+        },
+        {
+            "id": "q53",
+            "question": "How can you restrict an 'application.properties' file to a specific profile?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "application-{profile}.properties"
+                },
+                {
+                    "id": "o2",
+                    "text": "profile-{profile}.properties"
+                },
+                {
+                    "id": "o3",
+                    "text": "app.properties.{profile}"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring.profile.{profile}.properties"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Spring Boot automatically loads properties files following the pattern 'application-{profile}.properties' when that profile is active."
+        },
+        {
+            "id": "q54",
+            "question": "Which dependency provides the embedded Tomcat server?",
+            "type": "single-choice",
+            "topic": "Web Development",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "spring-boot-starter-web"
+                },
+                {
+                    "id": "o2",
+                    "text": "spring-boot-starter-tomcat"
+                },
+                {
+                    "id": "o3",
+                    "text": "spring-boot-starter-jetty"
+                },
+                {
+                    "id": "o4",
+                    "text": "spring-boot-starter-server"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The spring-boot-starter-web dependency includes the embedded Tomcat server by default."
+        },
+        {
+            "id": "q55",
+            "question": "What is the role of the 'spring-boot-maven-plugin'?",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Build Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To create an executable JAR file."
+                },
+                {
+                    "id": "o2",
+                    "text": "To run the application from Maven."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically deploy to Azure."
+                },
+                {
+                    "id": "o4",
+                    "text": "To manage Java versioning."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "The plugin provides 'repackage' (for executable JARs) and 'run' (for development execution) goals."
+        },
+        {
+            "id": "q56",
+            "question": "Which annotation tells Spring to ignore a class during component scanning?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Ignore"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Exclude"
+                },
+                {
+                    "id": "o3",
+                    "text": "@NoComponent"
+                },
+                {
+                    "id": "o4",
+                    "text": "It is not possible."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "While there isn't a single universal '@Ignore', exclusion is typically handled via @ComponentScan filters in the configuration."
+        },
+        {
+            "id": "q57",
+            "question": "Which of the following is the standard way to handle database transactions in Spring Boot?",
+            "type": "single-choice",
+            "topic": "Data Access",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Transactional"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Commit"
+                },
+                {
+                    "id": "o3",
+                    "text": "@DBTransaction"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Database"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@Transactional marks a method or class as requiring a transaction boundary."
+        },
+        {
+            "id": "q58",
+            "question": "What does the 'server.servlet.context-path' property change?",
+            "type": "single-choice",
+            "topic": "Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The port number."
+                },
+                {
+                    "id": "o2",
+                    "text": "The base path for all application endpoints."
+                },
+                {
+                    "id": "o3",
+                    "text": "The database connection string."
+                },
+                {
+                    "id": "o4",
+                    "text": "The logging level."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "This property sets the context root for the application (e.g., /api/v1)."
+        },
+        {
+            "id": "q59",
+            "question": "Which annotation is used to create a bean dynamically without component scanning?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "@Bean"
+                },
+                {
+                    "id": "o2",
+                    "text": "@Factory"
+                },
+                {
+                    "id": "o3",
+                    "text": "@Provide"
+                },
+                {
+                    "id": "o4",
+                    "text": "@Create"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "@Bean methods inside a @Configuration class allow manual control over bean instantiation."
+        },
+        {
+            "id": "q60",
+            "question": "What is the default behavior of Spring Boot when an error occurs during execution?",
+            "type": "single-choice",
+            "topic": "Error Handling",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It displays a default 'Whitelabel Error Page'."
+                },
+                {
+                    "id": "o2",
+                    "text": "It crashes the JVM."
+                },
+                {
+                    "id": "o3",
+                    "text": "It sends an email to the administrator."
+                },
+                {
+                    "id": "o4",
+                    "text": "It shows raw stack traces in the browser."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Spring Boot provides a default '/error' mapping that displays the Whitelabel Error Page."
+        }
+    ]
+}

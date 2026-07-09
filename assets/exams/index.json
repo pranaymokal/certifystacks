@@ -13,8 +13,8 @@
       "id": "aws-saa-basic",
       "name": "AWS Solutions Architect Associate",
       "vendor": "Amazon Web Services",
-      "questions": 15,
-      "duration": 15,
+      "questions": 60,
+      "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
     },
@@ -106,7 +106,88 @@
       "questions": 60,
       "duration": 60,
       "passingScore": 700,
-      "difficulty": "Basic"
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "azure-basic",
+      "name": "Microsoft Azure Fundamentals (AZ-900)",
+      "vendor": "Microsoft",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "infosec-basic",
+      "name": "Basic Information Security Concepts",
+      "vendor": "CertifyStacks",
+      "questions": 15,
+      "duration": 30,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "kubernetes-basic",
+      "name": "Kubernetes Basic",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "networking-basic",
+      "name": "Basic Networking Concepts",
+      "vendor": "CertifyStacks",
+      "questions": 15,
+      "duration": 30,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "security-basic",
+      "name": "Basic Cloud Security Concepts",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "aws-basic",
+      "name": "AWS Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "github-basic",
+      "name": "GitHub Fundamentals",
+      "vendor": "GitHub",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "git-basic",
+      "name": "Git Fundamentals",
+      "vendor": "Git",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "springboot-basic",
+      "name": "Spring Boot Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
     }
   ]
 }

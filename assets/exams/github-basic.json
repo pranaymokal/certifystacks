@@ -1,0 +1,1709 @@
+{
+    "id": "github-basic",
+    "name": "GitHub Fundamentals",
+    "vendor": "GitHub",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the primary difference between Git and GitHub?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Git is a version control system, while GitHub is a cloud-based hosting service for Git repositories."
+                },
+                {
+                    "id": "o2",
+                    "text": "Git is a cloud-based hosting service, while GitHub is a local version control system."
+                },
+                {
+                    "id": "o3",
+                    "text": "They are exactly the same tool developed by different companies."
+                },
+                {
+                    "id": "o4",
+                    "text": "Git is only used for open-source projects, while GitHub is only for private projects."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Git is the underlying distributed version control system (VCS) used to track changes locally. GitHub is a cloud platform that hosts Git repositories and provides collaboration features."
+        },
+        {
+            "id": "q2",
+            "question": "Which term describes creating a personal copy of another user's repository on your GitHub account?",
+            "type": "single-choice",
+            "topic": "Collaboration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Branching"
+                },
+                {
+                    "id": "o2",
+                    "text": "Cloning"
+                },
+                {
+                    "id": "o3",
+                    "text": "Forking"
+                },
+                {
+                    "id": "o4",
+                    "text": "Pushing"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Forking a repository creates a linked copy of a repository in your personal GitHub account, allowing you to freely experiment with changes without affecting the original project."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary purpose of a Pull Request (PR) in GitHub?",
+            "type": "single-choice",
+            "topic": "Pull Requests",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To download the latest code from the remote repository to your local machine."
+                },
+                {
+                    "id": "o2",
+                    "text": "To notify team members that you have completed a feature and want it merged into the main branch."
+                },
+                {
+                    "id": "o3",
+                    "text": "To permanently delete a repository."
+                },
+                {
+                    "id": "o4",
+                    "text": "To report a bug in the code."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A pull request is a mechanism to propose changes to a repository. It allows collaborators to review, discuss, and approve the changes before they are merged into the target branch."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following are valid visibility options when creating a new GitHub repository? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Repository Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Public"
+                },
+                {
+                    "id": "o2",
+                    "text": "Hidden"
+                },
+                {
+                    "id": "o3",
+                    "text": "Private"
+                },
+                {
+                    "id": "o4",
+                    "text": "Archived"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "When creating a new repository on GitHub, you can choose between Public (visible to anyone) or Private (visible only to you and explicitly added collaborators)."
+        },
+        {
+            "id": "q5",
+            "question": "What is the function of a .gitignore file in a GitHub repository?",
+            "type": "single-choice",
+            "topic": "Repository Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It completely disables version control for the entire repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "It specifies intentionally untracked files that Git and GitHub should ignore."
+                },
+                {
+                    "id": "o3",
+                    "text": "It deletes all unused code from the repository automatically."
+                },
+                {
+                    "id": "o4",
+                    "text": "It hides the repository from search engine results."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The .gitignore file tells Git which files or directories to ignore and not track in version control, such as compiled binaries, local environment variables, or IDE configurations."
+        },
+        {
+            "id": "q6",
+            "question": "Which GitHub feature is specifically designed to host static websites directly from a repository?",
+            "type": "single-choice",
+            "topic": "GitHub Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Actions"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Packages"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Pages"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Copilot"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository, optionally runs the files through a build process, and publishes a website."
+        },
+        {
+            "id": "q7",
+            "question": "What happens when you 'Star' a repository on GitHub?",
+            "type": "single-choice",
+            "topic": "Social Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It automatically creates a fork of the repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "It bookmarks the repository for easier access and shows appreciation to the maintainer."
+                },
+                {
+                    "id": "o3",
+                    "text": "It downloads the repository to your local machine."
+                },
+                {
+                    "id": "o4",
+                    "text": "It gives you push access to the repository."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Starring a repository is a way to bookmark projects you find interesting and to show appreciation to the developers. It does not grant access or copy the code."
+        },
+        {
+            "id": "q8",
+            "question": "What is a 'merge conflict' in the context of GitHub?",
+            "type": "single-choice",
+            "topic": "Version Control Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "When GitHub's servers go down."
+                },
+                {
+                    "id": "o2",
+                    "text": "When two users have different permission levels in a repository."
+                },
+                {
+                    "id": "o3",
+                    "text": "When competing changes are made to the same exact line of a file and Git cannot determine which one to keep."
+                },
+                {
+                    "id": "o4",
+                    "text": "When a repository runs out of storage space."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Merge conflicts occur when competing changes are made to the same line of a file, or when one person edits a file and another person deletes the same file. These must be resolved manually."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following are primarily used to track ideas, enhancements, tasks, or bugs in a GitHub repository? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Project Planning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Issues"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Actions"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Projects"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Gists"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "GitHub Issues are used to track individual bugs, tasks, or feature requests. GitHub Projects provide customizable boards to organize and plan those issues on a larger scale."
+        },
+        {
+            "id": "q10",
+            "question": "What is the standard file used to display information about a repository on its main page?",
+            "type": "single-choice",
+            "topic": "Documentation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "INDEX.html"
+                },
+                {
+                    "id": "o2",
+                    "text": "README.md"
+                },
+                {
+                    "id": "o3",
+                    "text": "CONFIG.txt"
+                },
+                {
+                    "id": "o4",
+                    "text": "ABOUT.md"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The README.md file is the standard file used to describe a project, including installation instructions, usage, and contribution guidelines. It renders automatically on the repository's root page."
+        },
+        {
+            "id": "q11",
+            "question": "Which feature allows you to automate software development workflows, such as CI/CD, directly in your GitHub repository?",
+            "type": "single-choice",
+            "topic": "Automation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Pages"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Actions"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Packages"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Insights"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub Actions makes it easy to automate all your software workflows, including continuous integration (CI) and continuous deployment (CD), right from GitHub."
+        },
+        {
+            "id": "q12",
+            "question": "What does creating a 'Branch' in GitHub allow you to do?",
+            "type": "single-choice",
+            "topic": "Version Control Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Isolate development work without affecting other branches or the main codebase."
+                },
+                {
+                    "id": "o2",
+                    "text": "Delete the entire repository history."
+                },
+                {
+                    "id": "o3",
+                    "text": "Merge two different repositories into one."
+                },
+                {
+                    "id": "o4",
+                    "text": "Create a secondary GitHub account."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Branching allows you to diverge from the main line of development and continue to do work without messing with that main line. It is highly used for developing new features."
+        },
+        {
+            "id": "q13",
+            "question": "Which authentication methods are recommended/required for interacting with remote GitHub repositories via the command line? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Security and Authentication",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Account Password only"
+                },
+                {
+                    "id": "o2",
+                    "text": "Personal Access Token (PAT)"
+                },
+                {
+                    "id": "o3",
+                    "text": "SSH Keys"
+                },
+                {
+                    "id": "o4",
+                    "text": "Social Media login"
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o3"
+            ],
+            "explanation": "GitHub removed support for standard password authentication for Git operations in 2021. You must now use a Personal Access Token (PAT) or an SSH key to authenticate via the command line."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of a GitHub 'Release'?",
+            "type": "single-choice",
+            "topic": "Releases and Packages",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To package and provide software iterations/versions to users."
+                },
+                {
+                    "id": "o2",
+                    "text": "To permanently delete a repository branch."
+                },
+                {
+                    "id": "o3",
+                    "text": "To make a private repository public."
+                },
+                {
+                    "id": "o4",
+                    "text": "To unlock restricted GitHub features."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Releases are based on Git tags and are used to package software, along with release notes and binary files, so users can easily download specific versions of your project."
+        },
+        {
+            "id": "q15",
+            "question": "If you find a bug in someone else's public repository but do not have write access, what is the best workflow to contribute a fix?",
+            "type": "single-choice",
+            "topic": "Collaboration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Email the owner the code snippet and wait."
+                },
+                {
+                    "id": "o2",
+                    "text": "Fork the repository, make the fix in your fork, and submit a Pull Request."
+                },
+                {
+                    "id": "o3",
+                    "text": "Push the fix directly to their main branch."
+                },
+                {
+                    "id": "o4",
+                    "text": "Create a new branch in their repository and merge it."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The standard open-source contribution workflow is to fork the repository, push your changes to your forked copy, and then open a Pull Request against the original repository."
+        },
+        {
+            "id": "q16",
+            "question": "What is the primary function of a 'Commit' in Git and GitHub?",
+            "type": "single-choice",
+            "topic": "Version Control Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To download the entire repository to your local machine."
+                },
+                {
+                    "id": "o2",
+                    "text": "To permanently delete a file from the version history."
+                },
+                {
+                    "id": "o3",
+                    "text": "To save a snapshot of the current state of your project's files."
+                },
+                {
+                    "id": "o4",
+                    "text": "To send a direct message to a collaborator."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A commit acts as a snapshot or a checkpoint of your repository at a specific point in time, allowing you to track changes and revert to earlier states if necessary."
+        },
+        {
+            "id": "q17",
+            "question": "You want to work on a GitHub repository locally on your computer. Which action should you take?",
+            "type": "single-choice",
+            "topic": "Repository Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Clone the repository"
+                },
+                {
+                    "id": "o2",
+                    "text": "Branch the repository"
+                },
+                {
+                    "id": "o3",
+                    "text": "Stash the repository"
+                },
+                {
+                    "id": "o4",
+                    "text": "Archive the repository"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Cloning a repository downloads a full copy of the remote repository from GitHub to your local machine, including all files, branches, and commit history."
+        },
+        {
+            "id": "q18",
+            "question": "Which GitHub feature is best suited for quickly sharing single files, code snippets, or terminal outputs without creating a full repository?",
+            "type": "single-choice",
+            "topic": "GitHub Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Gists"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Pages"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Packages"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Wikis"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "GitHub Gists are a simple way to share code snippets and pastes with others. They act like mini-repositories for single or multiple files without the overhead of a standard repository."
+        },
+        {
+            "id": "q19",
+            "question": "What markup language is standardly used on GitHub to format text in issues, pull requests, and README files?",
+            "type": "single-choice",
+            "topic": "Documentation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "HTML"
+                },
+                {
+                    "id": "o2",
+                    "text": "XML"
+                },
+                {
+                    "id": "o3",
+                    "text": "Markdown"
+                },
+                {
+                    "id": "o4",
+                    "text": "YAML"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "GitHub heavily relies on Markdown (specifically GitHub Flavored Markdown) to format text, allowing users to easily add bolding, lists, links, and code blocks using plain text syntax."
+        },
+        {
+            "id": "q20",
+            "question": "When creating a new repository on GitHub today, what is the default name given to the primary branch?",
+            "type": "single-choice",
+            "topic": "Repository Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "master"
+                },
+                {
+                    "id": "o2",
+                    "text": "main"
+                },
+                {
+                    "id": "o3",
+                    "text": "trunk"
+                },
+                {
+                    "id": "o4",
+                    "text": "development"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Starting in October 2020, GitHub changed the default branch name for newly created repositories from 'master' to 'main' to use more inclusive terminology."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following are standard options available in the GitHub UI for merging an approved Pull Request? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Pull Requests",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Create a merge commit"
+                },
+                {
+                    "id": "o2",
+                    "text": "Squash and merge"
+                },
+                {
+                    "id": "o3",
+                    "text": "Delete and merge"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fork and merge"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "The standard merge options in GitHub are 'Create a merge commit' (keeps all individual commits), 'Squash and merge' (combines all commits into one), and 'Rebase and merge'."
+        },
+        {
+            "id": "q22",
+            "question": "What is the primary purpose of a CODEOWNERS file in a GitHub repository?",
+            "type": "single-choice",
+            "topic": "Collaboration and Code Review",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To list the copyright details and software license for the project."
+                },
+                {
+                    "id": "o2",
+                    "text": "To define individuals or teams that are responsible for specific files or directories, automatically requesting their review on PRs."
+                },
+                {
+                    "id": "o3",
+                    "text": "To block all external users from viewing the repository's code."
+                },
+                {
+                    "id": "o4",
+                    "text": "To track the financial contributions of developers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A CODEOWNERS file specifies the individuals or teams responsible for code in a repository. When someone opens a pull request modifying those files, the designated owners are automatically requested for review."
+        },
+        {
+            "id": "q23",
+            "question": "Which official application allows developers to interact with GitHub repositories using a graphical user interface (GUI) instead of the command line?",
+            "type": "single-choice",
+            "topic": "Developer Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Desktop"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub CLI"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Actions"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Mobile"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "GitHub Desktop is a free, open-source graphical user interface application that simplifies Git operations, allowing users to commit, pull, and push code without using the command line."
+        },
+        {
+            "id": "q24",
+            "question": "What is GitHub Copilot?",
+            "type": "single-choice",
+            "topic": "GitHub Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A built-in antivirus scanner for repositories."
+                },
+                {
+                    "id": "o2",
+                    "text": "An AI-powered pair programmer that offers autocomplete-style code suggestions in your editor."
+                },
+                {
+                    "id": "o3",
+                    "text": "A feature that automatically deploys applications to AWS."
+                },
+                {
+                    "id": "o4",
+                    "text": "A project management tool that replaces GitHub Projects."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub Copilot is an AI tool developed by GitHub and OpenAI that assists developers by suggesting code snippets and entire functions in real-time within their code editor."
+        },
+        {
+            "id": "q25",
+            "question": "Which GitHub feature provides a dedicated space for a community to ask questions, share ideas, and engage in open-ended conversations separately from issues?",
+            "type": "single-choice",
+            "topic": "Community and Social",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Wikis"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Issues"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Discussions"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Actions"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "GitHub Discussions is a collaborative communication forum for the community around an open source or internal project, ideal for Q&A and general conversation rather than actionable bug tracking."
+        },
+        {
+            "id": "q26",
+            "question": "Which feature allows you to build integrations that subscribe to certain events on GitHub, sending an HTTP POST payload to a designated URL when those events occur?",
+            "type": "single-choice",
+            "topic": "Integrations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Webhooks"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Gists"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub CLI"
+                },
+                {
+                    "id": "o4",
+                    "text": "SSH Keys"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Webhooks allow external services to be notified when certain events happen within a GitHub repository, such as a new push or a pull request being opened."
+        },
+        {
+            "id": "q27",
+            "question": "Which view in the GitHub UI allows you to see the line-by-line revision history of a file, showing who made the last change to each specific line?",
+            "type": "single-choice",
+            "topic": "Repository Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Insights"
+                },
+                {
+                    "id": "o2",
+                    "text": "Blame"
+                },
+                {
+                    "id": "o3",
+                    "text": "Raw"
+                },
+                {
+                    "id": "o4",
+                    "text": "Security"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'Blame' view annotates a file to show the revision and author who last modified each line, making it easy to track down when and why a specific change was made."
+        },
+        {
+            "id": "q28",
+            "question": "What is the strict maximum file size limit for a single file pushed to a standard GitHub repository (without using Git Large File Storage)?",
+            "type": "single-choice",
+            "topic": "Repository Limits",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "50 MB"
+                },
+                {
+                    "id": "o2",
+                    "text": "100 MB"
+                },
+                {
+                    "id": "o3",
+                    "text": "500 MB"
+                },
+                {
+                    "id": "o4",
+                    "text": "1 GB"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub blocks pushes that contain standard files larger than 100 MB. To track larger files, users must utilize Git Large File Storage (Git LFS)."
+        },
+        {
+            "id": "q29",
+            "question": "How can you explicitly notify a specific user or team in a GitHub Issue or Pull Request comment? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Collaboration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By using the @username syntax"
+                },
+                {
+                    "id": "o2",
+                    "text": "By using the @org/team-name syntax"
+                },
+                {
+                    "id": "o3",
+                    "text": "By writing an email to their GitHub address inside the comment"
+                },
+                {
+                    "id": "o4",
+                    "text": "By using the #username syntax"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "You can mention (or 'ping') users and teams by typing the '@' symbol followed by their username or team name. This sends them a notification regarding the conversation."
+        },
+        {
+            "id": "q30",
+            "question": "What is a 'Status Check' in the context of a GitHub Pull Request?",
+            "type": "single-choice",
+            "topic": "Pull Requests and CI/CD",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A manual check to see if the GitHub servers are currently online."
+                },
+                {
+                    "id": "o2",
+                    "text": "A billing feature that checks if the account has enough credits to merge the code."
+                },
+                {
+                    "id": "o3",
+                    "text": "Automated tests or jobs that run against the code in a PR to ensure it meets conditions before merging."
+                },
+                {
+                    "id": "o4",
+                    "text": "A badge showing how popular the repository is."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Status checks are automated processes (like CI/CD pipelines, code linting, or unit tests) that run when a PR is opened. They provide feedback on whether the changes are safe to merge."
+        },
+        {
+            "id": "q31",
+            "question": "At its core, what is a GitHub 'repository' (repo)?",
+            "type": "single-choice",
+            "topic": "Core Concepts",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A specialized virtual machine for compiling code."
+                },
+                {
+                    "id": "o2",
+                    "text": "A folder that contains all of your project's files and each file's revision history."
+                },
+                {
+                    "id": "o3",
+                    "text": "A cloud-based chat room for developers."
+                },
+                {
+                    "id": "o4",
+                    "text": "A type of paid subscription plan."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A repository is the most basic element of GitHub. It is essentially a folder or storage space that houses all your project files, assets, and the complete version history of all changes."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following keywords, when included in a Pull Request description alongside an issue number (e.g., '#123'), will automatically close that issue when the PR is merged? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Issue Tracking",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Fixes"
+                },
+                {
+                    "id": "o2",
+                    "text": "Closes"
+                },
+                {
+                    "id": "o3",
+                    "text": "Mentions"
+                },
+                {
+                    "id": "o4",
+                    "text": "Updates"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "GitHub supports specific keywords like 'Fixes', 'Closes', and 'Resolves' followed by an issue number. When a PR containing these keywords is merged, the linked issue is automatically closed."
+        },
+        {
+            "id": "q33",
+            "question": "What is the primary function of a 'Draft Pull Request'?",
+            "type": "single-choice",
+            "topic": "Pull Requests",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To hide your code changes from repository administrators."
+                },
+                {
+                    "id": "o2",
+                    "text": "To indicate that your code is a work in progress and not yet ready for a formal review or merge."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically merge your code overnight without requiring approvals."
+                },
+                {
+                    "id": "o4",
+                    "text": "To save a copy of the pull request offline."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Draft Pull Requests clearly signal to collaborators that the work is still in progress. They cannot be merged until they are marked as 'Ready for review'."
+        },
+        {
+            "id": "q34",
+            "question": "How do you create a personalized 'Profile README' that is prominently displayed on your main GitHub user profile?",
+            "type": "single-choice",
+            "topic": "Profile Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Upload a PDF document in your account settings."
+                },
+                {
+                    "id": "o2",
+                    "text": "Create a new public repository with a name exactly matching your GitHub username and add a README.md file to it."
+                },
+                {
+                    "id": "o3",
+                    "text": "Purchase a GitHub Pro subscription."
+                },
+                {
+                    "id": "o4",
+                    "text": "Pin an existing gist to the top of your profile."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub has a special feature where if you create a public repository named exactly after your username, its README.md file is automatically rendered at the top of your public profile."
+        },
+        {
+            "id": "q35",
+            "question": "What is GitHub Codespaces?",
+            "type": "single-choice",
+            "topic": "Developer Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A forum exclusively for discussing coding problems."
+                },
+                {
+                    "id": "o2",
+                    "text": "A cloud-hosted, containerized development environment accessible directly via a web browser or local IDE."
+                },
+                {
+                    "id": "o3",
+                    "text": "A built-in marketplace for purchasing third-party code snippets."
+                },
+                {
+                    "id": "o4",
+                    "text": "A tool used to format and style CSS code automatically."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub Codespaces provides a complete, configurable cloud development environment hosted by GitHub, allowing you to code instantly in your browser (using a VS Code-like interface) or connect via a local IDE."
+        },
+        {
+            "id": "q36",
+            "question": "Which built-in GitHub feature actively monitors your repository for known security vulnerabilities in your dependencies and can automatically open PRs to update them?",
+            "type": "single-choice",
+            "topic": "Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Dependabot"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Actions"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Copilot"
+                },
+                {
+                    "id": "o4",
+                    "text": "Security Scanner Pro"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Dependabot is an automated security tool integrated into GitHub that scans your project's dependency files for vulnerabilities and automatically creates pull requests to update them to secure versions."
+        },
+        {
+            "id": "q37",
+            "question": "What is the primary use of 'Labels' in GitHub Issues and Pull Requests?",
+            "type": "single-choice",
+            "topic": "Project Planning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To enforce two-factor authentication for reviewers."
+                },
+                {
+                    "id": "o2",
+                    "text": "To categorize, prioritize, and filter work items using color-coded tags like 'bug' or 'enhancement'."
+                },
+                {
+                    "id": "o3",
+                    "text": "To hide sensitive code from public view."
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically assign a monetary bounty to an issue."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Labels are color-coded tags that help you organize, categorize, and quickly filter Issues and Pull Requests within a repository."
+        },
+        {
+            "id": "q38",
+            "question": "Which templates can maintainers configure in their repository to standardize the information contributors provide when submitting new work? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Repository Configuration",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Issue Templates"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pull Request Templates"
+                },
+                {
+                    "id": "o3",
+                    "text": "Commit Message Templates"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fork Templates"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Maintainers can create Issue and Pull Request templates (often stored in the .github directory). These pre-populate the text box with guidelines or checklists when a user opens a new issue or PR."
+        },
+        {
+            "id": "q39",
+            "question": "Under which main repository tab can you find analytics graphs detailing the number of unique visitors, repository clones, and popular referring sites?",
+            "type": "single-choice",
+            "topic": "Repository Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Actions"
+                },
+                {
+                    "id": "o2",
+                    "text": "Security"
+                },
+                {
+                    "id": "o3",
+                    "text": "Insights"
+                },
+                {
+                    "id": "o4",
+                    "text": "Settings"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'Insights' tab in a GitHub repository provides various analytics and graphs, including traffic metrics (clones and visitors), dependency graphs, and contributor statistics."
+        },
+        {
+            "id": "q40",
+            "question": "What is the primary effect of clicking the 'Watch' button on a GitHub repository?",
+            "type": "single-choice",
+            "topic": "Social Features",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "You will receive notifications for activities in the repository, such as new issues, PRs, and discussions."
+                },
+                {
+                    "id": "o2",
+                    "text": "A copy of the repository is immediately downloaded to your desktop."
+                },
+                {
+                    "id": "o3",
+                    "text": "You are instantly granted write access to the main branch."
+                },
+                {
+                    "id": "o4",
+                    "text": "It hides the repository from your feed."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Watching a repository subscribes you to notifications about activity within that project. You can customize the level of watching, such as opting to only be notified about new releases or all activity."
+        },
+        {
+            "id": "q41",
+            "question": "What is a primary advantage of creating a GitHub 'Organization' account compared to a standard personal account?",
+            "type": "single-choice",
+            "topic": "Account Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It removes all file size limits for the repository."
+                },
+                {
+                    "id": "o2",
+                    "text": "It allows multiple users to collaborate across many projects with sophisticated team-based access controls."
+                },
+                {
+                    "id": "o3",
+                    "text": "It provides a faster internet connection when cloning code."
+                },
+                {
+                    "id": "o4",
+                    "text": "It is the only way to host a public repository."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Organizations are shared accounts where groups of people can collaborate across many projects at once, offering advanced permissions, team management, and corporate billing features."
+        },
+        {
+            "id": "q42",
+            "question": "Which official GitHub feature allows users to financially support developers and open-source maintainers directly through the platform?",
+            "type": "single-choice",
+            "topic": "Community and Social",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Funding"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Sponsors"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Premium"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Commerce"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub Sponsors allows the developer community to financially support the people and organizations who design, build, and maintain open source projects they depend on."
+        },
+        {
+            "id": "q43",
+            "question": "In a GitHub repository, what does 'Assigning' a user to an Issue typically signify?",
+            "type": "single-choice",
+            "topic": "Project Planning",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "That the assigned user is the only one who can view the issue."
+                },
+                {
+                    "id": "o2",
+                    "text": "That the assigned user is responsible for working on or resolving the task described in the issue."
+                },
+                {
+                    "id": "o3",
+                    "text": "That the assigned user has been banned from commenting on the repository."
+                },
+                {
+                    "id": "o4",
+                    "text": "That the assigned user originally reported the bug."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Assignees clarify who is currently working on an issue or pull request. It is a project management tool to denote responsibility for completing a task."
+        },
+        {
+            "id": "q44",
+            "question": "If you are the owner and accidentally delete a GitHub repository, is it possible to restore it?",
+            "type": "single-choice",
+            "topic": "Repository Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "No, deletion on GitHub is immediate and permanent with no recovery options."
+                },
+                {
+                    "id": "o2",
+                    "text": "Yes, deleted repositories can typically be restored within 90 days from the user's account settings."
+                },
+                {
+                    "id": "o3",
+                    "text": "Yes, but it requires purchasing an Enterprise license first."
+                },
+                {
+                    "id": "o4",
+                    "text": "Yes, but only if the repository was strictly private."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub allows owners to restore deleted repositories within 90 days, provided the repository wasn't part of a fork network that has since been modified in certain ways."
+        },
+        {
+            "id": "q45",
+            "question": "Which official command-line tool brings GitHub-specific features like Pull Request and Issue management directly to your terminal?",
+            "type": "single-choice",
+            "topic": "Developer Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Git Bash"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Desktop"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub CLI (gh)"
+                },
+                {
+                    "id": "o4",
+                    "text": "OpenSSH"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "GitHub CLI ('gh') is an open-source tool that lets you use GitHub from the command line, enabling you to manage PRs, issues, actions, and releases without switching to a web browser."
+        },
+        {
+            "id": "q46",
+            "question": "What is the primary purpose of a commit message?",
+            "type": "single-choice",
+            "topic": "Version Control Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt the code changes for security purposes."
+                },
+                {
+                    "id": "o2",
+                    "text": "To briefly explain what changes were made in the commit and why."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically send an email to all repository contributors."
+                },
+                {
+                    "id": "o4",
+                    "text": "To execute CI/CD deployment scripts."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A commit message serves as a log or journal entry, describing the context, intent, and specifics of the changes made in that particular commit for future reference."
+        },
+        {
+            "id": "q47",
+            "question": "In a standard Git/GitHub workflow, which operation sends your locally committed changes to the remote GitHub repository?",
+            "type": "single-choice",
+            "topic": "Repository Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pull"
+                },
+                {
+                    "id": "o2",
+                    "text": "Fetch"
+                },
+                {
+                    "id": "o3",
+                    "text": "Push"
+                },
+                {
+                    "id": "o4",
+                    "text": "Clone"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The 'push' operation is used to upload local repository content to a remote repository. It updates the remote server with the commits you have made locally."
+        },
+        {
+            "id": "q48",
+            "question": "Which built-in GitHub feature provides a dedicated space to host extensive, multi-page documentation for your repository?",
+            "type": "single-choice",
+            "topic": "Documentation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "GitHub Wikis"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Discussions"
+                },
+                {
+                    "id": "o3",
+                    "text": "GitHub Gists"
+                },
+                {
+                    "id": "o4",
+                    "text": "GitHub Actions"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "GitHub Wikis are intended to host detailed documentation for a project. Every repository comes equipped with a section for hosting a Wiki, which behaves like a separate Git repository."
+        },
+        {
+            "id": "q49",
+            "question": "What does a green 'Verified' badge next to a commit on GitHub indicate?",
+            "type": "single-choice",
+            "topic": "Security and Authentication",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The code has been successfully deployed to production."
+                },
+                {
+                    "id": "o2",
+                    "text": "The commit was cryptographically signed (e.g., via GPG or SSH), confirming the author's identity."
+                },
+                {
+                    "id": "o3",
+                    "text": "The commit contains absolutely no bugs or errors."
+                },
+                {
+                    "id": "o4",
+                    "text": "The commit was reviewed and approved by a repository administrator."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'Verified' badge means that the commit was cryptographically signed using GPG, SSH, or S/MIME, proving that the person who made the commit is actually the owner of the GitHub account."
+        },
+        {
+            "id": "q50",
+            "question": "Which operation is used to fetch data from a remote GitHub repository and immediately merge it into your local repository?",
+            "type": "single-choice",
+            "topic": "Repository Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Push"
+                },
+                {
+                    "id": "o2",
+                    "text": "Pull"
+                },
+                {
+                    "id": "o3",
+                    "text": "Commit"
+                },
+                {
+                    "id": "o4",
+                    "text": "Fork"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'pull' command is used to fetch and download content from a remote repository and immediately update the local repository to match that content."
+        },
+        {
+            "id": "q51",
+            "question": "How can you prominently showcase specific repositories you are proud of at the very top of your personal GitHub profile?",
+            "type": "single-choice",
+            "topic": "Profile Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By starring the repositories."
+                },
+                {
+                    "id": "o2",
+                    "text": "By pinning up to six repositories to your profile."
+                },
+                {
+                    "id": "o3",
+                    "text": "By paying for sponsored placement."
+                },
+                {
+                    "id": "o4",
+                    "text": "By adding the 'featured' label to the repository settings."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "You can pin up to six public repositories or gists to your GitHub profile, allowing you to highlight your best work or most active projects for visitors to see immediately."
+        },
+        {
+            "id": "q52",
+            "question": "When viewing a file in the GitHub web interface, which button allows you to see the unformatted, plain text version of the code without line numbers or UI elements?",
+            "type": "single-choice",
+            "topic": "Repository Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Blame"
+                },
+                {
+                    "id": "o2",
+                    "text": "History"
+                },
+                {
+                    "id": "o3",
+                    "text": "Raw"
+                },
+                {
+                    "id": "o4",
+                    "text": "Preview"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Clicking the 'Raw' button on a file view displays the file in its original plain text format, which is highly useful for copying the code or curling the file directly from the terminal."
+        },
+        {
+            "id": "q53",
+            "question": "What major security requirement did GitHub make mandatory for all users contributing code by the end of 2023?",
+            "type": "single-choice",
+            "topic": "Security and Authentication",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Providing a government-issued ID."
+                },
+                {
+                    "id": "o2",
+                    "text": "Enabling Two-Factor Authentication (2FA)."
+                },
+                {
+                    "id": "o3",
+                    "text": "Changing passwords every 30 days."
+                },
+                {
+                    "id": "o4",
+                    "text": "Using a physical security key."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "To improve supply chain security and protect accounts from takeover, GitHub rolled out a mandatory Two-Factor Authentication (2FA) requirement for all users contributing to code on the platform."
+        },
+        {
+            "id": "q54",
+            "question": "If you want to completely hand over a project to another user or organization, preserving its stars, watchers, and issues, which action should you take?",
+            "type": "single-choice",
+            "topic": "Repository Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Fork the repository to their account."
+                },
+                {
+                    "id": "o2",
+                    "text": "Transfer ownership via the repository's Settings menu."
+                },
+                {
+                    "id": "o3",
+                    "text": "Clone the repo and have them upload it to a new repository."
+                },
+                {
+                    "id": "o4",
+                    "text": "Add them as a collaborator and leave the repository yourself."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Transferring ownership moves the entire repository—including its issues, pull requests, wikis, and stars—to another user or organization account, ensuring no metadata is lost."
+        },
+        {
+            "id": "q55",
+            "question": "How many private repositories can a standard user create on the free GitHub Personal plan?",
+            "type": "single-choice",
+            "topic": "Account Types",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "None, private repositories require a paid plan."
+                },
+                {
+                    "id": "o2",
+                    "text": "Up to 5."
+                },
+                {
+                    "id": "o3",
+                    "text": "Up to 10."
+                },
+                {
+                    "id": "o4",
+                    "text": "Unlimited."
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "In 2019, GitHub made private repositories free for all users. Developers on the free tier can create an unlimited number of private repositories with limited collaborators."
+        },
+        {
+            "id": "q56",
+            "question": "Which of the following actions typically require Write (or higher) access to a repository? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Access and Permissions",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Pushing new commits directly to a branch."
+                },
+                {
+                    "id": "o2",
+                    "text": "Merging an approved Pull Request."
+                },
+                {
+                    "id": "o3",
+                    "text": "Forking the repository."
+                },
+                {
+                    "id": "o4",
+                    "text": "Opening a new Issue."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Pushing code to branches and merging Pull Requests modify the actual source code of the repository and therefore require Write, Maintain, or Admin permissions. Anyone can fork or open issues on public repos with Read access."
+        },
+        {
+            "id": "q57",
+            "question": "Which GitHub UI feature allows you to click on a function, method, or variable in the code to instantly jump to where it was originally defined?",
+            "type": "single-choice",
+            "topic": "Developer Tools",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Code Navigation"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Copilot"
+                },
+                {
+                    "id": "o3",
+                    "text": "The Network Graph"
+                },
+                {
+                    "id": "o4",
+                    "text": "Dependabot"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Code Navigation uses the open-source tree-sitter library to parse code and provide 'jump to definition' and 'find all references' functionalities directly within the GitHub web interface."
+        },
+        {
+            "id": "q58",
+            "question": "Which tab on the GitHub homepage provides a curated feed to help you discover new open-source projects, trending repositories, and developer collections?",
+            "type": "single-choice",
+            "topic": "Community and Social",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Marketplace"
+                },
+                {
+                    "id": "o2",
+                    "text": "Explore"
+                },
+                {
+                    "id": "o3",
+                    "text": "Sponsors"
+                },
+                {
+                    "id": "o4",
+                    "text": "Pull Requests"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The 'Explore' section is designed to surface trending repositories, popular topics, and personalized recommendations based on the projects you already star or contribute to."
+        },
+        {
+            "id": "q59",
+            "question": "If you are working with GitHub Actions and need to enforce manual approvals or wait timers before deploying code to production, which feature should you configure?",
+            "type": "single-choice",
+            "topic": "Automation",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Branch Protection Rules"
+                },
+                {
+                    "id": "o2",
+                    "text": "GitHub Environments"
+                },
+                {
+                    "id": "o3",
+                    "text": "Issue Templates"
+                },
+                {
+                    "id": "o4",
+                    "text": "Repository Secrets"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "GitHub Environments are used with Actions to set up deployment targets. They allow you to configure protection rules (like requiring manual review) and environment-specific secrets before a job proceeds."
+        },
+        {
+            "id": "q60",
+            "question": "Which of the following are valid ways to resolve a merge conflict on GitHub? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Version Control Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Using the web-based conflict editor directly in the GitHub PR interface."
+                },
+                {
+                    "id": "o2",
+                    "text": "Pulling the branches locally, resolving the conflict in your IDE, and pushing the fix."
+                },
+                {
+                    "id": "o3",
+                    "text": "Clicking the 'Auto-Resolve' button which lets GitHub guess the correct code."
+                },
+                {
+                    "id": "o4",
+                    "text": "Closing and reopening the Pull Request."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Conflicts can be resolved locally using standard Git tools/IDEs and then pushed, or for simpler text conflicts, they can be resolved directly in the browser using GitHub's built-in conflict resolution editor. GitHub cannot auto-guess how to fix conflicting logic."
+        }
+    ]
+}
