@@ -121,8 +121,8 @@
       "id": "infosec-basic",
       "name": "Basic Information Security Concepts",
       "vendor": "CertifyStacks",
-      "questions": 15,
-      "duration": 30,
+      "questions": 60,
+      "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
     },
@@ -139,8 +139,8 @@
       "id": "networking-basic",
       "name": "Basic Networking Concepts",
       "vendor": "CertifyStacks",
-      "questions": 15,
-      "duration": 30,
+      "questions": 60,
+      "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
     },
