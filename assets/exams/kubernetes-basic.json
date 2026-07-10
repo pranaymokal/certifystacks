@@ -66,7 +66,8 @@
         {
             "id": "q3",
             "question": "Which of the following components run natively on every worker node in a Kubernetes cluster? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Architecture",
             "options": [
                 {
@@ -151,7 +152,8 @@
         {
             "id": "q6",
             "question": "Which of the following are valid Kubernetes Service types? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Networking",
             "options": [
                 {
@@ -293,7 +295,8 @@
         {
             "id": "q11",
             "question": "Which of the following are benefits of managing Pods through a Deployment rather than creating them directly? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Workloads",
             "options": [
                 {
@@ -350,7 +353,8 @@
         {
             "id": "q13",
             "question": "Which of the following fields are required root-level keys in every standard Kubernetes resource manifest file? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Core Concepts",
             "options": [
                 {
@@ -548,7 +552,8 @@
         {
             "id": "q20",
             "question": "Which of the following properties are characteristics of a Kubernetes ReplicaSet? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Workloads",
             "options": [
                 {
@@ -717,7 +722,8 @@
         {
             "id": "q26",
             "question": "Which of the following are valid access modes for a Kubernetes PersistentVolume? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Storage",
             "options": [
                 {
@@ -775,7 +781,8 @@
         {
             "id": "q28",
             "question": "Which of the following are control plane components in a Kubernetes architecture? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Architecture",
             "options": [
                 {
@@ -917,7 +924,8 @@
         {
             "id": "q33",
             "question": "Which of the following are distinct characteristics of a StatefulSet compared to a standard Deployment? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Workloads",
             "options": [
                 {
@@ -1087,7 +1095,8 @@
         {
             "id": "q39",
             "question": "Which of the following commands can be effectively used to troubleshoot a Pod that is continually crashing or failing to start? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Troubleshooting",
             "options": [
                 {
@@ -1172,7 +1181,8 @@
         {
             "id": "q42",
             "question": "The Horizontal Pod Autoscaler (HPA) typically scales the number of deployed Pods based on which observed metrics? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Scaling",
             "options": [
                 {
@@ -1425,7 +1435,8 @@
         {
             "id": "q51",
             "question": "Which of the following are defining characteristics of an Init Container? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Workloads",
             "options": [
                 {
@@ -1538,7 +1549,8 @@
         {
             "id": "q55",
             "question": "Which of the following are primary responsibilities of the kube-proxy component? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Architecture",
             "options": [
                 {
@@ -1567,7 +1579,8 @@
         {
             "id": "q56",
             "question": "Which of the following are valid lifecycle phases of a Kubernetes Pod? (Select THREE)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Workloads",
             "options": [
                 {
@@ -1625,7 +1638,8 @@
         {
             "id": "q58",
             "question": "Which of the following are valid ways to expose a Secret to a container running in a Pod? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Configuration and Security",
             "options": [
                 {

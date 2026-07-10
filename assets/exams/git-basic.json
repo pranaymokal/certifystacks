@@ -38,7 +38,8 @@
         {
             "id": "q2",
             "question": "Which of the following commands can be used to set your Git username and email address?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Configuration",
             "options": [
                 {
@@ -123,7 +124,8 @@
         {
             "id": "q5",
             "question": "According to Git architecture, what are the three main states that your files can reside in?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Git Architecture",
             "options": [
                 {
@@ -265,7 +267,8 @@
         {
             "id": "q10",
             "question": "Which of the following commands can be used to create a new branch in Git?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Branching",
             "options": [
                 {
@@ -519,7 +522,8 @@
         {
             "id": "q19",
             "question": "Which of the following commands can be used to remove a file from the staging area (unstage it) without losing the modifications in your working directory?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Undoing Changes",
             "options": [
                 {
@@ -604,7 +608,8 @@
         {
             "id": "q22",
             "question": "What are the standard commands to safely delete a local branch that has already been fully merged into your current branch?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Branching",
             "options": [
                 {
@@ -661,7 +666,8 @@
         {
             "id": "q24",
             "question": "If you have modified a tracked file but have NOT yet staged it, which commands will discard your local modifications and revert the file to its state in the last commit?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Undoing Changes",
             "options": [
                 {
@@ -830,7 +836,8 @@
         {
             "id": "q30",
             "question": "Which of the following Git operations intrinsically require communication with a remote server over a network?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Remote Repositories",
             "options": [
                 {
@@ -887,7 +894,8 @@
         {
             "id": "q32",
             "question": "Which of the following actions occur when you execute 'git pull'?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Remote Repositories",
             "options": [
                 {
@@ -944,7 +952,8 @@
         {
             "id": "q34",
             "question": "Which command allows you to re-apply the latest stashed changes back into your working directory?",
-            "type": "single-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Stashing",
             "options": [
                 {
@@ -1056,7 +1065,8 @@
         {
             "id": "q38",
             "question": "Which of the following are valid ways to create a tag in Git?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Tagging",
             "options": [
                 {
@@ -1197,7 +1207,8 @@
         {
             "id": "q43",
             "question": "Which of the following is true regarding 'git rebase'?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "History and Logging",
             "options": [
                 {
@@ -1310,7 +1321,8 @@
         {
             "id": "q47",
             "question": "If you want to discard all changes in your working directory and reset your branch to match the remote 'origin/main', which sequence of commands is most appropriate?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Undoing Changes",
             "options": [
                 {
@@ -1535,7 +1547,8 @@
         {
             "id": "q55",
             "question": "Which of these are true about 'git commit --amend'?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Committing Changes",
             "options": [
                 {
@@ -1649,7 +1662,8 @@
         {
             "id": "q59",
             "question": "What are the common benefits of using Git for version control?",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Git Fundamentals",
             "options": [
                 {

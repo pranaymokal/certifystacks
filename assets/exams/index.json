@@ -4,8 +4,8 @@
       "id": "az900-basic",
       "name": "Microsoft Azure AZ-900",
       "vendor": "Microsoft",
-      "questions": 15,
-      "duration": 30,
+      "questions": 60,
+      "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
     },
@@ -23,7 +23,7 @@
       "name": "Gitgub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
-      "duration": 60,
+      "duration": 70,
       "passingScore": 700,
       "difficulty": "Beginner"
     },
@@ -32,7 +32,7 @@
       "name": "Gitgub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
-      "duration": 60,
+      "duration": 70,
       "passingScore": 700,
       "difficulty": "Intermediate"
     },

@@ -94,7 +94,8 @@
         {
             "id": "q4",
             "question": "A company wants to store data in Amazon S3 that is infrequently accessed but requires immediate retrieval when needed. Which S3 storage classes would meet these requirements? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "S3",
             "options": [
                 {
@@ -179,7 +180,8 @@
         {
             "id": "q7",
             "question": "AWS Trusted Advisor provides recommendations in which of the following categories? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Trusted Advisor",
             "options": [
                 {
@@ -264,7 +266,8 @@
         {
             "id": "q10",
             "question": "Which design principles are pillars of the AWS Well-Architected Framework? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Well-Architected Framework",
             "options": [
                 {
@@ -321,7 +324,8 @@
         {
             "id": "q12",
             "question": "An administrator wants to distribute incoming HTTP and HTTPS traffic across multiple Amazon EC2 instances based on URL paths. Which Elastic Load Balancing (ELB) types support this routing functionality? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Elastic Load Balancing",
             "options": [
                 {
@@ -574,7 +578,8 @@
         {
             "id": "q21",
             "question": "What are the primary benefits of using AWS Organizations for a company managing multiple AWS accounts? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Management and Governance",
             "options": [
                 {
@@ -603,7 +608,8 @@
         {
             "id": "q22",
             "question": "Which AWS Support plans provide access to the AWS Support API for programmatic case management? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Support and Pricing",
             "options": [
                 {
@@ -800,7 +806,8 @@
         {
             "id": "q29",
             "question": "Which AWS services can be used to decouple and scale components of a microservices architecture? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Application Integration",
             "options": [
                 {
@@ -829,7 +836,8 @@
         {
             "id": "q30",
             "question": "According to the AWS pricing philosophy, what are the three fundamental drivers of cost? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Billing and Pricing",
             "options": [
                 {
@@ -942,7 +950,8 @@
         {
             "id": "q34",
             "question": "When constructing a standard AWS Identity and Access Management (IAM) policy document, which elements are required components of a statement block? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "IAM",
             "options": [
                 {
@@ -1055,7 +1064,8 @@
         {
             "id": "q38",
             "question": "AWS Edge Locations are utilized by which of the following AWS infrastructure components or services? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Global Infrastructure",
             "options": [
                 {
@@ -1280,7 +1290,8 @@
         {
             "id": "q46",
             "question": "Which of the following services are classified as serverless compute resources on AWS? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Serverless",
             "options": [
                 {
@@ -1505,7 +1516,8 @@
         {
             "id": "q54",
             "question": "Which of the following target endpoints can an Application Load Balancer (ALB) distribute incoming application traffic to? (Select TWO)",
-            "type": "multi-choice",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
             "topic": "Elastic Load Balancing",
             "options": [
                 {

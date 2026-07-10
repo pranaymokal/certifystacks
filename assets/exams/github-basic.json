@@ -1621,7 +1621,7 @@
         },
         {
             "id": "q58",
-            "question": "Which tab on the GitHub homepage provides a curated feed to help you discover new open-source projects, trending repositories, and developer collections?",
+            "question": "Which GitHub feature provides a curated feed to help you discover new open-source projects, trending repositories, and developer collections?",
             "type": "single-choice",
             "topic": "Community and Social",
             "options": [
@@ -1631,7 +1631,7 @@
                 },
                 {
                     "id": "o2",
-                    "text": "Explore"
+                    "text": "Trending"
                 },
                 {
                     "id": "o3",
@@ -1645,7 +1645,7 @@
             "correctAnswers": [
                 "o2"
             ],
-            "explanation": "The 'Explore' section is designed to surface trending repositories, popular topics, and personalized recommendations based on the projects you already star or contribute to."
+            "explanation": "While older versions of GitHub featured an 'Explore' tab, the current platform uses the 'Trending' page (github.com/trending) to provide a curated feed of repositories gaining momentum. 'Marketplace' is for apps/integrations, 'Sponsors' is for financial support, and 'Pull Requests' is for managing code contributions."
         },
         {
             "id": "q59",
