@@ -1,0 +1,1328 @@
+{
+  "id": "manual-testing-basic",
+  "name": "Manual Testing Fundamentals",
+  "vendor": "CertifyStacks",
+  "questions": 60,
+  "duration": 60,
+  "passingScore": 700,
+  "difficulty": "Beginner",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "What is the primary definition of manual testing?",
+      "type": "single-choice",
+      "topic": "Software Testing Basics",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing software using automated scripts and tools."
+        },
+        {
+          "id": "o2",
+          "text": "Executing test cases manually without the use of automation tools."
+        },
+        { "id": "o3", "text": "Reviewing source code to find syntax errors." },
+        {
+          "id": "o4",
+          "text": "A phase dedicated only to deploying the application to production."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Manual testing is the process of manually executing test cases without using any automation tools, simulating the end-user's perspective to identify bugs."
+    },
+    {
+      "id": "q2",
+      "question": "Which of the following activities are standard phases in the Software Testing Life Cycle (STLC)?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Software Testing Life Cycle (STLC)",
+      "options": [
+        { "id": "o1", "text": "Requirement Analysis" },
+        { "id": "o2", "text": "Test Environment Setup" },
+        { "id": "o3", "text": "Hardware Assembly" },
+        { "id": "o4", "text": "Database Administration" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Requirement Analysis and Test Environment Setup are critical phases in the STLC. Hardware assembly and database administration are generally out of the typical testing scope."
+    },
+    {
+      "id": "q3",
+      "question": "What is Black Box Testing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing the internal structure, design, and coding of software."
+        },
+        {
+          "id": "o2",
+          "text": "Testing software functionality without knowing the internal code structure."
+        },
+        { "id": "o3", "text": "Testing performed only by the developers." },
+        {
+          "id": "o4",
+          "text": "A testing method used exclusively for performance evaluation."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Black Box Testing evaluates the functionality of an application without viewing or understanding its internal code structure or underlying implementation."
+    },
+    {
+      "id": "q4",
+      "question": "Which of the following are essential components of a well-written Test Case?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Test Design",
+      "options": [
+        { "id": "o1", "text": "Test Case ID" },
+        { "id": "o2", "text": "Expected Result" },
+        { "id": "o3", "text": "Source Code Snippet" },
+        { "id": "o4", "text": "Server IP Address" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "A test case typically includes a Test Case ID, steps to reproduce, test data, and expected results. Source code and server IP addresses are not standard functional test case components."
+    },
+    {
+      "id": "q5",
+      "question": "What is the primary purpose of Regression Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To verify that a recent code change has not adversely affected existing features."
+        },
+        {
+          "id": "o2",
+          "text": "To test the application's performance under extreme load."
+        },
+        {
+          "id": "o3",
+          "text": "To check if the user interface design matches the mockups."
+        },
+        {
+          "id": "o4",
+          "text": "To ensure the application works perfectly on mobile devices."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Regression testing is performed to confirm that a recent program or code change has not adversely affected existing, functioning features."
+    },
+    {
+      "id": "q6",
+      "question": "What does a 'Severity' rating indicate in a defect report?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "How quickly the bug should be fixed by the developer."
+        },
+        {
+          "id": "o2",
+          "text": "The technical impact the defect has on the business functionality or application."
+        },
+        {
+          "id": "o3",
+          "text": "The amount of time the QA spent finding the bug."
+        },
+        { "id": "o4", "text": "The number of users who reported the issue." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Severity describes the technical impact of a defect on the system (e.g., Critical, Major, Minor), whereas Priority dictates the urgency with which it must be fixed."
+    },
+    {
+      "id": "q7",
+      "question": "Which of the following scenarios are examples of Negative Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Testing Techniques",
+      "options": [
+        { "id": "o1", "text": "Entering a valid username and password." },
+        {
+          "id": "o2",
+          "text": "Uploading a 50MB file when the maximum limit is 5MB."
+        },
+        {
+          "id": "o3",
+          "text": "Entering letters into a field that only accepts numeric phone numbers."
+        },
+        {
+          "id": "o4",
+          "text": "Verifying that the homepage loads within 2 seconds."
+        }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Negative testing involves testing the system with invalid, out-of-bounds, or unexpected inputs to ensure it handles errors gracefully and secures the application."
+    },
+    {
+      "id": "q8",
+      "question": "What is the main objective of Smoke Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To deeply test every minor feature of the software."
+        },
+        {
+          "id": "o2",
+          "text": "To verify that the critical, core functionalities of the build are working."
+        },
+        {
+          "id": "o3",
+          "text": "To ensure the software meets advanced security standards."
+        },
+        {
+          "id": "o4",
+          "text": "To test the application's recovery speed after a hardware crash."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Smoke testing is a preliminary test performed to check if the core functionalities of a software build are working, confirming it is stable enough to proceed with comprehensive testing."
+    },
+    {
+      "id": "q9",
+      "question": "Which test design technique involves dividing input test data into valid and invalid classes?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        { "id": "o1", "text": "Boundary Value Analysis" },
+        { "id": "o2", "text": "Equivalence Partitioning" },
+        { "id": "o3", "text": "State Transition Testing" },
+        { "id": "o4", "text": "Decision Table Testing" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Equivalence Partitioning divides input data into classes or partitions, assuming the software will treat all values within a given partition identically, reducing the total number of test cases."
+    },
+    {
+      "id": "q10",
+      "question": "Who primarily performs User Acceptance Testing (UAT)?",
+      "type": "single-choice",
+      "topic": "Levels of Testing",
+      "options": [
+        { "id": "o1", "text": "The lead software developer" },
+        { "id": "o2", "text": "The database administrator" },
+        { "id": "o3", "text": "The end-users or clients" },
+        { "id": "o4", "text": "The automation testing team" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "UAT is the final phase of testing, usually performed by the end-users or clients in a real-world scenario to ensure the software meets their operational business requirements."
+    },
+    {
+      "id": "q11",
+      "question": "Which of the following statuses are commonly found in a standard Defect Life Cycle?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Defect Management",
+      "options": [
+        { "id": "o1", "text": "New" },
+        { "id": "o2", "text": "Compiled" },
+        { "id": "o3", "text": "In Progress" },
+        { "id": "o4", "text": "Deployed" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Common statuses in a Defect Life Cycle include New, Assigned, In Progress, Fixed, Verified, and Closed. 'Compiled' and 'Deployed' are typically build or release pipeline statuses."
+    },
+    {
+      "id": "q12",
+      "question": "In manual testing, what does the concept of Verification refer to?",
+      "type": "single-choice",
+      "topic": "Software Testing Basics",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Checking if the final product meets the customer's actual market needs."
+        },
+        {
+          "id": "o2",
+          "text": "Evaluating artifacts and processes to ensure you are building the product correctly."
+        },
+        {
+          "id": "o3",
+          "text": "Executing automation scripts to verify the final code build."
+        },
+        {
+          "id": "o4",
+          "text": "Signing off the software for production release."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Verification asks 'Are we building the product right?' by reviewing documents, requirements, and processes without executing code, whereas Validation asks 'Are we building the right product?'."
+    },
+    {
+      "id": "q13",
+      "question": "If an application accepts numeric values from 1 to 100, which values are typically tested using Boundary Value Analysis?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Testing Techniques",
+      "options": [
+        { "id": "o1", "text": "0" },
+        { "id": "o2", "text": "1" },
+        { "id": "o3", "text": "50" },
+        { "id": "o4", "text": "100" }
+      ],
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "Boundary Value Analysis focuses on testing the edges of equivalence partitions. For a valid range of 1 to 100, boundary values include 0 (invalid low), 1 (valid minimum), 100 (valid maximum), and 101 (invalid high). Value 50 is an equivalence partition center point."
+    },
+    {
+      "id": "q14",
+      "question": "What is the primary characteristic of Exploratory Testing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Executing pre-written test scripts exactly as documented in the test plan."
+        },
+        {
+          "id": "o2",
+          "text": "Simultaneous learning, test design, and test execution driven by the tester's intuition."
+        },
+        {
+          "id": "o3",
+          "text": "Testing the software's server performance under extreme network latency."
+        },
+        {
+          "id": "o4",
+          "text": "Running the raw source code through a static analysis security tool."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Exploratory testing is a hands-on approach where testers rely on their domain knowledge and intuition to dynamically design and execute tests at the same time, without formal test scripts."
+    },
+    {
+      "id": "q15",
+      "question": "Which of the following are examples of Non-Functional Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Types of Testing",
+      "options": [
+        { "id": "o1", "text": "Load Testing" },
+        { "id": "o2", "text": "Usability Testing" },
+        { "id": "o3", "text": "Integration Testing" },
+        { "id": "o4", "text": "Unit Testing" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Non-Functional Testing evaluates non-behavioral aspects of a system like performance, usability, and reliability. Load and Usability testing fall into this category, whereas Integration and Unit testing are types of functional testing."
+    },
+    {
+      "id": "q16",
+      "question": "What is White Box Testing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing the software without any knowledge of its internal architecture."
+        },
+        {
+          "id": "o2",
+          "text": "Testing the internal structure, code, and design of the application."
+        },
+        {
+          "id": "o3",
+          "text": "A specialized technique focused purely on database administration."
+        },
+        {
+          "id": "o4",
+          "text": "Testing performed exclusively by end-users in a production environment."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "White Box Testing (also known as Clear Box or Structural testing) requires knowledge of the internal code, branches, and logic of the software to design test cases."
+    },
+    {
+      "id": "q17",
+      "question": "Which question best describes the concept of Validation in software testing?",
+      "type": "single-choice",
+      "topic": "Software Testing Basics",
+      "options": [
+        { "id": "o1", "text": "Are we building the product right?" },
+        { "id": "o2", "text": "Is the codebase well-documented?" },
+        { "id": "o3", "text": "Are we building the right product?" },
+        { "id": "o4", "text": "How fast does the application load?" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Validation involves dynamic execution of the software to ensure it meets the customer's exact needs and expectations, answering the question 'Are we building the right product?'."
+    },
+    {
+      "id": "q18",
+      "question": "What is the primary purpose of a Requirement Traceability Matrix (RTM)?",
+      "type": "single-choice",
+      "topic": "Test Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To track the total number of lines of code written by each developer."
+        },
+        {
+          "id": "o2",
+          "text": "To map and trace user requirements to the corresponding test cases."
+        },
+        {
+          "id": "o3",
+          "text": "To monitor network traffic during a load test."
+        },
+        {
+          "id": "o4",
+          "text": "To calculate the salary budget for the QA team."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "An RTM is a document that maps business requirements to test cases, ensuring that all requirements are covered by tests and no functionality is missed."
+    },
+    {
+      "id": "q19",
+      "question": "Which of the following describes Ad-hoc Testing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing conducted strictly following a detailed, approved test plan."
+        },
+        {
+          "id": "o2",
+          "text": "An informal, unscripted testing method performed without documentation."
+        },
+        {
+          "id": "o3",
+          "text": "An automated testing approach used for API endpoints."
+        },
+        {
+          "id": "o4",
+          "text": "A process of reviewing code syntax before compilation."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Ad-hoc testing is an informal, unscripted testing approach where the tester tries to break the system without referring to specific requirements or test cases."
+    },
+    {
+      "id": "q20",
+      "question": "What is the definition of Retesting in manual testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Running the entire test suite to find new defects."
+        },
+        {
+          "id": "o2",
+          "text": "Executing a specific test case again to verify that a previously reported defect has been fixed."
+        },
+        {
+          "id": "o3",
+          "text": "Checking if a new feature broke existing functionalities."
+        },
+        {
+          "id": "o4",
+          "text": "Testing the software on a different operating system."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Retesting focuses on verifying that a specific, logged defect has been successfully resolved by the development team. It is different from regression testing."
+    },
+    {
+      "id": "q21",
+      "question": "Which of the following are widely recognized approaches to Integration Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Levels of Testing",
+      "options": [
+        { "id": "o1", "text": "Top-Down Approach" },
+        { "id": "o2", "text": "Bottom-Up Approach" },
+        { "id": "o3", "text": "Left-Right Approach" },
+        { "id": "o4", "text": "Big Bang Approach" }
+      ],
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "Common integration testing strategies include Top-Down (using stubs), Bottom-Up (using drivers), and Big Bang (integrating all modules at once). 'Left-Right' is not a recognized integration approach."
+    },
+    {
+      "id": "q22",
+      "question": "When is Sanity Testing typically performed?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "At the very beginning of the project before requirements are gathered."
+        },
+        {
+          "id": "o2",
+          "text": "After a minor change in code or functionality to verify that the specific module is working properly."
+        },
+        {
+          "id": "o3",
+          "text": "When evaluating the performance of the system under 10,000 concurrent users."
+        },
+        {
+          "id": "o4",
+          "text": "Only during the final stage by actual paying customers."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Sanity testing is a targeted, unscripted test performed after receiving a software build with minor changes to confirm that the specific bugs were fixed and no major issues were introduced in that module."
+    },
+    {
+      "id": "q23",
+      "question": "Which of the following fields are vital to include when logging a Defect Report?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Defect Management",
+      "options": [
+        { "id": "o1", "text": "Steps to Reproduce" },
+        { "id": "o2", "text": "Developer's Salary Information" },
+        { "id": "o3", "text": "Environment (e.g., OS, Browser version)" },
+        { "id": "o4", "text": "Actual vs Expected Result" }
+      ],
+      "correctAnswers": ["o1", "o3", "o4"],
+      "explanation": "A high-quality defect report must include actionable information such as precise Steps to Reproduce, the Environment where the bug occurred, and the Actual vs Expected Results."
+    },
+    {
+      "id": "q24",
+      "question": "What is Compatibility Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Ensuring two QA team members agree on a test plan."
+        },
+        {
+          "id": "o2",
+          "text": "Testing how well the software performs across different hardware, operating systems, browsers, or network environments."
+        },
+        {
+          "id": "o3",
+          "text": "Checking if the software's source code is compatible with an automated static analysis tool."
+        },
+        {
+          "id": "o4",
+          "text": "Measuring how many concurrent database queries the system can handle."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Compatibility testing verifies that a software application functions correctly across a variety of supported environments, such as different web browsers, OS versions, and device types."
+    },
+    {
+      "id": "q25",
+      "question": "Which statements correctly describe Beta Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Levels of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It is performed by independent developers inside the organization."
+        },
+        {
+          "id": "o2",
+          "text": "It is performed by real end-users in their actual external environments."
+        },
+        {
+          "id": "o3",
+          "text": "It helps identify unexpected usage patterns and environmental bugs before official release."
+        },
+        {
+          "id": "o4",
+          "text": "It is a white-box testing technique focused entirely on backend logic."
+        }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Beta testing is a type of User Acceptance Testing (UAT) conducted by real users outside the development organization in real-world environments to catch unexpected issues before the final launch."
+    },
+    {
+      "id": "q26",
+      "question": "Which of the following activities are considered Dynamic Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Software Testing Basics",
+      "options": [
+        { "id": "o1", "text": "Unit Testing" },
+        { "id": "o2", "text": "Code Walkthroughs" },
+        { "id": "o3", "text": "System Testing" },
+        { "id": "o4", "text": "Document Reviews" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Dynamic testing involves actually executing the software code to validate its behavior (e.g., Unit, Integration, and System testing). Code walkthroughs and document reviews are Static Testing techniques."
+    },
+    {
+      "id": "q27",
+      "question": "In manual testing context, what does Test Coverage measure?",
+      "type": "single-choice",
+      "topic": "Test Management",
+      "options": [
+        { "id": "o1", "text": "The amount of time left in the testing phase." },
+        {
+          "id": "o2",
+          "text": "The extent to which the application's requirements or source code have been exercised by the test cases."
+        },
+        {
+          "id": "o3",
+          "text": "The number of automation licenses the testing team holds."
+        },
+        {
+          "id": "o4",
+          "text": "The speed at which a tester executes individual test steps."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Test Coverage is a metric used to measure the amount of functionality, requirements, or code that is validated by a set of test cases, helping to identify untested areas of the software."
+    },
+    {
+      "id": "q28",
+      "question": "According to ISTQB terminology, what is a 'Defect' (or Bug)?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A human action that produces an incorrect result in the code."
+        },
+        {
+          "id": "o2",
+          "text": "An imperfection or flaw in a component or system that can cause the system to fail to perform its required function."
+        },
+        {
+          "id": "o3",
+          "text": "An event in production where the system entirely crashes for the end user."
+        },
+        {
+          "id": "o4",
+          "text": "A missing business requirement from the initial project scope."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A defect (or bug) is a flaw in the system introduced by a human error (mistake) which, if executed, can cause a failure (deviation from expected behavior)."
+    },
+    {
+      "id": "q29",
+      "question": "Which of the following elements are typically defined inside a Master Test Plan?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Test Management",
+      "options": [
+        { "id": "o1", "text": "Testing Scope and Objectives" },
+        { "id": "o2", "text": "Roles and Responsibilities" },
+        {
+          "id": "o3",
+          "text": "Step-by-step reproduction instructions for a specific bug"
+        },
+        { "id": "o4", "text": "Hardware and Software Environment Requirements" }
+      ],
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "A Test Plan is a comprehensive management document that outlines scope, objectives, resources, schedule, and environment setup. Individual bug reproduction steps belong in a Defect Report, not a Test Plan."
+    },
+    {
+      "id": "q30",
+      "question": "What is the focus of Localization Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Ensuring the software architecture is globally scalable to millions of users."
+        },
+        {
+          "id": "o2",
+          "text": "Validating that the software can easily be translated into multiple languages without source code changes."
+        },
+        {
+          "id": "o3",
+          "text": "Testing how well a software application has been adapted to a specific region, language, and cultural context."
+        },
+        {
+          "id": "o4",
+          "text": "Verifying that local storage databases encrypt data correctly."
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Localization testing checks the software's readiness for a specific target culture/locale, examining elements like translated text, date/time formats, currency, and culturally appropriate UI components."
+    },
+    {
+      "id": "q31",
+      "question": "Which of the following is one of the seven fundamental principles of testing according to ISTQB?",
+      "type": "single-choice",
+      "topic": "Testing Principles",
+      "options": [
+        { "id": "o1", "text": "Exhaustive testing is possible." },
+        { "id": "o2", "text": "Defect clustering." },
+        { "id": "o3", "text": "Testing prevents all bugs." },
+        { "id": "o4", "text": "Testing can prove the absence of defects." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Defect clustering states that a small number of modules usually contain most of the bugs detected. The principles also state that exhaustive testing is impossible, and testing shows the presence, not absence, of defects."
+    },
+    {
+      "id": "q32",
+      "question": "What is a Test Scenario in manual testing?",
+      "type": "single-choice",
+      "topic": "Test Design",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A detailed step-by-step procedure to execute a test."
+        },
+        {
+          "id": "o2",
+          "text": "A high-level description of an application feature that can be tested."
+        },
+        { "id": "o3", "text": "A script used by automation tools." },
+        { "id": "o4", "text": "A document detailing the total budget for QA." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Test Scenario is a high-level classification of a testable feature or use case, often derived directly from business requirements. A Test Case provides the granular, step-by-step instructions to validate that scenario."
+    },
+    {
+      "id": "q33",
+      "question": "Which of the following statements apply to System Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It evaluates the fully integrated application as a whole."
+        },
+        {
+          "id": "o2",
+          "text": "It is typically categorized as a type of black-box testing."
+        },
+        {
+          "id": "o3",
+          "text": "It is performed primarily by the end-users before final sign-off."
+        },
+        {
+          "id": "o4",
+          "text": "It focuses heavily on testing individual methods and functions in the code."
+        }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "System testing evaluates the complete, integrated system's compliance with specified requirements and is generally treated as black-box testing. End-users perform UAT, not system testing, and individual methods are evaluated during unit testing."
+    },
+    {
+      "id": "q34",
+      "question": "What constitutes a Test Environment?",
+      "type": "single-choice",
+      "topic": "Test Environment",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Only the physical office space where QA engineers work."
+        },
+        {
+          "id": "o2",
+          "text": "The software, hardware, and network setup on which the testing team executes test cases."
+        },
+        {
+          "id": "o3",
+          "text": "The specific programming language used to build the software."
+        },
+        {
+          "id": "o4",
+          "text": "The final production server where actual customers interact with the application."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Test Environment encompasses the exact combination of hardware, software, network configurations, and test data required to execute the test cases effectively and simulate user conditions."
+    },
+    {
+      "id": "q35",
+      "question": "Which test design technique uses a table to systematically map different combinations of input conditions to their expected system actions?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        { "id": "o1", "text": "Equivalence Partitioning" },
+        { "id": "o2", "text": "State Transition Testing" },
+        { "id": "o3", "text": "Decision Table Testing" },
+        { "id": "o4", "text": "Use Case Testing" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Decision Table Testing (or Cause-Effect Table) systematically captures complex business rules by mapping combinations of input conditions to their expected actions, ensuring all logical permutations are considered."
+    },
+    {
+      "id": "q36",
+      "question": "When is Maintenance Testing typically performed?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "During the initial coding phase of a new application."
+        },
+        {
+          "id": "o2",
+          "text": "When testing a product that is already live in production and undergoing updates, patches, or migrations."
+        },
+        {
+          "id": "o3",
+          "text": "Before any project requirements have been gathered."
+        },
+        {
+          "id": "o4",
+          "text": "Exclusively during the UI wireframe design phase."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Maintenance testing is conducted on existing, deployed software to evaluate modifications, data migrations, or retirement of features, ensuring these changes do not break live operations."
+    },
+    {
+      "id": "q37",
+      "question": "During which phase of the Software Testing Life Cycle (STLC) does the testing team typically begin drafting the Requirement Traceability Matrix (RTM)?",
+      "type": "single-choice",
+      "topic": "Software Testing Life Cycle (STLC)",
+      "options": [
+        { "id": "o1", "text": "Test Execution" },
+        { "id": "o2", "text": "Test Closure" },
+        { "id": "o3", "text": "Requirement Analysis" },
+        { "id": "o4", "text": "Test Environment Setup" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "The RTM is initiated during the Requirement Analysis phase. Testers analyze the business requirements to ensure they are fully understood, paving the way to map them to test cases during the design phase."
+    },
+    {
+      "id": "q38",
+      "question": "If a tester logs a defect but the developer determines the application is actually functioning exactly as the requirements specify, what status is typically assigned to the defect?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        { "id": "o1", "text": "Fixed" },
+        { "id": "o2", "text": "Deferred" },
+        { "id": "o3", "text": "Rejected" },
+        { "id": "o4", "text": "Duplicate" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "When a developer determines the reported issue is not a bug or acts according to the designed business logic, they mark the defect status as 'Rejected' or 'Invalid'."
+    },
+    {
+      "id": "q39",
+      "question": "Which of the following testing types are primarily focused on the user interface (UI) and user experience (UX)?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Types of Testing",
+      "options": [
+        { "id": "o1", "text": "Database Testing" },
+        { "id": "o2", "text": "Usability Testing" },
+        { "id": "o3", "text": "Visual Testing" },
+        { "id": "o4", "text": "API Testing" }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Usability Testing assesses how user-friendly and intuitive the application is, while Visual Testing checks for UI layout, font, and alignment issues. API and Database testing focus strictly on the backend."
+    },
+    {
+      "id": "q40",
+      "question": "What is Test Data in the context of manual testing?",
+      "type": "single-choice",
+      "topic": "Test Design",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The quantitative metrics collected after test execution finishes."
+        },
+        {
+          "id": "o2",
+          "text": "The specific input values and database records required during the execution of a test case."
+        },
+        {
+          "id": "o3",
+          "text": "The source code files of the application being tested."
+        },
+        {
+          "id": "o4",
+          "text": "The project management spreadsheet outlining QA timelines."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Test data consists of the specific inputs, mock database records, or files required to execute a test case and properly verify the system's output behavior."
+    },
+    {
+      "id": "q41",
+      "question": "Which factors should business stakeholders and QA leads consider when assigning Priority to a defect?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The business and revenue impact of the defect."
+        },
+        { "id": "o2", "text": "The frequency of occurrence for end-users." },
+        {
+          "id": "o3",
+          "text": "The specific programming language the developer used to write the feature."
+        },
+        {
+          "id": "o4",
+          "text": "The aesthetic color theme of the defect tracking software."
+        }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Priority determines the urgency of a fix. It is heavily influenced by the business impact, how highly visible the defect is, and how frequently end-users will encounter it."
+    },
+    {
+      "id": "q42",
+      "question": "What is the primary purpose of Test Estimation?",
+      "type": "single-choice",
+      "topic": "Test Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To exactly predict the total number of bugs in the software."
+        },
+        {
+          "id": "o2",
+          "text": "To calculate the approximate effort, time, and resources required to complete all testing activities."
+        },
+        {
+          "id": "o3",
+          "text": "To measure the memory and CPU usage of the application under test."
+        },
+        {
+          "id": "o4",
+          "text": "To assign blame for timeline delays in previous project cycles."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Test estimation is a project management activity used to forecast the effort, timeline, and human resources needed to effectively complete QA testing within a scheduled release."
+    },
+    {
+      "id": "q43",
+      "question": "In an Agile development framework, when does manual testing usually occur?",
+      "type": "single-choice",
+      "topic": "Agile Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Only at the very end of the project after all backend coding is complete."
+        },
+        {
+          "id": "o2",
+          "text": "Continuously and iteratively alongside development throughout the sprint."
+        },
+        {
+          "id": "o3",
+          "text": "Exclusively during a dedicated stabilization month once a year."
+        },
+        {
+          "id": "o4",
+          "text": "Only after the product is fully released to customers."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Agile methodologies emphasize continuous, iterative testing. Manual testers work closely with developers within each sprint to design test cases and execute them as soon as features are built."
+    },
+    {
+      "id": "q44",
+      "question": "What does Alpha Testing mean?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing performed strictly by independent third-party regulatory auditors."
+        },
+        {
+          "id": "o2",
+          "text": "Final phase testing performed by actual end-users in the live production environment."
+        },
+        {
+          "id": "o3",
+          "text": "Acceptance testing performed internally by the organization before releasing the software to external beta users."
+        },
+        {
+          "id": "o4",
+          "text": "Automated performance testing on isolated API endpoints."
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Alpha testing is an early form of acceptance testing performed internally by employees (often QA or other internal stakeholders) in a controlled environment before releasing the software to external Beta users."
+    },
+    {
+      "id": "q45",
+      "question": "Which of the following scenarios best demonstrates the concept of Error Guessing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A tester systematically mapping out inputs using an equivalence partition table."
+        },
+        {
+          "id": "o2",
+          "text": "A tester using their past experience to proactively enter problematic inputs they suspect will crash the system."
+        },
+        {
+          "id": "o3",
+          "text": "A tester strictly following a step-by-step test script to verify a login page."
+        },
+        {
+          "id": "o4",
+          "text": "A developer writing automated assertions for their unit tests."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Error guessing is an experience-based technique where the tester leverages their intuition, domain knowledge, and historical context of similar systems to predict where bugs are most likely to occur."
+    },
+    {
+      "id": "q46",
+      "question": "What is the primary characteristic of a 'Blocker' defect?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It is a cosmetic issue that does not affect functionality."
+        },
+        {
+          "id": "o2",
+          "text": "It prevents further testing of a major portion of the application."
+        },
+        {
+          "id": "o3",
+          "text": "It is a bug that only occurs under extreme network load."
+        },
+        {
+          "id": "o4",
+          "text": "It represents a missing test case in the test plan."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A 'Blocker' defect completely halts the testing process for a specific module or application, meaning no further testing or workarounds can be executed until it is fixed."
+    },
+    {
+      "id": "q47",
+      "question": "What is the main goal of Accessibility Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To ensure the database can be accessed by administrators."
+        },
+        {
+          "id": "o2",
+          "text": "To verify that the application is usable by people with disabilities, including visual, auditory, and motor impairments."
+        },
+        {
+          "id": "o3",
+          "text": "To check if the source code is easily accessible to new developers."
+        },
+        {
+          "id": "o4",
+          "text": "To measure how fast the server can be accessed over a VPN."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Accessibility testing (often guided by WCAG standards) ensures that software is usable by individuals with disabilities, using tools like screen readers or keyboard-only navigation."
+    },
+    {
+      "id": "q48",
+      "question": "In Agile testing, what is a 'User Story'?",
+      "type": "single-choice",
+      "topic": "Agile Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A detailed technical specification document for the database schema."
+        },
+        {
+          "id": "o2",
+          "text": "An informal, general explanation of a software feature written from the perspective of the end user."
+        },
+        {
+          "id": "o3",
+          "text": "The personal profile of the tester executing the scripts."
+        },
+        {
+          "id": "o4",
+          "text": "A log of all defects found during the previous sprint."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A User Story is an Agile project management unit of work that describes a feature from the end-user's perspective, typically formatted as 'As a [user], I want [goal] so that [reason].'"
+    },
+    {
+      "id": "q49",
+      "question": "Which of the following best describes State Transition Testing?",
+      "type": "single-choice",
+      "topic": "Testing Techniques",
+      "options": [
+        { "id": "o1", "text": "Testing boundary values of input fields." },
+        {
+          "id": "o2",
+          "text": "Testing the system's behavior as it moves from one state to another based on specific inputs or events."
+        },
+        {
+          "id": "o3",
+          "text": "Testing the application's translation into different foreign languages."
+        },
+        {
+          "id": "o4",
+          "text": "Testing the application simultaneously on multiple operating systems."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "State Transition Testing is a black-box technique used when the system's output depends on its sequence of past events or its current state, verifying valid and invalid state changes."
+    },
+    {
+      "id": "q50",
+      "question": "Which of the following are standard components of 'Exit Criteria' in a test plan?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Test Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "All critical and major defects have been fixed and verified."
+        },
+        {
+          "id": "o2",
+          "text": "100% of the planned test cases have been executed."
+        },
+        {
+          "id": "o3",
+          "text": "The test environment has been initially provisioned."
+        },
+        {
+          "id": "o4",
+          "text": "Business requirements are successfully gathered."
+        }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Exit criteria define the conditions that must be met to conclude testing. Completing test execution and resolving critical bugs are exit criteria, while environment provisioning and requirement gathering belong to entry criteria or earlier phases."
+    },
+    {
+      "id": "q51",
+      "question": "What is the primary difference between Quality Assurance (QA) and Quality Control (QC)?",
+      "type": "single-choice",
+      "topic": "Software Testing Basics",
+      "options": [
+        {
+          "id": "o1",
+          "text": "QA is process-oriented and focuses on defect prevention, while QC is product-oriented and focuses on defect identification."
+        },
+        {
+          "id": "o2",
+          "text": "QA involves writing the code, while QC involves deploying the code."
+        },
+        {
+          "id": "o3",
+          "text": "QA is performed only by clients, while QC is performed by developers."
+        },
+        {
+          "id": "o4",
+          "text": "There is no difference; the terms are completely interchangeable."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Quality Assurance ensures the correct processes are in place to prevent bugs (proactive), whereas Quality Control involves executing tests to identify existing bugs in the product (reactive)."
+    },
+    {
+      "id": "q52",
+      "question": "Which of the following vulnerabilities are typically investigated during Security Testing?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Types of Testing",
+      "options": [
+        { "id": "o1", "text": "SQL Injection" },
+        { "id": "o2", "text": "Cross-Site Scripting (XSS)" },
+        { "id": "o3", "text": "Typographical errors on the homepage" },
+        { "id": "o4", "text": "Broken hyperlink redirects" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Security testing seeks out vulnerabilities like SQL Injection and XSS to ensure data protection. Typos and broken links are functional or visual defects, not direct security vulnerabilities."
+    },
+    {
+      "id": "q53",
+      "question": "In a defect life cycle, what does the status 'Deferred' indicate?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The bug has been fixed but is waiting for QA verification."
+        },
+        {
+          "id": "o2",
+          "text": "The bug is acknowledged but postponed to be fixed in a future release."
+        },
+        {
+          "id": "o3",
+          "text": "The bug report is rejected because it could not be reproduced."
+        },
+        {
+          "id": "o4",
+          "text": "The bug is assigned to a developer who is currently on leave."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A defect is marked as 'Deferred' when management acknowledges it is a valid issue but decides not to fix it in the current sprint or release cycle, usually due to time constraints or low priority."
+    },
+    {
+      "id": "q54",
+      "question": "Which of the following activities are part of the 'Test Closure' phase in the STLC?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Software Testing Life Cycle (STLC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Archiving testware (test cases, test plans, and test data) for future reference."
+        },
+        {
+          "id": "o2",
+          "text": "Writing the initial Requirement Traceability Matrix (RTM)."
+        },
+        {
+          "id": "o3",
+          "text": "Evaluating test completion metrics and compiling test summary reports."
+        },
+        {
+          "id": "o4",
+          "text": "Setting up the initial testing hardware environment."
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Test Closure involves formalizing the end of the testing process by generating summary reports, evaluating metrics, sharing feedback, and archiving testware. RTM creation and environment setup happen earlier in the STLC."
+    },
+    {
+      "id": "q55",
+      "question": "Which ISTQB testing principle is defined as 'The Pesticide Paradox'?",
+      "type": "single-choice",
+      "topic": "Testing Principles",
+      "options": [
+        {
+          "id": "o1",
+          "text": "If the same tests are repeated over and over again, eventually they will no longer find any new bugs."
+        },
+        {
+          "id": "o2",
+          "text": "Testing earlier in the lifecycle reduces the cost of bugs."
+        },
+        {
+          "id": "o3",
+          "text": "Exhaustive testing of every possible path is impossible."
+        },
+        {
+          "id": "o4",
+          "text": "Automated tools completely eliminate the need for human testers."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "The Pesticide Paradox states that repeating the same test cases continually will stop finding new defects, just as insects build resistance to pesticides. Test cases must be regularly reviewed and updated."
+    },
+    {
+      "id": "q56",
+      "question": "How does a Test Strategy differ from a Test Plan?",
+      "type": "single-choice",
+      "topic": "Test Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A Test Strategy is a static, high-level document covering organizational testing standards, while a Test Plan is dynamic and project-specific."
+        },
+        {
+          "id": "o2",
+          "text": "A Test Strategy is written by junior testers, while a Test Plan is written by developers."
+        },
+        {
+          "id": "o3",
+          "text": "A Test Strategy includes the exact step-by-step test cases, while a Test Plan does not."
+        },
+        {
+          "id": "o4",
+          "text": "There is no difference; they are two names for the same document."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "A Test Strategy sets the overarching testing standards and guidelines for an entire organization, whereas a Test Plan outlines the specific scope, schedule, and resources for an individual project."
+    },
+    {
+      "id": "q57",
+      "question": "What is the focus of End-to-End (E2E) Testing?",
+      "type": "single-choice",
+      "topic": "Types of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Testing an application's workflow from start to finish, including integration with external databases and third-party APIs."
+        },
+        { "id": "o2", "text": "Testing only the login screen multiple times." },
+        {
+          "id": "o3",
+          "text": "Validating the source code structure before it is compiled."
+        },
+        {
+          "id": "o4",
+          "text": "Checking if the application crashes when the power is turned off."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "End-to-End testing verifies the entire software product from beginning to end, ensuring all integrated pieces, external interfaces, and database dependencies function correctly in real-world scenarios."
+    },
+    {
+      "id": "q58",
+      "question": "Which of the following statements about Stubs and Drivers in integration testing are true?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Levels of Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Stubs act as dummy 'called' programs used in top-down integration testing."
+        },
+        {
+          "id": "o2",
+          "text": "Drivers act as dummy 'calling' programs used in bottom-up integration testing."
+        },
+        {
+          "id": "o3",
+          "text": "Stubs and Drivers are primarily used during final User Acceptance Testing (UAT)."
+        },
+        { "id": "o4", "text": "Stubs refer strictly to front-end UI mockups." }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "In integration testing, when dependent modules are not yet developed, Stubs replace lower-level modules (called programs), and Drivers replace higher-level modules (calling programs)."
+    },
+    {
+      "id": "q59",
+      "question": "According to the V-Model of software testing, which testing phase maps directly back to the Business Requirements gathering phase?",
+      "type": "single-choice",
+      "topic": "Software Testing Basics",
+      "options": [
+        { "id": "o1", "text": "User Acceptance Testing (UAT)" },
+        { "id": "o2", "text": "Unit Testing" },
+        { "id": "o3", "text": "Integration Testing" },
+        { "id": "o4", "text": "System Testing" }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "In the V-Model, each development phase has a corresponding testing phase. The highest level, Business Requirements gathering, corresponds to User Acceptance Testing (UAT), which verifies those exact requirements."
+    },
+    {
+      "id": "q60",
+      "question": "What is the primary purpose of a Bug Triage meeting?",
+      "type": "single-choice",
+      "topic": "Defect Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To evaluate, prioritize, and assign newly reported defects to the appropriate developers."
+        },
+        { "id": "o2", "text": "To write automated test scripts for old bugs." },
+        {
+          "id": "o3",
+          "text": "To discipline team members who introduce the most bugs."
+        },
+        {
+          "id": "o4",
+          "text": "To permanently delete low-priority bugs from the tracking system without review."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "A Bug Triage meeting involves QA leads, developers, and project managers reviewing new defects to assign proper severity, determine priority, and allocate them to developers for resolution."
+    }
+  ]
+}

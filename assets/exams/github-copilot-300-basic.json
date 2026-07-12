@@ -1560,6 +1560,7 @@
     {
       "id": "q56",
       "question": "Which of the following best describes the primary goal of the Duplication Detector in GitHub Copilot?",
+      "type": "single-choice",
       "topic": "Privacy and Safeguards",
       "options": [
         {
@@ -1587,6 +1588,7 @@
     {
       "id": "q57",
       "question": "When configuring content exclusions, which scope can be used to prevent Copilot from indexing specific files?",
+      "type": "single-choice",
       "topic": "Privacy and Exclusions",
       "options": [
         {
@@ -1614,6 +1616,7 @@
     {
       "id": "q58",
       "question": "Which of the following is considered a 'few-shot' prompting technique?",
+      "type": "single-choice",
       "topic": "Prompt Engineering",
       "options": [
         {
@@ -1641,6 +1644,7 @@
     {
       "id": "q59",
       "question": "What is the primary responsibility of a developer when using AI-generated code?",
+      "type": "single-choice",
       "topic": "Responsible AI",
       "options": [
         {
@@ -1668,6 +1672,7 @@
     {
       "id": "q60",
       "question": "How does Copilot gather context to build code suggestions?",
+      "type": "single-choice",
       "topic": "Data and Architecture",
       "options": [
         {
@@ -1695,6 +1700,7 @@
     {
       "id": "q61",
       "question": "Which GitHub Copilot plan offers IP indemnity for enterprise customers?",
+      "type": "single-choice",
       "topic": "Plans and Features",
       "options": [
         {
@@ -1722,6 +1728,7 @@
     {
       "id": "q62",
       "question": "What is the purpose of the GitHub Copilot CLI?",
+      "type": "single-choice",
       "topic": "Developer Use Cases",
       "options": [
         {
@@ -1749,6 +1756,7 @@
     {
       "id": "q63",
       "question": "If an organization wants to prevent its code from being used to train GitHub's global models, what is the best approach?",
+      "type": "single-choice",
       "topic": "Privacy and Exclusions",
       "options": [
         {
@@ -1776,6 +1784,7 @@
     {
       "id": "q64",
       "question": "How does Copilot Chat improve upon standard inline suggestions?",
+      "type": "single-choice",
       "topic": "Features",
       "options": [
         {
@@ -1803,6 +1812,7 @@
     {
       "id": "q65",
       "question": "Which of the following is a limitation of large language models used by Copilot?",
+      "type": "single-choice",
       "topic": "Responsible AI",
       "options": [
         {
@@ -1830,6 +1840,7 @@
     {
       "id": "q66",
       "question": "Which of the following is NOT a feature supported by GitHub Copilot Enterprise?",
+      "type": "single-choice",
       "topic": "Plans and Features",
       "options": [
         {
@@ -1857,6 +1868,7 @@
     {
       "id": "q67",
       "question": "What is the primary benefit of using 'Knowledge Bases' in GitHub Copilot Enterprise?",
+      "type": "single-choice",
       "topic": "Features",
       "options": [
         {
@@ -1882,35 +1894,37 @@
       "explanation": "Knowledge Bases allow the Copilot model to reference an organization's internal documentation, libraries, and best practices to provide highly relevant and context-aware suggestions."
     },
     {
-      "id": "q68",
-      "question": "What happens during the 'post-processing' phase of a Copilot suggestion?",
-      "topic": "Data and Architecture",
+      "id": "68",
+      "question": "Which scenario is most appropriate for using the Copilot coding agent, rather than only using Copilot Chat inside your IDE?",
+      "type": "single-choice",
+      "topic": "Agentic Workflows",
       "options": [
         {
           "id": "o1",
-          "text": "The code is compiled and run."
+          "text": "Asking “Why does this function fail?” and pasting a stack trace for Copilot Chat to explain in your IDE."
         },
         {
           "id": "o2",
-          "text": "The suggestion is filtered, ranked, and checked for duplication."
+          "text": "Implementing a backlog item that requires edits across multiple services, running tests, and opening a PR"
         },
         {
           "id": "o3",
-          "text": "The developer's feedback is sent to the LLM."
+          "text": "Renaming a local variable in a single file, then manually committing the change."
         },
         {
           "id": "o4",
-          "text": "The code is automatically committed to the repository."
+          "text": "Generating a one-off code snippet for a small helper function you’ll paste into a file."
         }
       ],
       "correctAnswers": [
         "o2"
       ],
-      "explanation": "After the LLM generates a response, it undergoes post-processing, which includes ranking the suggestions and filtering them through safeguards like the duplication detector."
+      "explanation": "Copilot coding agent is designed for complex, multi-step tasks that span multiple files and may require running tests or other commands, then creating a PR."
     },
     {
       "id": "q69",
       "question": "Why might Copilot suggestions be absent in a specific file?",
+      "type": "single-choice",
       "topic": "Troubleshooting",
       "options": [
         {
@@ -1938,6 +1952,7 @@
     {
       "id": "q70",
       "question": "How can Copilot assist in testing workflows?",
+      "type": "single-choice",
       "topic": "Developer Use Cases",
       "options": [
         {

@@ -1,0 +1,1289 @@
+{
+  "id": "devOps-basic",
+  "name": "DevOps Essential",
+  "vendor": "CertifyStacks",
+  "questions": 60,
+  "duration": 60,
+  "passingScore": 700,
+  "difficulty": "Basic",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "What is the primary goal of Continuous Integration (CI) in a DevOps pipeline?",
+      "type": "single-choice",
+      "topic": "Continuous Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Automating physical infrastructure provisioning"
+        },
+        {
+          "id": "o2",
+          "text": "Merging code changes frequently into a central repository to detect errors early"
+        },
+        {
+          "id": "o3",
+          "text": "Automatically deploying the application directly to end-users"
+        },
+        { "id": "o4", "text": "Managing container orchestration lifecycles" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Continuous Integration (CI) is a practice where developers frequently merge code changes into a central repository, after which automated builds and tests are run. The primary goal is to find and address bugs quicker, improve software quality, and reduce the time it takes to validate and release new software updates."
+    },
+    {
+      "id": "q2",
+      "question": "Which of the following are primary benefits of utilizing Infrastructure as Code (IaC)? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Eliminating the need for version control systems"
+        },
+        {
+          "id": "o2",
+          "text": "Ensuring consistency and repeatability in environment deployments"
+        },
+        {
+          "id": "o3",
+          "text": "Requiring manual intervention for security patching"
+        },
+        {
+          "id": "o4",
+          "text": "The ability to version, track, and audit infrastructure changes"
+        }
+      ],
+      "correctAnswers": ["o2", "o4"],
+      "explanation": "Infrastructure as Code (IaC) allows teams to define infrastructure in configuration files. This ensures that deployments are highly consistent and repeatable, avoiding human error. Because the infrastructure is defined as code, it can be tracked, audited, and versioned using standard source control tools like Git."
+    },
+    {
+      "id": "q3",
+      "question": "What is the main purpose of a container orchestration platform like Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Compiling application source code into executable binaries"
+        },
+        {
+          "id": "o2",
+          "text": "Automating the deployment, scaling, and management of containerized applications"
+        },
+        {
+          "id": "o3",
+          "text": "Replacing standard version control systems like Git"
+        },
+        {
+          "id": "o4",
+          "text": "Acting as a local hypervisor for traditional Virtual Machines"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Container orchestration platforms like Kubernetes are designed to handle the operational complexities of running containerized applications at scale. They automate tasks such as container deployment, scaling based on load, networking, and health monitoring."
+    },
+    {
+      "id": "q4",
+      "question": "In a GitOps workflow, what serves as the single source of truth for the declarative state of infrastructure and applications?",
+      "type": "single-choice",
+      "topic": "GitOps",
+      "options": [
+        { "id": "o1", "text": "The live production environment cluster" },
+        { "id": "o2", "text": "The Continuous Integration (CI) server" },
+        { "id": "o3", "text": "A Git repository" },
+        { "id": "o4", "text": "A public container registry" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "GitOps uses Git repositories as the single source of truth to deliver infrastructure and applications. By storing declarative configurations in Git, teams can use standard pull request workflows to propose, review, and merge infrastructure changes."
+    },
+    {
+      "id": "q5",
+      "question": "Which of the following elements constitute the three core pillars of observability? (Choose three)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "Logs" },
+        { "id": "o2", "text": "Metrics" },
+        { "id": "o3", "text": "Traces" },
+        { "id": "o4", "text": "Firewalls" }
+      ],
+      "correctAnswers": ["o1", "o2", "o3"],
+      "explanation": "The three core pillars of observability are Logs (records of discrete events), Metrics (aggregatable numeric representations of data over time), and Traces (the journey of a request as it moves across a distributed system)."
+    },
+    {
+      "id": "q6",
+      "question": "What is the primary difference between Continuous Delivery and Continuous Deployment?",
+      "type": "single-choice",
+      "topic": "Continuous Delivery/Deployment",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Continuous Delivery requires manual approval to push to production, whereas Continuous Deployment is fully automated to production."
+        },
+        {
+          "id": "o2",
+          "text": "Continuous Deployment is restricted to lower testing environments only."
+        },
+        {
+          "id": "o3",
+          "text": "Continuous Delivery is strictly used for infrastructure, not application code."
+        },
+        {
+          "id": "o4",
+          "text": "There is no difference; the terms are perfectly synonymous."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "In Continuous Delivery, every change is built, tested, and pushed to a non-production staging environment, ready to be deployed to production pending a manual approval step. In Continuous Deployment, that manual approval step is removed, and every change that passes automated tests is deployed to production automatically."
+    },
+    {
+      "id": "q7",
+      "question": "Which of the following is considered a declarative Infrastructure as Code (IaC) tool?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        { "id": "o1", "text": "Bash scripting" },
+        { "id": "o2", "text": "Terraform" },
+        { "id": "o3", "text": "Python" },
+        { "id": "o4", "text": "Make" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Terraform is a widely used declarative IaC tool. In a declarative approach, you define the desired state of the infrastructure (what it should look like), and the tool figures out the sequence of steps to achieve that state, unlike imperative scripting (like Bash) where you must define the exact commands to run."
+    },
+    {
+      "id": "q8",
+      "question": "Why are containers generally considered more lightweight than traditional virtual machines (VMs)?",
+      "type": "single-choice",
+      "topic": "Containerization",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Containers share the host system's OS kernel instead of requiring a full, separate guest OS for each instance."
+        },
+        {
+          "id": "o2",
+          "text": "Containers do not require a filesystem to execute code."
+        },
+        {
+          "id": "o3",
+          "text": "Containers are restricted to running simple static web pages."
+        },
+        {
+          "id": "o4",
+          "text": "Containers do not consume any CPU resources from the host hardware."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Containers virtualize at the operating system level, meaning all containers on a single host share the host's underlying OS kernel. Virtual Machines, on the other hand, require a full, heavy guest operating system to be loaded for every VM, making containers vastly more lightweight and faster to start."
+    },
+    {
+      "id": "q9",
+      "question": "What is the primary purpose of distributed tracing in a microservices architecture?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Tracking the flow and latency of a single request as it crosses multiple independent services."
+        },
+        {
+          "id": "o2",
+          "text": "Storing application logs in a centralized, highly available relational database."
+        },
+        {
+          "id": "o3",
+          "text": "Creating real-time backup copies of application databases."
+        },
+        {
+          "id": "o4",
+          "text": "Automatically scaling and deploying microservices based on traffic spikes."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "In microservices, a single user action may hit dozens of distinct services. Distributed tracing tags requests with a unique ID, allowing engineers to visualize the request's path, pinpoint latency bottlenecks, and understand service dependencies."
+    },
+    {
+      "id": "q10",
+      "question": "Which of the following tools are widely recognized for implementing GitOps practices natively within a Kubernetes environment? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitOps",
+      "options": [
+        { "id": "o1", "text": "Argo CD" },
+        { "id": "o2", "text": "Flux" },
+        { "id": "o3", "text": "Maven" },
+        { "id": "o4", "text": "Puppet" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Argo CD and Flux are leading GitOps operators specifically designed for Kubernetes. They continuously monitor a Git repository containing Kubernetes manifests or Helm charts and automatically sync the cluster to match the declared state."
+    },
+    {
+      "id": "q11",
+      "question": "In a robust CI/CD pipeline, what is the primary role of an artifact repository?",
+      "type": "single-choice",
+      "topic": "Continuous Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To store and version human-readable application source code."
+        },
+        {
+          "id": "o2",
+          "text": "To host the live running application that end-users interact with."
+        },
+        {
+          "id": "o3",
+          "text": "To securely store, manage, and version immutable build outputs like Docker images and JAR files."
+        },
+        {
+          "id": "o4",
+          "text": "To manage sprint planning and project tracking tickets."
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Artifact repositories (like Artifactory, Nexus, or Azure Artifacts) act as centralized hubs for binary components. After code is built in CI, the resulting immutable artifacts (e.g., container images, compiled binaries) are pushed here so they can be reliably pulled later during the deployment (CD) phase."
+    },
+    {
+      "id": "q12",
+      "question": "In the context of infrastructure management, what does the term 'configuration drift' refer to?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "When an application's source code is updated too frequently by multiple teams."
+        },
+        {
+          "id": "o2",
+          "text": "When the actual state of deployed infrastructure diverges from the defined configuration stored in version control over time."
+        },
+        {
+          "id": "o3",
+          "text": "When engineers switch from using one cloud provider to another."
+        },
+        {
+          "id": "o4",
+          "text": "When network latency causes infrastructure deployment pipelines to time out."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Configuration drift occurs when manual, untracked changes are made directly to servers or cloud environments (e.g., via a web portal or SSH), causing the live environment to differ from the automated IaC templates. This defeats the purpose of IaC and makes environments unpredictable."
+    },
+    {
+      "id": "q13",
+      "question": "Which of the following are essential native components found on worker nodes within a standard Kubernetes cluster? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "Kubelet" },
+        { "id": "o2", "text": "Kube-proxy" },
+        { "id": "o3", "text": "Dockerfile" },
+        { "id": "o4", "text": "Hypervisor" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "The Kubelet is an agent that runs on each worker node to ensure containers are running in a Pod. Kube-proxy is a network proxy that runs on each node, maintaining network rules to allow communication to Pods. Dockerfile is a build script, and a Hypervisor is for VMs, not native K8s components."
+    },
+    {
+      "id": "q14",
+      "question": "When configuring an observability stack, how is a 'metric' best defined?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A detailed, timestamped string of text recording a specific system error."
+        },
+        {
+          "id": "o2",
+          "text": "A measurable numerical value tracked over time, such as CPU utilization or HTTP request rate."
+        },
+        {
+          "id": "o3",
+          "text": "A visual mapping of all network switches and routers in a datacenter."
+        },
+        {
+          "id": "o4",
+          "text": "The compiled source code used by a monitoring agent."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Metrics are numerical measurements of system behavior over time. They are easily aggregated, making them ideal for triggering alerts and visualizing system health on dashboards (e.g., tracking memory usage spikes)."
+    },
+    {
+      "id": "q15",
+      "question": "Which core operational principle is absolutely central to the DevOps philosophy?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Maintaining strict organizational separation and hand-offs between development and operations teams."
+        },
+        {
+          "id": "o2",
+          "text": "Breaking down silos to foster collaboration, shared responsibility, and blameless continuous improvement."
+        },
+        {
+          "id": "o3",
+          "text": "Relying exclusively on manual testing processes to guarantee application security."
+        },
+        {
+          "id": "o4",
+          "text": "Avoiding the use of cloud computing to maximize bare-metal server performance."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "DevOps is fundamentally a cultural shift aimed at breaking down the traditional silos between development (Dev) and operations (Ops). By emphasizing communication, shared responsibility, and empathy, teams can build, test, and release software faster and more reliably."
+    },
+    {
+      "id": "q16",
+      "question": "What does the concept of 'idempotency' mean in the context of Infrastructure as Code (IaC)?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The execution of code will result in a different state every time it is run."
+        },
+        {
+          "id": "o2",
+          "text": "Running the same IaC script multiple times yields the same intended end state without causing unintended side effects."
+        },
+        {
+          "id": "o3",
+          "text": "Infrastructure configurations must be written in a proprietary scripting language."
+        },
+        {
+          "id": "o4",
+          "text": "The infrastructure is entirely read-only and cannot be modified once deployed."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Idempotency is a core principle of IaC. It ensures that no matter how many times you run your configuration script, the infrastructure will only be modified if its current state does not match the desired state defined in the code."
+    },
+    {
+      "id": "q17",
+      "question": "In DevOps, what is the primary goal of the 'shift-left' approach?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Moving security, testing, and quality assurance earlier into the software development lifecycle."
+        },
+        {
+          "id": "o2",
+          "text": "Delaying the deployment of code until the end of the year to ensure stability."
+        },
+        {
+          "id": "o3",
+          "text": "Shifting the responsibility of physical hardware maintenance to the development team."
+        },
+        {
+          "id": "o4",
+          "text": "Moving all database migrations to run strictly in production environments."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Shifting left refers to moving critical tasks like automated testing, security scanning, and quality checks earlier (to the 'left' on a project timeline) in the development process, allowing teams to find and fix defects sooner when they are cheaper to resolve."
+    },
+    {
+      "id": "q18",
+      "question": "Which deployment strategy involves maintaining two identical production environments, where only one is active at a time to minimize downtime during updates?",
+      "type": "single-choice",
+      "topic": "Continuous Deployment",
+      "options": [
+        { "id": "o1", "text": "Canary Release" },
+        { "id": "o2", "text": "Rolling Update" },
+        { "id": "o3", "text": "Blue-Green Deployment" },
+        { "id": "o4", "text": "A/B Testing" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "In a Blue-Green deployment, you maintain two identical environments. The 'Blue' environment runs the current application version, while the 'Green' environment hosts the new version. Traffic is instantly switched to the Green environment once testing is complete, enabling zero-downtime releases and easy rollbacks."
+    },
+    {
+      "id": "q19",
+      "question": "What is Prometheus most commonly used for in a cloud-native observability stack?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "Compiling Java and C# source code." },
+        {
+          "id": "o2",
+          "text": "Storing time-series metric data and triggering operational alerts."
+        },
+        {
+          "id": "o3",
+          "text": "Managing internal domain name system (DNS) routing tables."
+        },
+        {
+          "id": "o4",
+          "text": "Orchestrating container deployments across multiple nodes."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Prometheus is a leading open-source systems monitoring and alerting toolkit. It excels at collecting and storing metrics as time-series data (values associated with a timestamp) and generating alerts based on predefined rule conditions."
+    },
+    {
+      "id": "q20",
+      "question": "What is the smallest and most basic deployable object in Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "A Node" },
+        { "id": "o2", "text": "A Cluster" },
+        { "id": "o3", "text": "A Pod" },
+        { "id": "o4", "text": "A Namespace" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "A Pod is the fundamental building block in Kubernetes. It represents a single instance of a running process in your cluster and can contain one or more tightly coupled containers that share storage, network resources, and run configurations."
+    },
+    {
+      "id": "q21",
+      "question": "Which of the following are valid examples of automated testing stages typically integrated into a Continuous Integration (CI) pipeline? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Continuous Integration",
+      "options": [
+        { "id": "o1", "text": "Manual User Acceptance Testing (UAT)" },
+        { "id": "o2", "text": "Unit Testing" },
+        { "id": "o3", "text": "Hardware procurement analysis" },
+        { "id": "o4", "text": "Integration Testing" }
+      ],
+      "correctAnswers": ["o2", "o4"],
+      "explanation": "Unit Testing (testing individual components in isolation) and Integration Testing (testing how components work together) are standard automated tests run in a CI pipeline to validate code quality quickly. Manual UAT cannot be automated in CI by definition."
+    },
+    {
+      "id": "q22",
+      "question": "How does a standard GitOps 'pull-based' deployment model fundamentally operate?",
+      "type": "single-choice",
+      "topic": "GitOps",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A CI pipeline uses external credentials to manually push container images directly into the live cluster."
+        },
+        {
+          "id": "o2",
+          "text": "An agent running inside the cluster continuously monitors a Git repository and pulls changes to apply them locally."
+        },
+        {
+          "id": "o3",
+          "text": "Developers manually pull code from production back to their local workstations for debugging."
+        },
+        {
+          "id": "o4",
+          "text": "The cluster pushes its real-time metrics data into a Git repository for storage."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "In a pull-based GitOps model, a software agent (like Argo CD or Flux) resides inside the target cluster. It observes the designated Git repository and automatically pulls and applies the declared infrastructure or application configurations, removing the need for external CI systems to have admin access to the cluster."
+    },
+    {
+      "id": "q23",
+      "question": "What is the primary function of a Container Registry in a containerized application workflow?",
+      "type": "single-choice",
+      "topic": "Containerization",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To execute container processes on bare-metal servers."
+        },
+        {
+          "id": "o2",
+          "text": "To act as a storage and distribution system for named container images."
+        },
+        {
+          "id": "o3",
+          "text": "To monitor the CPU and memory consumption of running containers."
+        },
+        {
+          "id": "o4",
+          "text": "To load balance web traffic across multiple microservices."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Container Registry (such as Docker Hub, Amazon ECR, or Azure Container Registry) is a centralized repository where developers and CI systems push built container images. Deployment environments later pull these images from the registry to run them."
+    },
+    {
+      "id": "q24",
+      "question": "In Terraform, what is the primary purpose of the 'state' file?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To map your desired configuration code to the real-world resources deployed in your cloud provider."
+        },
+        {
+          "id": "o2",
+          "text": "To securely store all plaintext passwords and API keys for the deployment."
+        },
+        {
+          "id": "o3",
+          "text": "To replace the need for an operating system on the target servers."
+        },
+        {
+          "id": "o4",
+          "text": "To monitor the uptime and latency of the deployed application."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Terraform uses a state file (terraform.tfstate) to keep track of the metadata and mapping between the resources defined in your IaC templates and the actual physical/virtual resources created in the cloud provider. This allows Terraform to determine what changes need to be made on subsequent runs."
+    },
+    {
+      "id": "q25",
+      "question": "Which crucial DevOps metric measures the average time it takes a team to restore service after a system failure or outage?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        { "id": "o1", "text": "Deployment Frequency (DF)" },
+        { "id": "o2", "text": "Lead Time for Changes" },
+        { "id": "o3", "text": "Mean Time to Recovery (MTTR)" },
+        { "id": "o4", "text": "Change Failure Rate (CFR)" }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Mean Time to Recovery (MTTR) is a key performance indicator in DevOps representing the average time taken to recover from a product or system failure. Lower MTTR indicates highly resilient systems and responsive operational teams."
+    },
+    {
+      "id": "q26",
+      "question": "Which deployment strategy introduces a new version of an application to a small subset of users before rolling it out to the entire user base?",
+      "type": "single-choice",
+      "topic": "Continuous Deployment",
+      "options": [
+        { "id": "o1", "text": "Recreate Deployment" },
+        { "id": "o2", "text": "Canary Release" },
+        { "id": "o3", "text": "Shadow Deployment" },
+        { "id": "o4", "text": "Blue-Green Deployment" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Canary Release slowly introduces a new software version to a small, targeted group of users. If the 'canary' version remains stable and metrics look good, traffic is gradually shifted until the new version serves 100% of the users. This minimizes the blast radius of potential bugs."
+    },
+    {
+      "id": "q27",
+      "question": "Which of the following open-source tools form the widely used 'ELK stack' for centralized log aggregation and analysis? (Choose three)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "Elasticsearch" },
+        { "id": "o2", "text": "Logstash" },
+        { "id": "o3", "text": "Kibana" },
+        { "id": "o4", "text": "Kafka" }
+      ],
+      "correctAnswers": ["o1", "o2", "o3"],
+      "explanation": "The ELK stack is a common observability toolkit comprised of Elasticsearch (a search and analytics engine), Logstash (a server-side data processing pipeline), and Kibana (a data visualization dashboard)."
+    },
+    {
+      "id": "q28",
+      "question": "What is the core philosophy behind 'Immutable Infrastructure'?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Infrastructure components are never modified in-place; instead, they are completely replaced with a new version if changes are needed."
+        },
+        {
+          "id": "o2",
+          "text": "Servers run permanently without ever receiving security patches."
+        },
+        {
+          "id": "o3",
+          "text": "Administrators manually SSH into servers to apply critical software updates."
+        },
+        {
+          "id": "o4",
+          "text": "Cloud environments are locked so developers cannot view their configurations."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Immutable infrastructure is an approach where servers, once deployed, are never updated, patched, or tweaked in-place. If an update is required, a new server image is built from scratch and deployed to replace the old one, preventing configuration drift."
+    },
+    {
+      "id": "q29",
+      "question": "Which of the following are generally categorized as Configuration Management tools rather than purely Infrastructure Provisioning tools? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        { "id": "o1", "text": "Ansible" },
+        { "id": "o2", "text": "Terraform" },
+        { "id": "o3", "text": "Chef" },
+        { "id": "o4", "text": "AWS CloudFormation" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Ansible and Chef are primarily Configuration Management tools designed to install and manage software on existing servers. Terraform and AWS CloudFormation are Infrastructure Provisioning tools designed to create the actual cloud resources (networks, VMs, databases) themselves."
+    },
+    {
+      "id": "q30",
+      "question": "In a GitOps architecture, what is the function of the 'reconciliation loop'?",
+      "type": "single-choice",
+      "topic": "GitOps",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It automatically generates the monthly billing reports for cloud resource consumption."
+        },
+        {
+          "id": "o2",
+          "text": "It constantly compares the live cluster state against the desired state in Git, attempting to correct any drift."
+        },
+        {
+          "id": "o3",
+          "text": "It restarts the entire Kubernetes cluster once a day to clear memory caches."
+        },
+        {
+          "id": "o4",
+          "text": "It acts as an intrusion detection firewall for inbound web traffic."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The reconciliation loop is the engine of a GitOps operator. It acts continuously to compare the desired state (declared in the Git repository) with the actual live state in the cluster. If it detects a difference (configuration drift), it acts to 'reconcile' or sync the live environment back to match the Git state."
+    },
+    {
+      "id": "q31",
+      "question": "What is the primary function of a 'Service Mesh' in a microservices environment?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To compile application code into binary images."
+        },
+        {
+          "id": "o2",
+          "text": "To manage complex service-to-service communication, including security, observability, and traffic management."
+        },
+        {
+          "id": "o3",
+          "text": "To provision virtual machines on bare-metal servers."
+        },
+        {
+          "id": "o4",
+          "text": "To serve as a Git repository for source code versioning."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Service Mesh (like Istio or Linkerd) provides a dedicated infrastructure layer to handle service-to-service communication. It abstracts away complex networking tasks like mutual TLS encryption, traffic routing, and detailed telemetry collection from the application code itself."
+    },
+    {
+      "id": "q32",
+      "question": "Which of the following describes the 'Blue' environment in a Blue-Green deployment?",
+      "type": "single-choice",
+      "topic": "Continuous Deployment",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The environment currently serving live production traffic."
+        },
+        {
+          "id": "o2",
+          "text": "The development sandbox used for unit testing."
+        },
+        {
+          "id": "o3",
+          "text": "The idle environment waiting for the next deployment."
+        },
+        {
+          "id": "o4",
+          "text": "A temporary environment used exclusively for load testing."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "While names can be interchangeable, in the standard Blue-Green deployment model, 'Blue' typically refers to the stable, currently active production version, while 'Green' is the new version being prepared for cutover."
+    },
+    {
+      "id": "q33",
+      "question": "In the context of container security, what is the best practice for building container images?",
+      "type": "single-choice",
+      "topic": "Containerization",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Use the largest base image possible to include all utilities."
+        },
+        {
+          "id": "o2",
+          "text": "Run the application process inside the container as the root user."
+        },
+        {
+          "id": "o3",
+          "text": "Use minimal base images to reduce the attack surface and vulnerability risk."
+        },
+        {
+          "id": "o4",
+          "text": "Hardcode API keys and database passwords directly into the Dockerfile."
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Using minimal base images (like Alpine Linux or Distroless) minimizes the number of installed packages and libraries, thereby significantly reducing the attack surface and the number of potential security vulnerabilities that need patching."
+    },
+    {
+      "id": "q34",
+      "question": "Which term describes the automated process of checking code for quality and security vulnerabilities during the build phase of a CI pipeline?",
+      "type": "single-choice",
+      "topic": "Continuous Integration",
+      "options": [
+        { "id": "o1", "text": "Static Analysis" },
+        { "id": "o2", "text": "Manual Peer Review" },
+        { "id": "o3", "text": "Load Balancing" },
+        { "id": "o4", "text": "Infrastructure Provisioning" }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Static Analysis (or Static Application Security Testing - SAST) involves scanning source code or compiled binaries without executing them. It helps identify coding standard violations, potential bugs, and security vulnerabilities early in the development lifecycle."
+    },
+    {
+      "id": "q35",
+      "question": "Which Kubernetes resource is used to provide persistent storage to a Pod, independent of the Pod's lifecycle?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "ConfigMap" },
+        { "id": "o2", "text": "PersistentVolume (PV)" },
+        { "id": "o3", "text": "Secret" },
+        { "id": "o4", "text": "ReplicaSet" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A PersistentVolume (PV) is a cluster-level storage resource. Unlike a Pod's internal storage, which is destroyed when the Pod is deleted, a PV persists as long as needed, allowing data to survive Pod restarts or redeployments."
+    },
+    {
+      "id": "q36",
+      "question": "What is the primary role of a 'webhook' in a DevOps toolchain?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To manually execute deployment scripts from a local machine."
+        },
+        {
+          "id": "o2",
+          "text": "To trigger automated events in one tool (like a CI build) based on an action in another (like a Git push)."
+        },
+        {
+          "id": "o3",
+          "text": "To encrypt network traffic between microservices."
+        },
+        { "id": "o4", "text": "To manage physical server inventory tracking." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Webhooks allow systems to communicate in real-time. By sending an HTTP POST request to a defined URL, a webhook can notify a CI server to start a build immediately whenever code is pushed to a Git repository, enabling true automation."
+    },
+    {
+      "id": "q37",
+      "question": "Which of the following are benefits of using 'Sidecar' containers in Kubernetes? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Container Orchestration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Offloading common tasks like logging or proxying from the main application container."
+        },
+        {
+          "id": "o2",
+          "text": "Providing an isolated execution environment for different operating systems."
+        },
+        {
+          "id": "o3",
+          "text": "Enhancing modularity by separating application concerns."
+        },
+        { "id": "o4", "text": "Removing the need for a container runtime." }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Sidecar containers run alongside the main application container in the same Pod. They allow teams to offload secondary tasks like log shipping, monitoring, or proxying to a specialized, reusable container, which improves modularity and simplifies application development."
+    },
+    {
+      "id": "q38",
+      "question": "What is the primary objective of a 'Blameless Post-Mortem' in a DevOps culture?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To publicly identify and terminate the employee responsible for a system outage."
+        },
+        {
+          "id": "o2",
+          "text": "To document the sequence of events and identify systemic process improvements without assigning individual blame."
+        },
+        {
+          "id": "o3",
+          "text": "To prove that the operations team was not at fault for a deployment failure."
+        },
+        {
+          "id": "o4",
+          "text": "To bypass the need for automated testing in future releases."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A blameless post-mortem focuses on what happened and how to improve the system, rather than who made the mistake. This fosters an environment of psychological safety where teams feel encouraged to report issues early and learn from them."
+    },
+    {
+      "id": "q39",
+      "question": "Which configuration file format is most commonly used for defining Kubernetes manifests and IaC templates?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        { "id": "o1", "text": "XML" },
+        { "id": "o2", "text": "YAML" },
+        { "id": "o3", "text": "Binary" },
+        { "id": "o4", "text": "SQL" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "YAML (YAML Ain't Markup Language) is the industry standard for configuration management in DevOps. It is highly human-readable and is the primary language used to define Kubernetes objects and many CI/CD pipeline configurations."
+    },
+    {
+      "id": "q40",
+      "question": "Which tool is commonly used to package and manage complex Kubernetes applications, often referred to as the 'Kubernetes Package Manager'?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "Helm" },
+        { "id": "o2", "text": "Docker Swarm" },
+        { "id": "o3", "text": "Vagrant" },
+        { "id": "o4", "text": "Jenkins" }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Helm is the package manager for Kubernetes. It uses 'charts' to define, install, and upgrade even the most complex Kubernetes applications, making it much easier to manage versioned releases across multiple clusters."
+    },
+    {
+      "id": "q41",
+      "question": "In observability, what does the 'Cardinality' of a metric refer to?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "The total number of servers in a cluster." },
+        {
+          "id": "o2",
+          "text": "The number of unique label/value combinations in a dataset, which can impact storage and performance."
+        },
+        { "id": "o3", "text": "The frequency at which an alert is triggered." },
+        {
+          "id": "o4",
+          "text": "The speed at which a request traverses a network."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Cardinality refers to the number of unique combinations of label values for a metric. High-cardinality metrics (e.g., using user IDs or UUIDs as labels) can quickly overwhelm time-series databases, leading to performance degradation and increased storage costs."
+    },
+    {
+      "id": "q42",
+      "question": "Which of the following activities are typical for an SRE (Site Reliability Engineering) team? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Defining and tracking Service Level Objectives (SLOs)."
+        },
+        {
+          "id": "o2",
+          "text": "Manual manual server provisioning and patching."
+        },
+        {
+          "id": "o3",
+          "text": "Eliminating 'toil' through automation and software engineering."
+        },
+        {
+          "id": "o4",
+          "text": "Focusing solely on traditional software feature development."
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "SRE teams apply software engineering principles to infrastructure and operations problems. Key activities include defining SLOs to measure reliability and actively working to automate away 'toil' (manual, repetitive operational work)."
+    },
+    {
+      "id": "q43",
+      "question": "What is the primary function of an 'Ingress' resource in Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "To store environment secrets securely." },
+        {
+          "id": "o2",
+          "text": "To manage external access to HTTP/HTTPS services within a cluster, usually providing load balancing and SSL termination."
+        },
+        { "id": "o3", "text": "To schedule cron jobs for batch processing." },
+        {
+          "id": "o4",
+          "text": "To manage the persistent storage of node-level logs."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "An Ingress manages external access to the services in a cluster. It acts as a Layer 7 gateway, allowing you to configure rules that route traffic to different services based on hostnames or URL paths."
+    },
+    {
+      "id": "q44",
+      "question": "Which practice ensures that infrastructure changes are validated before reaching production?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        { "id": "o1", "text": "Deploying directly to production manually." },
+        {
+          "id": "o2",
+          "text": "Running code through a staging or pre-production environment with automated testing."
+        },
+        {
+          "id": "o3",
+          "text": "Bypassing version control for faster releases."
+        },
+        {
+          "id": "o4",
+          "text": "Only testing infrastructure changes after they have been deployed to users."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Just like application code, infrastructure code should go through a rigorous CI/CD pipeline. This includes running automated tests, 'dry runs' (like terraform plan), and deployments to isolated staging environments to catch errors before they impact real users."
+    },
+    {
+      "id": "q45",
+      "question": "What is the main benefit of utilizing a 'Container Runtime' (like containerd or CRI-O)?",
+      "type": "single-choice",
+      "topic": "Containerization",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It provides the interface that allows the Kubernetes Kubelet to manage the container lifecycle."
+        },
+        {
+          "id": "o2",
+          "text": "It replaces the need for a central container registry."
+        },
+        {
+          "id": "o3",
+          "text": "It acts as the primary web server for application frontends."
+        },
+        {
+          "id": "o4",
+          "text": "It manages the physical networking cabling in the datacenter."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "A container runtime is the software component responsible for actually running containers. In a Kubernetes context, the Kubelet communicates with the container runtime (via the Container Runtime Interface, or CRI) to pull images, start, stop, and manage containers on the host node."
+    },
+    {
+      "id": "q46",
+      "question": "Which DevOps practice focuses on the continuous monitoring of production environments to ensure application performance and health?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "Continuous Testing" },
+        { "id": "o2", "text": "Continuous Monitoring" },
+        { "id": "o3", "text": "Continuous Integration" },
+        { "id": "o4", "text": "Infrastructure Provisioning" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Continuous Monitoring is an essential DevOps practice that involves keeping a constant watch over the performance, availability, and health of applications and infrastructure in production. It enables rapid incident detection and feedback."
+    },
+    {
+      "id": "q47",
+      "question": "What is the primary function of a Kubernetes 'ReplicaSet'?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "To provide persistent data storage for pods." },
+        {
+          "id": "o2",
+          "text": "To ensure a specified number of pod replicas are running at any given time."
+        },
+        {
+          "id": "o3",
+          "text": "To act as a load balancer for external traffic."
+        },
+        { "id": "o4", "text": "To store configuration files and secrets." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A ReplicaSet's main purpose is to maintain a stable set of replica pods running at any given time. If a pod fails or is deleted, the ReplicaSet ensures that a replacement is started to match the desired count."
+    },
+    {
+      "id": "q48",
+      "question": "Which of the following are common benefits of using an API-driven infrastructure approach? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Enabling programmatic infrastructure management and automation."
+        },
+        {
+          "id": "o2",
+          "text": "Requiring a physical presence in the datacenter to change settings."
+        },
+        {
+          "id": "o3",
+          "text": "Integrating infrastructure changes into CI/CD pipelines."
+        },
+        { "id": "o4", "text": "Increasing human intervention time." }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "API-driven infrastructure allows systems to be managed programmatically rather than manually. This automation allows for seamless integration into CI/CD pipelines, increasing speed and reducing human error."
+    },
+    {
+      "id": "q49",
+      "question": "What is the purpose of a 'Health Check' (Liveness and Readiness probe) in Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To monitor the health of the physical datacenter's power supply."
+        },
+        {
+          "id": "o2",
+          "text": "To determine if a container is running (Liveness) and if it is ready to accept traffic (Readiness)."
+        },
+        {
+          "id": "o3",
+          "text": "To verify the identity of the developer who wrote the code."
+        },
+        {
+          "id": "o4",
+          "text": "To automatically clear the server's cache every hour."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Liveness probes determine if a container is alive and functioning; if it fails, the pod is restarted. Readiness probes determine if a container is ready to start accepting traffic; if it fails, the container is removed from service load balancers."
+    },
+    {
+      "id": "q50",
+      "question": "Which of the following is an example of 'Toil' that SRE teams aim to reduce through automation?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        { "id": "o1", "text": "Designing a new microservice architecture." },
+        {
+          "id": "o2",
+          "text": "Manually resetting passwords for users repeatedly."
+        },
+        { "id": "o3", "text": "Creating automated deployment pipelines." },
+        { "id": "o4", "text": "Writing documentation for new system features." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Toil is work that is manual, repetitive, automatable, tactical, and devoid of long-term value. Manually resetting passwords is a classic example of toil that should be automated via self-service tools."
+    },
+    {
+      "id": "q51",
+      "question": "In a CI/CD pipeline, what does 'Shift-Left Security' involve?",
+      "type": "single-choice",
+      "topic": "DevOps Philosophies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Running security scans only after the application is deployed to production."
+        },
+        {
+          "id": "o2",
+          "text": "Integrating security practices and testing into the earliest stages of the development cycle."
+        },
+        {
+          "id": "o3",
+          "text": "Removing security checks to increase deployment speed."
+        },
+        {
+          "id": "o4",
+          "text": "Assigning security tasks exclusively to a separate, isolated security team."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Shift-left security incorporates security testing into the development phase (e.g., automated vulnerability scanning of dependencies and code), allowing teams to identify and remediate risks before they reach production."
+    },
+    {
+      "id": "q52",
+      "question": "Which networking concept in Kubernetes allows Pods to communicate with each other regardless of which Node they are running on?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "Pod-to-Pod Networking" },
+        { "id": "o2", "text": "Manual IP address mapping" },
+        { "id": "o3", "text": "External load balancing" },
+        { "id": "o4", "text": "Isolated network partitions" }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Kubernetes implements a flat networking model that ensures all Pods can communicate with one another across the entire cluster without needing NAT, simplifying inter-service communication."
+    },
+    {
+      "id": "q53",
+      "question": "Why is it important to use 'Environment Variables' or 'Secrets Management' instead of hardcoding configuration in application code?",
+      "type": "single-choice",
+      "topic": "Continuous Integration",
+      "options": [
+        { "id": "o1", "text": "To make the application run faster." },
+        {
+          "id": "o2",
+          "text": "To keep sensitive data and environment-specific settings out of source control, improving security and portability."
+        },
+        {
+          "id": "o3",
+          "text": "To force the developer to rewrite the code for every deployment."
+        },
+        { "id": "o4", "text": "To reduce the size of the container image." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Hardcoding secrets (API keys, passwords) or configuration makes code insecure and brittle. Externalizing these via environment variables or secret management tools ensures that the same binary can run safely across different environments (Dev, Staging, Prod)."
+    },
+    {
+      "id": "q54",
+      "question": "What is the primary function of a 'Namespace' in Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To define the physical location of the server."
+        },
+        {
+          "id": "o2",
+          "text": "To provide a mechanism for isolating groups of resources within a single cluster."
+        },
+        { "id": "o3", "text": "To increase the processing speed of the CPU." },
+        { "id": "o4", "text": "To store container images." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Namespaces provide logical isolation within a Kubernetes cluster. They are often used to separate teams, projects, or environments (e.g., 'dev', 'prod') and manage resource quotas and access controls."
+    },
+    {
+      "id": "q55",
+      "question": "Which of the following describes an 'Immutable Artifact' in a DevOps pipeline? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Continuous Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A container image that is built once and never changed."
+        },
+        {
+          "id": "o2",
+          "text": "A server where configurations are manually edited daily."
+        },
+        {
+          "id": "o3",
+          "text": "A compiled binary that is promoted through environments without modification."
+        },
+        {
+          "id": "o4",
+          "text": "A text file that is modified by developers during runtime."
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Immutable artifacts are versions of software (like Docker images or binaries) that are created once and verified. Promoting the exact same artifact through environments ensures consistency and reduces the risk of environment-specific bugs."
+    },
+    {
+      "id": "q56",
+      "question": "What is the main advantage of using 'Declarative' configuration over 'Imperative' commands?",
+      "type": "single-choice",
+      "topic": "Infrastructure as Code (IaC)",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Declarative configuration is faster to write by hand."
+        },
+        {
+          "id": "o2",
+          "text": "It focuses on the end-state, making the infrastructure self-healing and predictable."
+        },
+        {
+          "id": "o3",
+          "text": "It requires the administrator to know the exact order of every step."
+        },
+        {
+          "id": "o4",
+          "text": "It eliminates the need for any automation tools."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Declarative configuration defines the goal state. Tools like Kubernetes and Terraform look at the current state, compare it to the goal state, and automatically take necessary actions to align them, making infrastructure more robust."
+    },
+    {
+      "id": "q57",
+      "question": "Which of the following are core components of a healthy CI/CD culture? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DevOps Philosophies",
+      "options": [
+        { "id": "o1", "text": "Encouraging experimentation and failing fast." },
+        {
+          "id": "o2",
+          "text": "Maintaining long-lived, complex manual merge processes."
+        },
+        { "id": "o3", "text": "Automating the feedback loop for developers." },
+        {
+          "id": "o4",
+          "text": "Avoiding communication between Dev and Ops teams."
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Successful DevOps teams thrive on quick feedback loops through automation and a culture of continuous improvement, where experimentation is welcomed and failures are used as learning opportunities."
+    },
+    {
+      "id": "q58",
+      "question": "What is the primary function of a 'ConfigMap' in Kubernetes?",
+      "type": "single-choice",
+      "topic": "Container Orchestration",
+      "options": [
+        { "id": "o1", "text": "To store sensitive passwords." },
+        {
+          "id": "o2",
+          "text": "To inject configuration data (non-sensitive) into Pods as environment variables or files."
+        },
+        { "id": "o3", "text": "To balance network traffic." },
+        { "id": "o4", "text": "To scale the cluster hardware." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable. They are intended for non-sensitive data, whereas Secrets are used for sensitive information."
+    },
+    {
+      "id": "q59",
+      "question": "In observability, what is a 'Dashboard' used for?",
+      "type": "single-choice",
+      "topic": "Observability",
+      "options": [
+        { "id": "o1", "text": "Storing source code in a repository." },
+        {
+          "id": "o2",
+          "text": "Visualizing metrics and logs to provide at-a-glance insight into system health."
+        },
+        {
+          "id": "o3",
+          "text": "Automatically triggering deployment pipelines."
+        },
+        { "id": "o4", "text": "Managing physical server access." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Dashboards aggregate various metrics and logs into a single visual interface, allowing engineers to monitor system health and trends in real-time."
+    },
+    {
+      "id": "q60",
+      "question": "Why is 'Short-lived' feature branching considered a best practice in DevOps?",
+      "type": "single-choice",
+      "topic": "Continuous Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It makes the Git history much longer and harder to read."
+        },
+        {
+          "id": "o2",
+          "text": "It reduces integration conflicts and allows for faster, more frequent code merges."
+        },
+        {
+          "id": "o3",
+          "text": "It allows developers to work in isolation for months at a time."
+        },
+        {
+          "id": "o4",
+          "text": "It prevents the team from using automated testing."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Keeping branches short-lived and merging frequently into the main branch minimizes 'merge hell,' encourages integration, and ensures that the codebase remains stable and ready for production."
+    }
+  ]
+}

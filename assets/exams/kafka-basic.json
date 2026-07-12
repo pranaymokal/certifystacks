@@ -1,0 +1,1713 @@
+{
+    "id": "apache-kafka-basic",
+    "name": "Apache Kafka",
+    "vendor": "CertifyStacks",
+    "questions": 60,
+    "duration": 60,
+    "passingScore": 700,
+    "difficulty": "Beginner",
+    "questionList": [
+        {
+            "id": "q1",
+            "question": "What is the fundamental data structure used by Apache Kafka to store messages?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Relational Table"
+                },
+                {
+                    "id": "o2",
+                    "text": "Distributed append-only commit log"
+                },
+                {
+                    "id": "o3",
+                    "text": "Key-Value Hash Map"
+                },
+                {
+                    "id": "o4",
+                    "text": "In-memory Graph"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Kafka is designed as a distributed, partitioned, and replicated commit log service. Messages are appended to the end of a log and are immutable once written."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following statements are true regarding Kafka consumer groups? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Consumer Groups",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Each partition is consumed by exactly one consumer within a given group."
+                },
+                {
+                    "id": "o2",
+                    "text": "A single consumer can read from multiple partitions."
+                },
+                {
+                    "id": "o3",
+                    "text": "Messages are deleted immediately after a consumer reads them."
+                },
+                {
+                    "id": "o4",
+                    "text": "Consumers in the same group read identical copies of all messages."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Within a consumer group, Kafka guarantees that each partition is assigned to exactly one consumer. However, if there are more partitions than consumers, a single consumer can be assigned multiple partitions. Messages are not deleted immediately after reading; they are retained based on the topic's retention policy."
+        },
+        {
+            "id": "q3",
+            "question": "In Kafka, what determines the active node that handles all read and write requests for a specific partition?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Zookeeper Controller"
+                },
+                {
+                    "id": "o2",
+                    "text": "The Partition Leader"
+                },
+                {
+                    "id": "o3",
+                    "text": "The Consumer Coordinator"
+                },
+                {
+                    "id": "o4",
+                    "text": "The Follower Replica"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Each partition has one server acting as the 'Leader' and zero or more servers acting as 'Followers'. The leader handles all read and write requests for the partition, while followers passively replicate the leader."
+        },
+        {
+            "id": "q4",
+            "question": "What configuration changes are required to enable Exactly-Once Semantics (EOS) for a Kafka producer? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Set enable.idempotence=true"
+                },
+                {
+                    "id": "o2",
+                    "text": "Set transactional.id to a unique string"
+                },
+                {
+                    "id": "o3",
+                    "text": "Set acks=0"
+                },
+                {
+                    "id": "o4",
+                    "text": "Set max.in.flight.requests.per.connection=10"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "To enable exactly-once semantics for a producer, it must be idempotent (enable.idempotence=true) and participate in a transaction by providing a unique transactional.id. Setting acks=0 disables acknowledgments and guarantees no reliability."
+        },
+        {
+            "id": "q5",
+            "question": "What triggers a consumer group rebalance in Kafka?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A consumer joins or leaves the group."
+                },
+                {
+                    "id": "o2",
+                    "text": "A producer sends a message with a null key."
+                },
+                {
+                    "id": "o3",
+                    "text": "The retention period of a topic expires."
+                },
+                {
+                    "id": "o4",
+                    "text": "A consumer successfully commits its current offset."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "A rebalance is triggered when the membership of a consumer group changes (e.g., a consumer crashes, leaves, or a new one joins) or when the partitions of subscribed topics change."
+        },
+        {
+            "id": "q6",
+            "question": "In a Kafka Streams topology, what represents a stream processing step that transforms data?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Source Node"
+                },
+                {
+                    "id": "o2",
+                    "text": "Processor Node"
+                },
+                {
+                    "id": "o3",
+                    "text": "Sink Node"
+                },
+                {
+                    "id": "o4",
+                    "text": "State Store"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Processor Node represents a single computational step in a topology. It receives input records from upstream nodes, applies a processing logic (transformation), and produces output records to downstream nodes."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following are true characteristics of Kafka partitions? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They allow a single topic to scale beyond a size that will fit on a single server."
+                },
+                {
+                    "id": "o2",
+                    "text": "They guarantee global message ordering across the entire topic."
+                },
+                {
+                    "id": "o3",
+                    "text": "They act as append-only sequences of records."
+                },
+                {
+                    "id": "o4",
+                    "text": "They limit the number of producers that can write to a topic simultaneously."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Partitions allow topics to scale horizontally across multiple brokers and are implemented as append-only logs. Kafka only provides total order over messages within a single partition, not globally across the entire topic."
+        },
+        {
+            "id": "q8",
+            "question": "What does the 'In-Sync Replica' (ISR) list represent in Kafka?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The list of all brokers currently active in the cluster."
+                },
+                {
+                    "id": "o2",
+                    "text": "The set of replica brokers that are fully caught up with the partition leader."
+                },
+                {
+                    "id": "o3",
+                    "text": "The list of consumers that are currently reading from the partition in real-time."
+                },
+                {
+                    "id": "o4",
+                    "text": "The group of topics that are replicated across multiple physical data centers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The In-Sync Replicas (ISR) is the subset of replicas for a partition that are currently alive and fully caught up to the leader. Only replicas in this list are eligible to be elected as the new leader if the current leader fails."
+        },
+        {
+            "id": "q9",
+            "question": "How does an idempotent producer in Kafka prevent duplicate messages during network retries?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By utilizing distributed locks on the Zookeeper cluster."
+                },
+                {
+                    "id": "o2",
+                    "text": "By assigning a unique Producer ID (PID) and a sequence number to each message batch."
+                },
+                {
+                    "id": "o3",
+                    "text": "By storing a cryptographic hash of every message in an internal metadata topic."
+                },
+                {
+                    "id": "o4",
+                    "text": "By relying on the downstream consumer application to filter out duplicated keys."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "When idempotence is enabled, the broker assigns a Producer ID (PID) to the producer. Each message batch sent gets a sequence number. The broker uses this PID and sequence number to deduplicate requests if a producer retries sending a batch."
+        },
+        {
+            "id": "q10",
+            "question": "When a new consumer joins an active consumer group that is already at maximum capacity (the number of consumers equals the number of partitions), what happens? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The new consumer remains idle."
+                },
+                {
+                    "id": "o2",
+                    "text": "The new consumer forcefully takes over a partition from an active consumer."
+                },
+                {
+                    "id": "o3",
+                    "text": "A rebalance occurs across the group."
+                },
+                {
+                    "id": "o4",
+                    "text": "The topic partition count is automatically increased by the broker."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Any change in consumer group membership triggers a rebalance. However, since a partition can only be assigned to one consumer in a group, if there are more consumers than partitions, the extra consumer(s) will remain idle."
+        },
+        {
+            "id": "q11",
+            "question": "What is the primary role of a 'Source Node' in a Kafka Streams processor topology?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It writes final processed data to an external relational database."
+                },
+                {
+                    "id": "o2",
+                    "text": "It consumes records directly from a Kafka topic and passes them to downstream processors."
+                },
+                {
+                    "id": "o3",
+                    "text": "It acts as a standalone producer application that generates raw user events."
+                },
+                {
+                    "id": "o4",
+                    "text": "It handles leader election for the stream processing threads."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In a Kafka Streams topology, a Source Node is a special type of Processor Node that takes its input directly from a Kafka topic, effectively bridging the Kafka broker data into the streams processing pipeline."
+        },
+        {
+            "id": "q12",
+            "question": "How does Kafka permanently identify the exact position of a specific message within a partition?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By the exact timestamp of its creation."
+                },
+                {
+                    "id": "o2",
+                    "text": "By a globally unique identifier (GUID) generated by the producer."
+                },
+                {
+                    "id": "o3",
+                    "text": "By its sequential Offset number."
+                },
+                {
+                    "id": "o4",
+                    "text": "By the ID of the partition leader at the time of writing."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Each message written to a Kafka partition is assigned a sequential id number called the 'offset'. The offset uniquely identifies each record within the partition."
+        },
+        {
+            "id": "q13",
+            "question": "Which combination of broker and producer configurations is essential for the highest durability and avoiding data loss during node failures? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Producer config: acks=all"
+                },
+                {
+                    "id": "o2",
+                    "text": "Consumer config: auto.commit.interval.ms=1000"
+                },
+                {
+                    "id": "o3",
+                    "text": "Broker config: min.insync.replicas > 1"
+                },
+                {
+                    "id": "o4",
+                    "text": "Broker config: unclean.leader.election.enable=true"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Setting acks=all guarantees the leader will wait for all in-sync replicas to acknowledge the record. Paired with a min.insync.replicas greater than 1, it ensures data is written to multiple nodes before returning success. Unclean leader election actually risks data loss."
+        },
+        {
+            "id": "q14",
+            "question": "Which Kafka component is primarily responsible for managing consumer group membership, tracking offsets, and triggering rebalances?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The Group Coordinator"
+                },
+                {
+                    "id": "o2",
+                    "text": "The Schema Registry"
+                },
+                {
+                    "id": "o3",
+                    "text": "The Controller Broker"
+                },
+                {
+                    "id": "o4",
+                    "text": "The KSQL Server"
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The Group Coordinator (a background process running on one of the Kafka brokers) manages the state of consumer groups, handles join/leave requests, tracks committed offsets, and orchestrates rebalances."
+        },
+        {
+            "id": "q15",
+            "question": "When using Kafka Transactions to implement Exactly-Once Semantics, what special marker is written to the topic partitions to finalize a successful transaction?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A Tombstone record"
+                },
+                {
+                    "id": "o2",
+                    "text": "A Commit control record"
+                },
+                {
+                    "id": "o3",
+                    "text": "An Offset Reset marker"
+                },
+                {
+                    "id": "o4",
+                    "text": "A Group Rebalance request"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "To finalize a transaction, the Transaction Coordinator writes a 'Commit' or 'Abort' control record to the user partitions involved. Consumers configured with isolation.level=read_committed use these markers to know which messages are part of a successfully completed transaction."
+        },
+        {
+            "id": "q16",
+            "question": "In Kafka Streams, which abstraction represents a changelog stream where each data record represents an update to a key?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "KStream"
+                },
+                {
+                    "id": "o2",
+                    "text": "KTable"
+                },
+                {
+                    "id": "o3",
+                    "text": "GlobalKStream"
+                },
+                {
+                    "id": "o4",
+                    "text": "Processor Context"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A KTable represents a changelog stream. Every data record in a KTable is considered an UPSERT (insert or update) for a specific key, retaining only the latest value for that key, unlike a KStream which represents an insert-only append log of independent events."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following are built-in partition assignment strategies provided out-of-the-box for Kafka consumer groups? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "RangeAssignor"
+                },
+                {
+                    "id": "o2",
+                    "text": "RoundRobinAssignor"
+                },
+                {
+                    "id": "o3",
+                    "text": "HashAssignor"
+                },
+                {
+                    "id": "o4",
+                    "text": "LatencyAssignor"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Kafka provides several built-in partition assignment strategies for consumer groups, including RangeAssignor (the default), RoundRobinAssignor, StickyAssignor, and CooperativeStickyAssignor. HashAssignor and LatencyAssignor are not standard out-of-the-box strategies."
+        },
+        {
+            "id": "q18",
+            "question": "What is the primary purpose of Kafka's log compaction feature?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To compress messages using GZIP or Snappy to save disk space."
+                },
+                {
+                    "id": "o2",
+                    "text": "To retain at least the last known value for each message key within the log."
+                },
+                {
+                    "id": "o3",
+                    "text": "To automatically delete all messages older than a specified time retention limit."
+                },
+                {
+                    "id": "o4",
+                    "text": "To combine multiple small messages into a single large batch for faster network transmission."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Log compaction ensures that Kafka will always retain at least the last known value for each message key within the log of data for a single topic partition. It is highly useful for restoring state, such as keeping the latest profile data for a user."
+        },
+        {
+            "id": "q19",
+            "question": "What happens if the broker configuration 'unclean.leader.election.enable' is set to true and all In-Sync Replicas (ISR) for a partition go offline?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The partition becomes completely unavailable for reads and writes until an ISR returns."
+                },
+                {
+                    "id": "o2",
+                    "text": "A non-ISR replica is elected as the new leader, which can potentially cause permanent data loss."
+                },
+                {
+                    "id": "o3",
+                    "text": "The Zookeeper ensemble automatically attempts to recreate the lost data from metadata."
+                },
+                {
+                    "id": "o4",
+                    "text": "The topic is automatically deleted and recreated by the cluster controller."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Enabling unclean leader election allows a replica that is not fully caught up (not in the ISR) to be elected as leader if all ISRs fail. This restores availability but risks data loss, as the newly elected leader might be missing the most recently committed messages."
+        },
+        {
+            "id": "q20",
+            "question": "To ensure a Kafka consumer only reads messages that are part of a successfully committed transaction, which configuration must be applied to the consumer?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "enable.auto.commit=false"
+                },
+                {
+                    "id": "o2",
+                    "text": "isolation.level=read_committed"
+                },
+                {
+                    "id": "o3",
+                    "text": "processing.guarantee=exactly_once"
+                },
+                {
+                    "id": "o4",
+                    "text": "transactional.id.required=true"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Setting 'isolation.level=read_committed' ensures the consumer will only fetch and return transactional messages that have been successfully committed, filtering out aborted transactions and ongoing uncommitted transactions."
+        },
+        {
+            "id": "q21",
+            "question": "In a stream processing topology, what is the specific role of a Sink Node?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It generates new data records from an external relational database."
+                },
+                {
+                    "id": "o2",
+                    "text": "It performs stateless transformations like filtering or mapping on an incoming stream."
+                },
+                {
+                    "id": "o3",
+                    "text": "It sends the processed data records out to a designated Kafka topic."
+                },
+                {
+                    "id": "o4",
+                    "text": "It aggregates records over a specific time window into a local cache."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "A Sink Node represents the end of a processing branch in a Kafka Streams topology. It takes records received from upstream processor nodes and writes them back into a specified Kafka topic."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following configuration properties can be used to dictate how long Kafka retains data in a standard topic before deleting it? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "log.retention.hours"
+                },
+                {
+                    "id": "o2",
+                    "text": "delete.topic.enable"
+                },
+                {
+                    "id": "o3",
+                    "text": "log.retention.bytes"
+                },
+                {
+                    "id": "o4",
+                    "text": "message.max.bytes"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "Kafka allows you to configure retention policies based on time (e.g., log.retention.hours, minutes, or ms) or based on log size (log.retention.bytes). When either of these limits is reached, old log segments are deleted."
+        },
+        {
+            "id": "q23",
+            "question": "How does the Kafka Group Coordinator determine if a consumer instance has failed and a group rebalance is necessary?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By continuously monitoring the consumer application's CPU and memory usage metrics."
+                },
+                {
+                    "id": "o2",
+                    "text": "By actively pinging the IP address of the consumer instance every second."
+                },
+                {
+                    "id": "o3",
+                    "text": "By expecting periodic heartbeat signals sent by the consumer within a configured timeout window."
+                },
+                {
+                    "id": "o4",
+                    "text": "By checking if the consumer has committed any new offsets in the past 24 hours."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Consumers send periodic heartbeats to the Group Coordinator. If the coordinator does not receive a heartbeat from a consumer within the 'session.timeout.ms' window, it considers the consumer dead and triggers a rebalance."
+        },
+        {
+            "id": "q24",
+            "question": "When a producer sends multiple messages featuring the exact same key to a specific Kafka topic, what distribution guarantee does Kafka provide by default?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "All messages with the same key are deleted simultaneously upon expiration."
+                },
+                {
+                    "id": "o2",
+                    "text": "All messages with the same key are guaranteed to be routed to the same partition."
+                },
+                {
+                    "id": "o3",
+                    "text": "The key is automatically stripped from the message to save storage space."
+                },
+                {
+                    "id": "o4",
+                    "text": "Messages with the same key are distributed round-robin across all available partitions to ensure balance."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "By default, Kafka uses a hashing mechanism on the message key to determine the target partition. Because the hash of the same key will always result in the same partition, Kafka guarantees that messages with identical keys end up in the exact same partition, preserving their processing order."
+        },
+        {
+            "id": "q25",
+            "question": "What core feature enables Kafka to intelligently distribute partition replicas across different physical hardware racks to prevent data loss during a rack-level failure?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Zookeeper Quorum Ensembles"
+                },
+                {
+                    "id": "o2",
+                    "text": "Consumer Group Rebalancing"
+                },
+                {
+                    "id": "o3",
+                    "text": "KTable State Stores"
+                },
+                {
+                    "id": "o4",
+                    "text": "Broker Rack Awareness"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "Broker Rack Awareness allows you to configure brokers with a rack ID. Kafka's partition assignment algorithm uses this metadata to ensure that replicas for a partition are spread across multiple racks, preventing a single rack power or network failure from taking down all replicas of a partition."
+        },
+        {
+            "id": "q26",
+            "question": "In a transactional Kafka producer environment, what mechanism explicitly prevents an old, paused producer (a 'zombie') from writing data and corrupting a transaction if a new producer instance has taken over?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "IP address whitelisting enforced on the broker."
+                },
+                {
+                    "id": "o2",
+                    "text": "Zombie fencing utilizing an incrementing Producer Epoch."
+                },
+                {
+                    "id": "o3",
+                    "text": "Strict consumer group heartbeats."
+                },
+                {
+                    "id": "o4",
+                    "text": "Log compaction on the internal transaction topic."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Kafka transactions utilize an epoch number linked to the transactional.id. When a new producer initializes with an existing transactional.id, the epoch is incremented. If an old 'zombie' producer tries to write using a lower, outdated epoch, the broker rejects the request. This is known as zombie fencing."
+        },
+        {
+            "id": "q27",
+            "question": "Which internal component in Kafka Streams is essential for maintaining data during stateful operations like aggregations, windowing, and joins?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Source Node"
+                },
+                {
+                    "id": "o2",
+                    "text": "State Store"
+                },
+                {
+                    "id": "o3",
+                    "text": "Global Controller"
+                },
+                {
+                    "id": "o4",
+                    "text": "Sink Node"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "State Stores are used by Kafka Streams to keep track of state across multiple messages (like counts in an aggregation). They can be implemented using in-memory hash maps or persistent local databases like RocksDB, and are fault-tolerant via changelog topics."
+        },
+        {
+            "id": "q28",
+            "question": "Where does Kafka natively store committed consumer group offsets by default in modern architecture (Kafka version 0.10 and later)?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "In a specialized internal Kafka topic named __consumer_offsets."
+                },
+                {
+                    "id": "o2",
+                    "text": "Directly inside the Zookeeper ensemble metadata tree."
+                },
+                {
+                    "id": "o3",
+                    "text": "In a local relational database running on the consumer client machine."
+                },
+                {
+                    "id": "o4",
+                    "text": "Natively within the raw filesystem block headers of the partition leader."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "Historically, consumer offsets were stored in Zookeeper, but this did not scale well under heavy write loads. Modern Kafka utilizes an internal compacted topic named __consumer_offsets to robustly and efficiently track where each consumer group has read up to."
+        },
+        {
+            "id": "q29",
+            "question": "Which Kafka group management feature helps reduce disruptive, unnecessary consumer group rebalances during brief consumer application restarts or rolling infrastructure upgrades?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Dynamic Partition Assignment"
+                },
+                {
+                    "id": "o2",
+                    "text": "Idempotent Producers"
+                },
+                {
+                    "id": "o3",
+                    "text": "Static Group Membership"
+                },
+                {
+                    "id": "o4",
+                    "text": "Log Compaction"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Static Group Membership allows a consumer to configure a unique 'group.instance.id'. If this consumer drops out and rejoins within the session timeout, it is recognized as the same static member and avoids triggering a full group rebalance, maintaining its existing partition assignments."
+        },
+        {
+            "id": "q30",
+            "question": "In the context of a Kafka partition, what exactly does the 'High Watermark' represent?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The absolute maximum size in bytes that a single log segment file can reach."
+                },
+                {
+                    "id": "o2",
+                    "text": "The exact point at which the topic retention policy begins deleting old, expired messages."
+                },
+                {
+                    "id": "o3",
+                    "text": "The offset of the last message that was successfully replicated to all currently In-Sync Replicas (ISR)."
+                },
+                {
+                    "id": "o4",
+                    "text": "The maximum number of consumer connections the broker will accept for a given topic."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The High Watermark is the offset of the last message that has been fully replicated to all brokers in the In-Sync Replicas (ISR) list. Only messages up to the high watermark are considered committed and are visible to consumers, ensuring consumers do not read data that could be lost if the leader fails."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following best describes a partition within an Apache Kafka topic?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A transient in-memory message queue"
+                },
+                {
+                    "id": "o2",
+                    "text": "An ordered, immutable sequence of records that is continually appended to"
+                },
+                {
+                    "id": "o3",
+                    "text": "A globally distributed relational table"
+                },
+                {
+                    "id": "o4",
+                    "text": "A randomized key-value store optimized for ad-hoc queries"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "At its core, a Kafka partition is a distributed commit log. It is an ordered, immutable sequence of records that is appended to continually. Once written, records cannot be modified."
+        },
+        {
+            "id": "q32",
+            "question": "What is the primary benefit of the Cooperative Rebalancing (Incremental Cooperative Rebalancing) protocol over the traditional Stop-the-World rebalancing?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It permanently stores offsets in Zookeeper instead of broker topics."
+                },
+                {
+                    "id": "o2",
+                    "text": "It requires all consumers to stop processing completely before any reassignment."
+                },
+                {
+                    "id": "o3",
+                    "text": "It only pauses consumers for the specific partitions being reassigned, avoiding total processing halts."
+                },
+                {
+                    "id": "o4",
+                    "text": "It automatically scales up the number of brokers when consumers join."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Cooperative rebalancing avoids the 'stop-the-world' effect by allowing consumers to continue processing data from partitions that are not being reassigned, significantly reducing downtime and latency spikes during group membership changes."
+        },
+        {
+            "id": "q33",
+            "question": "In the context of Exactly-Once Semantics (EOS), what is the role of the Transaction Coordinator?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It manages the state of transactions, assigns Producer IDs (PIDs), and writes commit/abort markers."
+                },
+                {
+                    "id": "o2",
+                    "text": "It is solely responsible for electing new partition leaders when brokers fail."
+                },
+                {
+                    "id": "o3",
+                    "text": "It compacts the internal transaction topics to save disk space."
+                },
+                {
+                    "id": "o4",
+                    "text": "It manages consumer group heartbeats and triggers rebalances."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "The Transaction Coordinator is a module running inside every Kafka broker that assigns PIDs, manages transaction epochs, logs transaction states to an internal topic, and writes the final commit or abort control messages to the user partitions."
+        },
+        {
+            "id": "q34",
+            "question": "Which Kafka ecosystem component is a client library specifically designed for building stateful and stateless stream processing applications?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Kafka Connect API"
+                },
+                {
+                    "id": "o2",
+                    "text": "Kafka Streams API"
+                },
+                {
+                    "id": "o3",
+                    "text": "Kafka Producer API"
+                },
+                {
+                    "id": "o4",
+                    "text": "ZooKeeper Ensembles"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The Kafka Streams API is a client library designed to facilitate data processing, transformations, stateful aggregations, and joins directly on data stored in Kafka, outputting the results back to Kafka."
+        },
+        {
+            "id": "q35",
+            "question": "What mechanism does Kafka use to resolve split-brain scenarios and ensure replicas can accurately truncate uncommitted data after a leader failure?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Timestamp Expiration"
+                },
+                {
+                    "id": "o2",
+                    "text": "Leader Epochs"
+                },
+                {
+                    "id": "o3",
+                    "text": "Log Compaction"
+                },
+                {
+                    "id": "o4",
+                    "text": "Consumer Offsets"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Leader Epoch is a monotonically increasing sequence number assigned by the controller every time a new leader is elected. It allows followers to identify stale leaders and safely truncate their logs to the correct offset, avoiding data inconsistency."
+        },
+        {
+            "id": "q36",
+            "question": "Which of the following are true regarding the key of a Kafka message? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A message key can be null."
+                },
+                {
+                    "id": "o2",
+                    "text": "A message key must always be a valid integer."
+                },
+                {
+                    "id": "o3",
+                    "text": "Messages with the same key are guaranteed to be routed to the same partition."
+                },
+                {
+                    "id": "o4",
+                    "text": "The message key must be globally unique across the entire Kafka cluster."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "In Kafka, a message key is optional and can be null (which typically results in round-robin partition assignment). If a key is provided, Kafka hashes it to ensure that all messages sharing the exact same key land on the same partition."
+        },
+        {
+            "id": "q37",
+            "question": "In an event streaming application, how does Kafka Connect fundamentally differ from Kafka Streams?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Connect requires Hadoop, whereas Streams is standalone."
+                },
+                {
+                    "id": "o2",
+                    "text": "Connect focuses on data integration with external systems, whereas Streams focuses on transforming and processing data already in Kafka."
+                },
+                {
+                    "id": "o3",
+                    "text": "Connect is for writing consumer groups, while Streams is strictly for producing messages."
+                },
+                {
+                    "id": "o4",
+                    "text": "Connect stores data in memory, while Streams persists data to disks."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Kafka Connect is an integration tool designed to reliably move large amounts of data between Kafka and external systems (like databases or cloud storage). Kafka Streams is a stream processing library used to build applications that compute and transform data flowing through Kafka."
+        },
+        {
+            "id": "q38",
+            "question": "If an active Kafka broker abruptly crashes, how does the cluster maintain read and write availability for the partitions that were hosted on that broker?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The partitions are moved to a temporary 'offline' state until an administrator restarts the broker."
+                },
+                {
+                    "id": "o2",
+                    "text": "The Kafka Controller automatically elects a new leader from the remaining In-Sync Replicas (ISR) for each affected partition."
+                },
+                {
+                    "id": "o3",
+                    "text": "Consumers are automatically rerouted to read directly from the Zookeeper metadata cache."
+                },
+                {
+                    "id": "o4",
+                    "text": "The Producer API buffers all data in memory indefinitely until the broken node recovers."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "High availability in Kafka is achieved through replication. If a broker acting as a partition leader fails, the cluster controller detects the failure and immediately promotes one of the active follower replicas (from the ISR list) to become the new leader."
+        },
+        {
+            "id": "q39",
+            "question": "Which consumer configuration property defines the maximum amount of time a consumer is allowed to process a batch of records before it is considered dead and removed from the consumer group?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "session.timeout.ms"
+                },
+                {
+                    "id": "o2",
+                    "text": "request.timeout.ms"
+                },
+                {
+                    "id": "o3",
+                    "text": "auto.commit.interval.ms"
+                },
+                {
+                    "id": "o4",
+                    "text": "max.poll.interval.ms"
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "The 'max.poll.interval.ms' setting specifies the maximum delay between invocations of poll(). If the consumer takes longer than this to process data and call poll() again, the coordinator assumes the consumer application has stalled or failed and triggers a group rebalance."
+        },
+        {
+            "id": "q40",
+            "question": "Why is a persistent, unique 'transactional.id' critical for a Kafka producer attempting to utilize Exactly-Once Semantics (EOS)?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It acts as a password to bypass standard consumer ACL authorization rules."
+                },
+                {
+                    "id": "o2",
+                    "text": "It instructs the broker to compress messages using a specific transactional algorithm."
+                },
+                {
+                    "id": "o3",
+                    "text": "It allows the Transaction Coordinator to identify the producer across restarts, fencing off older 'zombie' instances."
+                },
+                {
+                    "id": "o4",
+                    "text": "It guarantees that the producer will only write data to exactly one partition at all times."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "The transactional.id is used to consistently identify the same producer instance across application crashes and restarts. The broker uses it to assign a producer epoch, effectively recognizing when a new instance spins up and strictly fencing out old instances to prevent duplicate transactional writes."
+        },
+        {
+            "id": "q41",
+            "question": "Which of the following physical files are fundamental components of a Kafka partition stored on a broker's filesystem? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Log segment files (.log)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Index files (.index and .timeindex)"
+                },
+                {
+                    "id": "o3",
+                    "text": "SQL relational metadata stores (.db)"
+                },
+                {
+                    "id": "o4",
+                    "text": "B-Tree Node definition files (.btree)"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Kafka partitions are physically stored as a series of segment files. Each segment consists primarily of a data file (.log) that holds the actual messages, an offset index (.index) for quick lookups by offset, and a time index (.timeindex) for lookups by timestamp."
+        },
+        {
+            "id": "q42",
+            "question": "Regarding message ordering, what specific guarantee does a Kafka cluster provide natively?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Strict global ordering of all messages across every partition in a single topic."
+                },
+                {
+                    "id": "o2",
+                    "text": "Strict global ordering of all messages across the entire Kafka cluster."
+                },
+                {
+                    "id": "o3",
+                    "text": "Strict sequential ordering only for messages appended within a specific partition."
+                },
+                {
+                    "id": "o4",
+                    "text": "No ordering guarantees are provided unless a custom partitioner is written."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Kafka only guarantees the order of messages within a single partition. If global ordering across a topic is required, the topic must be configured to have only one partition, which severely limits horizontal scalability."
+        },
+        {
+            "id": "q43",
+            "question": "What is the primary function of a 'Follower' replica in an Apache Kafka cluster under normal operating conditions?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To passively fetch and replicate data from the leader to ensure data redundancy."
+                },
+                {
+                    "id": "o2",
+                    "text": "To actively serve read requests to consumers, load-balancing the network traffic."
+                },
+                {
+                    "id": "o3",
+                    "text": "To process stream aggregations natively on the broker."
+                },
+                {
+                    "id": "o4",
+                    "text": "To maintain Zookeeper connectivity state."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "By default, followers in Kafka exist strictly for redundancy and fault tolerance. They passively issue fetch requests to the leader to mirror the data. Under standard configurations, all client read and write requests go exclusively to the partition leader."
+        },
+        {
+            "id": "q44",
+            "question": "When a consumer group undergoes a rebalance, what dictates where a newly assigned consumer begins reading data in a partition?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It always starts reading from the absolute beginning of the partition."
+                },
+                {
+                    "id": "o2",
+                    "text": "It resumes reading from the last offset that was successfully committed to the __consumer_offsets topic by the previous consumer."
+                },
+                {
+                    "id": "o3",
+                    "text": "It immediately skips to the end of the partition and only reads new data."
+                },
+                {
+                    "id": "o4",
+                    "text": "It waits for an administrator to manually specify the starting offset."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "After a rebalance, consumers check the internal __consumer_offsets topic. They will begin fetching messages from the offset immediately following the last committed offset for their assigned partitions, ensuring processing continuity."
+        },
+        {
+            "id": "q45",
+            "question": "In a Kafka topic with exactly-once semantics enabled, how are aborted transactional messages handled when a consumer reads the partition?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They are physically deleted from the broker's disk immediately upon the abort command."
+                },
+                {
+                    "id": "o2",
+                    "text": "They are returned to the consumer, which must use application-level logic to discard them."
+                },
+                {
+                    "id": "o3",
+                    "text": "If the consumer is configured with isolation.level=read_committed, the Kafka consumer client automatically filters out and discards the aborted messages."
+                },
+                {
+                    "id": "o4",
+                    "text": "They are moved to a special Dead Letter Queue (DLQ) topic."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Aborted transaction messages physically remain in the partition log (until standard retention policies remove them). However, if a consumer is configured with 'isolation.level=read_committed', the underlying Kafka consumer client library detects the abort control marker and transparently filters those messages out, never returning them to the user application."
+        },
+        {
+            "id": "q46",
+            "question": "What happens to a message in a standard Kafka topic after a consumer successfully reads it and commits its offset?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The message is immediately deleted from the broker to free up disk space."
+                },
+                {
+                    "id": "o2",
+                    "text": "The message is moved to a hidden archive topic."
+                },
+                {
+                    "id": "o3",
+                    "text": "The message is retained on the broker until the topic's retention policy (time or size) expires."
+                },
+                {
+                    "id": "o4",
+                    "text": "The message is marked as 'read' and becomes invisible to all other consumer groups."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Kafka does not delete messages immediately after they are consumed. Messages are durably stored in the commit log and are only deleted when they exceed the configured retention period (e.g., 7 days) or size limit, regardless of whether they have been read."
+        },
+        {
+            "id": "q47",
+            "question": "How do multiple independent consumer groups reading from the exact same Kafka topic interact with each other?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "They share the exact same processing offset, meaning they act in a publish-subscribe fashion."
+                },
+                {
+                    "id": "o2",
+                    "text": "They operate completely independently, with each group tracking its own offset and reading all messages in the topic."
+                },
+                {
+                    "id": "o3",
+                    "text": "They split the topic partitions evenly among all active consumer groups."
+                },
+                {
+                    "id": "o4",
+                    "text": "Only one consumer group is allowed to read from a specific topic at any given time to prevent data corruption."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Different consumer groups operate entirely independently of one another. Each group maintains its own offsets, allowing multiple distinct applications to read the exact same stream of data at their own pace without interfering with each other."
+        },
+        {
+            "id": "q48",
+            "question": "As of Apache Kafka 3.0, what is the default configuration for producer idempotence (enable.idempotence)?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "false"
+                },
+                {
+                    "id": "o2",
+                    "text": "true"
+                },
+                {
+                    "id": "o3",
+                    "text": "It is disabled unless a transactional.id is provided."
+                },
+                {
+                    "id": "o4",
+                    "text": "It dynamically toggles based on the current cluster load."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Starting in Kafka 3.0, producers are configured with enable.idempotence=true and acks=all by default. This change provides stronger durability and exactly-once delivery guarantees out-of-the-box."
+        },
+        {
+            "id": "q49",
+            "question": "How does Kafka handle a situation where a follower replica falls too far behind the partition leader due to a network issue?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The lagging broker is automatically shut down by the controller."
+                },
+                {
+                    "id": "o2",
+                    "text": "The partition leader pauses all incoming writes until the follower catches up."
+                },
+                {
+                    "id": "o3",
+                    "text": "The follower skips the missing messages and resumes fetching only the newest data."
+                },
+                {
+                    "id": "o4",
+                    "text": "The follower is removed from the In-Sync Replicas (ISR) list until it can fully catch up."
+                }
+            ],
+            "correctAnswers": [
+                "o4"
+            ],
+            "explanation": "If a follower falls behind the leader beyond a configured threshold (replica.lag.time.max.ms), the leader drops it from the In-Sync Replicas (ISR) list. This ensures that the leader does not wait for acknowledgments from a slow replica, preserving write performance."
+        },
+        {
+            "id": "q50",
+            "question": "In the context of Kafka Streams, what does the term 'Topology' refer to?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The physical network routing layout between Kafka brokers in a datacenter."
+                },
+                {
+                    "id": "o2",
+                    "text": "A directed acyclic graph (DAG) of stream processing nodes and edges."
+                },
+                {
+                    "id": "o3",
+                    "text": "The hierarchical structure of ZooKeeper nodes managing cluster metadata."
+                },
+                {
+                    "id": "o4",
+                    "text": "The mapping algorithm that assigns consumer groups to topic partitions."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Topology in Kafka Streams is a directed acyclic graph (DAG) that defines the stream processing logic. The nodes in the graph represent processors (which transform data), and the edges represent the streams of data flowing between them."
+        },
+        {
+            "id": "q51",
+            "question": "What is the primary role of the group.id configuration property in a Kafka consumer application?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It defines the security principal used for ACL authorization."
+                },
+                {
+                    "id": "o2",
+                    "text": "It uniquely identifies the consumer group that the consumer instance belongs to."
+                },
+                {
+                    "id": "o3",
+                    "text": "It specifies the exact topic the consumer is permitted to read from."
+                },
+                {
+                    "id": "o4",
+                    "text": "It dictates the physical broker node the consumer must connect to."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The group.id string uniquely identifies the consumer group. All consumer instances sharing the same group.id work together to consume a set of topics, with Kafka automatically distributing the partitions among them."
+        },
+        {
+            "id": "q52",
+            "question": "Which of the following statements about Kafka topics are true? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A topic is a logical category or feed name to which records are published."
+                },
+                {
+                    "id": "o2",
+                    "text": "A topic must be strictly limited to a single partition to guarantee data durability."
+                },
+                {
+                    "id": "o3",
+                    "text": "A single topic can have zero, one, or many consumers subscribing to the data written to it."
+                },
+                {
+                    "id": "o4",
+                    "text": "A topic automatically enforces strict Avro schema definitions out-of-the-box without external tools."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3"
+            ],
+            "explanation": "A topic is the fundamental logical classification of messages in Kafka. A topic can have many consumers (or none) and can be split into multiple partitions for scalability. Kafka itself treats message payloads as raw byte arrays and requires external tools like Schema Registry to enforce schemas."
+        },
+        {
+            "id": "q53",
+            "question": "If a Kafka topic is configured with a replication factor of 3, how many broker failures can a partition tolerate while ensuring no data is lost?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "0"
+                },
+                {
+                    "id": "o2",
+                    "text": "1"
+                },
+                {
+                    "id": "o3",
+                    "text": "2"
+                },
+                {
+                    "id": "o4",
+                    "text": "3"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "With a replication factor of 3 (N), the partition can tolerate N-1 failures. Therefore, it can survive 2 broker failures without losing committed data, provided that the producer requires acknowledgments from the leader and at least one follower before considering a write successful."
+        },
+        {
+            "id": "q54",
+            "question": "Which configuration allows a Kafka Streams application to update local state stores and produce output messages atomically?",
+            "type": "single-choice",
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "setting isolation.level=read_uncommitted"
+                },
+                {
+                    "id": "o2",
+                    "text": "setting processing.guarantee=“exactly_once_v2”"
+                },
+                {
+                    "id": "o3",
+                    "text": "setting acks=1 on the internal producer"
+                },
+                {
+                    "id": "o4",
+                    "text": "setting max.poll.records=1 on the consumer"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Kafka Streams provides native support for Exactly-Once Semantics. By setting the processing.guarantee configuration to exactly_once_v2 (or the older exactly_once), the framework automatically coordinates transactions between consuming, updating state stores, and producing results."
+        },
+        {
+            "id": "q55",
+            "question": "What is the primary difference between stateless and stateful stream processing operations in Kafka Streams?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Stateless relies on external relational databases; stateful relies strictly on in-memory arrays."
+                },
+                {
+                    "id": "o2",
+                    "text": "Stateless operations process each record independently; stateful operations require remembering data from previously processed records."
+                },
+                {
+                    "id": "o3",
+                    "text": "Stateless operations can only be deployed on a single node; stateful operations are highly distributed."
+                },
+                {
+                    "id": "o4",
+                    "text": "Stateless operations only utilize KTables; stateful operations only utilize KStreams."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Stateless operations (like filter or map) look at a single event in isolation and produce an outcome. Stateful operations (like count, aggregate, or join) require a State Store to remember previous events in order to calculate the current outcome."
+        },
+        {
+            "id": "q56",
+            "question": "During a standard 'Stop-the-World' (eager) rebalance in a consumer group, what happens to message processing?",
+            "type": "single-choice",
+            "topic": "Consumer Group Rebalancing",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Processing continues uninterrupted using stale cached offsets."
+                },
+                {
+                    "id": "o2",
+                    "text": "All consumers in the group pause processing entirely and give up their partitions until the reassignment completes."
+                },
+                {
+                    "id": "o3",
+                    "text": "Incoming messages are temporarily buffered in consumer memory until the rebalance is over."
+                },
+                {
+                    "id": "o4",
+                    "text": "The topic is temporarily locked, causing producers to throw timeout exceptions."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "In an eager (stop-the-world) rebalance protocol, all consumers in the group must revoke their current partition assignments and stop fetching data. They remain idle until the group coordinator finalizes the new partition assignments, which can cause noticeable latency spikes."
+        },
+        {
+            "id": "q57",
+            "question": "How do Kafka consumers natively achieve horizontal scalability to process high-throughput topics faster?",
+            "type": "single-choice",
+            "topic": "Distributed Commit Log",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "By deploying a single consumer instance on a machine with more CPU cores and RAM."
+                },
+                {
+                    "id": "o2",
+                    "text": "By adding more consumer instances to the same consumer group, allowing them to read from multiple partitions concurrently."
+                },
+                {
+                    "id": "o3",
+                    "text": "By continually increasing the max.poll.records configuration value to infinite limits."
+                },
+                {
+                    "id": "o4",
+                    "text": "By completely disabling offset commits to eliminate network overhead."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "The primary way to scale consumption in Kafka is to partition the topic and have multiple consumer instances (sharing the same group.id) read from those partitions in parallel. Each consumer handles a subset of the partitions."
+        },
+        {
+            "id": "q58",
+            "question": "What is the specialized role of the 'Active Controller' broker within an Apache Kafka cluster?",
+            "type": "single-choice",
+            "topic": "Failure Recovery",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It is the only broker permitted to accept write requests from producers."
+                },
+                {
+                    "id": "o2",
+                    "text": "It acts as a load balancer, routing external network traffic to the correct partition leaders."
+                },
+                {
+                    "id": "o3",
+                    "text": "It is responsible for managing the state of partitions and replicas, including performing leader elections when brokers fail."
+                },
+                {
+                    "id": "o4",
+                    "text": "It exclusively hosts the internal __consumer_offsets topic."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "In a Kafka cluster, one broker acts as the active controller. Its primary responsibility is managing cluster metadata and coordinating administrative tasks, such as electing new partition leaders if a broker crashes and communicating these state changes to other brokers."
+        },
+        {
+            "id": "q59",
+            "question": "Which of the following producer conditions must be met for a Kafka application to successfully implement Exactly-Once Semantics (Transactions)? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Exactly-Once Semantics",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "The producer must be assigned a stable transactional.id."
+                },
+                {
+                    "id": "o2",
+                    "text": "The producer must have enable.idempotence explicitly or implicitly set to true."
+                },
+                {
+                    "id": "o3",
+                    "text": "The producer must set acks=1 to optimize network round-trips."
+                },
+                {
+                    "id": "o4",
+                    "text": "The producer must generate a random group.id for every message."
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o2"
+            ],
+            "explanation": "Transactions in Kafka rely on the producer having idempotence enabled (which ensures no duplicates) and a unique, static transactional.id (which allows the Transaction Coordinator to track the producer across restarts and fence off zombie instances). Transactions strictly require acks=all, not acks=1."
+        },
+        {
+            "id": "q60",
+            "question": "Which of the following stream processing operations is an example of a 'stateful' transformation in Kafka Streams?",
+            "type": "single-choice",
+            "topic": "Event Streaming Topologies",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "MapValues (e.g., converting a lowercase string to uppercase)"
+                },
+                {
+                    "id": "o2",
+                    "text": "Filter (e.g., removing messages that contain null values)"
+                },
+                {
+                    "id": "o3",
+                    "text": "Count (e.g., counting the total number of occurrences for a specific key)"
+                },
+                {
+                    "id": "o4",
+                    "text": "Branch (e.g., routing a message to different streams based on a predicate)"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Counting the occurrences of a key requires the application to remember how many times it has seen that key previously. Therefore, count is a stateful operation that requires a State Store. MapValues, Filter, and Branch operate on one record at a time without needing historical context."
+        }
+    ]
+}

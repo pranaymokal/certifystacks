@@ -82,6 +82,10 @@
         {
           "id": "o3",
           "text": "Hybrid Cloud"
+        },
+        {
+          "id": "o4",
+          "text": "On-Premises"
         }
       ],
       "correctAnswers": [

@@ -1944,6 +1944,7 @@
     {
       "id": "q70",
       "question": "Which roles can manage content exclusion policies?",
+      "type": "single-choice",
       "topic": "Copilot Governance and Policies",
       "options": [
         {

@@ -8,6 +8,431 @@
     "difficulty": "Beginner",
     "questionList": [
         {
+            "id": "q1",
+            "question": "What is the primary purpose of a Mobile Device Management (MDM) solution in a corporate environment?",
+            "type": "single-choice",
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To increase the cellular signal strength of employee smartphones."
+                },
+                {
+                    "id": "o2",
+                    "text": "To allow administrators to securely monitor, manage, and enforce policies on employee mobile devices."
+                },
+                {
+                    "id": "o3",
+                    "text": "To intercept and read employees' personal text messages."
+                },
+                {
+                    "id": "o4",
+                    "text": "To replace the need for an enterprise firewall."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Mobile Device Management (MDM) software allows IT departments to enforce security policies, wipe lost devices remotely, and manage applications on smartphones and tablets, ensuring corporate data remains secure on mobile endpoints."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following describes 'Typosquatting'?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A physical attack where someone steals a keyboard."
+                },
+                {
+                    "id": "o2",
+                    "text": "Registering a domain name that is slightly misspelled compared to a popular website, hoping users will accidentally visit it."
+                },
+                {
+                    "id": "o3",
+                    "text": "Using automated scripts to repeatedly guess passwords."
+                },
+                {
+                    "id": "o4",
+                    "text": "Hiding malicious code inside a word processing document."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Typosquatting (also called URL hijacking) is a form of cybersquatting where attackers register domain names that are common typographical errors of legitimate websites (e.g., 'gooogle.com') to distribute malware or steal credentials."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary function of a Non-Disclosure Agreement (NDA) in information security?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To encrypt sensitive emails before they leave the corporate network."
+                },
+                {
+                    "id": "o2",
+                    "text": "To legally bind individuals or organizations to protect confidential information and trade secrets from being shared."
+                },
+                {
+                    "id": "o3",
+                    "text": "To authorize ethical hackers to perform penetration testing."
+                },
+                {
+                    "id": "o4",
+                    "text": "To mandate the use of Multi-Factor Authentication across the company."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "An NDA is a legal contract that establishes a confidential relationship. It legally requires the signing parties to protect sensitive information and prohibits them from sharing it with unauthorized third parties."
+        },
+        {
+            "id": "q4",
+            "question": "Why is the use of a reputable Password Manager highly recommended by security professionals?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "It completely eliminates the need for users to authenticate."
+                },
+                {
+                    "id": "o2",
+                    "text": "It automatically bypasses Multi-Factor Authentication prompts."
+                },
+                {
+                    "id": "o3",
+                    "text": "It allows users to safely generate, store, and auto-fill complex, unique passwords for every online account."
+                },
+                {
+                    "id": "o4",
+                    "text": "It prevents websites from tracking user browsing history."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Password managers encourage good security hygiene by generating highly complex, unique passwords for every account and securely storing them in an encrypted vault, meaning the user only needs to remember one strong master password."
+        },
+        {
+            "id": "q5",
+            "question": "What is the primary difference between an Intrusion Detection System (IDS) and an Intrusion Prevention System (IPS)?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "An IDS monitors and alerts on malicious activity, while an IPS actively blocks or stops the malicious activity."
+                },
+                {
+                    "id": "o2",
+                    "text": "An IDS is used for physical security, while an IPS is used for network security."
+                },
+                {
+                    "id": "o3",
+                    "text": "An IDS encrypts data, while an IPS decrypts data."
+                },
+                {
+                    "id": "o4",
+                    "text": "An IDS requires a hardware appliance, while an IPS is purely software-based."
+                }
+            ],
+            "correctAnswers": [
+                "o1"
+            ],
+            "explanation": "An Intrusion Detection System (IDS) is a passive control that logs and alerts administrators about potential threats. An Intrusion Prevention System (IPS) is an active control that can automatically block or drop traffic it identifies as malicious."
+        },
+        {
+            "id": "q6",
+            "question": "What type of software is designed to automatically display or download advertising material, often unexpectedly, when a user is online?",
+            "type": "single-choice",
+            "topic": "Threats and Vulnerabilities",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Ransomware"
+                },
+                {
+                    "id": "o2",
+                    "text": "Adware"
+                },
+                {
+                    "id": "o3",
+                    "text": "Logic Bomb"
+                },
+                {
+                    "id": "o4",
+                    "text": "Rootkit"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Adware is a type of potentially unwanted program (PUP) or malware that generates revenue for its developer by automatically generating online advertisements in the user interface of the software or on a screen presented to the user."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following physical security controls is best suited to mitigate the risk of 'Shoulder Surfing'?",
+            "type": "single-choice",
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A heavy-duty cable lock"
+                },
+                {
+                    "id": "o2",
+                    "text": "A privacy screen filter"
+                },
+                {
+                    "id": "o3",
+                    "text": "A biometric fingerprint scanner"
+                },
+                {
+                    "id": "o4",
+                    "text": "A Faraday cage"
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A privacy screen filter is a physical panel placed over a computer monitor or laptop screen. It narrows the viewing angle so that only the person sitting directly in front of the screen can read the contents, preventing onlookers from shoulder surfing."
+        },
+        {
+            "id": "q8",
+            "question": "What is the most secure and appropriate way to dispose of printed physical documents containing confidential company information?",
+            "type": "single-choice",
+            "topic": "Data Protection",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Tearing them in half and placing them in a public recycling bin."
+                },
+                {
+                    "id": "o2",
+                    "text": "Using a cross-cut or micro-cut document shredder before disposal."
+                },
+                {
+                    "id": "o3",
+                    "text": "Placing them directly into the standard office trash can."
+                },
+                {
+                    "id": "o4",
+                    "text": "Scanning them into a computer and then throwing the originals away intact."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Confidential paper documents must be securely destroyed using a cross-cut or micro-cut shredder to ensure the information cannot be reassembled or read by malicious actors engaging in dumpster diving."
+        },
+        {
+            "id": "q9",
+            "question": "If an employee suspects they have accidentally clicked on a malicious link in a phishing email on their corporate workstation, what is the best immediate course of action?",
+            "type": "single-choice",
+            "topic": "Security Operations",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Forward the email to all colleagues to warn them."
+                },
+                {
+                    "id": "o2",
+                    "text": "Quietly delete the email and reboot the computer to clear the memory."
+                },
+                {
+                    "id": "o3",
+                    "text": "Disconnect the computer from the network immediately and notify the IT/Security department."
+                },
+                {
+                    "id": "o4",
+                    "text": "Attempt to run a manual anti-virus scan and fix the issue themselves."
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Disconnecting the device from the network immediately prevents potential malware from communicating with external servers or spreading laterally across the corporate network. Reporting it immediately allows the security team to initiate incident response procedures."
+        },
+        {
+            "id": "q10",
+            "question": "In the context of risk management, an organization decides to purchase cybersecurity insurance to cover potential financial losses from a data breach. This is an example of which risk treatment strategy?",
+            "type": "single-choice",
+            "topic": "Security Governance",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Risk Acceptance"
+                },
+                {
+                    "id": "o2",
+                    "text": "Risk Avoidance"
+                },
+                {
+                    "id": "o3",
+                    "text": "Risk Transfer"
+                },
+                {
+                    "id": "o4",
+                    "text": "Risk Mitigation"
+                }
+            ],
+            "correctAnswers": [
+                "o3"
+            ],
+            "explanation": "Risk Transfer (or Risk Sharing) involves shifting the financial burden or impact of a risk to a third party, such as purchasing an insurance policy or outsourcing a particular high-risk service to a specialized vendor."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following are considered secure best practices for employees working remotely or from public locations? (Choose two)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Endpoint Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Connecting to open public Wi-Fi without a VPN."
+                },
+                {
+                    "id": "o2",
+                    "text": "Using a corporate-approved Virtual Private Network (VPN) for all work activities."
+                },
+                {
+                    "id": "o3",
+                    "text": "Leaving work laptops unattended on tables when ordering coffee."
+                },
+                {
+                    "id": "o4",
+                    "text": "Locking the computer screen every time they step away from the device."
+                }
+            ],
+            "correctAnswers": [
+                "o2",
+                "o4"
+            ],
+            "explanation": "When working remotely, employees should always use a VPN to encrypt their network traffic and strictly adhere to physical security policies, such as locking their screens when away to prevent unauthorized access."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following are examples of physical security controls? (Choose three)",
+            "type": "multiple-choice",
+            "multipleAnswer": true,
+            "topic": "Physical Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Closed-Circuit Television (CCTV) cameras"
+                },
+                {
+                    "id": "o2",
+                    "text": "Network Firewalls"
+                },
+                {
+                    "id": "o3",
+                    "text": "Security guards"
+                },
+                {
+                    "id": "o4",
+                    "text": "Perimeter fencing"
+                }
+            ],
+            "correctAnswers": [
+                "o1",
+                "o3",
+                "o4"
+            ],
+            "explanation": "Physical security controls are tangible measures designed to restrict physical access to facilities and assets. CCTV, security personnel, and fencing are physical controls. A network firewall is a logical/technical control."
+        },
+        {
+            "id": "q13",
+            "question": "What does the concept of 'Security through Obscurity' rely on?",
+            "type": "single-choice",
+            "topic": "Security Frameworks",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "Using the strongest available military-grade encryption."
+                },
+                {
+                    "id": "o2",
+                    "text": "Attempting to achieve security by hiding implementation details, source code, or system flaws rather than fixing them."
+                },
+                {
+                    "id": "o3",
+                    "text": "Implementing multiple overlapping layers of security controls."
+                },
+                {
+                    "id": "o4",
+                    "text": "Ensuring a system is completely disconnected from the internet."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Security through Obscurity is the flawed practice of relying on secrecy (e.g., hiding a database URL or relying on uncompiled, undocumented code) as the primary method of securing a system. It is widely considered a weak security practice on its own."
+        },
+        {
+            "id": "q14",
+            "question": "What is a MAC address in the context of computer networking?",
+            "type": "single-choice",
+            "topic": "Network Security",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "A temporary internet protocol address assigned by a router."
+                },
+                {
+                    "id": "o2",
+                    "text": "A unique, physical hardware identifier permanently burned into a network interface controller (NIC)."
+                },
+                {
+                    "id": "o3",
+                    "text": "A cryptographic key used exclusively by Apple devices."
+                },
+                {
+                    "id": "o4",
+                    "text": "A logical address used to route traffic across the global internet."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "A Media Access Control (MAC) address is a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment (Data Link Layer). Unlike an IP address, a true MAC address is tied to the physical hardware."
+        },
+        {
+            "id": "q15",
+            "question": "Why is it important to configure computers to automatically lock the screen and require a password after a short period of inactivity?",
+            "type": "single-choice",
+            "topic": "Identity and Access Management",
+            "options": [
+                {
+                    "id": "o1",
+                    "text": "To reduce the electricity consumption of the computer's monitor."
+                },
+                {
+                    "id": "o2",
+                    "text": "To prevent unauthorized users from accessing the system if the authorized user steps away."
+                },
+                {
+                    "id": "o3",
+                    "text": "To force the operating system to install background software updates."
+                },
+                {
+                    "id": "o4",
+                    "text": "To automatically disconnect the computer from the local Wi-Fi network."
+                }
+            ],
+            "correctAnswers": [
+                "o2"
+            ],
+            "explanation": "Automatic screen locks ensure that if an employee forgets to manually lock their workstation before walking away, the system will secure itself shortly after, mitigating the risk of physical unauthorized access or data theft."
+        },
+        {
             "id": "q16",
             "question": "Which security concept ensures that a user or system is exactly who they claim to be?",
             "type": "single-choice",

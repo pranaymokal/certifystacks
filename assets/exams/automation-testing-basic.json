@@ -1,0 +1,1584 @@
+{
+  "id": "automation-testing-basic",
+  "name": "Automation Testing Fundamentals",
+  "vendor": "CertifyStacks",
+  "questions": 60,
+  "duration": 60,
+  "passingScore": 700,
+  "difficulty": "Beginner",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "What is the primary purpose of introducing automation testing into a software project?",
+      "type": "single-choice",
+      "topic": "Core Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To completely replace all manual testing efforts"
+        },
+        {
+          "id": "o2",
+          "text": "To find all hidden bugs in the application code"
+        },
+        {
+          "id": "o3",
+          "text": "To execute repetitive tests reliably and quickly"
+        },
+        {
+          "id": "o4",
+          "text": "To automatically write source code for the application"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "The primary goal of automation testing is to increase efficiency by handling repetitive and time-consuming test cases, allowing manual testers to focus on exploratory and edge-case testing. It cannot completely replace manual testing or find every single bug."
+    },
+    {
+      "id": "q2",
+      "question": "Which of the following testing types is generally the BEST candidate for automation?",
+      "type": "single-choice",
+      "topic": "Test Selection",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Exploratory Testing"
+        },
+        {
+          "id": "o2",
+          "text": "Usability Testing"
+        },
+        {
+          "id": "o3",
+          "text": "Regression Testing"
+        },
+        {
+          "id": "o4",
+          "text": "Ad-hoc Testing"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Regression tests are executed repeatedly whenever there is a change in the code to ensure existing functionality is not broken. Because they are repetitive and predictable, they yield the highest return on investment when automated."
+    },
+    {
+      "id": "q3",
+      "question": "Which of the following are common benefits of implementing automated testing? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Core Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Subjective evaluation of UI aesthetics"
+        },
+        {
+          "id": "o2",
+          "text": "Faster execution of test suites"
+        },
+        {
+          "id": "o3",
+          "text": "Elimination of the need for human testers"
+        },
+        {
+          "id": "o4",
+          "text": "Higher test coverage capabilities"
+        }
+      ],
+      "correctAnswers": ["o2", "o4"],
+      "explanation": "Automated testing runs scripts significantly faster than a human could execute the same steps, and it can run massive arrays of data variations to improve test coverage. It is not capable of subjective visual evaluation or replacing human testers entirely."
+    },
+    {
+      "id": "q4",
+      "question": "What is a 'test script' in the context of automation testing?",
+      "type": "single-choice",
+      "topic": "Terminology",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A manual step-by-step document written for QA engineers"
+        },
+        {
+          "id": "o2",
+          "text": "A piece of code or program that executes test instructions automatically"
+        },
+        {
+          "id": "o3",
+          "text": "The production source code of the application being tested"
+        },
+        {
+          "id": "o4",
+          "text": "A bug report generated after a test failure"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A test script is a set of instructions written in a programming or scripting language that an automation tool uses to interact with the application under test."
+    },
+    {
+      "id": "q5",
+      "question": "What defines a 'Data-Driven' automation framework?",
+      "type": "single-choice",
+      "topic": "Automation Frameworks",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A framework that exclusively tests database schemas and tables"
+        },
+        {
+          "id": "o2",
+          "text": "A framework where test input and expected output data are stored in external files (like CSV or Excel)"
+        },
+        {
+          "id": "o3",
+          "text": "A framework that writes random data to the hard drive to test storage limits"
+        },
+        {
+          "id": "o4",
+          "text": "A framework where tests are written strictly using SQL queries"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Data-driven testing separates the test logic from the test data. The script reads multiple sets of input values from an external data source, allowing a single script to test many different data permutations."
+    },
+    {
+      "id": "q6",
+      "question": "Which of the following tools are widely known as open-source automation testing tools? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Automation Tools",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Micro Focus UFT One"
+        },
+        {
+          "id": "o2",
+          "text": "Selenium"
+        },
+        {
+          "id": "o3",
+          "text": "Cypress"
+        },
+        {
+          "id": "o4",
+          "text": "Tricentis Tosca"
+        }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Selenium and Cypress are popular open-source testing frameworks. UFT One and Tricentis Tosca are commercial, paid enterprise tools."
+    },
+    {
+      "id": "q7",
+      "question": "What is the primary function of a 'Test Automation Framework'?",
+      "type": "single-choice",
+      "topic": "Automation Frameworks",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To compile the application's source code into an executable file"
+        },
+        {
+          "id": "o2",
+          "text": "To provide a set of rules, coding standards, and libraries that organize and streamline script creation"
+        },
+        {
+          "id": "o3",
+          "text": "To provide physical servers for hosting the web application"
+        },
+        {
+          "id": "o4",
+          "text": "To track defects and assign them to developers"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A test automation framework is a conceptual structure comprising guidelines, coding standards, concepts, processes, and tools designed to help QA professionals write structured, maintainable, and scalable tests."
+    },
+    {
+      "id": "q8",
+      "question": "In UI automation, what is the purpose of a 'Locator'?",
+      "type": "single-choice",
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To determine the geographical location of the server hosting the app"
+        },
+        {
+          "id": "o2",
+          "text": "To track down memory leaks within the application code"
+        },
+        {
+          "id": "o3",
+          "text": "To identify and interact with specific HTML elements on a web page"
+        },
+        {
+          "id": "o4",
+          "text": "To pinpoint the URL of the staging environment"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Locators (such as ID, Name, CSS Selector, or XPath) are commands used by automation tools to locate unique web elements on a page so the script can interact with them (e.g., clicking a button or typing into a text field)."
+    },
+    {
+      "id": "q9",
+      "question": "What is the fundamental difference between manual testing and automated testing?",
+      "type": "single-choice",
+      "topic": "Core Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Manual testing uses scripts, while automated testing uses human intuition."
+        },
+        {
+          "id": "o2",
+          "text": "Automated testing requires human intervention for each executed step."
+        },
+        {
+          "id": "o3",
+          "text": "Automated testing is only applicable to desktop applications, not web applications."
+        },
+        {
+          "id": "o4",
+          "text": "Automated testing uses software tools to control test execution, whereas manual testing requires a human to perform each step."
+        }
+      ],
+      "correctAnswers": ["o4"],
+      "explanation": "The core distinction is that manual testing requires a human to execute test steps one by one, while automated testing utilizes scripts and tools to execute the steps programmatically without continuous human intervention."
+    },
+    {
+      "id": "q10",
+      "question": "Which of the following scenarios are generally NOT recommended for test automation? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Test Selection",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Tests that will only be executed once"
+        },
+        {
+          "id": "o2",
+          "text": "Smoke tests validating basic application health"
+        },
+        {
+          "id": "o3",
+          "text": "User Experience (UX) and visual aesthetics evaluation"
+        },
+        {
+          "id": "o4",
+          "text": "Data-heavy calculations and validations"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Tests that are run only once do not offer a good return on the time invested to code the automation. Additionally, subjective evaluations like UX, usability, and visual aesthetics are best handled by human observation."
+    },
+    {
+      "id": "q11",
+      "question": "What role does Continuous Integration (CI) play in automation testing?",
+      "type": "single-choice",
+      "topic": "CI/CD Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It ensures the automation tool's license is continuously renewed."
+        },
+        {
+          "id": "o2",
+          "text": "It automatically runs the automation test suite every time a developer merges new code."
+        },
+        {
+          "id": "o3",
+          "text": "It is a manual process of continuously checking the UI for visual bugs."
+        },
+        {
+          "id": "o4",
+          "text": "It keeps the test environments online 24/7 without downtime."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "In a Continuous Integration (CI) pipeline, automated tests are triggered immediately upon code commits or merges. This ensures new changes are validated quickly, catching defects early in the development cycle."
+    },
+    {
+      "id": "q12",
+      "question": "What does the acronym 'BDD' stand for in the context of automation testing?",
+      "type": "single-choice",
+      "topic": "Automation Approaches",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Bug Driven Development"
+        },
+        {
+          "id": "o2",
+          "text": "Basic Data Design"
+        },
+        {
+          "id": "o3",
+          "text": "Behavior Driven Development"
+        },
+        {
+          "id": "o4",
+          "text": "Binary Driven Deployment"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Behavior Driven Development (BDD) is an agile software development process that encourages collaboration among developers, QA, and non-technical stakeholders by writing test scenarios in a natural, readable language format (e.g., Given/When/Then)."
+    },
+    {
+      "id": "q13",
+      "question": "According to modern Agile and DevOps practices, when is the ideal time to introduce automation testing in the Software Development Life Cycle (SDLC)?",
+      "type": "single-choice",
+      "topic": "Process & Strategy",
+      "options": [
+        {
+          "id": "o1",
+          "text": "As early as possible, following a 'Shift-Left' approach"
+        },
+        {
+          "id": "o2",
+          "text": "Only after the application is completely developed and deployed to production"
+        },
+        {
+          "id": "o3",
+          "text": "Exclusively during the User Acceptance Testing (UAT) phase"
+        },
+        {
+          "id": "o4",
+          "text": "Immediately before the project deadline"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "The 'Shift-Left' testing approach advocates introducing automated testing early in the SDLC. Early testing helps identify and resolve defects when they are cheaper and easier to fix, rather than waiting until the end of the cycle."
+    },
+    {
+      "id": "q14",
+      "question": "In automated API or unit testing, what is the purpose of a 'mock'?",
+      "type": "single-choice",
+      "topic": "Technical Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A simulated object that mimics the behavior of a real component for testing purposes"
+        },
+        {
+          "id": "o2",
+          "text": "A malicious script designed to test the application's firewall"
+        },
+        {
+          "id": "o3",
+          "text": "A visual wireframe of the user interface"
+        },
+        {
+          "id": "o4",
+          "text": "A placeholder text file containing failed test logs"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Mocking involves creating a fake version of an external dependency (like a database or a third-party API) so that the specific component being tested can run independently and reliably without relying on real external systems."
+    },
+    {
+      "id": "q15",
+      "question": "Which of the following are programming languages commonly used to write automation test scripts? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Technical Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "HTML"
+        },
+        {
+          "id": "o2",
+          "text": "Java"
+        },
+        {
+          "id": "o3",
+          "text": "CSS"
+        },
+        {
+          "id": "o4",
+          "text": "Python"
+        }
+      ],
+      "correctAnswers": ["o2", "o4"],
+      "explanation": "Java and Python are robust, versatile programming languages frequently used to write test automation scripts in frameworks like Selenium and Appium. HTML and CSS are markup and styling languages used for building web pages, not for writing execution logic."
+    },
+    {
+      "id": "q16",
+      "question": "What does the term 'Test Environment' refer to in the context of automation testing?",
+      "type": "single-choice",
+      "topic": "Terminology",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A physical meeting room where testers write their test cases"
+        },
+        {
+          "id": "o2",
+          "text": "A specific setup of software, hardware, and network configurations used to execute tests"
+        },
+        {
+          "id": "o3",
+          "text": "The live production server where end-users access the application"
+        },
+        {
+          "id": "o4",
+          "text": "The text editor used by developers to write application code"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A test environment is a configured setup comprising hardware, software, network configurations, and test data that mimics the production environment, allowing testers to run their automated scripts in a controlled state."
+    },
+    {
+      "id": "q17",
+      "question": "Which type of automation framework uses specific action words like 'Click', 'Type', or 'Verify' stored in an external table to represent test steps?",
+      "type": "single-choice",
+      "topic": "Automation Frameworks",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Data-Driven Framework"
+        },
+        {
+          "id": "o2",
+          "text": "Keyword-Driven Framework"
+        },
+        {
+          "id": "o3",
+          "text": "Linear Scripting Framework"
+        },
+        {
+          "id": "o4",
+          "text": "Hybrid Framework"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Keyword-Driven framework separates the test steps and logic by mapping specific keywords (like 'Click' or 'Login') to functions. This allows non-technical users to write tests in a spreadsheet using these predefined action words."
+    },
+    {
+      "id": "q18",
+      "question": "Which of the following are commonly used locator strategies to identify elements on a web page during UI automation? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "CSS Selector"
+        },
+        {
+          "id": "o2",
+          "text": "Network IP Address"
+        },
+        {
+          "id": "o3",
+          "text": "XPath"
+        },
+        {
+          "id": "o4",
+          "text": "CPU Thread ID"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "CSS Selectors and XPath are standard locator strategies used in web automation (like Selenium) to traverse the HTML DOM and identify specific elements. IP addresses and CPU threads are unrelated to web element identification."
+    },
+    {
+      "id": "q19",
+      "question": "What is the primary role of an 'Assertion' in an automated test script?",
+      "type": "single-choice",
+      "topic": "Scripting Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To launch the web browser or application"
+        },
+        {
+          "id": "o2",
+          "text": "To compare the actual outcome of a step against the expected outcome"
+        },
+        {
+          "id": "o3",
+          "text": "To securely close the connection to the backend database"
+        },
+        {
+          "id": "o4",
+          "text": "To randomly generate testing data"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Assertions are validation checkpoints within a test script. They compare what the application actually did (actual result) against what it was supposed to do (expected result). If they do not match, the assertion fails the test."
+    },
+    {
+      "id": "q20",
+      "question": "What is the main benefit of utilizing the Page Object Model (POM) design pattern in UI automation?",
+      "type": "single-choice",
+      "topic": "Design Patterns",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It automatically writes test code based on screenshots."
+        },
+        {
+          "id": "o2",
+          "text": "It enhances code reusability and maintainability by separating UI locators from test execution logic."
+        },
+        {
+          "id": "o3",
+          "text": "It completely removes the need to use assertions in your scripts."
+        },
+        {
+          "id": "o4",
+          "text": "It enables API testing without requiring internet access."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The Page Object Model (POM) is a design pattern that creates an object repository for web UI elements. By separating the web elements from the test logic, scripts become much easier to maintain when the UI changes."
+    },
+    {
+      "id": "q21",
+      "question": "When testing backend business logic, why is API automation generally preferred over UI automation?",
+      "type": "single-choice",
+      "topic": "API Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "API tests provide a better visual representation of the application."
+        },
+        {
+          "id": "o2",
+          "text": "API tests execute significantly faster and are less prone to environmental flakiness."
+        },
+        {
+          "id": "o3",
+          "text": "API tests do not require any programming knowledge to create."
+        },
+        {
+          "id": "o4",
+          "text": "API tests are the only way to test mobile applications."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "API tests interact directly with the application's backend services, bypassing the graphical user interface. This makes them much faster to execute and far less brittle than UI tests, which can fail due to rendering issues or minor visual changes."
+    },
+    {
+      "id": "q22",
+      "question": "How is a 'Flaky Test' best described in test automation?",
+      "type": "single-choice",
+      "topic": "Maintenance & Execution",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A test that passes and fails intermittently without any changes to the application code"
+        },
+        {
+          "id": "o2",
+          "text": "A test that consistently fails because of a confirmed bug in the system"
+        },
+        {
+          "id": "o3",
+          "text": "A test that runs extremely fast"
+        },
+        {
+          "id": "o4",
+          "text": "A test that only checks visual CSS styling"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "A flaky test is an unreliable test that yields different results (sometimes passing, sometimes failing) across multiple runs, even when the underlying application code remains unchanged. They reduce trust in the automation suite."
+    },
+    {
+      "id": "q23",
+      "question": "Which of the following metrics are typically included in a standard automation execution report? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Reporting",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The Pass/Fail status of individual test cases"
+        },
+        {
+          "id": "o2",
+          "text": "The monetary cost of executing the test suite"
+        },
+        {
+          "id": "o3",
+          "text": "The total duration and execution time of the test run"
+        },
+        {
+          "id": "o4",
+          "text": "The original source code of the application being tested"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Execution reports provide stakeholders with the results of a test run, prominently featuring the number of tests passed/failed/skipped, and the time it took to execute them. They do not contain application source code or execution cost metrics."
+    },
+    {
+      "id": "q24",
+      "question": "Why are 'Waits' (or Synchronization commands) critical when writing web UI automation scripts?",
+      "type": "single-choice",
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "They pause the script dynamically to ensure the web element is fully loaded before interacting with it."
+        },
+        {
+          "id": "o2",
+          "text": "They artificially inflate the execution time to match manual testing speeds."
+        },
+        {
+          "id": "o3",
+          "text": "They alert a manual tester to take over the test execution."
+        },
+        {
+          "id": "o4",
+          "text": "They compress image files on the web page to load them faster."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Web pages load asynchronously. Synchronization commands (like Explicit or Implicit waits) ensure the automation tool waits until an element is present or clickable before trying to interact with it, preventing common 'ElementNotFound' exceptions."
+    },
+    {
+      "id": "q25",
+      "question": "What is the primary goal of 'Cross-Browser Automation Testing'?",
+      "type": "single-choice",
+      "topic": "Test Types",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To verify that multiple database servers can communicate with each other"
+        },
+        {
+          "id": "o2",
+          "text": "To ensure a web application renders and functions consistently across different web browsers (like Chrome, Firefox, Safari)"
+        },
+        {
+          "id": "o3",
+          "text": "To test the internet speed provided by different Internet Service Providers"
+        },
+        {
+          "id": "o4",
+          "text": "To automatically clear the cache and cookies of a single browser repeatedly"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Cross-browser testing verifies that a web application behaves identically and degrades gracefully across different browsers and browser versions, accommodating the diverse environments of end-users."
+    },
+    {
+      "id": "q26",
+      "question": "What does executing a web automation test in 'Headless Mode' mean?",
+      "type": "single-choice",
+      "topic": "Execution Strategies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Running the test without an active internet connection"
+        },
+        {
+          "id": "o2",
+          "text": "Running the test in the background without launching the visual graphical user interface (GUI) of the browser"
+        },
+        {
+          "id": "o3",
+          "text": "Running the test without any assertions or validations"
+        },
+        {
+          "id": "o4",
+          "text": "Running the test on an operating system without a kernel"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Headless browser testing runs the automation script without rendering the browser's UI. This significantly speeds up test execution and consumes fewer system resources, making it ideal for CI/CD pipelines."
+    },
+    {
+      "id": "q27",
+      "question": "Why should automation code be managed using a Version Control System (VCS) like Git? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Best Practices",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To track changes, maintain code history, and allow reverting to previous states"
+        },
+        {
+          "id": "o2",
+          "text": "To automatically execute manual test cases"
+        },
+        {
+          "id": "o3",
+          "text": "To allow multiple automation engineers to collaborate on the same codebase simultaneously"
+        },
+        {
+          "id": "o4",
+          "text": "To host the application's primary database schemas"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Test scripts are source code. A VCS like Git allows teams to track modifications, manage branches for new test features, and collaborate efficiently without overwriting each other's work."
+    },
+    {
+      "id": "q28",
+      "question": "Which automation framework approach is traditionally associated with a 'Record and Playback' methodology?",
+      "type": "single-choice",
+      "topic": "Automation Frameworks",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Behavior Driven Framework (BDD)"
+        },
+        {
+          "id": "o2",
+          "text": "Data-Driven Framework"
+        },
+        {
+          "id": "o3",
+          "text": "Linear Scripting Framework"
+        },
+        {
+          "id": "o4",
+          "text": "Keyword-Driven Framework"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Linear Scripting involves recording the manual steps taken on an application and playing them back sequentially. It is the simplest framework but suffers heavily from poor maintainability and hardcoded data."
+    },
+    {
+      "id": "q29",
+      "question": "In the context of UI automation, what is a 'dynamic element'?",
+      "type": "single-choice",
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A web element whose locator attributes (like ID or Class) change every time the page is loaded or refreshed"
+        },
+        {
+          "id": "o2",
+          "text": "A web element that always remains in the exact same static position on the screen"
+        },
+        {
+          "id": "o3",
+          "text": "An element that is strictly used for designing the footer of a page"
+        },
+        {
+          "id": "o4",
+          "text": "An HTML tag that cannot be interacted with by any automation tool"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Dynamic elements have attributes that change upon each server request or user session (e.g., an ID like 'button_12345' changing to 'button_98765'). They require advanced locator strategies (like relative XPaths or specific CSS matching) to interact with them reliably."
+    },
+    {
+      "id": "q30",
+      "question": "Why is 'Test Script Maintenance' considered a significant challenge in UI automation?",
+      "type": "single-choice",
+      "topic": "Maintenance & Execution",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Because automation tools automatically uninstall themselves after one year"
+        },
+        {
+          "id": "o2",
+          "text": "Because frequent changes to the application's interface can break existing locators and logic, requiring manual script updates"
+        },
+        {
+          "id": "o3",
+          "text": "Because programming languages frequently change their fundamental syntax, breaking old code"
+        },
+        {
+          "id": "o4",
+          "text": "Because UI automation tests can only be run once before being permanently deleted"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Applications evolve rapidly. When a developer changes a UI element (like moving a button or changing an ID), the automation script looking for the old locator will fail. Continuously updating scripts to match the evolving UI represents a high maintenance overhead."
+    },
+    {
+      "id": "q31",
+      "question": "In test automation, what is the primary purpose of 'Setup' and 'Teardown' methods?",
+      "type": "single-choice",
+      "topic": "Scripting Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To install the application on the end-user's machine"
+        },
+        {
+          "id": "o2",
+          "text": "To prepare the test environment before a test runs and clean it up after the test completes"
+        },
+        {
+          "id": "o3",
+          "text": "To write the actual application source code before testing begins"
+        },
+        {
+          "id": "o4",
+          "text": "To automatically detect and fix bugs in the software"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Setup methods are used to prepare necessary conditions (like logging in or preparing data) before a test executes. Teardown methods run after the test finishes to restore the environment to its original state, ensuring subsequent tests are not affected."
+    },
+    {
+      "id": "q32",
+      "question": "Which of the following is a popular open-source framework specifically designed for automating mobile applications?",
+      "type": "single-choice",
+      "topic": "Mobile Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Appium"
+        },
+        {
+          "id": "o2",
+          "text": "Postman"
+        },
+        {
+          "id": "o3",
+          "text": "Apache JMeter"
+        },
+        {
+          "id": "o4",
+          "text": "JUnit"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Appium is an open-source test automation framework used for testing native, hybrid, and mobile web apps on both iOS and Android platforms."
+    },
+    {
+      "id": "q33",
+      "question": "Which of the following are common debugging artifacts generated when an automated UI test fails? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Reporting & Debugging",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Automated pull requests"
+        },
+        {
+          "id": "o2",
+          "text": "Screenshots of the failed state"
+        },
+        {
+          "id": "o3",
+          "text": "Detailed execution logs and stack traces"
+        },
+        {
+          "id": "o4",
+          "text": "Source code backups"
+        }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "When an automated UI test fails, frameworks are often configured to capture screenshots of the screen at the exact moment of failure and generate execution logs. These artifacts are crucial for developers and testers to diagnose the root cause of the failure."
+    },
+    {
+      "id": "q34",
+      "question": "What is the primary benefit of executing automated tests in parallel rather than sequentially?",
+      "type": "single-choice",
+      "topic": "Execution Strategies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It completely eliminates flaky tests."
+        },
+        {
+          "id": "o2",
+          "text": "It significantly reduces the overall execution time of the test suite."
+        },
+        {
+          "id": "o3",
+          "text": "It reduces the amount of source code needed for the application."
+        },
+        {
+          "id": "o4",
+          "text": "It prevents network timeouts."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Parallel execution allows multiple test scripts to run simultaneously across different threads or environments. This drastically cuts down the total time required to get feedback from a large test suite compared to running them one by one (sequentially)."
+    },
+    {
+      "id": "q35",
+      "question": "In automation testing, what does a 'False Positive' test result indicate?",
+      "type": "single-choice",
+      "topic": "Reporting & Metrics",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A test that passes successfully when it was supposed to pass"
+        },
+        {
+          "id": "o2",
+          "text": "A test that reports a failure, but the application is actually functioning correctly"
+        },
+        {
+          "id": "o3",
+          "text": "A test that passes, even though there is a bug in the application"
+        },
+        {
+          "id": "o4",
+          "text": "A test that refuses to execute"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A 'False Positive' occurs when a test script fails and reports a defect, but upon investigation, the application works fine. This is often caused by flaky scripts, environmental issues, or outdated locators, and it wastes valuable debugging time."
+    },
+    {
+      "id": "q36",
+      "question": "What role does a 'Driver' (such as ChromeDriver or GeckoDriver) play in web UI automation?",
+      "type": "single-choice",
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It acts as a physical hardware device to store test results."
+        },
+        {
+          "id": "o2",
+          "text": "It acts as an intermediate proxy that translates automation script commands into native actions the specific browser can execute."
+        },
+        {
+          "id": "o3",
+          "text": "It automatically generates test cases based on user behavior."
+        },
+        {
+          "id": "o4",
+          "text": "It compresses the web page to make it load faster during testing."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Browsers like Chrome and Firefox require a specific executable (like ChromeDriver for Chrome or GeckoDriver for Firefox) to interface with automation frameworks. The driver receives commands from the script and executes them natively within the browser."
+    },
+    {
+      "id": "q37",
+      "question": "Which type of automated testing is focused on verifying that the application's underlying data structures, constraints, and stored procedures function correctly?",
+      "type": "single-choice",
+      "topic": "Test Types",
+      "options": [
+        {
+          "id": "o1",
+          "text": "UI Testing"
+        },
+        {
+          "id": "o2",
+          "text": "Database Testing"
+        },
+        {
+          "id": "o3",
+          "text": "Visual Regression Testing"
+        },
+        {
+          "id": "o4",
+          "text": "Usability Testing"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Database testing involves writing automated scripts (often executing SQL queries) to validate data integrity, verify database schema consistency, and ensure that backend stored procedures or triggers are executing correctly."
+    },
+    {
+      "id": "q38",
+      "question": "Which of the following testing activities are generally considered poor candidates for automation? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Core Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Repetitive Regression Testing"
+        },
+        {
+          "id": "o2",
+          "text": "Ad-hoc Exploratory Testing"
+        },
+        {
+          "id": "o3",
+          "text": "Usability and User Experience (UX) Testing"
+        },
+        {
+          "id": "o4",
+          "text": "Data-Driven API Validation"
+        }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Exploratory testing requires human intuition, creativity, and spontaneous learning, which machines cannot replicate. Usability testing requires subjective human feedback on how comfortable or intuitive an interface feels. Both are highly unsuited for automated scripts."
+    },
+    {
+      "id": "q39",
+      "question": "What does the metric 'Automated Test Coverage' typically measure?",
+      "type": "single-choice",
+      "topic": "Process & Strategy",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The amount of money spent on automation tools"
+        },
+        {
+          "id": "o2",
+          "text": "The proportion of the application's codebase or feature set that is exercised by automated tests"
+        },
+        {
+          "id": "o3",
+          "text": "The physical geographic locations where tests are run"
+        },
+        {
+          "id": "o4",
+          "text": "The number of manual testers employed by the company"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Test coverage is a metric used to evaluate the extent to which the source code or application requirements are tested by the automation suite. High test coverage indicates a lower risk of undiscovered defects."
+    },
+    {
+      "id": "q40",
+      "question": "What is 'Continuous Testing' in modern software development?",
+      "type": "single-choice",
+      "topic": "CI/CD Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "A practice where manual testers work 24/7 in shifts"
+        },
+        {
+          "id": "o2",
+          "text": "The process of executing automated tests automatically as part of the software delivery pipeline to obtain immediate feedback on business risks"
+        },
+        {
+          "id": "o3",
+          "text": "Testing an application continuously until the servers crash"
+        },
+        {
+          "id": "o4",
+          "text": "Writing code without ever stopping to compile it"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Continuous Testing is a DevOps practice where automated tests are integrated tightly into the CI/CD pipeline. Tests run seamlessly and frequently upon every code commit, ensuring code quality is continuously evaluated."
+    },
+    {
+      "id": "q41",
+      "question": "While functional UI tests check if a feature works, what does an automated 'Load Test' primarily evaluate?",
+      "type": "single-choice",
+      "topic": "Performance Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The spelling and grammar of the UI text"
+        },
+        {
+          "id": "o2",
+          "text": "How the system behaves and responds under a high volume of concurrent users or data transactions"
+        },
+        {
+          "id": "o3",
+          "text": "If the application complies with legal accessibility standards"
+        },
+        {
+          "id": "o4",
+          "text": "If the application can run on an outdated operating system"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Load testing is a type of non-functional performance testing automated to simulate real-world load on any application or website. It ensures the infrastructure can handle high traffic volumes without degrading performance or crashing."
+    },
+    {
+      "id": "q42",
+      "question": "In a modular automation framework, what is the main advantage of breaking down tests into smaller, independent modules?",
+      "type": "single-choice",
+      "topic": "Automation Frameworks",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It allows the script to bypass network security protocols."
+        },
+        {
+          "id": "o2",
+          "text": "It makes scripts easier to maintain, as updates to a shared module automatically propagate to all test cases using it."
+        },
+        {
+          "id": "o3",
+          "text": "It eliminates the need to use assertions in the test."
+        },
+        {
+          "id": "o4",
+          "text": "It guarantees that the application will never have any bugs."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Modularity involves creating small, independent scripts that represent specific modules of the application (like a 'Login' module). This promotes high reusability; if the login process changes, you only need to update the logic in one module rather than every single test case."
+    },
+    {
+      "id": "q43",
+      "question": "Which of the following environments are standard targets for running automated regression test suites before releasing code to end-users? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Environments",
+      "options": [
+        {
+          "id": "o1",
+          "text": "QA/Testing Environment"
+        },
+        {
+          "id": "o2",
+          "text": "Local developer's notepad"
+        },
+        {
+          "id": "o3",
+          "text": "Staging Environment"
+        },
+        {
+          "id": "o4",
+          "text": "A disconnected offline router"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Automated regression tests are standardly executed in dedicated QA/Testing environments, and subsequently in Staging environments (which heavily mimic production), to ensure stability before the code reaches the live Production environment."
+    },
+    {
+      "id": "q44",
+      "question": "What does 'Hardcoding' test data mean in the context of automation scripting?",
+      "type": "single-choice",
+      "topic": "Terminology",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Encrypting data so it cannot be read by hackers"
+        },
+        {
+          "id": "o2",
+          "text": "Embedding fixed data values directly into the test script's source code, reducing reusability"
+        },
+        {
+          "id": "o3",
+          "text": "Writing code exclusively on a physical hard drive"
+        },
+        {
+          "id": "o4",
+          "text": "Using extremely complex algorithms to generate dynamic data"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Hardcoding test data means placing specific values (like a specific username 'testuser1') directly into the test commands. This is considered a poor practice because it makes the script rigid; if you need to run the test with a different user, you have to rewrite the actual script code."
+    },
+    {
+      "id": "q45",
+      "question": "If an automated UI test suite consistently takes 10 hours to run sequentially, which strategy is the BEST way to significantly reduce this feedback loop?",
+      "type": "single-choice",
+      "topic": "Maintenance & Execution",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Implementing parallel execution across multiple machines or virtual nodes"
+        },
+        {
+          "id": "o2",
+          "text": "Deleting half of the test suite randomly"
+        },
+        {
+          "id": "o3",
+          "text": "Switching entirely to manual testing"
+        },
+        {
+          "id": "o4",
+          "text": "Adding artificial wait times to the scripts"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Executing tests in parallel—distributing them across multiple threads, virtual machines, or cloud environments (like Selenium Grid)—is the most effective way to drastically reduce total execution time without sacrificing test coverage."
+    },
+    {
+      "id": "q46",
+      "question": "According to the 'Test Automation Pyramid' concept, which type of automated tests should be the most numerous and form the foundation of the suite?",
+      "type": "single-choice",
+      "topic": "Process & Strategy",
+      "options": [
+        {
+          "id": "o1",
+          "text": "End-to-End (E2E) UI Tests"
+        },
+        {
+          "id": "o2",
+          "text": "Manual Exploratory Tests"
+        },
+        {
+          "id": "o3",
+          "text": "Unit Tests"
+        },
+        {
+          "id": "o4",
+          "text": "Integration Tests"
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "The Test Automation Pyramid suggests that a healthy automation suite should have a large base of fast, reliable Unit Tests. As you move up the pyramid to Integration and UI tests, the tests become slower and more expensive to maintain, so there should be fewer of them."
+    },
+    {
+      "id": "q47",
+      "question": "What is the primary purpose of a tool like Selenium Grid in an automation testing infrastructure?",
+      "type": "single-choice",
+      "topic": "Automation Tools",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To write test scripts using a drag-and-drop interface"
+        },
+        {
+          "id": "o2",
+          "text": "To route test execution commands to different machines and browsers for parallel execution"
+        },
+        {
+          "id": "o3",
+          "text": "To capture network traffic and identify security vulnerabilities"
+        },
+        {
+          "id": "o4",
+          "text": "To compile the application's Java source code"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Selenium Grid allows test execution to be distributed across multiple physical or virtual machines. This enables parallel execution across different operating systems and browser versions, vastly reducing total test execution time."
+    },
+    {
+      "id": "q48",
+      "question": "Which of the following tools are widely used Continuous Integration/Continuous Deployment (CI/CD) orchestrators that can automatically trigger test suites? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "CI/CD Integration",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Jenkins"
+        },
+        {
+          "id": "o2",
+          "text": "Notepad++"
+        },
+        {
+          "id": "o3",
+          "text": "GitLab CI"
+        },
+        {
+          "id": "o4",
+          "text": "Microsoft Excel"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Jenkins and GitLab CI are popular automation servers that orchestrate CI/CD pipelines, allowing teams to trigger automated tests automatically whenever new code is merged. Notepad++ and Excel are not CI/CD tools."
+    },
+    {
+      "id": "q49",
+      "question": "In automated API testing, what does an HTTP response status code of 200 typically indicate?",
+      "type": "single-choice",
+      "topic": "API Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The request was successful (OK)"
+        },
+        {
+          "id": "o2",
+          "text": "The requested resource was not found (Not Found)"
+        },
+        {
+          "id": "o3",
+          "text": "The server encountered an unexpected condition (Internal Server Error)"
+        },
+        {
+          "id": "o4",
+          "text": "The user is not authorized to make the request (Unauthorized)"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "An HTTP status code of 200 OK is the standard response for successful HTTP requests. In API automation, asserting that the response code is 200 is one of the most basic validations of a healthy endpoint."
+    },
+    {
+      "id": "q50",
+      "question": "Which of the following represents a best practice regarding test independence in automation?",
+      "type": "single-choice",
+      "topic": "Best Practices",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Tests should depend strictly on the outcome of the previous test to save execution time."
+        },
+        {
+          "id": "o2",
+          "text": "Tests should be completely independent and capable of running in any random order."
+        },
+        {
+          "id": "o3",
+          "text": "All tests must use the exact same hardcoded user account simultaneously."
+        },
+        {
+          "id": "o4",
+          "text": "Tests should permanently alter database records so they cannot be run twice."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Automated tests should be isolated and independent. If Test B relies on Test A to pass, a failure in Test A causes a cascading failure in Test B (a false negative), making debugging difficult and preventing parallel execution."
+    },
+    {
+      "id": "q51",
+      "question": "What is 'Cucumber' primarily used for in the context of automation testing?",
+      "type": "single-choice",
+      "topic": "Automation Tools",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It is a tool that monitors server memory usage during load testing."
+        },
+        {
+          "id": "o2",
+          "text": "It is a framework that supports Behavior-Driven Development (BDD) by reading tests written in plain English syntax."
+        },
+        {
+          "id": "o3",
+          "text": "It is a database management system used for storing test results."
+        },
+        {
+          "id": "o4",
+          "text": "It is an IDE exclusively designed for writing Python code."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Cucumber is a popular open-source tool that implements Behavior-Driven Development (BDD). It allows testers and business stakeholders to write test scenarios in a human-readable format (Gherkin syntax) which is then mapped to automation code."
+    },
+    {
+      "id": "q52",
+      "question": "When an automation script encounters an 'Element Not Interactable' or 'Element Not Visible' error, what is the most common cause?",
+      "type": "single-choice",
+      "topic": "Reporting & Debugging",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The automation tool's software license has expired."
+        },
+        {
+          "id": "o2",
+          "text": "The UI element exists in the HTML document but is currently hidden, covered by another element, or hasn't fully rendered."
+        },
+        {
+          "id": "o3",
+          "text": "The computer running the test has lost its internet connection."
+        },
+        {
+          "id": "o4",
+          "text": "The programming language being used is no longer supported."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "This exception occurs when the automation framework locates the element in the Document Object Model (DOM), but cannot interact with it (e.g., click it) because it is obstructed, off-screen, or explicitly set to be invisible by the application's CSS."
+    },
+    {
+      "id": "q53",
+      "question": "Which of the following are valid data formats commonly used to structure and transmit payloads in automated API testing? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "API Testing",
+      "options": [
+        {
+          "id": "o1",
+          "text": "JSON (JavaScript Object Notation)"
+        },
+        {
+          "id": "o2",
+          "text": "MP4 (MPEG-4 Part 14)"
+        },
+        {
+          "id": "o3",
+          "text": "XML (eXtensible Markup Language)"
+        },
+        {
+          "id": "o4",
+          "text": "JPEG (Joint Photographic Experts Group)"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "JSON and XML are the standard text-based data formats used for structuring payloads in REST and SOAP APIs, respectively. MP4 and JPEG are media formats for video and images, not for structuring API data transmission."
+    },
+    {
+      "id": "q54",
+      "question": "What is the primary purpose of executing an automated 'Smoke Test' suite immediately after a new software deployment?",
+      "type": "single-choice",
+      "topic": "Execution Strategies",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To exhaustively test every single edge case and negative scenario in the system"
+        },
+        {
+          "id": "o2",
+          "text": "To quickly verify that the most crucial and fundamental functions of the application work before committing to heavier testing"
+        },
+        {
+          "id": "o3",
+          "text": "To validate the aesthetic alignment of UI elements on mobile devices"
+        },
+        {
+          "id": "o4",
+          "text": "To deliberately crash the servers to test their recovery time"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Smoke Test suite is a shallow, rapid series of automated tests designed to verify that the core functionality of a build is stable. If the smoke test fails, the build is immediately rejected, saving time that would be wasted running a full regression suite on a broken environment."
+    },
+    {
+      "id": "q55",
+      "question": "Why is attempting to achieve 100% test automation generally considered a poor strategy?",
+      "type": "single-choice",
+      "topic": "Process & Strategy",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Because modern automation tools physically limit users to a maximum of 500 test cases"
+        },
+        {
+          "id": "o2",
+          "text": "Because automating highly complex, rarely used edge cases often costs more in maintenance time than it provides in value"
+        },
+        {
+          "id": "o3",
+          "text": "Because developers are not allowed to write automated tests"
+        },
+        {
+          "id": "o4",
+          "text": "Because CI/CD pipelines will crash if more than 90% of the application is tested automatically"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Not all test cases yield a positive Return on Investment (ROI) when automated. Highly volatile features, complex subjective scenarios, and rare edge cases are often more efficiently executed via manual or exploratory testing."
+    },
+    {
+      "id": "q56",
+      "question": "In the context of automated unit testing, what does the metric 'Code Coverage' measure?",
+      "type": "single-choice",
+      "topic": "Reporting & Metrics",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The percentage of the application's source code lines that are actually executed during the test run"
+        },
+        {
+          "id": "o2",
+          "text": "The amount of time it takes for a developer to write a single line of test code"
+        },
+        {
+          "id": "o3",
+          "text": "The number of comments and documentation lines present in the codebase"
+        },
+        {
+          "id": "o4",
+          "text": "The visual accuracy of the user interface compared to design mockups"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Code Coverage is a white-box testing metric that calculates the proportion of the application's underlying source code (lines, branches, or methods) that is successfully triggered and validated by the automated unit tests."
+    },
+    {
+      "id": "q57",
+      "question": "Which of the following HTML attributes is generally considered the most reliable, robust, and preferred choice for locating a web element in UI automation?",
+      "type": "single-choice",
+      "topic": "UI Automation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "ID"
+        },
+        {
+          "id": "o2",
+          "text": "Class"
+        },
+        {
+          "id": "o3",
+          "text": "Style"
+        },
+        {
+          "id": "o4",
+          "text": "Tag Name"
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "In HTML standards, an 'ID' attribute is designed to be completely unique within a page. Using an ID as a locator is faster and far less prone to breaking during UI redesigns compared to classes, tag names, or complex XPath queries."
+    },
+    {
+      "id": "q58",
+      "question": "What is the primary function of 'Test Data Management' (TDM) in an automation strategy?",
+      "type": "single-choice",
+      "topic": "Process & Strategy",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To permanently delete customer data from production servers"
+        },
+        {
+          "id": "o2",
+          "text": "To plan, provision, and maintain the necessary state of data required for test scripts to execute accurately and reliably"
+        },
+        {
+          "id": "o3",
+          "text": "To encrypt the source code of the automation framework"
+        },
+        {
+          "id": "o4",
+          "text": "To limit the amount of internet bandwidth the automation suite can consume"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Test Data Management ensures that scripts have the precise data they need (like specific user accounts, inventory items, or transaction histories) available in the test environment before the script executes, preventing failures caused by missing or corrupt data."
+    },
+    {
+      "id": "q59",
+      "question": "Which of the following testing frameworks are commonly used to structure and execute assertions in Java-based automation projects? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Automation Tools",
+      "options": [
+        {
+          "id": "o1",
+          "text": "TestNG"
+        },
+        {
+          "id": "o2",
+          "text": "PyTest"
+        },
+        {
+          "id": "o3",
+          "text": "JUnit"
+        },
+        {
+          "id": "o4",
+          "text": "Mocha"
+        }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "TestNG and JUnit are the dominant unit testing frameworks for the Java programming language, providing the annotations, assertions, and execution engines needed to run Java-based tests. PyTest is for Python, and Mocha is for JavaScript/Node.js."
+    },
+    {
+      "id": "q60",
+      "question": "What is a fundamental limitation of automated testing when compared to human manual testing?",
+      "type": "single-choice",
+      "topic": "Core Concepts",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Automated tests execute much slower than a human tester."
+        },
+        {
+          "id": "o2",
+          "text": "Automated tests cannot generate reports or logs."
+        },
+        {
+          "id": "o3",
+          "text": "Automated tests only check exactly what they are programmed to check, and will blindly ignore obvious visual glitches if not explicitly asserted."
+        },
+        {
+          "id": "o4",
+          "text": "Automated tests can only be run during business hours."
+        }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "A machine lacks human intuition. If an automation script is programmed to check if a 'Login' button works, it will pass as long as the backend responds properly, completely ignoring if the button is rendered upside-down or overlapping with text, unless explicitly told to check for those visual states."
+    }
+  ]
+}

@@ -188,6 +188,60 @@
       "duration": 60,
       "passingScore": 700,
       "difficulty": "Beginner"
+    },
+    {
+      "id": "manual-testing-basic",
+      "name": "Manual Testing Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "microservices-basic",
+      "name": "Microservices Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "performance-testing-basic",
+      "name": "Performance Testing Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "devOps-basic",
+      "name": "DevOps Essentials",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Basic"
+    },
+    {
+      "id": "automation-testing-basic",
+      "name": "Automation Testing Fundamentals",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
+    },
+    {
+      "id": "apachesparks-basic",
+      "name": "Apache Sparks",
+      "vendor": "CertifyStacks",
+      "questions": 60,
+      "duration": 60,
+      "passingScore": 700,
+      "difficulty": "Beginner"
     }
   ]
 }

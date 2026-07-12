@@ -1,0 +1,1036 @@
+{
+  "id": "apachesparks-basic",
+  "name": "Apache Spark",
+  "vendor": "CertifyStacks",
+  "questions": 60,
+  "duration": 60,
+  "passingScore": 700,
+  "difficulty": "Beginner",
+  "questionList": [
+    {
+      "id": "q1",
+      "question": "What is the primary benefit of Apache Spark's lazy evaluation strategy?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It forces immediate execution of all transformations."
+        },
+        {
+          "id": "o2",
+          "text": "It allows Spark to optimize the execution plan before data is processed."
+        },
+        {
+          "id": "o3",
+          "text": "It ensures that data is always persisted to disk."
+        },
+        {
+          "id": "o4",
+          "text": "It reduces the amount of memory allocated to the driver."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Lazy evaluation allows Spark to build a complete lineage of transformations (the DAG) and apply optimizations like predicate pushdown or projection pruning before triggering the actual computation."
+    },
+    {
+      "id": "q2",
+      "question": "Which components are part of a Spark application's architecture? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Driver Program" },
+        { "id": "o2", "text": "SQL Optimizer" },
+        { "id": "o3", "text": "Executors" },
+        { "id": "o4", "text": "Global Master Node" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "A Spark application runs as an independent set of processes coordinated by the Driver program, which schedules tasks on distributed Executors."
+    },
+    {
+      "id": "q3",
+      "question": "In Spark memory management, which space is used for caching DataFrames or RDDs?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "Execution Memory" },
+        { "id": "o2", "text": "Storage Memory" },
+        { "id": "o3", "text": "User Memory" },
+        { "id": "o4", "text": "Reserved Memory" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Storage Memory is specifically dedicated to caching blocks of data (like RDD partitions or persisted DataFrames), while Execution Memory is used for shuffle, join, and sort operations."
+    },
+    {
+      "id": "q4",
+      "question": "Which of the following actions trigger a job in Spark? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "collect()" },
+        { "id": "o2", "text": "map()" },
+        { "id": "o3", "text": "count()" },
+        { "id": "o4", "text": "filter()" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Transformations like map() and filter() are lazy and return new DataFrames/RDDs. Actions like collect() and count() trigger the execution of the DAG."
+    },
+    {
+      "id": "q5",
+      "question": "What is a 'Shuffle' in the context of Spark?",
+      "type": "single-choice",
+      "topic": "Data Shuffling",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The process of moving data between executors over the network."
+        },
+        { "id": "o2", "text": "The method of saving data to HDFS." },
+        {
+          "id": "o3",
+          "text": "The process of splitting tasks into smaller threads."
+        },
+        {
+          "id": "o4",
+          "text": "An optimization that removes unnecessary columns."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "A shuffle is an expensive operation that redistributes data across partitions, usually required for wide transformations like groupBy or join."
+    },
+    {
+      "id": "q6",
+      "question": "Which Spark object represents the entry point to programming Spark with the Dataset and DataFrame API?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "SparkContext" },
+        { "id": "o2", "text": "SparkSession" },
+        { "id": "o3", "text": "SQLContext" },
+        { "id": "o4", "text": "RDDContext" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "SparkSession is the unified entry point introduced in Spark 2.0, replacing the older SparkContext, SQLContext, and HiveContext."
+    },
+    {
+      "id": "q7",
+      "question": "Which of the following are considered 'Wide Transformations' that trigger a shuffle? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "groupByKey()" },
+        { "id": "o2", "text": "filter()" },
+        { "id": "o3", "text": "join()" },
+        { "id": "o4", "text": "map()" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Wide transformations require data from other partitions, necessitating a shuffle. Narrow transformations (map, filter) can be performed on local data partitions."
+    },
+    {
+      "id": "q8",
+      "question": "What does a DAG (Directed Acyclic Graph) represent in Spark?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "The cluster configuration settings." },
+        {
+          "id": "o2",
+          "text": "A physical plan of how data is stored on disk."
+        },
+        {
+          "id": "o3",
+          "text": "The logical sequence of operations (lineage) performed on data."
+        },
+        { "id": "o4", "text": "The list of active executors in the cluster." }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "The DAG represents the sequence of transformations. Spark uses this to schedule stages and tasks efficiently, ensuring that dependencies are clear."
+    },
+    {
+      "id": "q9",
+      "question": "Execution Memory is primarily used for which of the following? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "Caching RDDs" },
+        { "id": "o2", "text": "Sorting data" },
+        { "id": "o3", "text": "Performing joins" },
+        { "id": "o4", "text": "Storing broadcast variables" }
+      ],
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Execution memory handles the computational requirements of shuffles, sorts, and joins, whereas storage memory is for persisted data."
+    },
+    {
+      "id": "q10",
+      "question": "Why should you avoid using 'collect()' on a large dataset?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "It is not a valid action." },
+        {
+          "id": "o2",
+          "text": "It can cause an OutOfMemoryError on the driver node."
+        },
+        { "id": "o3", "text": "It forces the data to be written to disk." },
+        {
+          "id": "o4",
+          "text": "It is significantly slower than taking a sample."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "collect() gathers all partitions from the executors and sends them to the driver. If the dataset is large, it exceeds the driver's memory, leading to a crash."
+    },
+    {
+      "id": "q11",
+      "question": "Which of the following is an example of a narrow transformation?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "reduceByKey()" },
+        { "id": "o2", "text": "map()" },
+        { "id": "o3", "text": "repartition()" },
+        { "id": "o4", "text": "distinct()" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Narrow transformations involve operations where input partitions map to a single output partition, requiring no data movement between executors."
+    },
+    {
+      "id": "q12",
+      "question": "What is the role of the 'Driver' in a Spark cluster?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "To store the data partitions." },
+        {
+          "id": "o2",
+          "text": "To execute the tasks assigned by the executors."
+        },
+        {
+          "id": "o3",
+          "text": "To schedule tasks and maintain the state of the Spark application."
+        },
+        { "id": "o4", "text": "To write logs to HDFS." }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "The Driver is the central process that maintains application state, creates the SparkSession, and orchestrates the distribution of work to executors."
+    },
+    {
+      "id": "q13",
+      "question": "When does Spark typically optimize a query plan?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        { "id": "o1", "text": "Immediately after each transformation." },
+        { "id": "o2", "text": "Only when the code is compiled." },
+        {
+          "id": "o3",
+          "text": "When an action is called, triggering the execution plan."
+        },
+        { "id": "o4", "text": "During the cluster initialization." }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Spark's Catalyst Optimizer works when the DAG is finalized upon an action call, allowing it to see the whole query plan and optimize it."
+    },
+    {
+      "id": "q14",
+      "question": "Which memory management approach allows Spark to be more efficient than MapReduce?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "Always writing intermediate data to disk." },
+        {
+          "id": "o2",
+          "text": "In-memory processing for intermediate computations."
+        },
+        { "id": "o3", "text": "Using only the Driver for all calculations." },
+        { "id": "o4", "text": "Avoiding all memory usage." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Spark enables in-memory processing for intermediate datasets, whereas legacy MapReduce required writing intermediate data to disk between stages."
+    },
+    {
+      "id": "q15",
+      "question": "Which of these are valid ways to trigger a Shuffle? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "join()" },
+        { "id": "o2", "text": "map()" },
+        { "id": "o3", "text": "repartition()" },
+        { "id": "o4", "text": "filter()" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Operations that change the number of partitions (repartition) or align datasets (join) force the data to be redistributed across the cluster."
+    },
+    {
+      "id": "q16",
+      "question": "What is the primary function of a Spark 'Stage' in a DAG?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "A stage represents a single line of code." },
+        {
+          "id": "o2",
+          "text": "A stage is a group of tasks that can be executed in parallel without shuffling."
+        },
+        {
+          "id": "o3",
+          "text": "A stage is the total execution time of the job."
+        },
+        { "id": "o4", "text": "A stage is the memory allocated to the Driver." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Stages are boundaries created by shuffle operations. All tasks within a stage can be processed in parallel because they do not depend on data from other partitions."
+    },
+    {
+      "id": "q17",
+      "question": "Which of the following are common reasons to persist or cache a DataFrame? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To avoid recomputing the DataFrame multiple times in an iterative algorithm."
+        },
+        {
+          "id": "o2",
+          "text": "To reduce the amount of CPU used by the Driver."
+        },
+        {
+          "id": "o3",
+          "text": "To speed up downstream operations by keeping data in memory."
+        },
+        { "id": "o4", "text": "To force a shuffle to happen earlier." }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Caching is essential when a DataFrame is used repeatedly (like in Machine Learning loops), as it prevents the redundant re-evaluation of the lineage."
+    },
+    {
+      "id": "q18",
+      "question": "Which Spark configuration property determines the default number of partitions created when shuffling?",
+      "type": "single-choice",
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "spark.executor.memory" },
+        { "id": "o2", "text": "spark.sql.shuffle.partitions" },
+        { "id": "o3", "text": "spark.driver.cores" },
+        { "id": "o4", "text": "spark.default.parallelism" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "spark.sql.shuffle.partitions controls the number of partitions to use when shuffling data for joins or aggregations in Spark SQL/DataFrames."
+    },
+    {
+      "id": "q19",
+      "question": "What happens to a DataFrame when you call 'unpersist()'?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The data is immediately saved to the master node."
+        },
+        {
+          "id": "o2",
+          "text": "The cached data blocks are removed from memory/disk."
+        },
+        { "id": "o3", "text": "The DataFrame is deleted from the source." },
+        { "id": "o4", "text": "The SparkSession is terminated." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "unpersist() manually removes the cached blocks from the memory or disk, freeing up space for other operations."
+    },
+    {
+      "id": "q20",
+      "question": "Which of the following describes the difference between an RDD and a DataFrame? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "DataFrames have a schema; RDDs do not." },
+        {
+          "id": "o2",
+          "text": "RDDs are automatically optimized by Catalyst; DataFrames are not."
+        },
+        {
+          "id": "o3",
+          "text": "DataFrames provide a high-level SQL-like API; RDDs are lower-level."
+        },
+        { "id": "o4", "text": "RDDs are always faster than DataFrames." }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "DataFrames provide optimization through the Catalyst engine and Tungsten, and use schemas for better performance and usability compared to the low-level, schema-less RDD API."
+    },
+    {
+      "id": "q21",
+      "question": "What is the primary function of the 'Tungsten' project in Spark?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "To provide a user interface for monitoring." },
+        {
+          "id": "o2",
+          "text": "To improve memory management and CPU efficiency through binary data representation."
+        },
+        {
+          "id": "o3",
+          "text": "To handle network connectivity between clusters."
+        },
+        { "id": "o4", "text": "To schedule jobs on external cloud providers." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Project Tungsten focuses on optimizing Spark's internal engine by utilizing off-heap memory management and binary data formats to reduce GC overhead."
+    },
+    {
+      "id": "q22",
+      "question": "Which transformation is considered 'Narrow'?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "sortByKey()" },
+        { "id": "o2", "text": "union()" },
+        { "id": "o3", "text": "join()" },
+        { "id": "o4", "text": "groupBy()" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "union() is a narrow transformation because each partition of the result depends on only one partition from the input."
+    },
+    {
+      "id": "q23",
+      "question": "What is the benefit of 'Predicate Pushdown' in Spark SQL?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        { "id": "o1", "text": "It forces all data to be loaded into memory." },
+        {
+          "id": "o2",
+          "text": "It pushes filters down to the data source to reduce data read."
+        },
+        { "id": "o3", "text": "It increases the number of shuffles." },
+        { "id": "o4", "text": "It skips the execution of the final action." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Predicate pushdown is an optimization where Spark pushes filter conditions directly to the data source (like Parquet or SQL DBs) so only relevant data is read into Spark."
+    },
+    {
+      "id": "q24",
+      "question": "Which of these are actions that return results to the Driver? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "take(n)" },
+        { "id": "o2", "text": "first()" },
+        { "id": "o3", "text": "select()" },
+        { "id": "o4", "text": "where()" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "take() and first() return actual data objects to the driver, whereas select() and where() return new DataFrame objects (transformations)."
+    },
+    {
+      "id": "q25",
+      "question": "What does a 'Partition' represent in Spark?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "A physical disk block." },
+        {
+          "id": "o2",
+          "text": "A logical split of data that can be processed independently."
+        },
+        { "id": "o3", "text": "A list of all users on the cluster." },
+        { "id": "o4", "text": "The entire dataset." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Partitions are the atomic units of parallelism in Spark. The more partitions you have, the more granular the parallel processing can be."
+    },
+    {
+      "id": "q26",
+      "question": "Which of the following is true about broadcast variables?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "They are automatically replicated to all executors."
+        },
+        { "id": "o2", "text": "They can only be used by the Driver." },
+        { "id": "o3", "text": "They are stored on disk." },
+        { "id": "o4", "text": "They cause a full cluster shuffle." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Broadcast variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks, reducing network traffic."
+    },
+    {
+      "id": "q27",
+      "question": "What is the purpose of the 'Catalyst Optimizer'?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To manually execute user-written code line by line."
+        },
+        {
+          "id": "o2",
+          "text": "To transform and optimize logical query plans before physical execution."
+        },
+        {
+          "id": "o3",
+          "text": "To manage the garbage collection of the cluster."
+        },
+        { "id": "o4", "text": "To monitor network latency." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Catalyst is Spark’s query optimizer. It performs rule-based and cost-based optimizations to make query plans as efficient as possible."
+    },
+    {
+      "id": "q28",
+      "question": "When a shuffle occurs, where is data typically written during the map phase?",
+      "type": "single-choice",
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "Directly to the reducer's memory." },
+        { "id": "o2", "text": "To the local disk of the executor." },
+        { "id": "o3", "text": "To the Driver's memory." },
+        { "id": "o4", "text": "To a permanent cloud storage bucket." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "During the shuffle map phase, intermediate data is written to the executor's local disk, where it is fetched by the reducer tasks."
+    },
+    {
+      "id": "q29",
+      "question": "Which of these factors can impact Spark performance negatively? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Data skew in partitions." },
+        { "id": "o2", "text": "Too many small partitions." },
+        { "id": "o3", "text": "Using columnar storage formats." },
+        { "id": "o4", "text": "Using in-memory caching." }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Data skew forces some executors to do significantly more work, while too many small partitions increase scheduling overhead."
+    },
+    {
+      "id": "q30",
+      "question": "What does the 'Driver' do if an executor fails?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "The entire job is aborted." },
+        {
+          "id": "o2",
+          "text": "It reschedules the lost tasks on other available executors."
+        },
+        { "id": "o3", "text": "It waits for the executor to restart." },
+        { "id": "o4", "text": "It deletes the data." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Spark is fault-tolerant. The Driver tracks task progress and will automatically re-run tasks associated with a failed executor on healthy ones."
+    },
+    {
+      "id": "q31",
+      "question": "Which component is responsible for resource negotiation in a Spark cluster?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Spark Driver" },
+        { "id": "o2", "text": "Cluster Manager" },
+        { "id": "o3", "text": "Executor" },
+        { "id": "o4", "text": "SparkSession" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The Cluster Manager (e.g., YARN, Mesos, or Kubernetes) is responsible for acquiring resources from the cluster to run the Spark application."
+    },
+    {
+      "id": "q32",
+      "question": "What is the result of a 'Narrow' transformation?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "A full shuffle across the network." },
+        {
+          "id": "o2",
+          "text": "A new DataFrame where each partition depends on only one parent partition."
+        },
+        { "id": "o3", "text": "A reduction in the total number of records." },
+        { "id": "o4", "text": "A temporary write to HDFS." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "In narrow transformations, each input partition contributes to only one output partition, allowing for computation without inter-node data transfer."
+    },
+    {
+      "id": "q33",
+      "question": "Which of these features are part of the 'Tungsten' optimization project? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Off-heap memory management" },
+        { "id": "o2", "text": "Binary data processing" },
+        { "id": "o3", "text": "Automatic SQL query generation" },
+        { "id": "o4", "text": "Distributed job scheduling" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Tungsten focuses on memory efficiency by managing memory manually (off-heap) and using binary formats to avoid the overhead of Java object serialization."
+    },
+    {
+      "id": "q34",
+      "question": "What does the 'Storage Level' argument in persist() determine?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Where to cache the data (e.g., Memory only, Disk only, or both)."
+        },
+        { "id": "o2", "text": "The priority of the task in the job queue." },
+        { "id": "o3", "text": "The number of replicas to create." },
+        { "id": "o4", "text": "The compression codec to use." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Storage levels allow developers to specify whether data should be kept in memory, on disk, serialized, or replicated across the cluster."
+    },
+    {
+      "id": "q35",
+      "question": "Which of the following are valid Spark 'Actions'? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "reduce()" },
+        { "id": "o2", "text": "saveAsTextFile()" },
+        { "id": "o3", "text": "selectExpr()" },
+        { "id": "o4", "text": "alias()" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Actions trigger the execution of the DAG to produce a result or write data. Transformations like selectExpr and alias are lazy."
+    },
+    {
+      "id": "q36",
+      "question": "What happens if a Spark task takes too long due to data skew?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "The entire cluster pauses." },
+        {
+          "id": "o2",
+          "text": "The task is split automatically into smaller chunks by the Driver."
+        },
+        {
+          "id": "o3",
+          "text": "The job runs as fast as the slowest task (straggler)."
+        },
+        { "id": "o4", "text": "Spark automatically drops the skewed data." }
+      ],
+      "correctAnswers": ["o3"],
+      "explanation": "Spark stages complete only when all tasks in the stage are finished. A skewed partition becomes a 'straggler' that delays the entire stage completion."
+    },
+    {
+      "id": "q37",
+      "question": "How does Spark's 'Lazy Evaluation' improve performance?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        { "id": "o1", "text": "It eliminates the need for executors." },
+        {
+          "id": "o2",
+          "text": "It allows Spark to combine multiple transformations into a single stage."
+        },
+        {
+          "id": "o3",
+          "text": "It forces the data to be processed on the local machine."
+        },
+        { "id": "o4", "text": "It bypasses the need to write results to disk." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "By waiting until an action is called, Spark can 'fuse' operations (like map and filter) to minimize passes over the data."
+    },
+    {
+      "id": "q38",
+      "question": "Which of the following are consequences of a wide transformation? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "Data is redistributed across executors." },
+        { "id": "o2", "text": "Performance overhead due to network I/O." },
+        { "id": "o3", "text": "Memory is freed on all executors." },
+        { "id": "o4", "text": "The DAG is immediately executed." }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Wide transformations require a shuffle, which involves moving data over the network, incurring a performance cost compared to local operations."
+    },
+    {
+      "id": "q39",
+      "question": "What is a Spark 'Job'?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "A unit of work triggered by an action." },
+        { "id": "o2", "text": "The set of all transformations in the app." },
+        { "id": "o3", "text": "A group of executors." },
+        { "id": "o4", "text": "A physical machine in the cluster." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Every time an action (like collect or count) is called, Spark creates a Job, which consists of one or more stages."
+    },
+    {
+      "id": "q40",
+      "question": "Which memory region in Spark is dynamically shared between Storage and Execution?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "Reserved Memory" },
+        { "id": "o2", "text": "Unified Memory" },
+        { "id": "o3", "text": "User Memory" },
+        { "id": "o4", "text": "System Memory" }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Spark uses a unified memory management system where the boundary between Storage and Execution is flexible, allowing one to borrow memory from the other if needed."
+    },
+    {
+      "id": "q41",
+      "question": "What is the primary role of the Spark Driver?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Processing the data." },
+        {
+          "id": "o2",
+          "text": "Converting the user code into a DAG and scheduling tasks."
+        },
+        { "id": "o3", "text": "Storing the final results on HDFS." },
+        { "id": "o4", "text": "Managing cluster security." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The Driver is responsible for analyzing the program, creating the logical plan, optimizing it, and scheduling tasks on the executors."
+    },
+    {
+      "id": "q42",
+      "question": "Which of these operations are narrow? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "map()" },
+        { "id": "o2", "text": "flatMap()" },
+        { "id": "o3", "text": "join()" },
+        { "id": "o4", "text": "groupByKey()" }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Map and flatMap are narrow because the operation on one record does not depend on other records in the partition."
+    },
+    {
+      "id": "q43",
+      "question": "What is 'Serialization' in Spark?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The process of converting objects into a byte stream."
+        },
+        { "id": "o2", "text": "The process of deleting duplicate rows." },
+        { "id": "o3", "text": "The process of repartitioning data." },
+        { "id": "o4", "text": "The process of starting a cluster." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Serialization is essential for sending data across the network or caching it efficiently in memory. Efficient serialization formats like Kryo are often preferred over Java serialization."
+    },
+    {
+      "id": "q44",
+      "question": "What is the purpose of 'Broadcast Variables'?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "To send large datasets to the Driver." },
+        {
+          "id": "o2",
+          "text": "To cache small, read-only data on all executors, avoiding repeated shipping."
+        },
+        { "id": "o3", "text": "To automatically partition data." },
+        { "id": "o4", "text": "To perform joins on disk." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Broadcast variables are efficient for joining a large dataset with a small reference table, as the small table is sent once to each executor."
+    },
+    {
+      "id": "q45",
+      "question": "Which of the following describes the 'BlockManager' in Spark?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "It is a utility that creates SQL blocks." },
+        {
+          "id": "o2",
+          "text": "It manages data blocks in memory and on disk across the cluster."
+        },
+        { "id": "o3", "text": "It is only available on the Driver." },
+        { "id": "o4", "text": "It manages user session timeouts." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The BlockManager is responsible for reading and writing data blocks, acting as the interface for caching and shuffle data storage."
+    },
+    {
+      "id": "q46",
+      "question": "What is a 'Task' in Spark terminology?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "The entire Spark application." },
+        {
+          "id": "o2",
+          "text": "The smallest unit of work executed by an executor."
+        },
+        { "id": "o3", "text": "A transformation triggered by the user." },
+        { "id": "o4", "text": "The cluster manager's heartbeat." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "A Task is a unit of execution that performs work on a single partition of data within a Stage."
+    },
+    {
+      "id": "q47",
+      "question": "Which of the following are benefits of partitioning data in Spark? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "Increased parallelism." },
+        { "id": "o2", "text": "Reduced memory footprint per partition." },
+        { "id": "o3", "text": "Elimination of all network traffic." },
+        { "id": "o4", "text": "Automatic removal of duplicate records." }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Partitioning allows tasks to run in parallel across the cluster and keeps the size of each partition manageable within executor memory."
+    },
+    {
+      "id": "q48",
+      "question": "What is the primary purpose of the 'Shuffle Read' phase?",
+      "type": "single-choice",
+      "topic": "Data Shuffling",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To fetch partitioned data from other executors."
+        },
+        { "id": "o2", "text": "To write data to the local file system." },
+        { "id": "o3", "text": "To initialize the Spark context." },
+        { "id": "o4", "text": "To optimize the query plan." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "In a shuffle operation, the reduce phase (Shuffle Read) involves executors fetching their required map output partitions from the disks of other executors."
+    },
+    {
+      "id": "q49",
+      "question": "When does Spark perform 'Task Serialization'?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        {
+          "id": "o1",
+          "text": "When tasks are sent from the Driver to the Executors."
+        },
+        { "id": "o2", "text": "Only when saving data to S3." },
+        { "id": "o3", "text": "When the Spark cluster is booting up." },
+        { "id": "o4", "text": "When a task successfully completes." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Tasks must be serialized so they can be transmitted over the network from the Driver to the Executors, where they are then deserialized and executed."
+    },
+    {
+      "id": "q50",
+      "question": "Which of the following transformations can cause an OutOfMemoryError if the data is heavily skewed? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Data Shuffling",
+      "options": [
+        { "id": "o1", "text": "join()" },
+        { "id": "o2", "text": "map()" },
+        { "id": "o3", "text": "groupByKey()" },
+        { "id": "o4", "text": "filter()" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Wide transformations like join and groupByKey aggregate data based on keys. If one key has significantly more data than others, that executor will run out of memory."
+    },
+    {
+      "id": "q51",
+      "question": "What is the function of the 'Spark UI'?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "To write code directly in a browser." },
+        {
+          "id": "o2",
+          "text": "To monitor job progress, stage details, and resource utilization."
+        },
+        { "id": "o3", "text": "To configure cluster hardware." },
+        { "id": "o4", "text": "To manage HDFS permissions." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The Spark UI provides deep visibility into the execution of Spark jobs, including task-level metrics, stage timelines, and memory usage per executor."
+    },
+    {
+      "id": "q52",
+      "question": "What is a 'Transformation' in Spark?",
+      "type": "single-choice",
+      "topic": "Lazy Evaluation",
+      "options": [
+        {
+          "id": "o1",
+          "text": "An operation that returns a new DataFrame/RDD."
+        },
+        { "id": "o2", "text": "An operation that triggers a write to disk." },
+        { "id": "o3", "text": "An operation that counts the number of rows." },
+        {
+          "id": "o4",
+          "text": "An operation that returns a result to the user."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Transformations are operations on a DataFrame/RDD that are lazy and return a new DataFrame/RDD without triggering immediate execution."
+    },
+    {
+      "id": "q53",
+      "question": "Why is 'Kryo' serialization preferred over Java serialization in Spark?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "It is built into the Java standard library." },
+        { "id": "o2", "text": "It is significantly faster and more compact." },
+        { "id": "o3", "text": "It requires no configuration." },
+        { "id": "o4", "text": "It is the only supported format." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Kryo is a third-party serialization library that is much more efficient than the default Java serialization, leading to smaller data sizes and faster network transfers."
+    },
+    {
+      "id": "q54",
+      "question": "What is the purpose of the 'Driver' memory configuration?",
+      "type": "single-choice",
+      "topic": "Distributed Compute",
+      "options": [
+        {
+          "id": "o1",
+          "text": "To hold the data partitions processed by tasks."
+        },
+        {
+          "id": "o2",
+          "text": "To handle metadata, the SparkSession, and collected results."
+        },
+        { "id": "o3", "text": "To store the cached data blocks." },
+        { "id": "o4", "text": "To serve as a backup for executor storage." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Driver memory is used for the management tasks, query planning, and storing data brought to the driver node via actions like collect()."
+    },
+    {
+      "id": "q55",
+      "question": "Which of the following are examples of 'Actions'? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "show()" },
+        { "id": "o2", "text": "drop()" },
+        { "id": "o3", "text": "count()" },
+        { "id": "o4", "text": "select()" }
+      ],
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "show() and count() require processing the data to output or calculate a result, thus triggering the DAG. drop and select are transformations."
+    },
+    {
+      "id": "q56",
+      "question": "What does a 'Stage Boundary' represent?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        { "id": "o1", "text": "The point where a shuffle is required." },
+        { "id": "o2", "text": "The end of the entire Spark application." },
+        { "id": "o3", "text": "A point where the code is compiled." },
+        { "id": "o4", "text": "The maximum memory limit of an executor." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Stage boundaries in a DAG are triggered by wide transformations, necessitating a shuffle to reorganize data across executors."
+    },
+    {
+      "id": "q57",
+      "question": "What is 'Off-heap' memory?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Memory managed by the OS directly, outside the JVM heap."
+        },
+        { "id": "o2", "text": "Memory that is not available to the cluster." },
+        { "id": "o3", "text": "Memory reserved for the Driver only." },
+        { "id": "o4", "text": "A cache located on the network." }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Off-heap memory is memory allocated outside the JVM garbage-collected heap, which helps Spark avoid long GC pauses and improve performance."
+    },
+    {
+      "id": "q58",
+      "question": "Which of the following is true about Executor nodes? (Choose two)",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Distributed Compute",
+      "options": [
+        { "id": "o1", "text": "They execute tasks assigned by the Driver." },
+        { "id": "o2", "text": "They store data partitions." },
+        { "id": "o3", "text": "They manage the entire application's DAG." },
+        {
+          "id": "o4",
+          "text": "They perform task scheduling for the whole cluster."
+        }
+      ],
+      "correctAnswers": ["o1", "o2"],
+      "explanation": "Executors are the worker nodes in the cluster that run the actual tasks and hold the data partitions in memory or on disk."
+    },
+    {
+      "id": "q59",
+      "question": "What happens if a DataFrame is persisted with 'MEMORY_AND_DISK' but there is no free memory?",
+      "type": "single-choice",
+      "topic": "Memory Management",
+      "options": [
+        { "id": "o1", "text": "The job crashes." },
+        {
+          "id": "o2",
+          "text": "The partitions are automatically spilled to disk."
+        },
+        { "id": "o3", "text": "Spark waits until memory becomes available." },
+        { "id": "o4", "text": "The DataFrame is discarded." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The MEMORY_AND_DISK storage level allows Spark to spill partitions that do not fit in memory to the local disk, ensuring the job continues to run."
+    },
+    {
+      "id": "q60",
+      "question": "Why is the Spark DAG considered 'Acyclic'?",
+      "type": "single-choice",
+      "topic": "DAG Execution",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Because it contains loops that repeat forever."
+        },
+        {
+          "id": "o2",
+          "text": "Because the operations flow in a single direction without cycles."
+        },
+        { "id": "o3", "text": "Because it doesn't support transformations." },
+        { "id": "o4", "text": "Because it only runs on one machine." }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The graph is 'Directed' because of the flow of transformations and 'Acyclic' because there are no circular dependencies in the operation lineage."
+    }
+  ]
+}

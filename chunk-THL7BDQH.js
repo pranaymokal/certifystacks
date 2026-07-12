@@ -1,0 +1,1 @@
+import{pb as i}from"./chunk-A7BSDIYN.js";var s=class o{transform(r){if(r==null)return"00:00:00";let n=Math.floor(r/3600),m=Math.floor(r%3600/60),f=r%60,t=e=>e<10?"0"+e:e;return`${t(n)}:${t(m)}:${t(f)}`}static \u0275fac=function(n){return new(n||o)};static \u0275pipe=i({name:"formatTime",type:o,pure:!0})};export{s as a};
