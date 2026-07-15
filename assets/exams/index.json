@@ -20,7 +20,7 @@
     },
     {
       "id": "github-copilot-300-basic",
-      "name": "Gitgub Copilot GH-300",
+      "name": "GitHub Copilot GH-300",
       "vendor": "Github",
       "questions": 70,
       "duration": 70,
@@ -29,10 +29,10 @@
     },
     {
       "id": "github-copilot-300-intermediate",
-      "name": "Gitgub Copilot GH-300",
+      "name": "GitHub Copilot GH-300",
       "vendor": "Github",
-      "questions": 70,
-      "duration": 70,
+      "questions": 75,
+      "duration": 75,
       "passingScore": 700,
       "difficulty": "Intermediate"
     },
@@ -223,7 +223,7 @@
       "questions": 60,
       "duration": 60,
       "passingScore": 700,
-      "difficulty": "Basic"
+      "difficulty": "Beginner"
     },
     {
       "id": "automation-testing-basic",

@@ -1,1973 +1,1973 @@
 {
-  "id": "github-copilot-300-intermediate",
-  "name": "GitHub Copilot Certification Practice Exam",
-  "vendor": "GitHub",
-  "questions": 70,
-  "duration": 60,
+  "id": "github-copilot-gh300-intermediate",
+  "name": "GitHub Copilot GH-300",
+  "vendor": "CertifyStacks",
+  "questions": 75,
+  "duration": 75,
   "passingScore": 700,
   "difficulty": "Intermediate",
   "questionList": [
     {
       "id": "q1",
-      "question": "Who benefits most from GitHub Copilot Free?",
+      "question": "When attempting to refactor a function that depends on a database schema defined in a separate, currently closed file, what is the most effective prompt engineering technique in VS Code?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Enterprises that need audit logs and policy controls"
+          "text": "Paste the entire database schema into a single inline comment above the function."
         },
         {
           "id": "o2",
-          "text": "Individuals getting started with Copilot for personal use"
+          "text": "Use the `@workspace` agent or `#file` variables in Copilot Chat to explicitly include the schema file in the context before requesting the refactor."
         },
         {
           "id": "o3",
-          "text": "Organization admins who need usage reporting"
+          "text": "Disable content exclusions in the repository settings so Copilot can scan all closed files automatically."
         },
         {
           "id": "o4",
-          "text": "Students or teachers who need Copilot Pro at no cost"
+          "text": "Open the terminal and run `copilot fetch --schema`."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot Free is designed for individual developers getting started with Copilot for personal use. It provides limited usage and does not include organizational governance features."
+      "correctAnswers": ["o2"],
+      "explanation": "Using chat variables like `#file` or agents like `@workspace` explicitly grounds the LLM in the necessary context, ensuring it understands external dependencies without cluttering the active document."
     },
     {
       "id": "q2",
-      "question": "Which statement best describes Copilot’s context awareness when generating suggestions?",
+      "question": "Which Copilot Chat slash command is explicitly designed to generate standardized documentation (such as Javadoc or Python Docstrings) for a selected complex method?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Copilot always uses the entire repository history"
+          "text": "/explain"
         },
         {
           "id": "o2",
-          "text": "Copilot considers only the file name and comments"
+          "text": "/comment"
         },
         {
           "id": "o3",
-          "text": "Copilot uses surrounding code, current file contents, and comments to shape suggestions"
+          "text": "/doc"
         },
         {
           "id": "o4",
-          "text": "Copilot only considers public code"
+          "text": "/generate"
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Inline suggestions primarily use the surrounding code, the current file, comments, and open editor context. Repository-aware Chat in Copilot Enterprise can additionally use indexed repository content."
+      "correctAnswers": ["o3"],
+      "explanation": "The `/doc` command is optimized to read the selected code and automatically generate standard documentation blocks appropriate for the file's programming language."
     },
     {
       "id": "q3",
-      "question": "Does GitHub Copilot guarantee that generated code is always correct and secure?",
+      "question": "In supported environments, GitHub Copilot allows users to select different underlying LLMs (such as GPT-4o or Claude 3.5 Sonnet) from a dropdown. What is the primary developer benefit of this multi-model selection feature?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Yes, Copilot guarantees security"
+          "text": "It bypasses organization-level data privacy settings."
         },
         {
           "id": "o2",
-          "text": "Yes, Copilot guarantees correctness"
+          "text": "It allows developers to choose a model optimized for specific tasks, balancing capabilities like speed versus complex reasoning depending on the workflow."
         },
         {
           "id": "o3",
-          "text": "No, developers must review and test suggestions"
+          "text": "It enables GitHub Copilot to operate entirely offline without internet access."
         },
         {
           "id": "o4",
-          "text": "No, but Copilot automatically fixes insecure code"
+          "text": "It permanently increases the token limit of the context window to an infinite size."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Copilot provides non-deterministic suggestions that can be incomplete, incorrect, or insecure. GitHub explicitly expects developers to review, test, lint, scan, and validate outputs. Copilot augments development but offers no guarantee of correctness or security."
+      "correctAnswers": ["o2"],
+      "explanation": "Different AI models have distinct strengths. Multi-model selection empowers developers to choose faster models for simple completions and highly capable models for complex architectural reasoning."
     },
     {
       "id": "q4",
-      "question": "Which types of prompts or responses can be blocked by GitHub Copilot's safety filters?",
-      "type": "multiple-choice",
-      "multipleAnswer": true,
-      "topic": "Copilot Governance and Policies",
+      "question": "An enterprise administrator has enabled the 'Block suggestions matching public code' policy at the organization level. A developer working on a repository within this organization attempts to disable this filter in their local VS Code settings. What will be the outcome?",
+      "type": "single-choice",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "Hate speech or discriminatory language"
+          "text": "The local setting overrides the enterprise policy, and public code suggestions will be allowed."
         },
         {
           "id": "o2",
-          "text": "Sexually explicit content"
+          "text": "The enterprise policy overrides the local setting; suggestions closely matching public code will remain blocked."
         },
         {
           "id": "o3",
-          "text": "Code with logical errors"
+          "text": "The developer's GitHub account is temporarily suspended for a policy violation."
         },
         {
           "id": "o4",
-          "text": "Strong personal opinions in comments"
+          "text": "The repository is automatically marked as public to resolve the conflict."
         }
       ],
-      "correctAnswers": [
-        "o1",
-        "o2"
-      ],
-      "explanation": "Copilot requests and responses pass through content safety filters designed to block harmful categories such as toxicity (hate/discrimination) and sexually explicit content. These protections target safety and harm, not general code correctness or style."
+      "correctAnswers": ["o2"],
+      "explanation": "Organizational and Enterprise policies strictly supersede local IDE configurations. Developers cannot bypass server-side security and IP safeguards."
     },
     {
       "id": "q5",
-      "question": "In VS Code, which built-in action helps you gather logs and diagnostics for Copilot issues?",
+      "question": "When the relevant context in an IDE (open tabs, selected text) exceeds the token limit of the Copilot model's context window, how does the system process the data?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "GitHub Copilot: Export Telemetry"
+          "text": "It employs heuristics to prioritize and truncate the context, focusing on the most relevant information like immediately surrounding code and recently accessed files."
         },
         {
           "id": "o2",
-          "text": "Developer: Open Runtime Console"
+          "text": "It refuses to generate a suggestion and displays an error prompting the user to manually close tabs."
         },
         {
           "id": "o3",
-          "text": "GitHub Copilot: Collect Diagnostics"
+          "text": "It compresses the text using a lossless zip encoding algorithm before sending it to the LLM."
         },
         {
           "id": "o4",
-          "text": "GitHub Copilot: Reset Extension Cache"
+          "text": "It splits the prompt into multiple separate API calls and merges the outputs locally."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Use the Command Palette action “GitHub Copilot: Collect Diagnostics” to gather environment details and Copilot extension logs for troubleshooting connectivity, auth, or extension behavior in VS Code. This is the standard first step before escalating."
+      "correctAnswers": ["o1"],
+      "explanation": "Because context windows have fixed limits, the Copilot client uses advanced pruning and prioritization heuristics to send only the most contextually significant tokens to the model."
     },
     {
       "id": "q6",
-      "question": "Which of the following is not a valid, current Copilot plan name?",
+      "question": "A developer notices that GitHub Copilot Chat confidently provided a code snippet utilizing a library method that sounds plausible but does not actually exist in the framework's official documentation. Which AI concept does this scenario best illustrate?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Copilot Free"
+          "text": "Zero-shot prompting"
         },
         {
           "id": "o2",
-          "text": "Copilot Pro+"
+          "text": "Data poisoning"
         },
         {
           "id": "o3",
-          "text": "Copilot Premium"
+          "text": "Hallucination"
         },
         {
           "id": "o4",
-          "text": "Copilot Enterprise"
+          "text": "Prompt injection"
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Official plan names include Copilot Free, Copilot Pro / Pro+ (individual), Copilot Business (organization), and Copilot Enterprise (enterprise). “Copilot Premium” is not an official plan name."
+      "correctAnswers": ["o3"],
+      "explanation": "A 'hallucination' occurs when a generative AI model presents false or invented information (like a non-existent function) as factual, highlighting the need for developers to validate AI outputs."
     },
     {
       "id": "q7",
-      "question": "Which platform does not support GitHub Copilot?",
-      "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "question": "Which of the following strategies effectively improve the accuracy when prompting GitHub Copilot to generate a complex Regular Expression (Regex)?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "GitHub Enterprise Cloud"
+          "text": "Providing specific examples of strings that SHOULD match the pattern."
         },
         {
           "id": "o2",
-          "text": "GitHub.com"
+          "text": "Providing specific examples of strings that SHOULD NOT match the pattern (edge cases)."
         },
         {
           "id": "o3",
-          "text": "GitHub Enterprise Server (GHES)"
+          "text": "Specifying the exact regex flavor or target programming language (e.g., PCRE, Python, JavaScript)."
         },
         {
           "id": "o4",
-          "text": "Visual Studio Code"
+          "text": "Instructing the AI to generate the regex using the shortest possible character length."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "GitHub documents that Copilot is not available for self-hosted GitHub Enterprise Server (GHES). Copilot is provided as a cloud service for GitHub Enterprise Cloud (GHEC) organizations, GitHub.com, and supported IDEs such as VS Code, Visual Studio, and JetBrains."
+      "correctAnswers": ["o1", "o2", "o3"],
+      "explanation": "Effective Regex generation requires boundary setting. Providing positive matches, negative matches, and specifying the language flavor grounds the model. Asking for the 'shortest' regex often sacrifices accuracy for brevity."
     },
     {
       "id": "q8",
-      "question": "Which Copilot admin control limits what content the models can access as input context?",
+      "question": "What primary capability distinguishes 'Agent Mode' (Copilot Edits) from standard inline completions and Chat in VS Code?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Code referencing"
+          "text": "It can securely access the developer's local file system to delete obsolete directories."
         },
         {
           "id": "o2",
-          "text": "Content exclusion"
+          "text": "It can autonomously plan and apply interconnected code modifications across multiple files in the workspace simultaneously to achieve a stated goal."
         },
         {
           "id": "o3",
-          "text": "Prompt engineering"
+          "text": "It replaces the underlying LLM with a rule-based syntax engine for guaranteed accuracy."
         },
         {
           "id": "o4",
-          "text": "Telemetry retention"
+          "text": "It allows developers to bypass all organizational content exclusions."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Enterprise owners and organization owners can configure content exclusion to prevent selected repositories, directories, file types, or patterns from being used as Copilot context."
+      "correctAnswers": ["o2"],
+      "explanation": "Copilot Edits (Agent Mode) elevates Copilot from a single-file assistant to a multi-file agent capable of making coordinated edits across the codebase, which the user can then review in a unified diff view."
     },
     {
       "id": "q9",
-      "question": "When matching public code controls are enabled, about how much surrounding code does Copilot compare to detect matches?",
+      "question": "A developer uses Copilot Chat to generate a sorting algorithm, but the resulting code has an O(n^2) time complexity. The developer requires O(n log n). What is the most effective next step?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "~50 characters"
+          "text": "Delete the entire chat history to clear the context and start completely over."
         },
         {
           "id": "o2",
-          "text": "~150 characters"
+          "text": "Keep the conversation context active and explicitly reply, 'Refactor this code to achieve O(n log n) time complexity.'"
         },
         {
           "id": "o3",
-          "text": "~300 characters"
+          "text": "Accept the code, highlight it, and use the `/fix` command."
         },
         {
           "id": "o4",
-          "text": "The entire file"
+          "text": "Manually rewrite the algorithm since Copilot cannot adjust algorithmic complexity."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Code referencing checks a suggestion and about 150 characters of surrounding code against public GitHub code to detect close matches. Admins or users can block matched suggestions entirely, or allow them while showing references to the public source for review."
+      "correctAnswers": ["o2"],
+      "explanation": "Copilot Chat is conversational. The most efficient approach is iterative prompting: treating the previous output as a draft and explicitly stating the new constraints (like Big-O complexity) in a follow-up message."
     },
     {
       "id": "q10",
-      "question": "When an enterprise policy enforces a Copilot setting - for example, “block matching public code” - what can organizations do?",
+      "question": "For users on the GitHub Copilot Business or Enterprise tiers, how are code snippets that are sent from private repositories to the LLM handled to ensure data privacy?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Override it at the organization level"
+          "text": "They are retained securely for 30 days for telemetry analysis and then purged."
         },
         {
           "id": "o2",
-          "text": "Override it at the repository level"
+          "text": "They are anonymized and permanently added to the public training dataset."
         },
         {
           "id": "o3",
-          "text": "Not override it, enterprise-enforced policies take precedence"
+          "text": "They are encrypted in transit, used momentarily in memory to generate the suggestion, and immediately discarded without retention."
         },
         {
           "id": "o4",
-          "text": "Override it for public repos only"
+          "text": "They are stored locally on the machine's hard drive and never transmitted over the network."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "In GitHub Enterprise Cloud, enterprise-enforced Copilot policies cannot be overridden by organizations or repositories. Lower scopes must comply with enterprise policies. They may apply additional restrictions where supported, but they cannot relax or weaken enterprise-enforced settings."
+      "correctAnswers": ["o3"],
+      "explanation": "GitHub enforces a strict zero-retention policy for Business and Enterprise customers. Prompts and suggestions are encrypted, processed in memory, and immediately destroyed to protect proprietary code."
     },
     {
       "id": "q11",
-      "question": "Is GitHub Copilot available from the command line? If so, what can it help you do?",
-      "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "question": "Which of the following statements accurately describe the configuration and behavior of Content Exclusions in GitHub Copilot?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "No, Copilot is IDE-only"
+          "text": "Exclusions can be configured by repository owners using a `.github/copilot-exclusions.yml` file."
         },
         {
           "id": "o2",
-          "text": "Yes, via Copilot command in the CLI for drafting/explaining commands"
+          "text": "Organization administrators can configure global exclusions across all repositories via the GitHub web interface."
         },
         {
           "id": "o3",
-          "text": "Yes, only for Enterprise plans"
+          "text": "Exclusions prevent Copilot from providing inline suggestions or utilizing the excluded file's contents as context."
         },
         {
           "id": "o4",
-          "text": "Yes, if GHES is enabled"
+          "text": "Content exclusions are used to block specific developers from installing the Copilot extension."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot CLI brings Copilot to the terminal, helping you draft/explain shell and Git commands, refine flags, and learn usage interactively. Availability depends on your Copilot plan and org policy; GHES is not supported for Copilot."
+      "correctAnswers": ["o1", "o2", "o3"],
+      "explanation": "Content Exclusions are a critical safeguard managed via YAML files or the web UI (Options 1 & 2) that strictly block Copilot from reading or writing to specified files (Option 3). They manage file access, not user license assignments (Option 4)."
     },
     {
       "id": "q12",
-      "question": "How does Content exclusion differ from a .gitignore file?",
+      "question": "In the context of the broader Software Development Life Cycle (SDLC), how does GitHub Copilot Enterprise directly assist developers during the Pull Request (PR) review phase?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Both prevent files from being pushed to GitHub"
+          "text": "By automatically approving and merging PRs that pass all CI/CD unit tests."
         },
         {
           "id": "o2",
-          "text": "Content exclusion limits what Copilot can use as input context; .gitignore controls what Git tracks"
+          "text": "By rewriting Git commit histories automatically to hide syntax errors."
         },
         {
           "id": "o3",
-          "text": "Content exclusion blocks outputs similar to excluded files"
+          "text": "By generating narrative PR summaries based on the file diffs to help reviewers understand the scope of changes."
         },
         {
           "id": "o4",
-          "text": ".gitignore disables Copilot on ignored files"
+          "text": "By deploying the PR code to a staging environment without human intervention."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Content exclusion is a Copilot governance control that prevents specified repos/paths/file types/patterns from being used as context. Content exclusion limits what Copilot can use as context."
+      "correctAnswers": ["o3"],
+      "explanation": "Copilot Enterprise integrates into GitHub.com to generate PR summaries, summarizing the 'what' and 'why' of code diffs, significantly reducing the cognitive load on PR reviewers."
     },
     {
       "id": "q13",
-      "question": "At which scopes can code referencing / “Suggestions matching public code” be configured?",
+      "question": "Although GitHub Copilot implements robust security filters, what is a theoretical vulnerability risk if a developer relies on Copilot Chat to process unsanitized external data (e.g., pasting raw user logs into the prompt)?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Only at the IDE level"
+          "text": "Buffer overflow of the IDE's local memory."
         },
         {
           "id": "o2",
-          "text": "At the individual account level and via organization/enterprise policies"
+          "text": "Indirect prompt injection, where malicious external strings manipulate the AI into generating unintended or harmful suggestions."
         },
         {
           "id": "o3",
-          "text": "Only at the repository level"
+          "text": "Spontaneous deletion of the remote GitHub repository."
         },
         {
           "id": "o4",
-          "text": "Only at the enterprise level"
+          "text": "Triggering an automated hardware shutdown."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Code referencing, also called “Suggestions matching public code,” can be configured by individual users or governed through organization and enterprise policies."
+      "correctAnswers": ["o2"],
+      "explanation": "If untrusted data (like user inputs or third-party logs) contains manipulative text, it could act as an indirect prompt injection, causing the LLM to output unsafe code or leak context."
     },
     {
       "id": "q14",
-      "question": "If an enterprise policy restricts Copilot to a specific set of AI models/surfaces, what can organizations do?",
+      "question": "In GitHub Copilot Chat, what is the primary function of chat variables such as `#file`, `#selection`, or `#terminalLastCommand`?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Choose any model/surface regardless of enterprise policy"
+          "text": "They allow developers to explicitly scope the context sent to the AI, reducing noise and improving suggestion accuracy."
         },
         {
           "id": "o2",
-          "text": "Configure org settings only within the enterprise-allowed set"
+          "text": "They serve as macros to execute local shell commands directly from the chat window."
         },
         {
           "id": "o3",
-          "text": "Override enterprise policy at the repo level"
+          "text": "They define the strict programming language syntax the AI is permitted to output."
         },
         {
           "id": "o4",
-          "text": "Disable enterprise policy from the org settings page"
+          "text": "They format the AI's output text into stylized Markdown."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Enterprise owners can enforce or preset Copilot policies (for example, allowed models and surfaces like Chat/Edits/CLI). When enforced, organizations may only configure within the allowed set; repositories inherit and cannot weaken enterprise-level rules."
+      "correctAnswers": ["o1"],
+      "explanation": "Chat variables grant developers granular control over the context window. Instead of Copilot guessing what is relevant, variables explicitly attach specific files, selected code, or terminal output to the prompt."
     },
     {
       "id": "q15",
-      "question": "Which GitHub Copilot capability can autonomously make multi-step code changes and open a pull request for review?",
+      "question": "A developer wants to refactor a specific function without taking their visual focus away from the main editor window. Which Copilot feature is specifically designed for localized, in-place code modifications?",
       "type": "single-choice",
-      "topic": "Agentic Workflows",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Copilot Chat inline replies"
+          "text": "The Copilot Chat Sidebar"
         },
         {
           "id": "o2",
-          "text": "Copilot coding agent"
+          "text": "Inline Chat (accessed via Command+I or Ctrl+I)"
         },
         {
           "id": "o3",
-          "text": "Content exclusion"
+          "text": "The @workspace agent"
         },
         {
           "id": "o4",
-          "text": "Code referencing / matching public code"
+          "text": "The GitHub CLI extension"
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot Edits (Edit mode) assists with user-directed changes, while the Copilot coding agent autonomously performs multi-step tasks and can open a pull request for review."
+      "correctAnswers": ["o2"],
+      "explanation": "Inline Chat opens a small prompt dialogue directly inside the editor at the cursor's location, allowing developers to request changes and view diffs in real-time without shifting context to a sidebar."
     },
     {
       "id": "q16",
-      "question": "Which statement about Copilot Knowledge Bases is accurate?",
-      "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "question": "When utilizing GitHub Copilot to generate unit tests for a critical financial calculation function, what is the most effective way to ensure the AI covers edge cases rather than just the 'happy path'?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Available on all Copilot plans"
+          "text": "Use the /tests command and immediately merge the output without modification."
         },
         {
           "id": "o2",
-          "text": "Available on Business and Enterprise"
+          "text": "Explicitly prompt Copilot Chat with instructions like 'Generate unit tests for this function, including edge cases for negative numbers, zero, and extremely large inputs.'"
         },
         {
           "id": "o3",
-          "text": "Enterprise-only: use curated docs as chat context on GitHub.com/VS Code"
+          "text": "Provide examples of edge cases in the form of a few-shot prompt within a comment block above the function."
         },
         {
           "id": "o4",
-          "text": "Available on Pro+ and Enterprise"
+          "text": "Change the IDE's syntax highlighting to trigger a deeper architectural analysis."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Copilot Knowledge Bases are an Enterprise-only capability that lets you curate organization-approved documentation and ground Copilot Chat on GitHub.com and VS Code in those sources for higher-quality answers."
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "To get robust test coverage, developers must guide the AI. Explicitly listing the expected edge cases in a chat prompt or using a few-shot comment pattern ensures Copilot generates tests beyond basic expected inputs."
     },
     {
       "id": "q17",
-      "question": "Which targets can be specified in Content exclusion rules?",
+      "question": "A developer is using the GitHub Copilot CLI extension. What is the functional difference between the copilot explain and copilot suggest commands?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Only repositories"
+          "text": "explain translates natural language into shell commands, while suggest runs the commands automatically."
         },
         {
           "id": "o2",
-          "text": "Repositories and branches"
+          "text": "explain provides a natural language breakdown of what an existing shell command does, while suggest generates a new shell command based on a natural language query."
         },
         {
           "id": "o3",
-          "text": "Repositories, paths/directories, file types, and pattern-based rules"
+          "text": "explain is used for Git operations, while suggest is strictly for Docker operations."
         },
         {
           "id": "o4",
-          "text": "Only file extensions"
+          "text": "There is no difference; they are aliases for the same underlying function."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Content exclusion supports multiple target types: entire repositories, specific paths/directories, file types (extensions), and pattern/glob-based selectors. This lets admins draw precise context boundaries without disabling Copilot for the whole codebase."
+      "correctAnswers": ["o2"],
+      "explanation": "The CLI offers distinct functions: copilot explain [command] breaks down complex or unfamiliar terminal commands, whereas copilot suggest [query] synthesizes a new command to accomplish a stated goal."
     },
     {
       "id": "q18",
-      "question": "Which statement best describes repository-aware Copilot Chat on GitHub.com?",
+      "question": "How does the scope of information retrieved by a 'Knowledge Base' in Copilot Enterprise differ from the @workspace agent in VS Code?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "It is available to all plans by default"
+          "text": "They are identical in scope, just accessed from different interfaces."
         },
         {
           "id": "o2",
-          "text": "It’s an Enterprise capability that lets chat reference repository files and documentation on GitHub.com"
+          "text": "The @workspace agent searches external stack overflow answers, while Knowledge Bases only search local files."
         },
         {
           "id": "o3",
-          "text": "It runs offline using the IDE only"
+          "text": "Knowledge Bases search across indexed Markdown documentation and repositories hosted on GitHub.com, whereas @workspace searches only the files currently open or available in the local IDE directory."
         },
         {
           "id": "o4",
-          "text": "It requires GHES"
+          "text": "Knowledge Bases can execute code, whereas @workspace can only read it."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot Enterprise enables GitHub.com repository-aware Chat, allowing authorized users to reference and reason over repository files and documentation in the browser. This goes beyond IDE-local context and benefits from repository indexing."
+      "correctAnswers": ["o3"],
+      "explanation": "Knowledge Bases ground Copilot in organizational documentation managed centrally on GitHub.com. The @workspace agent is a local IDE feature that indexes and searches the developer's current local project directory."
     },
     {
       "id": "q19",
-      "question": "In VS Code, where do you enable or disable Copilot inline suggestions globally or per language?",
+      "question": "When utilizing Copilot Edits (Agent Mode) to refactor code across multiple files, what must a developer do before the changes take permanent effect in the file system?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "File → Preferences → Keyboard Shortcuts → GitHub"
+          "text": "Nothing; Agent Mode writes directly to disk and automatically commits to Git."
         },
         {
           "id": "o2",
-          "text": "Settings → Extensions → GitHub Copilot (Inline Suggest: Enable / Enable for [Language])"
+          "text": "Review the proposed multi-file diffs and explicitly click 'Accept' (or use the equivalent keyboard shortcut) to apply the edits."
         },
         {
           "id": "o3",
-          "text": "Source Control → Git → Copilot"
+          "text": "Provide an administrator password to unlock cross-file write permissions."
         },
         {
           "id": "o4",
-          "text": "Terminal → Integrated → Copilot"
+          "text": "Restart the IDE to synchronize the changes with the language server."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "In VS Code, Copilot’s inline behavior is controlled in Settings → Extensions → GitHub Copilot. You can toggle Inline Suggest: Enable globally and configure inline suggestions on a per-language basis, letting teams keep Copilot active generally while restricting specific stacks."
+      "correctAnswers": ["o2"],
+      "explanation": "Agent Mode operates securely by drafting changes in a dedicated view. The developer retains full control and must review and explicitly accept the proposed edits before they modify the actual files."
     },
     {
       "id": "q20",
-      "question": "Where can you find GitHub Copilot extension logs and Electron Developer Tools logs in VS Code?",
+      "question": "An organization has configured a Content Exclusion policy targeting a highly sensitive configuration file named secrets.yaml. If a developer asks Copilot Chat a direct question about the contents of secrets.yaml, how will Copilot respond?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "Only in GitHub.com → Your profile → Logs"
+          "text": "It will provide the answer but flag the query for admin review."
         },
         {
           "id": "o2",
-          "text": "Output panel / Extensions logs folder for Copilot; Developer Tools for Electron logs"
+          "text": "It will answer the question only if the file is actively open in the editor."
         },
         {
           "id": "o3",
-          "text": "Git → Show Git Output (only)"
+          "text": "Copilot Chat will recognize the exclusion policy and refuse to process the file's contents or answer questions about it."
         },
         {
           "id": "o4",
-          "text": "Copilot Chat → /logs command"
+          "text": "It will override the exclusion because Chat operates independently from inline suggestion policies."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "VS Code writes Copilot/extension diagnostics to the Output view and the Extensions logs folder. You can open logs via View → Output → “GitHub Copilot”, and open the extension log files using the Command Palette command “Developer: Open Extension Logs Folder”. Platform-level details live under Developer: Toggle Developer Tools → Console for Electron DevTools."
+      "correctAnswers": ["o3"],
+      "explanation": "Content Exclusions apply universally across the Copilot extension. If a file is excluded, Copilot (including Chat) will not read it, use it as context, or answer queries regarding its contents."
     },
     {
       "id": "q21",
-      "question": "How do you run “GitHub Copilot: Collect Diagnostics” from the Command Palette in VS Code?",
-      "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "question": "During the 'post-processing' phase of the Copilot data pipeline, which critical actions are typically performed before the suggestion is rendered in the user's IDE?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Ctrl/Cmd+` → type “diagnostics copilot”"
+          "text": "Executing the code in a sandbox to ensure it passes unit tests."
         },
         {
           "id": "o2",
-          "text": "View → Explorer → Diagnostics"
+          "text": "Applying safety filters to remove toxic, offensive, or harmful outputs."
         },
         {
           "id": "o3",
-          "text": "Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS) → type “Collect Diagnostics” → select “GitHub Copilot: Collect Diagnostics”"
+          "text": "Checking the suggestion against the Public Code duplication filter (if enabled)."
         },
         {
           "id": "o4",
-          "text": "F1 → “Open Logs” (only)"
+          "text": "Formatting the code to perfectly match the user's local Prettier or ESLint configuration."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Use the Command Palette (Ctrl+Shift+P on Windows/Linux, Cmd+Shift+P on macOS) and run “GitHub Copilot: Collect Diagnostics.” From the Command Palette, type “Diagnostics” or “Collect Diagnostics”, then select “GitHub Copilot: Collect Diagnostics”. The command packages Copilot logs, environment details, versions, and connectivity information into an editor tab that you can inspect or share with support to help identify connectivity/extension issues."
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Post-processing happens server-side and involves safety checks (filtering toxicity) and IP safeguards (duplication detection). Copilot does not autonomously execute the code in a sandbox, nor does it guarantee perfect alignment with local linting rules without explicit context."
     },
     {
       "id": "q22",
-      "question": "On which platforms is Copilot Chat available?",
+      "question": "To ensure GitHub Copilot generates accurate CSS classes for a new HTML element you are writing, what is the best context-crafting strategy in a supported IDE?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Only VS Code and Visual Studio"
+          "text": "Open the relevant CSS file in an adjacent tab within the IDE."
         },
         {
           "id": "o2",
-          "text": "GitHub.com, VS Code, Visual Studio, JetBrains IDEs, Eclipse, Xcode, GitHub Mobile, Windows Terminal"
+          "text": "Include the entire CSS file in an HTML comment."
         },
         {
           "id": "o3",
-          "text": "Only GitHub.com"
+          "text": "Use the @terminal agent to ping the CSS file."
         },
         {
           "id": "o4",
-          "text": "Only IDEs (no browser or mobile)"
+          "text": "Rename the HTML file to have a .css extension."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "GitHub lists multiple surfaces for Copilot Chat, including GitHub.com, major IDEs (Visual Studio Code, Visual Studio, JetBrains IDEs, Eclipse, Xcode), GitHub Mobile, and Windows Terminal. Core chat behavior is similar across these environments, but effective availability still depends on your plan and organization/enterprise policy."
+      "correctAnswers": ["o1"],
+      "explanation": "Copilot builds its context window by looking at the active file and other files open in adjacent tabs. Opening the relevant CSS file allows Copilot to 'see' the available classes and suggest them accurately."
     },
     {
       "id": "q23",
-      "question": "What’s the difference between Copilot Edits – Edit mode and Agent mode?",
+      "question": "For users on the GitHub Copilot Individual plan, what is the default behavior regarding telemetry data (prompts and suggestions), and what control does the user have?",
       "type": "single-choice",
-      "topic": "Agentic Workflows",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "Edit = disables approvals; Agent = requires approvals"
+          "text": "Data is retained by default for training, and users cannot opt out."
         },
         {
           "id": "o2",
-          "text": "Edit = user-driven targeted edits; Agent = autonomous multi-step changes (can open a pull requset)"
+          "text": "Data is not retained by default, but users can opt in."
         },
         {
           "id": "o3",
-          "text": "Edit = chat only; Agent = inline only"
+          "text": "Data is retained by default to improve GitHub products, but users can explicitly opt out via their GitHub settings."
         },
         {
           "id": "o4",
-          "text": "Edit = repository-aware; Agent = IDE-only"
+          "text": "Data is sold to third parties unless the user upgrades to the Business plan."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Edit mode keeps you in control: you pick files, preview diffs, and accept changes incrementally. It is a user-driven, targeted edit experience where you select the scope, review suggested diffs, and apply or reject changes. Agent mode lets the Copilot coding agent decide which files and commands to run and perform autonomous multi-step work across files and tools, often creating or updating pull requests that you then review and merge."
+      "correctAnswers": ["o3"],
+      "explanation": "Unlike the Business and Enterprise tiers (which have zero retention), the Individual tier retains snippets by default for product improvement, though GitHub provides a clear opt-out toggle in user settings."
     },
     {
       "id": "q24",
-      "question": "What do Copilot code reviews and PR summaries provide on GitHub.com?",
+      "question": "Why is it possible for GitHub Copilot to suggest code that contains a security vulnerability, such as a SQL injection flaw?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Auto-merge PRs"
+          "text": "Because Copilot purposefully generates vulnerable code for security training."
         },
         {
           "id": "o2",
-          "text": "AI review suggestions and natural-language summaries of changes"
+          "text": "Because Copilot lacks security filters entirely."
         },
         {
           "id": "o3",
-          "text": "License scanning"
+          "text": "Because it relies on patterns from its training data, which includes historical public code that may contain outdated or insecure practices."
         },
         {
           "id": "o4",
-          "text": "Static code analysis only"
+          "text": "Because the duplication detector forces the use of vulnerable patterns."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "On GitHub.com, Copilot can generate review suggestions and summaries to accelerate PR understanding. Copilot code review can analyze pull requests and offer inline review comments and suggestions, while Copilot PR summaries generate natural-language overviews of the changes so reviewers can quickly understand scope and intent. These aids do not replace manual mandatory reviews or testing; they help reviewers focus on high-risk areas by condensing diffs and spotting potential issues in the code to be merged."
+      "correctAnswers": ["o3"],
+      "explanation": "LLMs predict text based on their training data. Since public repositories contain many insecure coding patterns (like concatenated SQL strings), the model might replicate these if the context suggests them, highlighting the need for manual security review."
     },
     {
       "id": "q25",
-      "question": "For individual users, which statement about Copilot access and eligibility is correct?",
+      "question": "If an organization administrator explicitly disables the 'Copilot Chat' feature in the enterprise policy settings, what will the developers observe in their IDEs?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Copilot Free is for personal use; Pro is paid but may be free for verified students/teachers/maintainers"
+          "text": "They will still have access to Chat, but their messages will be limited to 10 per day."
         },
         {
           "id": "o2",
-          "text": "Pro is only for organizations"
+          "text": "The Chat interface will become disabled or hidden, and they will only be able to use inline ghost text suggestions."
         },
         {
           "id": "o3",
-          "text": "Business is required for single developers"
+          "text": "The entire GitHub Copilot extension will uninstall itself."
         },
         {
           "id": "o4",
-          "text": "Enterprise includes Pro seats for free"
+          "text": "They will be prompted to pay for a personal license to continue using Chat."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Copilot Free is intended for individuals getting started with Copilot and includes limited usage quotas.Copilot Pro (and Pro+) are paid individual subscriptions and Copilot Pro can be free for verified students, teachers, and maintainers of popular open-source projects. You do not need Business or Enterprise plans for a single developer using a personal GitHub account."
+      "correctAnswers": ["o2"],
+      "explanation": "Administrators have granular control over features. Disabling Copilot Chat at the organizational level dynamically removes or disables the Chat panel in the developers' IDEs, restricting them to inline completions."
     },
     {
       "id": "q26",
-      "question": "Who purchases and assigns seats for Business vs. Enterprise plans?",
+      "question": "A developer is writing a Python script and wants to ensure Copilot does NOT use the outdated os.path module, but instead uses the modern pathlib module. Which prompting strategy is recommended?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Developers purchase directly in the IDE"
+          "text": "Delete the os module from the system environment."
         },
         {
           "id": "o2",
-          "text": "Org owners purchase/assign Business; Enterprise owners manage Enterprise subscriptions and seat assignment"
+          "text": "Use a negative constraint in a comment or chat prompt, such as 'Implement this function using pathlib. Do not use os.path.'"
         },
         {
           "id": "o3",
-          "text": "Repository admins purchase both"
+          "text": "Use the /fix command before writing any code."
         },
         {
           "id": "o4",
-          "text": "Students purchase Enterprise"
+          "text": "Write the code entirely in uppercase."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "For Copilot Business, organization owners subscribe at the organization level, purchase Copilot seats, and assign them to organization members. For Copilot Enterprise, enterprise owners subscribe at the enterprise layer and centrally manage plans and seat assignment across organizations, delegating as needed while respecting organization boundaries."
+      "correctAnswers": ["o2"],
+      "explanation": "LLMs respond well to explicit constraints. Setting a negative constraint ('Do not use X') alongside a positive directive ('Use Y') effectively steers the model away from unwanted legacy libraries."
     },
     {
       "id": "q27",
-      "question": "Which answer best captures the Copilot plan taxonomy and key highlights?",
+      "question": "According to the principles of Responsible AI, how should a senior developer conduct a peer review on a Pull Request where the author explicitly states that 80% of the code was generated by GitHub Copilot?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Free, Team, Premium"
+          "text": "Approve it immediately, as AI-generated code is mathematically proven to be bug-free."
         },
         {
           "id": "o2",
-          "text": "Free / Pro (individual), Pro+ (individual), Business (org), Enterprise (org)"
+          "text": "Reject the PR, as using AI violates standard open-source licenses."
         },
         {
           "id": "o3",
-          "text": "Pro, Business, Enterprise only"
+          "text": "Review the code exactly as if a human wrote it, scrutinizing it for logic, security, performance, and adherence to company standards."
         },
         {
           "id": "o4",
-          "text": "Free, Team, Enterprise Server"
+          "text": "Run a duplication detector and only review lines that match public code."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "GitHub’s current plan taxonomy distinguishes individual plans (Copilot Free, Copilot Pro, Copilot Pro+) and organization/enterprise plans (Copilot Business, Copilot Enterprise). As you move up tiers, you gain governance and policy controls (such as usage reporting and content exclusion) and enterprise capabilities (such as, SSO integrations, audit logs, repo-aware chat, and advanced data controls)."
+      "correctAnswers": ["o3"],
+      "explanation": "The human developer is always accountable for the code they commit. AI-generated code must pass the exact same rigorous review, testing, and security checks as human-authored code."
     },
     {
       "id": "q28",
-      "question": "What’s the practical contrast in how developers invoke Copilot features?",
+      "question": "Which of the following is an example of a 'Few-Shot' prompting technique in the context of GitHub Copilot?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Inline suggestions: appear near the cursor (accept with Tab/Enter). Chat: open a chat panel and prompt (supports selections)."
+          "text": "Typing // fetch data and waiting for a suggestion."
         },
         {
           "id": "o2",
-          "text": "Both are automatically applied without user action"
+          "text": "Providing two or three commented examples of input strings and their expected formatted outputs before declaring a new formatting function."
         },
         {
           "id": "o3",
-          "text": "Only chat can generate code; inline cannot"
+          "text": "Asking Copilot to explain a bug in the code."
         },
         {
           "id": "o4",
-          "text": "Inline runs in the browser; chat runs only in IDEs"
+          "text": "Using a keyboard shortcut to accept only the first word of a suggestion."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Inline is a lightweight completion experience that appears as ghost text near the cursor and is accepted via keys such as Tab/Enter. Chat is invoked by opening a chat view or inline chat, then typing prompts that can use selected code or files as context. Both experiences run in supported IDEs, while Copilot Chat is also available on GitHub.com and Windows Terminal."
+      "correctAnswers": ["o2"],
+      "explanation": "Few-shot prompting involves giving the LLM a 'few' examples (shots) of the desired input/output pattern. This heavily influences the model to match your specific logic and formatting style."
     },
     {
       "id": "q29",
-      "question": "Can Copilot help generate unit tests in supported IDEs?",
+      "question": "A developer needs Copilot to help translate a complex JSON payload into corresponding TypeScript interfaces. What is the most efficient workflow using Copilot Chat?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "No, only refactors are supported"
+          "text": "Paste the JSON into the terminal and wait for a suggestion."
         },
         {
           "id": "o2",
-          "text": "Yes, use Copilot Chat or context prompts to generate tests for selected code"
+          "text": "Highlight the JSON payload in the editor, open Copilot Chat, and prompt: 'Generate TypeScript interfaces for the selected JSON.'"
         },
         {
           "id": "o3",
-          "text": "Only on Enterprise plans"
+          "text": "Use the /tests command on the JSON file."
         },
         {
           "id": "o4",
-          "text": "Only in JetBrains IDEs"
+          "text": "Manually write the first interface and hope Copilot auto-completes the rest."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot Chat and prompt patterns support test generation for selected code. In supported IDEs you can select a function or file and ask Copilot to generate unit (or integration) tests, and Copilot will propose test cases, scaffolds, and assertions based on the surrounding context. Guides such as “Writing tests with GitHub Copilot” also describe using prompts or command ( /tests) to generate tests."
+      "correctAnswers": ["o2"],
+      "explanation": "Selecting text anchors it as context for Copilot Chat. Explicitly asking the Chat interface to perform a transformation (JSON to TypeScript) is highly efficient and precise."
     },
     {
       "id": "q30",
-      "question": "Is Windows Terminal a supported surface for Copilot Chat?",
-      "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "question": "When multi-model selection is available in GitHub Copilot, why might a developer choose a smaller, faster model (like GPT-3.5 or Claude 3 Haiku) over a highly capable model (like GPT-4o)?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "No, terminal isn’t supported"
+          "text": "Because they are doing basic boilerplate generation or syntax formatting where lower latency is preferred."
         },
         {
           "id": "o2",
-          "text": "Yes, Windows Terminal is listed among supported Copilot Chat surfaces"
+          "text": "Because smaller models have infinite context windows."
         },
         {
           "id": "o3",
-          "text": "Yes, but only on GHES"
+          "text": "Because they are working in an environment with strict API rate limits and need quicker, lighter requests."
         },
         {
           "id": "o4",
-          "text": "Only if you disable inline suggestions"
+          "text": "Because smaller models automatically deploy code to production."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "GitHub includes Windows Terminal among the supported surfaces for Copilot Chat. With Terminal Chat in Windows Terminal, you can ask Copilot for command suggestions, explanations directly in the terminal."
+      "correctAnswers": ["o1", "o3"],
+      "explanation": "Smaller models trade deep reasoning capabilities for speed. They are ideal for quick, simple tasks (like boilerplate or basic autocomplete) where low latency is crucial to maintaining developer flow. They do not have infinite context windows or deployment capabilities."
     },
     {
       "id": "q31",
-      "question": "How can Copilot help with documentation tasks such as docstrings, README sections, and code comments?",
+      "question": "A developer wants to add specialized instructions that apply across all Copilot Chat interactions within a specific project repository. Which method allows them to store these instructions persistently in the repo?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "It can only generate code, not docs"
+          "text": "Creating a local file named .github/copilot-instructions.md containing the custom rules."
         },
         {
           "id": "o2",
-          "text": "Use Copilot Chat and selection-based prompts to draft docstrings, comments, and README snippets"
+          "text": "Pinning a chat message inside the VS Code Copilot Chat sidebar."
         },
         {
           "id": "o3",
-          "text": "Docs are generated automatically on every commit"
+          "text": "Configuring the standard .gitignore file with systemic rule tags."
         },
         {
           "id": "o4",
-          "text": "Only Enterprise plans can generate documentation"
+          "text": "Adding a custom key to the root level of the local package.json file."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot supports documentation workflows. You can select code and ask Copilot Chat to “write docstrings,” “explain this function,” or “draft a README section”. Inline suggestions also surface comment completions near the cursor."
+      "correctAnswers": ["o1"],
+      "explanation": "GitHub Copilot respects custom rules stored in a .github/copilot-instructions.md file at the root of a repository. This file allows teams to ground Copilot in repository-specific coding standards, architecture models, and guidelines automatically."
     },
     {
       "id": "q32",
-      "question": "How can Copilot assist with debugging and fixing errors?",
+      "question": "When configuring proxy servers for GitHub Copilot in an enterprise environment with custom firewalls, what architectural requirement must be met for secure network traffic validation?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "It automatically fixes all errors at build time"
+          "text": "The proxy must decrypt and inspect all payloads before sending them to GitHub."
         },
         {
           "id": "o2",
-          "text": "Use Copilot Chat to explain error messages/stack traces and propose fixes or refactors"
+          "text": "The proxy must allow secure HTTPS connections to Copilot endpoints and support custom SSL/TLS certificate chains if using SSL inspection."
         },
         {
           "id": "o3",
-          "text": "Errors must be fixed manually; Copilot doesn’t help"
+          "text": "The proxy must force Copilot to drop all network connections to force local model operation."
         },
         {
           "id": "o4",
-          "text": "Only Enterprise users can use Chat for debugging"
+          "text": "The proxy must map all outbound requests via standard UDP broadcast groups."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot Chat can analyze error messages, stack traces, and selected code, then propose root cause hypotheses, fixes, and refactors. You can paste error messages or stack traces into Chat, or invoke Copilot from debugging contexts, and ask it to explain the error, identify likely causes, and propose code changes."
+      "correctAnswers": ["o2"],
+      "explanation": "GitHub Copilot requires persistent, secure connections to its cloud infrastructure. If corporate proxies employ SSL decryption/inspection, the custom certificate chain must be correctly injected into the IDE/system environment so Copilot can validate endpoints securely."
     },
     {
       "id": "q33",
-      "question": "How can Copilot support a TDD (Red→Green→Refactor) workflow?",
-      "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "question": "Which of the following scenarios represents an appropriate use case for the @vscode agent in the Copilot Chat panel?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "By generating test scaffolds/cases from selections and then helping refactor after tests pass"
+          "text": "Asking how to change a specific keybinding or setting inside VS Code."
         },
         {
           "id": "o2",
-          "text": "By auto-approving PRs when tests pass"
+          "text": "Refactoring a Python backend script to improve database connection pool efficiency."
         },
         {
           "id": "o3",
-          "text": "By disabling tests during development"
+          "text": "Locating and installing an extension to handle Docker containers from the editor UI."
         },
         {
           "id": "o4",
-          "text": "By replacing the need for assertions"
+          "text": "Requesting a list of available native editor commands or menu features."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Use Copilot Chat to generate tests from a selected function or acceptance criteria for the red stage, where tests initially fail. Then iterate on the implementation with inline suggestions or Copilot Edits until the tests pass, the green stage. After that, ask Copilot to propose refactors that preserve behavior while tests guard against regressions, the refactor stage."
+      "correctAnswers": ["o1", "o3", "o4"],
+      "explanation": "The @vscode agent is specifically designed to bridge Copilot Chat with the editor itself. It handles editor commands, UI shortcuts, customization, and extension management rather than application logic refactoring."
     },
     {
       "id": "q34",
-      "question": "What actually happens when you accept an inline suggestion?",
+      "question": "A team leader wants to audit the enterprise's general adoption metrics for Copilot without exposing granular, individual developer code selections. Which access level or feature should be utilized?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "The suggestion is inserted into your editor; you decide whether to keep, edit, or discard"
+          "text": "The GitHub Organization/Enterprise Copilot Usage API and aggregated dashboard panels."
         },
         {
           "id": "o2",
-          "text": "The code is auto-committed and pushed"
+          "text": "Pasting individual developer local IDE log files into Copilot Chat."
         },
         {
           "id": "o3",
-          "text": "The change is merged to main if CI passes"
+          "text": "Enabling the content exclusions override mode to force remote repository tracking."
         },
         {
           "id": "o4",
-          "text": "An audit log entry is always generated"
+          "text": "Requesting telemetry dumps directly from individual Copilot Individual accounts."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Inline suggestions appear near the cursor as ghost text and are accepted via Tab/Enter or editor-specific key bindings. When you accept an inline suggestion, the ghost text becomes real code in your editor, just as if you had typed it yourself. The code is not automatically staged, committed, or pushed, and there is no auto-merge. You retain full control over further edits, staging, commits, and pushes through your normal Git workflow."
+      "correctAnswers": ["o1"],
+      "explanation": "GitHub provides enterprise administrators with aggregated usage dashboards and APIs that deliver high-level trends (acceptance rates, active seats, language breakdowns) while respecting privacy by ensuring individual keystrokes or code lines are never exposed."
     },
     {
       "id": "q35",
-      "question": "How can Copilot help you understand an unfamiliar file or component in your codebase?",
+      "question": "How does Copilot identify and choose related files to build its 'Jaccard similarity' context window during inline completions?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Only repository-aware chat in Enterprise can explain files"
+          "text": "It scans every single file in the local file system alpha-numerically."
         },
         {
           "id": "o2",
-          "text": "It can’t, Copilot only writes code"
+          "text": "It measures lexical overlaps and similarity metrics between the active file and other files currently open in adjacent editor tabs."
         },
         {
           "id": "o3",
-          "text": "Use selection/file prompts in Copilot Chat to summarize purpose, dependencies, and risks"
+          "text": "It queries the public internet for files sharing the same project folder names."
         },
         {
           "id": "o4",
-          "text": "You must upload files to a third-party site"
+          "text": "It prioritizes files based on their total character weight on disk."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "In supported IDEs, you can select a file or key regions of code and ask Copilot Chat to summarize the purpose, describe dependencies, and highlight potential risks or edge cases."
+      "correctAnswers": ["o2"],
+      "explanation": "Copilot uses a Jaccard similarity algorithm locally in the IDE client to analyze open tabs. It selects chunks of code from adjacent files that share vocabulary or structural similarity with the active tab, optimizing context relevance."
     },
     {
       "id": "q36",
-      "question": "Which is the best-crafted prompt?",
+      "question": "What is the primary technical limitation of attempting to refactor a massive monolithic function (e.g., 5000 lines of legacy code) inside a single standard inline chat block?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Write a function to reverse a string"
+          "text": "The language server completely crashes the host OS immediately."
         },
         {
           "id": "o2",
-          "text": "Function in code to reverse a string"
+          "text": "The input constraints exceed the token limit of the context window, causing truncation or failure to process the complete structural dependency."
         },
         {
           "id": "o3",
-          "text": "Suggest some code to reverse a string"
+          "text": "Inline chat can only process file formats written in plain text or Markdown."
         },
         {
           "id": "o4",
-          "text": "Write a Python function to reverse a string using slicing"
+          "text": "Copilot strictly limits inline modifications to exactly 10 lines per operation."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Effective prompts specify language, task, and method/constraints. Stating “Python” + “reverse a string” + “using slicing” removes ambiguity and guides the model to the intended pattern. A well-crafted prompt usually names the language, the action, the object, and any key constraint in a single concise sentence, so Copilot does less guessing and more targeted completion."
+      "correctAnswers": ["o2"],
+      "explanation": "Every LLM has a finite input and output token constraint. Attempting to feed a massive block of code along with instruction tokens often hits these limits, truncating vital information and leading to low-quality or incomplete code modifications."
     },
     {
       "id": "q37",
-      "question": "How do you improve ambiguous prompts?",
+      "question": "Which of the following best practices should developers execute to comply with ethical guidelines for 'Responsible AI Usage' when dealing with license warnings or code suggested by Copilot?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Use shorter prompts"
+          "text": "Assume any output generated by the AI is automatically public domain and exempt from validation."
         },
         {
           "id": "o2",
-          "text": "Avoid specifying language"
+          "text": "Ensure that the public code matching filter is enabled and actively investigate the origin of any specialized logic matching public sources to preserve compliance."
         },
         {
           "id": "o3",
-          "text": "Retry without changes"
+          "text": "Disable local compilation to prevent security scanners from breaking the workspace context flow."
         },
         {
           "id": "o4",
-          "text": "Provide more context and details"
+          "text": "Delete all comments mentioning external package names to hide licensing signatures."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Ambiguous prompts force the model to guess. Adding specific context (file or selection, domain facts), clear intent (what to build or change), and constraints (language, framework, format, performance or style requirements) reliably improves accuracy. Define inputs/outputs and minimal acceptance criteria so the model follows instead of guessing, matching the guidance to avoid ambiguity by adding project context, clear goals, and specific requirements."
+      "correctAnswers": ["o2"],
+      "explanation": "Responsible AI management means ensuring proper compliance. Keeping duplication filters enabled prevents intellectual property leakage and allows developers to maintain clear licensing alignment within commercial software projects."
     },
     {
       "id": "q38",
-      "question": "Which technique most reliably boosts output quality?",
+      "question": "A developer needs Copilot Chat to help optimize a database query. Which prompt engineering strategy provides the most effective grounding for this task?",
       "type": "single-choice",
       "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Use detailed instructions with examples"
+          "text": "Prompting: 'Fix my query speed, it is currently too slow.'"
         },
         {
           "id": "o2",
-          "text": "Use vague prompts"
+          "text": "Using the #file variable to supply the raw SQL file along with the specific database schema definition and index structure."
         },
         {
           "id": "o3",
-          "text": "Avoid comments in code"
+          "text": "Pasting the hardware specifications of the target production database engine."
         },
         {
           "id": "o4",
-          "text": "Skip specifying input or output"
+          "text": "Asking Copilot to guess what indexes might exist on a standard relational table."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Use detailed instructions with small, concrete examples anchors the format, tone, and structure the model should match, reducing guesswork. The prompt-engineering guidance explicitly encourages “give examples” so Copilot can see the pattern you want and apply it to new cases, instead of inventing style and structure on its own."
+      "correctAnswers": ["o2"],
+      "explanation": "Grounding requires exact context. Supplying the precise query alongside the target table schema and existing index setup enables Copilot to diagnose structural bottlenecks accurately instead of guessing."
     },
     {
       "id": "q39",
-      "question": "Why does adding examples help?",
+      "question": "What is the direct consequence of adding an exclamation point rule like /secure/*.ts to an enterprise content exclusion path?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "Examples distract the AI"
+          "text": "Copilot will prioritize files matching this pattern above all other tabs."
         },
         {
           "id": "o2",
-          "text": "They reduce Copilot’s ability to generate code"
+          "text": "Copilot will completely block any code completion, chat context referencing, or AI interaction with files matching that path."
         },
         {
           "id": "o3",
-          "text": "They slow completions"
+          "text": "The affected files are automatically encrypted and committed to a private fork."
         },
         {
           "id": "o4",
-          "text": "They align output with the desired style/pattern"
+          "text": "Developers are prompted to log in using structural multi-factor authentication on every keystroke."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Short few-shot examples show the model the shape you want (naming, layout, docstrings, tests), so generated output conforms to your pattern. Examples effectively shows, not tell the desired style, structure, and tone, which is why prompt-engineering guidance recommends “give examples” so Copilot can generalize from patterns instead of guessing."
+      "correctAnswers": ["o2"],
+      "explanation": "Content exclusions use standard match patterns. When a file path matches an exclusion pattern, Copilot features are completely turned off for that file, preventing sensitive logic from being processed server-side."
     },
     {
       "id": "q40",
-      "question": "Why is context crucial in prompts?",
-      "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "question": "When multi-model selection is available in the Copilot Chat UI, what type of tasks generally benefit most from selecting a larger, advanced reasoning model like Claude 3.5 Sonnet or GPT-4o?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "It consumes more tokens"
+          "text": "Complex multi-file architectural refactoring plans."
         },
         {
           "id": "o2",
-          "text": "It helps Copilot generate relevant and accurate suggestions"
+          "text": "Debugging intricate asynchronous timing conflicts or deep algorithmic logical flaws."
         },
         {
           "id": "o3",
-          "text": "It prevents completions"
+          "text": "Basic, repetitive ghost text variable declarations within a simple function."
         },
         {
           "id": "o4",
-          "text": "It reduces security"
+          "text": "Designing comprehensive end-to-end integration and security test suites."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot conditions on the surrounding code, the current file, and your prompt. Because Copilot does prediction, not execution, the closer and richer the context around the prompt, the more relevant and accurate the suggestions. Prompts that reference the right file/selection, types, interfaces, and data shapes give Copilot a much clearer target than generic requests."
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "Advanced models feature deep reasoning matrices, making them highly effective at tracking abstract data states, architectural changes (Option 1), logic bugs (Option 2), and structured testing paradigms (Option 4). Simple syntax autocomplete (Option 3) is better handled by lower-latency models."
     },
     {
       "id": "q41",
-      "question": "What should you do if Copilot generates irrelevant suggestions?",
+      "question": "A developer leverages the /fix command on a highlighted block of code inside Copilot Chat. How does Copilot deduce what the bug actually is?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Stop using Copilot"
+          "text": "It checks online compiler logs globally."
         },
         {
           "id": "o2",
-          "text": "Refine or rephrase the prompt with more context"
+          "text": "It parses the highlighted code alongside diagnostic error lists or terminal compilation warnings provided by the IDE's active language server context."
         },
         {
           "id": "o3",
-          "text": "Use shorter prompts"
+          "text": "It forces the application to build and crash locally to analyze standard output logs."
         },
         {
           "id": "o4",
-          "text": "Disable duplication detection"
+          "text": "It automatically reports the line changes directly to the remote repository default branch."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Irrelevance usually means missing or misaligned output. Instead of giving up or just retrying, you improve quality by refining the prompt with more context and clearer intent: add a selection/file, specify inputs/outputs, name the language/tooling, and set constraints so Copilot has less room to guess."
+      "correctAnswers": ["o2"],
+      "explanation": "The /fix command is deeply integrated with the IDE client. It reads the specific code segment and automatically attaches the editor's active language server diagnostics (linter errors, type mismatch warnings) to the prompt context, pinpointing the mechanical issue."
     },
     {
       "id": "q42",
-      "question": "Which practice helps Copilot match project style?",
+      "question": "When an enterprise customizes Copilot Enterprise by defining 'Knowledge Bases', what type of content can be synchronized and processed to ground chat responses?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Avoid adding comments"
+          "text": "Only raw binary files and executable image builds."
         },
         {
           "id": "o2",
-          "text": "Use vague instructions"
+          "text": "Indexed Markdown documentation directories and codebase repositories hosted within the target organization on GitHub."
         },
         {
           "id": "o3",
-          "text": "Skip output format"
+          "text": "External personal websites and public forums crawled live by individual users."
         },
         {
           "id": "o4",
-          "text": "Add snippets and style examples"
+          "text": "Local environment variables and private system hardware drivers."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Supplying snippets and style examples (naming, error handling, test layout, docstrings) guides Copilot to mirror your project’s conventions. Prompt-engineering guidance explicitly recommends providing project-specific examples so Copilot can follow your patterns instead of inventing its own style."
+      "correctAnswers": ["o2"],
+      "explanation": "Knowledge Bases link Copilot Enterprise to specific data stores on GitHub. Administrators select repositories containing internal wiki files, structural guides, or source frameworks, which are then parsed and used to enrich chat accuracy safely."
     },
     {
       "id": "q43",
-      "question": "Which statement best describes what Copilot relies on during inference?",
+      "question": "What core operational pattern should developers apply to minimize the risk of 'automation bias' while working with inline ghost text suggestions?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Runtime execution of your code"
+          "text": "Accepting every single inline suggestion instantly to keep velocity tracking metrics high."
         },
         {
           "id": "o2",
-          "text": "Your prompts, file contents, and surrounding code context"
+          "text": "Treating suggestions as unverified recommendations that require deliberate critical review, line-by-line inspection, and functional execution verification."
         },
         {
           "id": "o3",
-          "text": "Web searches via Bing"
+          "text": "Configuring the IDE to turn off all local compiler warnings to eliminate system clutter."
         },
         {
           "id": "o4",
-          "text": "Pre-stored templates"
+          "text": "Limiting code production to zero human-authored lines to avoid introducing logical variability."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Copilot performs contextual prediction, not execution. It uses your prompt, the current file and surrounding code, and other allowed context (for example, chat history or repo index) to generate suggestions. It does not run your program or call external web search at inference time; quality depends on how good the available context is."
+      "correctAnswers": ["o2"],
+      "explanation": "Automation bias describes the tendency to trust automated systems blindly. To mitigate this risk, developers must actively evaluate all generated syntax, verifying that the implementation meets design parameters and lacks security flaws."
     },
     {
       "id": "q44",
-      "question": "What does content exclusion let organizations do and why is it relevant to prompting?",
+      "question": "Which of the following elements are passed as metadata to the telemetry infrastructure during standard operation of Copilot Business (unless tracking is modified by specific policies)?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Speed up Copilot"
+          "text": "The text content of all private proprietary code snippets."
         },
         {
           "id": "o2",
-          "text": "Disable Copilot entirely"
+          "text": "User engagement metrics such as latency, feature usage events, error rates, and acceptance actions, without storing raw source code snippets."
         },
         {
           "id": "o3",
-          "text": "Publish private code"
+          "text": "The local system administrator account passwords."
         },
         {
           "id": "o4",
-          "text": "Prevent specified repos/paths/file types/patterns from being used as input context"
+          "text": "Complete network route maps of the enterprise intranet topology."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Content exclusion lets organizations with Copilot Business or Enterprise define what input context Copilot can see. Admins can exclude specific repositories, directories/paths, file types, or pattern-based rules, preventing that content from being used as context for suggestions in IDEs and on GitHub.com, even if users prompt near it. This keeps secrets and sensitive code and intellectual property out of Copilot’s prompt context."
+      "correctAnswers": ["o2"],
+      "explanation": "For Copilot Business and Enterprise tiers, raw code snippets are discarded after processing. Telemetry is restricted strictly to functional usage metrics (clicks, latency, feature events) to evaluate performance without tracking intellectual assets."
     },
     {
       "id": "q45",
-      "question": "Which Copilot plans include content exclusion?",
+      "question": "A developer wants to write a prompt that causes Copilot Chat to return only a raw code structure without any natural language descriptions or intro commentary. Which method is most effective?",
       "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
+      "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "Free and Individual"
+          "text": "Closing the chat panel and typing exclusively in the workspace terminal shell."
         },
         {
           "id": "o2",
-          "text": "Business and Enterprise"
+          "text": "Including strict system-style constraints in the prompt, such as: 'Return only valid code matching this requirement. Do not include any explanations, introductory text, or markdown prose.'"
         },
         {
           "id": "o3",
-          "text": "Individual only"
+          "text": "Running the prompt in a completely empty local text document with no file type extension."
         },
         {
           "id": "o4",
-          "text": "Free only"
+          "text": "Using the /explain command alongside the target framework tags."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Content exclusion is an organization-level control available on Copilot Business and Copilot Enterprise. It lets organization and enterprise admins define which repositories, directories/paths, file types, or patterns Copilot can use as input context in IDEs and on GitHub.com."
+      "correctAnswers": ["o2"],
+      "explanation": "Explicit boundary definitions (structural constraints) force the model's output formatting layer to omit narrative boilerplate, delivering clean, parser-friendly code blocks immediately."
     },
     {
       "id": "q46",
-      "question": "Which prompt gives Copilot the clearest output target?",
+      "question": "When configuring a proxy server configuration for GitHub Copilot inside a corporate network, which specific security configuration must be modified if the corporate proxy intercepts traffic using an internal self-signed Root Certificate Authority (CA)?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "“Summarize this.”"
+          "text": "The public code filter must be configured to pass via HTTP."
         },
         {
           "id": "o2",
-          "text": "“Summarize this function in 3 bullets for junior devs; include inputs, outputs, and one caveat.”"
+          "text": "The corporate Root CA certificate must be explicitly imported or referenced in the IDE settings (e.g., http.proxyStrictSSL or custom certificate path configurations)."
         },
         {
           "id": "o3",
-          "text": "“Explain code.”"
+          "text": "The developer must disable multi-factor authentication for the target repository."
         },
         {
           "id": "o4",
-          "text": "“Write notes.”"
+          "text": "The content exclusion rules must be switched from YAML to JSON format."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Stating the audience, length/structure, and must-include items creates a concrete target. A prompt like “summarize this function in 3 bullets for junior devs; include inputs, outputs, and one caveat” defines format (bullets), length (3), audience (junior devs), and required content (inputs/outputs/caveat), so Copilot has a very clear output shape and less room to guess."
+      "correctAnswers": ["o2"],
+      "explanation": "If a corporate proxy uses SSL inspection with self-signed certificates, the Copilot IDE extension will reject the connection as unsafe by default due to certificate chain validation failure. The Root CA must be explicitly configured or trusted by the IDE runtime environment."
     },
     {
       "id": "q47",
-      "question": "When asking Copilot to refactor code, which prompt is best?",
-      "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "question": "Which of the following actions can be carried out using the @workspace agent in VS Code to enhance developer productivity across an entire local codebase?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "“Improve this.”"
+          "text": "Finding all instances where a deprecated function is used across the current repository workspace."
         },
         {
           "id": "o2",
-          "text": "“Make it cleaner.”"
+          "text": "Generating a comprehensive outline explaining the high-level architecture of the directory structural design."
         },
         {
           "id": "o3",
-          "text": "“Rewrite completely.”"
+          "text": "Executing an automated database migration script directly on the production cluster."
         },
         {
           "id": "o4",
-          "text": "“Refactor to pure functions; no side effects; keep same public API; add docstrings; return early on invalid input.”"
+          "text": "Asking how an existing configuration variable flows through different files within the local directory."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Refactor prompts work best when constraints are explicit: style (pure functions, no side effects), compatibility (keep the same public API and behavior), non-functional requirements (add docstrings), and guardrails (return early on invalid input). This matches refactoring guidance that structure should change but observable behavior must remain the same and tests should continue to pass."
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "The @workspace agent has structural visibility across the files within the open IDE directory, making it ideal for cross-file queries, architectural documentation, and tracking dependencies. It cannot execute infrastructure changes like production database migrations (Option 3)."
     },
     {
       "id": "q48",
-      "question": "Which prompt best reduces hallucinations when generating API code?",
+      "question": "When evaluating the data lifecycle under GitHub Copilot Enterprise, which component ensures that chat answers given on the GitHub.com web UI are securely grounded in company-specific technical conventions?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "“Use the Foo API.”"
+          "text": "The local IDE cache layer."
         },
         {
           "id": "o2",
-          "text": "“Use Foo API v3; only endpoints /users/{id}, /users/search; TypeScript; fetch; no undocumented fields; include error handling for 4xx/5xx.”"
+          "text": "Custom Knowledge Bases indexing enterprise documentation repositories."
         },
         {
           "id": "o3",
-          "text": "“Write users code.”"
+          "text": "The default system shell environment variable matrix."
         },
         {
           "id": "o4",
-          "text": "“Guess the latest endpoints.”"
+          "text": "An automated web crawler searching public forums live."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Hallucinations drop when you fix the API version, restrict which endpoints can be used, and specify language and tooling. A prompt like “Use Foo API v3; only endpoints /users/{id}, /users/search; TypeScript; fetch; no undocumented fields; include error handling for 4xx/5xx” defines a constrained, testable contract instead of an open-ended request, and “no undocumented fields” explicitly discourages Copilot from inventing properties or methods."
+      "correctAnswers": ["o2"],
+      "explanation": "Knowledge Bases are a signature capability of GitHub Copilot Enterprise. They allow administrators to index private documentation repositories on GitHub.com, providing contextual grounding to chat inquiries without exposing source code to public models."
     },
     {
       "id": "q49",
-      "question": "You want table-driven unit tests. Which prompt is best?",
+      "question": "A team wishes to restrict Copilot from interacting with or scanning a subdirectory named /sensitive-data/ across all organizational code assets. What is the most robust implementation approach?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "“Generate table-driven tests in Go for Parse(), covering empty, invalid, edge lengths; include names and wantErr.”"
+          "text": "Ask all developers to manually toggle the extension off when opening those files."
         },
         {
           "id": "o2",
-          "text": "“Write table-driven tests.”"
+          "text": "Configure a global Content Exclusion policy using path matching patterns at the organization or repository settings tier."
         },
         {
           "id": "o3",
-          "text": "“Test everything table-driven.”"
+          "text": "Add the folder path to the local system firewall blacklist."
         },
         {
           "id": "o4",
-          "text": "“Add some asserts for table-driven test.”"
+          "text": "Wrap the code inside an inline HTML/Markdown comment containing the tag // copilot:ignore."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Specifying language (Go), test style (“table-driven tests”), the target function (Parse()), and cases/fields (“covering empty, invalid, edge lengths; include names and wantErr”) gives Copilot a concrete, idiomatic template to expand. This matches common Go patterns where tests use a []struct{ name string; input …; want …; wantErr bool } table and iterate over named cases."
+      "correctAnswers": ["o2"],
+      "explanation": "Content Exclusion policies allow organization administrators or repository owners to apply exact patterns (such as glob patterns) that completely isolate files or directories from being read or manipulated by any Copilot endpoint."
     },
     {
       "id": "q50",
-      "question": "Which prompt provides the most effective context for generating a robust SQL query?",
+      "question": "Which of the following describes the technical concept of 'Context Pruning' within the context construction layer of GitHub Copilot?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "“PostgreSQL 14; given schema (tables/columns below); return top 5 customers by revenue last 30 days; output columns: id, name, revenue.”"
+          "text": "Deleting unused branch assets from the remote repository after a code suggestion is accepted."
         },
         {
           "id": "o2",
-          "text": "“Given schema (tables/columns below); return top 5 customers by revenue last 30 days; include window fn for rank; output columns: id, name, revenue, rank.”"
+          "text": "The automatic truncation and prioritization of token data by client-side heuristics to fit within the finite context window constraint of the target AI model."
         },
         {
           "id": "o3",
-          "text": "“Write a SQL query using the schema below to return the top 5 customers by revenue in the last 30 days; choose any appropriate columns.”"
+          "text": "Encrypting local system user logs before sending payloads via corporate networks."
         },
         {
           "id": "o4",
-          "text": "“PostgreSQL 14; given schema (tables/columns below); return top 5 customers by revenue last 30 days; include window fn for rank; output columns: id, name, revenue, rank.”"
+          "text": "Restricting code suggestions entirely to a single line of text."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Pinning dialect/version, schema, time window, and required columns steers Copilot away from generic or wrong SQL and toward a verifiable, project-ready query. High-quality SQL prompts should explicitly name the SQL dialect and version, provide the relevant tables/columns, describe the business question and filters, and specify the output shape and ordering, so Copilot generates syntactically correct, planner-friendly SQL for that engine instead of generic guesses."
+      "correctAnswers": ["o2"],
+      "explanation": "AI models have a strict upper limit on input tokens. Context pruning represents the programmatic process where the Copilot extension sorts the data elements (surrounding text, adjacent open tabs) to discard less relevant components while retaining crucial tokens before transmitting the payload."
     },
     {
       "id": "q51",
-      "question": "Which prompt best directs Copilot to produce safe code for secrets?",
+      "question": "A developer writes a custom system rule file named .github/copilot-instructions.md at the root of a project. What is the primary purpose of this file?",
       "type": "single-choice",
       "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "“Use an API key from an environment variable; if it’s missing, fall back to a default test key and log the value for debugging.”"
+          "text": "To configure billing seats automatically for new repository contributors."
         },
         {
           "id": "o2",
-          "text": "“Get the API key from a secrets manager or environment variable; if unavailable, continue with limited functionality and log configuration details.”"
+          "text": "To serve as a persistent prompt engineering template that automatically guides Copilot Chat's style, architectural preferences, and coding standards within that repository."
         },
         {
           "id": "o3",
-          "text": "“Read API key from env var; do not hardcode; fail fast if missing; log-safe (no secrets in logs); show minimal example.”"
+          "text": "To force the IDE to deploy application builds onto a staging environment."
         },
         {
           "id": "o4",
-          "text": "“Store the API key in a configuration file checked into the repo; document that it should not be shared publicly.”"
+          "text": "To list the security paths that are entirely excluded from the token data stream."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Security-sensitive prompts should forbid hardcoding, require environment-based or secret-manager configuration, and mandate safe logging and fail-fast behavior if configuration is missing. A prompt like “read API key from env var; do not hardcode; fail fast if missing; log-safe (no secrets in logs)” turns security rules into explicit constraints so Copilot proposes patterns that align with secure coding practices instead of convenient but unsafe shortcuts."
+      "correctAnswers": ["o2"],
+      "explanation": "The .github/copilot-instructions.md file allows teams to formalize their internal standards. When developers interact with Copilot Chat in that repository, the instructions are automatically appended to the context window to enforce consistency."
     },
     {
       "id": "q52",
-      "question": "You want Copilot to explain a complex file to a new teammate. Which prompt is best?",
+      "question": "What primary ethical risk is addressed by utilizing a public code matching duplication filter within an enterprise deployment of GitHub Copilot?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "“Explain this file in detail: what it does, how it works, and any important parts.”"
+          "text": "The complete exhaustion of target network bandwidth limitations."
         },
         {
           "id": "o2",
-          "text": "“Summarize this file for engineers: main purpose, data flows, and dependencies.”"
+          "text": "The risk of inadvertently introducing public open-source code snippets without proper license alignment or copyright attribution."
         },
         {
           "id": "o3",
-          "text": "“Create a thorough explanation of this file, including architecture, flows, and risks, with no strict length limit.”"
+          "text": "The local operating system experiencing memory fragmentation issues during generation."
         },
         {
           "id": "o4",
-          "text": "“Explain this file for a new backend hire: purpose, key data flows, external dependencies, risks; 5 bullets max.”"
+          "text": "Preventing developers from typing duplicate helper methods within the same file."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Defining the audience, sections and length focuses the explanation on onboarding value rather than arbitrary detail. A prompt like “explain this file for a new backend hire: purpose, key data flows, external dependencies, risks; 5 bullets max” tells Copilot who the explanation is for, which topics to cover, and how concise to be, ensuring the result is structured, skimmable, and useful for ramp-up."
+      "correctAnswers": ["o2"],
+      "explanation": "The public code filter checks suggestions against public repositories on GitHub. If a match of ~150 characters is found, it blocks it, helping corporations mitigate legal and compliance risks related to open-source licensing constraints."
     },
     {
       "id": "q53",
-      "question": "Which prompt targets a performance-aware implementation?",
-      "type": "single-choice",
+      "question": "When attempting to refactor an asynchronous code routine with strict execution time limitations, which combination of prompt parameters yields the most targeted and optimal AI response?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "“Write a streaming JSON parser in Node.js; O(1) extra space; handle 10MB+ inputs; backpressure with streams; include benchmarks stub.”"
+          "text": "Declaring the exact hardware performance specifications of the developer's laptop."
         },
         {
           "id": "o2",
-          "text": "“Write a streaming JSON parser in Node.js that can handle 10MB+ inputs and include a simple benchmark.”"
+          "text": "Explicitly stating performance constraints (e.g., 'Ensure the implementation limits maximum blocking duration to under 50ms')."
         },
         {
           "id": "o3",
-          "text": "“Write a fast JSON parser in Node.js; it should parse 10MB+ inputs and be efficient.”"
+          "text": "Using chat references (like #file) to supply the surrounding thread pool setup context."
         },
         {
           "id": "o4",
-          "text": "“Write a JSON parser in any language; prioritize performance and document how to test its speed.”"
+          "text": "Instructing the AI to format the response text entirely in uppercase variables."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Performance prompts must specify the language/runtime, space/time constraints, workload size, and internal mechanisms (such as streaming and backpressure) to avoid naive, all-in-memory solutions. A prompt like “Write a streaming JSON parser in Node.js; O(1) extra space; handle 10MB+ inputs; backpressure with streams; include benchmarks stub” locks down constraints so Copilot targets a production-grade implementation."
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "Optimal prompt engineering involves clear contextual grounding and constraints. Supplying explicit metrics (Option 2) and defining structural connections via variables (Option 3) leads to highly accurate results. Local hardware parameters or capitalization variations do not guide the code synthesis effectively."
     },
     {
       "id": "q54",
-      "question": "Which prompt best constrains the output format so it can be pasted cleanly into a CI pipeline?",
+      "question": "Under the data privacy guidelines for GitHub Copilot Business and Enterprise licenses, how does the remote system process user prompt data in transit and at rest?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "“List failing tests with their names and error messages in any readable format.”"
+          "text": "Prompts are stored permanently in plain text on public databases."
         },
         {
           "id": "o2",
-          "text": "“Output JSON array of failing tests with fields: name, file, line, message; no prose.”"
+          "text": "Prompts are encrypted in transit, handled momentarily in volatile cloud application memory to fulfill the suggestion request, and immediately discarded with zero permanent retention."
         },
         {
           "id": "o3",
-          "text": "“Return failing tests as JSON with test name and message, plus a short explanation of likely causes.”"
+          "text": "Prompts are compiled into binary blobs and stored on the user's branch metadata."
         },
         {
           "id": "o4",
-          "text": "“Output a human-readable report of failing tests, grouped by file, suitable for pasting into chat or email.”"
+          "text": "Prompts are routed through peer-to-peer user nodes before processing."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Specifying a explicit serialization format, the exact schema fields, and forbidding extra conversational prose yields machine-consumable output that scripts can parse without post-processing. Stripping prose ensures that automated systems do not run into parsing issues due to unstructured introduction or conclusion sentences."
+      "correctAnswers": ["o2"],
+      "explanation": "GitHub provides enterprise-grade privacy protection for commercial licenses. Prompts and suggestions are never persisted on disk or used for training underlying global models, ensuring data confidentiality."
     },
     {
       "id": "q55",
-      "question": "You need an ordered migration plan before any code is generated. Which prompt is best?",
+      "question": "A developer wants to evaluate a complex regular expression block for a set of boundary scenarios. Which workflow provides the most structured approach using Copilot Chat?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "“Create a short plan to migrate this service from Flask to FastAPI, focusing on the main steps required to complete the migration.”"
+          "text": "Delete the pattern and hope it regenerates correctly."
         },
         {
           "id": "o2",
-          "text": "“Outline the tasks to move this service from Flask to FastAPI and then implement the new routes in FastAPI.”"
+          "text": "Highlight the expression block and use the /tests command while explicitly adding edge case criteria string text in the chat prompt box."
         },
         {
           "id": "o3",
-          "text": "“Create a 5-step plan to migrate Flask → FastAPI; list risks, roll-back steps, and how to keep routes backward-compatible.”"
+          "text": "Use the @vscode agent to reformat the system log configuration parameters."
         },
         {
           "id": "o4",
-          "text": "“Provide FastAPI code that replicates the current Flask service’s behavior, assuming breaking changes are acceptable if they simplify the migration.”"
+          "text": "Run a standard shell check inside the local environment terminal view."
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Requesting a short, ordered plan with risks and backward-compatibility constraints clarifies architectural choices before jumping into code. A prompt like “Create a 5-step plan to migrate Flask → FastAPI; list risks, roll-back steps, and how to keep routes backward-compatible” isolates planning from execution and forces risk assessment early."
+      "correctAnswers": ["o2"],
+      "explanation": "Combining the structural targeting capabilities of the /tests command with targeted edge-case directives allows Copilot to construct custom assertions that validate the limits of complex logic strings like Regex."
     },
     {
       "id": "q56",
-      "question": "Which prompt reduces overbroad refactors in large files?",
+      "question": "What operational symptom will be encountered if a developer works on a file that matches a path pattern designated within a repository's content exclusion ledger file?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "“Refactor the parseHeader logic to make it clearer and more robust across the parser code.”"
+          "text": "The entire IDE workspace shifts to a read-only state."
         },
         {
           "id": "o2",
-          "text": "“Update the parser to handle invalid headers better and improve error messages throughout the file.”"
+          "text": "Inline suggestions will display a persistent loading animation but never complete."
         },
         {
           "id": "o3",
-          "text": "“Tidy up parseHeader and related helpers, improving structure and naming wherever it seems useful.”"
+          "text": "Copilot completions are completely disabled for that file, and a visual icon or status indicator will indicate that the file's context is excluded."
         },
         {
           "id": "o4",
-          "text": "“Modify only function parseHeader; keep public behavior; add bounds checks; return detailed errors.”"
+          "text": "The local system logs will prompt the user to upgrade their personal license tier."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Limiting the edit scope to a single named function, maintaining behavioral contracts, and listing specific modifications prevents Copilot from tweaking unrelated logic across a large file. This focuses Copilot’s editing window precisely on the target code block."
+      "correctAnswers": ["o3"],
+      "explanation": "When an exclusion match occurs, the client immediately blocks communication with the Copilot API for that asset. The extension will visually notify the developer (often via a blocked status indicator) that AI features are disabled for that file."
     },
     {
       "id": "q57",
-      "question": "How do you best prompt Copilot for secure and resilient HTTP handling?",
+      "question": "Which of the following describes the core technical limitation of large language models regarding historical library dependencies in GitHub Copilot suggestions?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "“Use HTTPS; validate TLS certs; set timeouts and retries; redact secrets in logs; handle 429/5xx with backoff.”"
+          "text": "The models completely refuse to process files containing modern JavaScript frameworks."
         },
         {
           "id": "o2",
-          "text": "“Call the API over HTTPS and log the full request and response body for debugging if something goes wrong.”"
+          "text": "The model operates on a dataset cutoff date and may over-represent older patterns or deprecated methods that were highly prevalent in public training data at that time."
         },
         {
           "id": "o3",
-          "text": "“Use HTTPS with a reasonable timeout and retry a few times on failure.”"
+          "text": "The system pipeline only understands code that was authored prior to the year 2010."
         },
         {
           "id": "o4",
-          "text": "“Call the API with HTTPS but skip strict certificate validation to avoid connection issues.”"
+          "text": "The duplication engine forces all output to match the oldest version of a package."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Security and reliability require explicit constraints: clear protocol verification (TLS validation), explicit timeouts, backoff retry handling for specific response codes, and credential redactions. This ensures Copilot doesn't introduce default, fragile connection boilerplate."
+      "correctAnswers": ["o2"],
+      "explanation": "LLMs lack dynamic awareness of API changes that occur post-training unless explicitly provided in the prompt context. If an API updates, the model might still output deprecated versions because they were common in the pre-training dataset."
     },
     {
       "id": "q58",
-      "question": "Which prompt best avoids unsupported or hallucinated library calls?",
+      "question": "What is the primary operational advantage of utilizing the Inline Chat interface (Command+I / Ctrl+I) over the standard Sidebar Chat panel when handling quick code additions?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "“Use Redis with a standard client library and configure basic connection settings for your environment.”"
+          "text": "Inline Chat allows the developer to bypass corporate network proxies entirely."
         },
         {
           "id": "o2",
-          "text": "“Initialize Redis in Python using redis-py and show how to set and get a key for caching.”"
+          "text": "It provides contextual code modification directly at the line cursor focus point, rendering an interactive side-by-side split diff comparison view within the main editor workspace."
         },
         {
           "id": "o3",
-          "text": "“Use Redis for caching in your service and choose any compatible client version that works with your stack.”"
+          "text": "It uses a model that has an infinite token context length capacity."
         },
         {
           "id": "o4",
-          "text": "“Python 3.11; redis-py v5 only; use Redis.from_url; no deprecated APIs; include connection timeout and health check.”"
+          "text": "It restricts the prompt logic to zero human-authored comment markers."
         }
       ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Pinning the runtime language version, the exact library major/minor version, and specifying allowed constructor targets drastically cuts down on legacy or deprecated API usage. It ensures the boilerplate aligns strictly with your project environment's real dependencies."
+      "correctAnswers": ["o2"],
+      "explanation": "Inline Chat is designed for in-place modifications, allowing the developer to maintain visual focus on the active file and directly accept or reject modifications using an integrated diff interface."
     },
     {
       "id": "q59",
-      "question": "What is the best way to prompt for a highly predictable CLI tool?",
-      "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "question": "When multi-model selection is configured inside the enterprise environment, which criteria guide a developer to choose a complex reasoning model rather than a low-latency model?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "“Create a Python CLI with argparse; flags: --input, --format (json|csv), --verbose; validate files; exit codes 0/2; examples.”"
+          "text": "Tracing intricate logical interactions across highly distributed multi-layered microservices."
         },
         {
           "id": "o2",
-          "text": "“Write a Python CLI that accepts some arguments and prints a result based on the input.”"
+          "text": "Writing basic variable assignments inside a small local loop utility routine."
         },
         {
           "id": "o3",
-          "text": "“Create a CLI script in any language that processes an input file and prints output to the console.”"
+          "text": "Diagnosing mathematical state updates or race conditions within high-concurrency loops."
         },
         {
           "id": "o4",
-          "text": "“Set up a simple command-line entry point without worrying about validation, exit codes, or detailed help text.”"
+          "text": "Refactoring monolithic structures into decoupled modular frameworks requiring sophisticated code synthesis."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "Explicitly noting the parser library (argparse), enumerating flags, restricting parameter choices, and specifying semantic system exit codes ensures Copilot builds standard, Unix-compliant tools without making arbitrary architectural guesses."
+      "correctAnswers": ["o1", "o3", "o4"],
+      "explanation": "Complex reasoning models excel at abstract logical mapping, making them highly effective for microservice analysis (Option 1), concurrency bug chasing (Option 3), and framework architectural refactoring (Option 4). Basic loop completions (Option 2) are better suited for faster, lower-latency models."
     },
     {
       "id": "q60",
-      "question": "Which prompt best demonstrates how to execute a safe database migration?",
+      "question": "Which specific slash command inside the Copilot Chat workspace is optimized to analyze a codebase module and pinpoint performance bottlenecks or structural security oversights without proposing changes?",
       "type": "single-choice",
-      "topic": "Prompt Engineering",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "“Add a new status column and update the application to start using it, then remove old fields later if needed.”"
+          "text": "/fix"
         },
         {
           "id": "o2",
-          "text": "“Update the schema and data to support a status field in a way that works for your database engine.”"
+          "text": "/doc"
         },
         {
           "id": "o3",
-          "text": "“Add column status (ENUM) with default ‘new’; backfill from state; online migration (no downtime); include rollback SQL.”"
+          "text": "/explain"
         },
         {
           "id": "o4",
-          "text": "“Redesign the schema to better model status and deploy the changes during a low-traffic window, accepting some downtime.”"
+          "text": "/tests"
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Migrations need exact DDL, backfill rules, an online strategy (no downtime), and a clear rollback path so changes can ship safely without blocking deploys or corrupting data. A prompt like “Add column status (ENUM) with default ‘new’; backfill from state; online migration (no downtime); include rollback SQL” describes the schema change, how to derive values from existing data, and how to roll back if needed."
+      "correctAnswers": ["o3"],
+      "explanation": "The /explain command instructs Copilot Chat to read the selected code structure and output a descriptive breakdown of its behavior, execution logic, and potential runtime flaws or performance considerations in plain language."
     },
     {
       "id": "q61",
-      "question": "Which prompt best constrains logging for privacy?",
+      "question": "When generating inline code suggestions, GitHub Copilot utilizes the 'Fill-In-The-Middle' (FIM) paradigm. What is the primary advantage of this approach compared to standard left-to-right generation?",
+      "type": "single-choice",
+      "topic": "Data and Architecture",
+      "options": [
+        {
+          "id": "o1",
+          "text": "It generates code from bottom to top, preventing syntax errors in lower scopes."
+        },
+        {
+          "id": "o2",
+          "text": "It leverages code context both immediately before and immediately after the cursor to synthesize highly accurate completions that fit into existing structures."
+        },
+        {
+          "id": "o3",
+          "text": "It fills in missing database rows automatically by connecting to local SQL servers."
+        },
+        {
+          "id": "o4",
+          "text": "It forces the LLM to bypass cloud network latency by processing exclusively on the local GPU."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The Fill-In-The-Middle (FIM) technique allows the AI model to 'read' the suffix (code after the cursor) alongside the prefix (code before the cursor). This helps Copilot confidently close brackets, match variable names used later in the file, and ensure structural continuity."
+    },
+    {
+      "id": "q62",
+      "question": "A developer wants to quickly scaffold a new Node.js Express application with a specific modular directory structure. Which Copilot Chat command is explicitly designed to generate workspace scaffolding and propose a new directory layout?",
+      "type": "single-choice",
+      "topic": "GitHub Copilot Features",
+      "options": [
+        {
+          "id": "o1",
+          "text": "/scaffold"
+        },
+        {
+          "id": "o2",
+          "text": "@workspace /new"
+        },
+        {
+          "id": "o3",
+          "text": "/create"
+        },
+        {
+          "id": "o4",
+          "text": "@terminal /init"
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "The @workspace /new command is specifically engineered to architect new projects. It proposes a folder structure and boilerplate files based on the natural language request, allowing the developer to preview and create the workspace in one click."
+    },
+    {
+      "id": "q63",
+      "question": "When a developer uses Copilot Chat directly within the IDE's integrated terminal panel (Terminal Chat), which contextual data is automatically prioritized in the prompt payload?",
+      "type": "single-choice",
+      "topic": "Data and Architecture",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The active browser tabs open on the host machine."
+        },
+        {
+          "id": "o2",
+          "text": "The most recent compilation errors, active shell environment type (e.g., bash, powershell), and the immediate terminal buffer history."
+        },
+        {
+          "id": "o3",
+          "text": "The entire Git commit history of the repository since inception."
+        },
+        {
+          "id": "o4",
+          "text": "The local hardware driver configurations and IP address."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Terminal Chat grounds the AI model in the terminal's context. This includes the specific shell being used, recent commands, and recent standard output/errors, making it highly effective for debugging build failures or crafting shell scripts."
+    },
+    {
+      "id": "q64",
+      "question": "When generating an automated Pull Request summary in GitHub Copilot Enterprise, which specific data points does the system analyze to construct the narrative description?",
+      "type": "single-choice",
+      "topic": "GitHub Copilot Features",
+      "options": [
+        {
+          "id": "o1",
+          "text": "The developer's historical coding speed metrics and Jira ticket data."
+        },
+        {
+          "id": "o2",
+          "text": "The raw file diffs across the branch, commit messages, and the PR title."
+        },
+        {
+          "id": "o3",
+          "text": "The public internet for similar open-source PRs to copy descriptions."
+        },
+        {
+          "id": "o4",
+          "text": "Live production database schemas and performance monitoring logs."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "To generate accurate PR summaries, Copilot Enterprise analyzes the actual code changes (diffs), the title provided for the PR, and the commit messages within that PR to synthesize a human-readable summary of 'what changed' and 'why'."
+    },
+    {
+      "id": "q65",
+      "question": "A developer faces a complex algorithmic bug and asks Copilot Chat to fix it. To improve the accuracy and logical soundness of the AI's response, the developer appends the phrase 'Explain your reasoning step-by-step before writing the code.' Which prompt engineering technique does this represent?",
       "type": "single-choice",
       "topic": "Prompt Engineering",
       "options": [
         {
           "id": "o1",
-          "text": "“Add JSON logs with level and message, and include full request and response bodies to simplify debugging.”"
+          "text": "Few-shot prompting"
         },
         {
           "id": "o2",
-          "text": "“Add structured logs with level, event, and user details; include tokens in debug mode to help trace issues.”"
+          "text": "Negative constraints"
         },
         {
           "id": "o3",
-          "text": "“Add structured JSON logs: level, event, requestId; no PII; redact tokens; include error stack; single line per event.”"
+          "text": "Chain-of-Thought prompting"
         },
         {
           "id": "o4",
-          "text": "“Enable verbose logging across the service, capturing all available fields by default and filtering sensitive data later if needed.”"
+          "text": "Context pruning"
         }
       ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Privacy-aware logging specifies structure, fields, and redaction rules so logs stay machine-parsable and do not leak secrets or PII. A prompt like “Add structured JSON logs: level, event, requestId; no PII; redact tokens; include error stack; single line per event” defines the log schema, correlation IDs, redaction behavior, and one-event-per-line constraint."
-    },
-    {
-      "id": "q62",
-      "question": "Which plan offers enterprise proxy support and integration with advanced compliance capabilities?",
-      "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
-      "options": [
-        {
-          "id": "o1",
-          "text": "Copilot Free, for individuals without governance or compliance controls"
-        },
-        {
-          "id": "o2",
-          "text": "Copilot Individual (Pro/Pro+), with premium personal features only"
-        },
-        {
-          "id": "o3",
-          "text": "Copilot Enterprise"
-        },
-        {
-          "id": "o4",
-          "text": "Copilot Business, with org-level license management and policies but not full enterprise compliance integrations"
-        }
-      ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Copilot Enterprise is the enterprise-tier plan for GitHub Enterprise Cloud organizations. It includes all Copilot Business capabilities (centralized management, org policies, content exclusion, Copilot audit logs) and adds enterprise-grade features such as deeper integration with enterprise identity and governance, advanced compliance support, and enterprise-level network controls like subscription-based routing and proxy/allowlisting configuration at the enterprise scope."
-    },
-    {
-      "id": "q63",
-      "question": "Which plan provides organizational license management and usage reporting without advanced enterprise compliance integrations?",
-      "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
-      "options": [
-        {
-          "id": "o1",
-          "text": "Copilot Free"
-        },
-        {
-          "id": "o2",
-          "text": "Copilot Individual Pro"
-        },
-        {
-          "id": "o3",
-          "text": "Copilot Individual Pro+"
-        },
-        {
-          "id": "o4",
-          "text": "Copilot Enterprise"
-        }
-      ],
-      "correctAnswers": [
-        "o4"
-      ],
-      "explanation": "Copilot Enterprise is designed for GitHub Enterprise Cloud customers who need advanced compliance and governance on top of org-level controls. It includes all Copilot Business capabilities (centralized license management, policies, content exclusion, and Copilot audit logs) and adds enterprise-grade features such as deeper integration with enterprise identity and governance, advanced compliance support, and enterprise-level network controls like proxy/allowlisting and network routing."
-    },
-    {
-      "id": "q64",
-      "question": "What’s the practical difference between Copilot Edits – Edit mode and Agent mode?",
-      "type": "single-choice",
-      "topic": "Agentic Workflows",
-      "options": [
-        {
-          "id": "o1",
-          "text": "Edit auto-merges; Agent requires reviews"
-        },
-        {
-          "id": "o2",
-          "text": "Edit = user-scoped diffs; Agent = autonomous, multi-step execution that may culminate in a PR"
-        },
-        {
-          "id": "o3",
-          "text": "Edit is IDE-only; Agent is GitHub.com only"
-        },
-        {
-          "id": "o4",
-          "text": "Edit reads the repo; Agent can’t"
-        }
-      ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "With Copilot Edits – Edit mode, you keep tight control: you pick which files Copilot may change, review the proposed diffs, and apply them incrementally. With Agent mode, Copilot can plan and execute a multi-step workflow—it can inspect the broader project, choose relevant files, run tools or commands, and iterate until the task is complete. The practical difference is scope and autonomy: Edit mode is user-scoped diffs, while Agent mode is autonomous orchestration across files and tools, which in practice often feeds into changes that eventually end up in a pull request for review."
-    },
-    {
-      "id": "q65",
-      "question": "Which plan provides organizational license management and usage reporting without enterprise integrations (like audit logs/SSO)?",
-      "type": "single-choice",
-      "topic": "GitHub Copilot Plans and Licensing",
-      "options": [
-        {
-          "id": "o1",
-          "text": "Copilot Free"
-        },
-        {
-          "id": "o2",
-          "text": "Copilot Individual Pro"
-        },
-        {
-          "id": "o3",
-          "text": "Copilot Business"
-        },
-        {
-          "id": "o4",
-          "text": "Copilot Individual Pro+"
-        }
-      ],
-      "correctAnswers": [
-        "o3"
-      ],
-      "explanation": "Copilot Business is the first plan that provides organization-level license management and usage reporting, along with policy controls such as content exclusion. Organization and enterprise owners on Business can assign Copilot seats, download detailed activity and usage reports, and configure policies for their members. Copilot Enterprise includes all of these capabilities and adds deeper enterprise-grade integrations for identity, compliance, and governance."
+      "correctAnswers": ["o3"],
+      "explanation": "Chain-of-Thought prompting encourages the Large Language Model to break down its reasoning sequentially. By 'thinking aloud' in text before generating the final code, the model is significantly less likely to make logical leaps or mathematical errors."
     },
     {
       "id": "q66",
-      "question": "Which of the following is a primary developer use case for Copilot?",
+      "question": "An enterprise administrator enables the 'Block suggestions matching public code' policy. Does this safeguard evaluate developer code against the organization's own private repositories?",
       "type": "single-choice",
-      "topic": "Developer Use Cases",
+      "topic": "Privacy & Safeguards",
       "options": [
         {
           "id": "o1",
-          "text": "Helping explore unfamiliar APIs and libraries"
+          "text": "Yes, it compares against all private repos in the enterprise."
         },
         {
           "id": "o2",
-          "text": "Automating end-to-end payroll and compliance processing for HR teams"
+          "text": "No, the duplication detector only checks for matches against public code on GitHub.com."
         },
         {
           "id": "o3",
-          "text": "Drafting legally binding corporate contracts without human review"
+          "text": "Yes, but only if the private repositories are written in strictly typed languages."
         },
         {
           "id": "o4",
-          "text": "Managing calendar invites, meeting rooms, and company-wide scheduling"
+          "text": "No, it only checks against local file caches on the developer's laptop."
         }
       ],
-      "correctAnswers": [
-        "o1"
-      ],
-      "explanation": "GitHub Copilot and Copilot Chat are designed to act as an AI pair programmer, helping you understand and use new APIs and libraries by generating example calls, scaffolding common patterns, and explaining code and errors in natural language. When working with an unfamiliar SDK or framework, you can ask Copilot Chat to propose usage examples, explain parameters, and even generate tests, turning exploration of new APIs into an iterative, guided workflow."
+      "correctAnswers": ["o2"],
+      "explanation": "The public code filter (duplication detector) specifically queries against an index of public repositories on GitHub. It is designed to prevent open-source license infringement, not to prevent internal code reuse among private repositories."
     },
     {
       "id": "q67",
-      "question": "Which setting governs similar-but-not-exact suggestions that resemble public code?",
+      "question": "Which specific UI action allows a developer to apply a multi-line Copilot Chat refactoring directly into a target file without manually copying and pasting?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Developer Productivity",
       "options": [
         {
           "id": "o1",
-          "text": "Content exclusion"
+          "text": "Clicking the 'Apply in Editor' (or 'Insert at Cursor') button located on the code block within the Chat panel."
         },
         {
           "id": "o2",
-          "text": "Code referencing (matching public code)"
+          "text": "Pressing Alt+F4 to force a workspace sync."
         },
         {
           "id": "o3",
-          "text": "Duplication-detection filter"
+          "text": "Running the copilot --force-apply command in the terminal."
         },
         {
           "id": "o4",
-          "text": "Usage reporting"
+          "text": "Dragging and dropping the chat window outside the IDE bounds."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Code referencing is the mechanism Copilot uses when you allow suggestions that match or resemble public code. The policy for suggestions that match public code can be set to block these suggestions entirely, or allow them and show references, in which case Copilot surfaces links to the public repositories where similar code was found. This setting governs how Copilot handles similar-but-not-exact public-code matches, whereas content exclusion only controls which inputs Copilot can see."
+      "correctAnswers": ["o1"],
+      "explanation": "The 'Apply in Editor' (or equivalent insert button depending on IDE) bridges the Chat panel and the active document. It allows developers to seamlessly merge AI-generated solutions into the active editor, often previewing the diff before final acceptance."
     },
     {
       "id": "q68",
-      "question": "When code referencing is set to “Allow + show references”, what should you expect?",
+      "question": "Why might GitHub Copilot fail to provide inline ghost text suggestions when a developer is editing a monolithic 15MB JSON configuration file?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Data and Architecture",
       "options": [
         {
           "id": "o1",
-          "text": "Copilot blocks all similar suggestions"
+          "text": "JSON is an unsupported language that is automatically blocked."
         },
         {
           "id": "o2",
-          "text": "Copilot may show the suggestion with links to public sources"
+          "text": "The file exceeds the maximum token length and client-side parsing size limits for the context window, causing the extension to pause processing to preserve IDE performance."
         },
         {
           "id": "o3",
-          "text": "Duplication filter is disabled"
+          "text": "Copilot strictly requires all JSON files to be encrypted before processing."
         },
         {
           "id": "o4",
-          "text": "Content exclusion is ignored"
+          "text": "The duplication detector automatically flags and ignores files larger than 10MB."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "When code referencing is configured to “Allow + show references”, Copilot can surface suggestions that match or resemble public code and attach references to public repositories where similar code appears. This lets developers review the origin of the code and make informed decisions about attribution and licensing before accepting the suggestion."
+      "correctAnswers": ["o2"],
+      "explanation": "Copilot extensions have built-in performance governors. If a file is excessively large, attempting to parse it and build a context window would cause severe lag in the IDE. Consequently, Copilot disables itself on extremely large files."
     },
     {
       "id": "q69",
-      "question": "At what scopes can you configure code referencing behavior?",
+      "question": "Why is it critical to continue running traditional Static Application Security Testing (SAST) tools in a CI/CD pipeline when code is primarily generated by GitHub Copilot?",
       "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "topic": "Responsible AI Usage",
       "options": [
         {
           "id": "o1",
-          "text": "Only repository level"
+          "text": "Because SAST tools are required to train the Copilot LLM."
         },
         {
           "id": "o2",
-          "text": "Individual account and org/enterprise policies"
+          "text": "Because Copilot generates code deterministically and will forcefully bypass standard IDE linting rules."
         },
         {
           "id": "o3",
-          "text": "Only enterprise level"
+          "text": "Copilot relies on probabilistic models and historical data that may contain insecure patterns, meaning AI-generated code can still introduce vulnerabilities like SQL injection or cross-site scripting."
         },
         {
           "id": "o4",
-          "text": "Only IDE settings"
+          "text": "Because SAST tools automatically disable the public code filter."
         }
       ],
-      "correctAnswers": [
-        "o2"
-      ],
-      "explanation": "Code referencing and related “suggestions matching public code” behavior are controlled by policies at multiple scopes. As an individual, you can configure whether to block suggestions that match public code or allow + show references, unless your setting is overridden by your organization or enterprise. Organization and enterprise owners can define policies that apply to all users who receive Copilot seats through them, and these higher-level policies take precedence over individual preferences."
+      "correctAnswers": ["o3"],
+      "explanation": "AI is not infallible and does not replace security protocols. Because LLMs learn from human code—which inherently contains flaws—they can reproduce vulnerabilities. AI-generated code must be subjected to the same rigorous SAST/DAST testing as human code."
     },
     {
       "id": "q70",
-      "question": "Which roles can manage content exclusion policies?",
-      "type": "single-choice",
-      "topic": "Copilot Governance and Policies",
+      "question": "Which of the following statements is true regarding the use of multiple AI models (e.g., Claude 3.5 Sonnet, GPT-4o) within the Copilot Chat interface?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "GitHub Copilot Features",
       "options": [
         {
           "id": "o1",
-          "text": "Outside collaborators only"
+          "text": "All models execute the prompt simultaneously, and the IDE displays only the fastest response."
         },
         {
           "id": "o2",
-          "text": "People with Maintain role"
+          "text": "Developers can manually toggle between available models in the chat interface via a dropdown menu."
         },
         {
           "id": "o3",
-          "text": "Repository administrators, organization owners, and enterprise owners"
+          "text": "Different models can be chosen to match the complexity or latency requirements of a specific task."
         },
         {
           "id": "o4",
-          "text": "Any repository contributor"
+          "text": "Using a non-default model incurs a separate per-message billing charge on enterprise invoices."
         }
       ],
-      "correctAnswers": [
-        "o3"
+      "correctAnswers": ["o2", "o3"],
+      "explanation": "GitHub Copilot's multi-model selection allows users to manually pick the engine that powers Chat via a dropdown toggle. This enables developers to balance speed versus reasoning capability on a task-by-task basis at no additional per-message cost."
+    },
+    {
+      "id": "q71",
+      "question": "Which specific code authoring practice drastically improves the contextual quality of GitHub Copilot's inline completions for an upcoming function block?",
+      "type": "single-choice",
+      "topic": "Prompt Engineering",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Using single-letter variable names to compress token usage."
+        },
+        {
+          "id": "o2",
+          "text": "Writing a highly descriptive docstring and using explicitly descriptive function and parameter names immediately before the cursor."
+        },
+        {
+          "id": "o3",
+          "text": "Removing all type hints and strict typings."
+        },
+        {
+          "id": "o4",
+          "text": "Disabling syntax highlighting in the IDE preferences."
+        }
       ],
-      "explanation": "Content exclusion is an administrative control. GitHub Docs state that repository administrators, organization owners, and enterprise owners can manage content exclusion settings, while users with the Maintain role can only view the configuration for a repository and cannot edit it. Outside collaborators and general contributors do not have permission to change content exclusion settings."
+      "correctAnswers": ["o2"],
+      "explanation": "Descriptive names and comments act as the strongest signals for the LLM. If a function is named calculate_tax_deduction_for_2024(income, dependents), Copilot has massive context to generate the exact internal logic accurately, whereas calc(a, b) leaves it guessing."
+    },
+    {
+      "id": "q72",
+      "question": "When leveraging GitHub Copilot to write unit tests for an existing application, which of the following practices ensure the highest quality test suites?",
+      "type": "multiple-choice",
+      "multipleAnswer": true,
+      "topic": "Developer Productivity",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Supplying the target testing framework (e.g., Jest, PyTest) in the prompt."
+        },
+        {
+          "id": "o2",
+          "text": "Explicitly asking Copilot to generate edge cases, null handling, and negative test scenarios."
+        },
+        {
+          "id": "o3",
+          "text": "Blindly trusting the first test suite generated without manually verifying test assertions."
+        },
+        {
+          "id": "o4",
+          "text": "Keeping the mock data schema or interface definitions open in an adjacent editor tab to ground the context."
+        }
+      ],
+      "correctAnswers": ["o1", "o2", "o4"],
+      "explanation": "High-quality testing with Copilot requires explicit constraints (Option 1 & 2) and strong contextual grounding via adjacent tabs (Option 4). Trusting tests blindly (Option 3) violates Responsible AI practices and can lead to false positives."
+    },
+    {
+      "id": "q73",
+      "question": "In a GitHub Copilot Enterprise deployment, what manual action must an administrator take to ensure their corporate codebase is NOT used to train the global public Copilot models?",
+      "type": "single-choice",
+      "topic": "Privacy & Safeguards",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Submit a written legal request to Microsoft."
+        },
+        {
+          "id": "o2",
+          "text": "No action is required; Copilot Business and Enterprise plans automatically exclude user data, prompts, and suggestions from public model training by default."
+        },
+        {
+          "id": "o3",
+          "text": "Edit the .copilotignore file on every developer's machine."
+        },
+        {
+          "id": "o4",
+          "text": "Set the GitHub repository visibility explicitly to 'Internal'."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Data privacy is a foundational pillar of the commercial Copilot tiers. Business and Enterprise plans have zero-retention policies built-in by default; prompts and enterprise code are never used to train the global models."
+    },
+    {
+      "id": "q74",
+      "question": "What primary capability distinguishes 'Agent Mode' (Copilot Edits) from standard Copilot Chat when dealing with a massive refactoring task?",
+      "type": "single-choice",
+      "topic": "GitHub Copilot Features",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Chat generates text responses for copying, while Agent Mode autonomously opens multiple files, proposes interconnected code changes, and presents a unified multi-file diff view for review."
+        },
+        {
+          "id": "o2",
+          "text": "Agent Mode is strictly for audio-based interactions."
+        },
+        {
+          "id": "o3",
+          "text": "Chat cannot generate code snippets longer than 10 lines."
+        },
+        {
+          "id": "o4",
+          "text": "Agent Mode automatically executes Git merges and production deployments."
+        }
+      ],
+      "correctAnswers": ["o1"],
+      "explanation": "Agent Mode (Copilot Edits) operates cross-file. It acts as an autonomous planner that edits the actual files in your workspace directly (subject to your final review via diffs), whereas Chat mostly serves as an advisory side-panel."
+    },
+    {
+      "id": "q75",
+      "question": "A developer wants to rewrite a specific loop from a 500-line file using modern array mapping methods. What is the most efficient way to scope Copilot Chat's context to ONLY that target loop?",
+      "type": "single-choice",
+      "topic": "Prompt Engineering",
+      "options": [
+        {
+          "id": "o1",
+          "text": "Delete the rest of the file, prompt Copilot, and then paste the code back."
+        },
+        {
+          "id": "o2",
+          "text": "Highlight the loop in the editor and use the #selection variable or rely on the default selection context when issuing the Chat prompt."
+        },
+        {
+          "id": "o3",
+          "text": "Describe the exact line numbers of the loop in plain English."
+        },
+        {
+          "id": "o4",
+          "text": "Use the @workspace agent."
+        }
+      ],
+      "correctAnswers": ["o2"],
+      "explanation": "Highlighting text and referencing it (either implicitly by having it highlighted when Chat opens, or explicitly using #selection) is the most targeted and robust way to anchor the AI's attention solely to the block of code requiring modification."
     }
   ]
 }
