@@ -577,6 +577,7 @@
       "id": "q21",
       "question": "Which of the following resources can be placed inside an Azure Resource Group? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Core Azure Architecture",
       "options": [
         {
@@ -690,6 +691,7 @@
       "id": "q25",
       "question": "Which of the following categories are evaluated by Azure Advisor to give optimization recommendations? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Management and Governance",
       "options": [
         {
@@ -1083,6 +1085,7 @@
       "id": "q39",
       "question": "Which of the following features are key functionalities provided by Microsoft Defender for Cloud? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Security",
       "options": [
         {
@@ -1226,6 +1229,7 @@
       "id": "q44",
       "question": "Which of the following declarative options represent native Infrastructure as Code (IaC) tools within the Microsoft Azure ecosystem? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Management and Governance",
       "options": [
         {
@@ -1647,6 +1651,7 @@
       "id": "q59",
       "question": "Under the shared responsibility model, which of the following infrastructure elements are managed by the cloud provider in a Platform as a Service (PaaS) deployment? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Cloud Concepts",
       "options": [
         {

@@ -748,6 +748,7 @@
       "id": "q29",
       "question": "Which of the following communication protocols are highly prominent in modern microservices architectures for synchronous service-to-service communication? (Choose two)",
       "type": "multiple-choice",
+      "multipleAnswer": true,
       "topic": "Communication",
       "options": [
         {
